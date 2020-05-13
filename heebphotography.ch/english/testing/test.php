@@ -27,6 +27,7 @@
     echo "Cool " . "= ";
     echo nl2br(" ");
     echo $$$Cool;
+    _
     ?>
     <!-- <script language="php">
     echo "Hello World!";
