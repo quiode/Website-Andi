@@ -5,9 +5,9 @@
   <body>
   <?php   
     echo "Hello World!";
-  ?>
+  ?>  
+  <script language="php">
+  echo "Hello World!";
+</script>
   </body>
-  <!-- <script language="php">
-    echo "Hello World!";
-  </script> -->
 </html>
