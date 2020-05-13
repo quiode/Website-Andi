@@ -16,9 +16,13 @@
     echo "
     ";
     echo $Age;
+    define("Constant", "This constant is very nice");
+    echo "
+    ";
+    echo Constant;
   ?>  
-  <script language="php">
+  <!-- <script language="php">
   echo "Hello World!";
-</script>
+</script> -->
   </body>
 </html>
