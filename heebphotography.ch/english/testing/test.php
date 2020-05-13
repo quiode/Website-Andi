@@ -5,21 +5,23 @@
 </head>
 
 <body>
-    <?php
-    echo "Hello World!";
-    echo " ";
-    $Name = "Dominik Schwaiger";
-    $Age = 16;
-    $Mood = "Tired";
-    echo $Name . " ";
-    echo $Mood . " ";
-    echo $Age . " ";
-    define("Constant", "This constant is very nice");
-    echo Constant;
-    ?>
+    <h1>
+        <?php
+        echo "Hello World!";
+        echo "\r\n";
+        $Name = "Dominik Schwaiger";
+        $Age = 16;
+        $Mood = "Tired";
+        echo $Name . "";
+        echo $Mood . "\r\n";
+        echo $Age . "\r\n";
+        define("Constant", "This constant is very nice");
+        echo Constant . "\r\n";
+        ?>
+    </h1>
     <!-- <script language="php">
-  echo "Hello World!";
-</script> -->
+    echo "Hello World!";
+    </script> -->
 </body>
 
 </html>
