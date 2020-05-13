@@ -17,11 +17,14 @@
     define("Constant", "This constant is very nice");
     echo nl2br(Constant . "\r\n");
     echo nl2br("\r\n\r\n");
-    echo $Name;
+    $Cool = "Super";
+    $Super = "Mega";
+    $Mega = $Name;
+    echo $Cool;
     echo nl2br("\r\n");
-    echo $$Name;
+    echo $$Cool;
     echo nl2br("\r\n");
-    echo $$$Mood;
+    echo $$$Cool;
     ?>
     <!-- <script language="php">
     echo "Hello World!";
