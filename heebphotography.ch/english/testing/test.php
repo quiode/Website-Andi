@@ -21,7 +21,7 @@
     echo nl2br("\r\n");
     echo $$Name;
     echo nl2br("\r\n");
-    echo $$$Name;
+    echo $$$Mood;
     ?>
     <!-- <script language="php">
     echo "Hello World!";
