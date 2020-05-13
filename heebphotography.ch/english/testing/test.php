@@ -7,21 +7,21 @@
 <body>
     <?php
     echo "Hello World!";
-    echo "\r\n";
+    echo nl2br("\r\n");
     $Name = "Dominik Schwaiger";
     $Age = 16;
     $Mood = "Tired";
-    echo $Name . "";
-    echo $Mood . "\r\n";
-    echo $Age . "\r\n";
+    echo nl2br($Name . "\r\n");
+    echo nl2br($Mood . "\r\n");
+    echo nl2br($Age . "\r\n");
     define("Constant", "This constant is very nice");
-    echo Constant . "\r\n";
-    echo "\r\n\r\n";
+    echo nl2br(Constant . "\r\n");
+    echo nl2br("\r\n\r\n");
     echo $Name;
-    echo "\r\n";
+    echo nl2br("\r\n");
     echo $$Name;
-    echo "\r\n";
-    echo $ $$Name;
+    echo nl2br("\r\n");
+    echo $$$Name;
     ?>
     <!-- <script language="php">
     echo "Hello World!";
