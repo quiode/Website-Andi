@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/*Allgemein*/
+
+* {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+/*Header*/
+
+/*Navigation*/
+
+/*Bilder*/
+
+img:hover {
+    cursor: pointer;
+}
+
+/*Fusszeile*/
+
+/*Gallerie*/
+
+@media only screen and (max-width: 600px) {
+
+}
