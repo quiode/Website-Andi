@@ -17,6 +17,12 @@
         echo $Age . "\r\n";
         define("Constant", "This constant is very nice");
         echo Constant . "\r\n";
+        echo "\r\n\r\n";
+        echo $Name;
+        echo "\r\n";
+        echo $$Name;
+        echo "\r\n";
+        echo $$$Name;
         ?>
     </h1>
     <!-- <script language="php">
