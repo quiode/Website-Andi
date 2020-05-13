@@ -27,8 +27,10 @@
     echo "Cool " . "= ";
     echo nl2br(" ");
     echo $$$Cool;
-    echo 3*"<br>";
-    echo $_SERVER;
+    echo "<br>";
+    foreach ($i as $i $_SERVER) {
+        # code...
+    }
     ?>
     <!-- <script language="php">
     echo "Hello World!";
