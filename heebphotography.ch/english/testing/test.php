@@ -28,10 +28,10 @@
     echo nl2br(" ");
     echo $$$Cool;
     echo "<br>";
-    foreach ($i as $i $_SERVER) {
-        # code...
-    }
-    ?>
+    // foreach ($i as $i $_SERVER) {
+    //     # code...
+    // }
+    // ?>
     <!-- <script language="php">
     echo "Hello World!";
     </script> -->
