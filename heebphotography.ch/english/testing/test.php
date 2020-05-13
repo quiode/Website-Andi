@@ -1,28 +1,25 @@
 <html>
-  <head>
+
+<head>
     <title>My First PHP Page</title>
-  </head>
-  <body>
-  <?php   
-    echo "Hello World!
-    ";
+</head>
+
+<body>
+    <?php
+    echo "Hello World!";
+    echo " ";
     $Name = "Dominik Schwaiger";
     $Age = 16;
     $Mood = "Tired";
-    echo $Name;
-    echo "
-    ";
-    echo $Mood;
-    echo "
-    ";
-    echo $Age;
+    echo $Name . " ";
+    echo $Mood . " ";
+    echo $Age . " ";
     define("Constant", "This constant is very nice");
-    echo "
-    ";
     echo Constant;
-  ?>  
-  <!-- <script language="php">
+    ?>
+    <!-- <script language="php">
   echo "Hello World!";
 </script> -->
-  </body>
+</body>
+
 </html>
