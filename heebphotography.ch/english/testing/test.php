@@ -5,6 +5,12 @@
   <body>
   <?php   
     echo "Hello World!";
+    $Name = "Dominik Schwaiger";
+    $Age = 16;
+    $Mood = "Tired";
+    echo "Name " + $Name;
+    echo "Mood " + $Mood;
+    echo "Age " + $Age;
   ?>  
   <script language="php">
   echo "Hello World!";
