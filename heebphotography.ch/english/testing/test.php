@@ -21,9 +21,11 @@
     $Super = "Mega";
     $Mega = $Name;
     echo $Cool;
-    echo nl2br("\r\n");
+    echo nl2br(" ");
     echo $$Cool;
-    echo nl2br("\r\n");
+    echo nl2br(" ");
+    echo "Cool " . "= ";
+    echo nl2br(" ");
     echo $$$Cool;
     ?>
     <!-- <script language="php">
