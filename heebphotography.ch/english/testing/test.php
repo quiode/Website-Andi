@@ -4,13 +4,18 @@
   </head>
   <body>
   <?php   
-    echo "Hello World!";
+    echo "Hello World!
+    ";
     $Name = "Dominik Schwaiger";
     $Age = 16;
     $Mood = "Tired";
-    echo "Name " + $Name;
-    echo "Mood " + $Mood;
-    echo "Age " + $Age;
+    echo $Name;
+    echo "
+    ";
+    echo $Mood;
+    echo "
+    ";
+    echo $Age;
   ?>  
   <script language="php">
   echo "Hello World!";
