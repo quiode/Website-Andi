@@ -25,10 +25,7 @@
 
         <article>
             <header>
-                <?php
-                require "config.php";
-                echo '<img src="' . $image_path . 'example_image.jpg" />';
-                ?>
+                <img src="/images/example_image.jpg">
             </header>
         </article>
     </section>
