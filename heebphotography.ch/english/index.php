@@ -7,6 +7,9 @@
     <title>Wildlifephotography Andreas Heeb</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script src="code.js"></script>
+    <?php
+    require "config.php";
+    ?>
 </head>
 
 <body>
@@ -25,7 +28,9 @@
 
         <article>
             <header>
-                <img src="Images/example_image.jpg" />
+                <?php
+                echo '<img src="'.$image_path.'example_image.jpg" />';
+                ?>
             </header>
         </article>
     </section>
