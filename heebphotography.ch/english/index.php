@@ -14,11 +14,11 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="../Gallery/">Gallery</a></li>
-                    <li><a href="../About me/">About me</a></li>
-                    <li><a href="../Linktree/">Linktree</a></li>
-                    <li><a href="../Contact/">Contact</a></li>
-                    <li><a href="../Impressum/">Impressum</a></li>
+                    <li><a href="../gallery/">Gallery</a></li>
+                    <li><a href="../about me/">About me</a></li>
+                    <li><a href="../linktree/">Linktree</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                    <li><a href="../impressum/">Impressum</a></li>
                 </ul>
             </nav>
         </header>
