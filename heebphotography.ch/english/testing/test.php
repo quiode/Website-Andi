@@ -35,9 +35,9 @@
     </script> -->
     <h1>
     <?php
-    echo "<br>";
-    echo $test;
-    echo "<br>";
+    // echo "<br>";
+    // echo $test;
+    // echo "<br>";
     foreach ($_SERVER as $i) {
         echo $i . "<br>";
     }
