@@ -1,5 +1,9 @@
 <html>
 
+<head>
+    <title>Language | Wildlifephotography Andreas Heeb</title>
+</head>
+
 <body>
     <ul>
         <li>
