@@ -30,6 +30,7 @@ a {
     text-align: center;
     margin: 0%; */
     transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
 #english {
@@ -47,4 +48,5 @@ a {
     background-color: white;
     width: 50%;
     height: 100%;
+    z-index: 0;
 }
