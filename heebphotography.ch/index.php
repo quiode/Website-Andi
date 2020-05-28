@@ -15,16 +15,16 @@
         </li> -->
         <li>
             <?php
-            echo "<a href=\"en.";
+            echo "<a href=\"https://en.";
             echo $_SERVER['HTTP_HOST'];
-            echo "\" id =\"english\">English</a>>"
+            echo "\" id =\"english\">English</a>"
             ?>
         </li>
         <li>
             <?php
-            echo "<a href=\"de.";
+            echo "<a href=\"https://de.";
             echo $_SERVER['HTTP_HOST'];
-            echo "\" id =\"deutsch\">Deutsch</a>>"
+            echo "\" id =\"deutsch\">Deutsch</a>"
             ?>
         </li>
     </ul>
