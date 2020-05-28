@@ -13,6 +13,11 @@
         <li>
             <a href="../public/deutsch" id="deutsch">Deutsch</a>
         </li>
+        <li>
+            <?php
+            echo $_SERVER['HTTP_HOST'];
+            ?>
+        </li>
     </ul>
 </body>
 
