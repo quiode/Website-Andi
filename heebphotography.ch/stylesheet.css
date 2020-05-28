@@ -8,17 +8,16 @@ ul {
     left: 50%;
 } */
 
-a:hover {
-    color: black;
-    background-color: green;
-    text-decoration: none;
-}
 #english:hover ~ #background_english {
     background-color: green;
+    color: black;
+    text-decoration: none;
 }
 
 #deutsch:hover ~ #background_deutsch {
     background-color: green;
+    color: black;
+    text-decoration: none;
 }
 a:checked {
     color: black;
