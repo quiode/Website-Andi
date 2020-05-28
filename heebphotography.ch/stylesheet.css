@@ -9,13 +9,13 @@ ul {
 } */
 
 #english:hover+#background_english {
-    background-color: rgb(139, 139, 139);
+    background-color: #CCCCCC;
     color: black;
     text-decoration: none;
 }
 
 #deutsch:hover+#background_deutsch {
-    background-color: rgb(139, 139, 139);
+    background-color: #CCCCCC;
     color: black;
     text-decoration: none;
 }
