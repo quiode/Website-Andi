@@ -41,3 +41,10 @@ a {
     left: 75%;
     top: 50%;
 }
+
+#background_english {
+    position: fixed;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+}

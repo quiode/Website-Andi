@@ -28,6 +28,7 @@
             ?>
         </li>
     </ul>
+    <div id="background_english"></div>
 </body>
 
 </html>
