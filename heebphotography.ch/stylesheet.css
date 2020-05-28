@@ -21,19 +21,20 @@ a:checked {
 a {
     color: black;
     text-decoration: none;
-    position: absolute;
+    position: relative;
     font-size: 1000%;
-    /* width: 50%;
+    display: inline-block;
+    width: 50%;
     height: 50%;
-    margin: 0%; */
+    margin: 0%;
 }
 
 #english {
-    left: 25%;
-    top: 50%;
+    /* left: 25%;
+    top: 50%; */
 }
 
 #deutsch {
-    right: 75%;
-    top: 50%;
+    /* right: 75%;
+    top: 50%; */
 }
