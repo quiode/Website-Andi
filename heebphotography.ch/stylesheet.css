@@ -23,16 +23,16 @@ a {
     text-decoration: none;
     position: absolute;
     font-size: 1000%;
-    width: 0px;
-    height: 0px;
+    width: 50%;
+    height: 50%;
 }
 
 #english {
-    left: 25%;
-    top: 50%;
+    /* left: 25%;
+    top: 50%; */
 }
 
 #deutsch {
-    right: 25%;
-    top: 50%;
+    /* right: 25%;
+    top: 50%; */
 }
