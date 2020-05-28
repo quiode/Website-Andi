@@ -8,10 +8,10 @@
 <body>
     <ul>
         <li>
-            <a id="english">English</a>
+            <a href="../public/english" id="english">English</a>
         </li>
         <li>
-            <a id="german">Deutsch</a>
+            <a href="../public/deutsch" id="deutsch">Deutsch</a>
         </li>
     </ul>
 </body>
