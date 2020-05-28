@@ -23,6 +23,8 @@ a {
     text-decoration: none;
     position: absolute;
     font-size: 1000%;
+    width: 0px;
+    height: 0px;
 }
 
 #english {
