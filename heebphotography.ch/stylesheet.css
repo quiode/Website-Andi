@@ -13,10 +13,13 @@ a:hover {
     background-color: green;
     text-decoration: none;
 }
-a:hover ~ #background_english {
+#english:hover ~ #background_english {
     background-color: green;
 }
 
+#deutsch:hover ~ #background_deutsch {
+    background-color: green;
+}
 a:checked {
     color: black;
     text-decoration: none;
@@ -54,4 +57,13 @@ a {
     z-index: 0;
     top: 0%;
     left: 0%;
+}
+#background_deutsch {
+    position: fixed;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    z-index: 0;
+    top: 0%;
+    left: 50%;
 }
