@@ -1,8 +1,14 @@
 <html>
 
 <body>
-    <h1>Deutsch</h1>
-    <h1>English</h1>
+    <ul>
+        <li>
+            <a>English</a>
+        </li>
+        <li>
+            <a>Deutsch</a>
+        </li>
+    </ul>
 </body>
 
 </html>
