@@ -7,18 +7,22 @@ ul {
     top: 50%;
     left: 50%;
 } */
+#english:hover {
+    color: blue;
+}
 
-#english:hover ~ #background_english {
+#english:hover~#background_english {
     background-color: green;
     color: black;
     text-decoration: none;
 }
 
-#deutsch:hover ~ #background_deutsch {
+#deutsch:hover~#background_deutsch {
     background-color: green;
     color: black;
     text-decoration: none;
 }
+
 a:checked {
     color: black;
     text-decoration: none;
@@ -57,6 +61,7 @@ a {
     top: 0%;
     left: 0%;
 }
+
 #background_deutsch {
     position: fixed;
     background-color: white;
