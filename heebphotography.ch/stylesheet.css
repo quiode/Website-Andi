@@ -10,6 +10,7 @@ ul {
 
 a:hover {
     color: black;
+    background-color: green;
     text-decoration: none;
 }
 
@@ -36,6 +37,6 @@ a {
 }
 
 #deutsch {
-    right: 25%;
+    left: 75%;
     top: 50%;
 }
