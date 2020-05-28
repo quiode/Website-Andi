@@ -27,6 +27,7 @@ a {
     /* display: inline-block; */
     width: 50%;
     height: 100%;
+    text-align: center;
     /* margin: 0%; */
     transform: translate(-50%, -50%);
 }
