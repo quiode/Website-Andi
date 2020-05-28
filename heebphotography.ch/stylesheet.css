@@ -7,9 +7,6 @@ ul {
     top: 50%;
     left: 50%;
 } */
-#english:hover {
-    color: blue;
-}
 
 #english:hover~#background_english {
     background-color: green;
@@ -54,7 +51,7 @@ a {
 
 #background_english {
     position: fixed;
-    background-color: white;
+    /* background-color: white; */
     width: 50%;
     height: 100%;
     z-index: 0;
@@ -64,7 +61,7 @@ a {
 
 #background_deutsch {
     position: fixed;
-    background-color: white;
+    /* background-color: white; */
     width: 50%;
     height: 100%;
     z-index: 0;
