@@ -8,16 +8,24 @@
 </head>
 
 <body>
-    <?php
+    <nav>
+    </nav>
+    <article>
+        <?php
     $images = scandir("images", 1);
     unset($images[sizeof($images)-1]);
     unset($images[sizeof($images)-1]);
     foreach ($images as $image){
+        echo "<section>";
+
         echo "<img src=\"images/";
         echo $image;
         echo "\">";
+
+        echo "</section>";
     }
     ?>
+    </article>
 </body>
 
 </html>
