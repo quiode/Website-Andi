@@ -1,7 +1,8 @@
 .image {
-    max-width: 200px;
+    /* max-width: 200px;
     max-height: 400px;
     min-width: 50px;
-    min-height: 100px;
+    min-height: 100px; */
     width: 25%;
+    height: auto;
 }
