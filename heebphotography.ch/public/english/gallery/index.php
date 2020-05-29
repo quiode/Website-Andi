@@ -16,13 +16,19 @@
     $images = scandir("images", 1);
     unset($images[sizeof($images)-1]);
     unset($images[sizeof($images)-1]);
+    $test = array(1,2);
+    $test[2] = "hi";
+    echo $test;
     foreach ($images as $image){
-        // echo "<section>";
-        echo "<img src=\"images/";
-        echo $image;
-        echo "\" class=\"image\">";
-        // echo "</section>";
+
     }
+    // foreach ($images as $image){
+    //     echo "<section>";
+    //     echo "<img src=\"images/";
+    //     echo $image;
+    //     echo "\" class=\"image\">";
+    //     echo "</section>";
+    // }
         ?>
     </article>
 </body>
