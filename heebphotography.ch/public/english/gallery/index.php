@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    $images = scandir("/./images", 1);
+    $images = scandir("/../images/", 1);
     echo $images;
     ?>
     OK WTF WARUM GAHT DAS NÖD
