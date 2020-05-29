@@ -15,3 +15,15 @@
     padding-right: 0%;
     padding-bottom: 0%;
 } */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+}
+
+.image {
+    vertical-align: middle;
+}
