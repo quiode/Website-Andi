@@ -18,7 +18,7 @@
     unset($images[sizeof($images)-1]);
     $test = array(1,2);
     $test[2] = "hi";
-    echo $test;
+    print_r($test);
     foreach ($images as $image){
 
     }
