@@ -1,6 +1,7 @@
 .image {
-    max-width: 10%;
-    max-height: 10%;
+    max-width: 200px;
+    max-height: 400px;
     min-width: 50px;
     min-height: 100px;
+    width: 25%;
 }
