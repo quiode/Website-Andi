@@ -18,6 +18,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 4px;
 }
 
 .column {
@@ -27,5 +28,5 @@
 
 .image {
     vertical-align: middle;
-    padding: 0 4px;
+    margin-top: 8px;
 }
