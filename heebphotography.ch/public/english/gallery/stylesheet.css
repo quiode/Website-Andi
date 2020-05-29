@@ -8,5 +8,6 @@
     height: auto;
     margin-left: 1vw;
     margin-right: 1vw;
-    margin-top: 5vw;
+    margin-top: 2vw;
+    max-height: 100vh;
 }
