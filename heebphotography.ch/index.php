@@ -4,6 +4,7 @@
 <head>
     <title>Language | Wildlifephotography Andreas Heeb</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
