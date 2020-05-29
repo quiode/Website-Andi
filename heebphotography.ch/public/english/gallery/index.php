@@ -13,7 +13,7 @@
     foreach ($images as $image){
         echo "<img src=\"images/";
         echo $image;
-        echo ">";
+        echo "\">";
     }
     ?>
 </body>
