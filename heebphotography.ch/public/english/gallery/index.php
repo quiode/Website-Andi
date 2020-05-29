@@ -11,26 +11,76 @@
 <body>
     <nav>
     </nav>
-    <article id="gallery">
+    <div id="gallery">
         <?php
     $images = scandir("images", 1);
     unset($images[sizeof($images)-1]);
     unset($images[sizeof($images)-1]);
-    $test = array(1,2);
-    $test[2] = "hi";
-    print_r($test);
-    foreach ($images as $image){
-
+    $image_column_1 = array();
+    $image_column_2 = array();
+    $image_column_3 = array();
+    $image_column_4 = array();
+    
+    $i = 0;
+    $c = 0;
+    while ($i <= sizeof($images)) {
+        $image_column_1[$c] = $images[$i++];
+        if ($i >= sizeof($images)) {
+        break;
+        }
+        $image_column_2[$c] = $images[$i++];
+        if ($i >= sizeof($images)) {
+        break;
+        }
+        $image_column_3[$c] = $images[$i++];
+        if ($i >= sizeof($images)) {
+        break;
+        }
+        $image_column_4[$c++] = $images[$i++];
     }
-    // foreach ($images as $image){
-    //     echo "<section>";
-    //     echo "<img src=\"images/";
-    //     echo $image;
-    //     echo "\" class=\"image\">";
-    //     echo "</section>";
-    // }
         ?>
-    </article>
+        <div class="row">
+            <div class="column">
+                <?php
+                foreach ($image_column_1 as $image) {
+                        echo "<img src=\"images/";
+                        echo $image;
+                        echo "\" class=\"image\">";
+                }
+                ?>
+            </div>
+
+            <div class="column">
+                <?php
+                foreach ($image_column_1 as $image) {
+                        echo "<img src=\"images/";
+                        echo $image;
+                        echo "\" class=\"image\">";
+                }
+                ?>
+            </div>
+
+            <div class="column">
+                <?php
+                foreach ($image_column_1 as $image) {
+                        echo "<img src=\"images/";
+                        echo $image;
+                        echo "\" class=\"image\">";
+                }
+                ?>
+            </div>
+
+            <div class="column">
+                <?php
+                foreach ($image_column_1 as $image) {
+                        echo "<img src=\"images/";
+                        echo $image;
+                        echo "\" class=\"image\">";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
