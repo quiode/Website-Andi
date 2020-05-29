@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    $images = scandir("/./images/", 1);
+    $images = scandir("heebphotography.ch/public/english/images", 1);
     echo $images;
     ?>
 </body>
