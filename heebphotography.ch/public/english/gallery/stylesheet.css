@@ -34,4 +34,9 @@
 
 #gallery {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.image {
+    flex-basis: 25vw;
 }
