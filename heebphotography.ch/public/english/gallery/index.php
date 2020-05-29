@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    $images = scandir("/../images/", 1);
+    $images = scandir("/../images", 1);
     echo $images;
     ?>
     <img src="/../images/2.jpg" />
