@@ -4,11 +4,11 @@
     min-width: 50px;
     min-height: 100px; */
     position: relative;
-    width: 23vw;
+    width: 24vw;
     height: auto;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    margin-top: 2vw;
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+    margin-top: 0.2vw;
     max-height: 100vh;
     padding-left: 0%;
     padding-top: 0%;
