@@ -17,13 +17,11 @@
     unset($images[sizeof($images)-1]);
     unset($images[sizeof($images)-1]);
     foreach ($images as $image){
-        echo "<section>";
-
+        // echo "<section>";
         echo "<img src=\"images/";
         echo $image;
         echo "\" class=\"image\">";
-
-        echo "</section>";
+        // echo "</section>";
     }
         ?>
     </article>
