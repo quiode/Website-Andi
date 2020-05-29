@@ -11,6 +11,7 @@
     <?php
     $images = scandir("/images", 1);
     echo $images;
+    echo "test";
     ?>
     <img src="/images/2.jpg" />
     OK WTF WARUM GAHT DAS NÖD
