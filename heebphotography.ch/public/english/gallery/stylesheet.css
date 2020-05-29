@@ -39,4 +39,8 @@
 
 .image {
     width: 24vw;
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+    margin-top: 0.1vh;
+    margin-bottom: 0.1vh;
 }
