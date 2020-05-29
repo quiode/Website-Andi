@@ -10,12 +10,12 @@
 <body>
     <?php
     $images = scandir("images", 1);
-    foreach ($images as $image) {
+    foreach ($images as $image){
+        echo "<img src=\"images/";
         echo $image;
+        echo ">";
     }
     ?>
-    <img src="/images/2.jpg" />
-    OK WTF WARUM GAHT DAS NÖD
 </body>
 
 </html>
