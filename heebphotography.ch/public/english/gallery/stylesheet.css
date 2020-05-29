@@ -15,7 +15,8 @@
     padding-right: 0%;
     padding-bottom: 0%;
 } */
-.row {
+
+/* .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
@@ -29,4 +30,8 @@
 .image {
     vertical-align: middle;
     margin-top: 8px;
+} */
+
+#gallery {
+    display: flex;
 }
