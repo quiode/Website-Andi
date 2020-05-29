@@ -9,9 +9,10 @@
 
 <body>
     <?php
-    $images = scandir("heebphotography.ch/public/english/images", 1);
+    $images = scandir("/./images", 1);
     echo $images;
     ?>
+    OK WTF WARUM GAHT DAS NÖD
 </body>
 
 </html>
