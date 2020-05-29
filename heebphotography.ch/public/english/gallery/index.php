@@ -11,7 +11,7 @@
     <?php
     $images = scandir("/../images", 1);
     echo $images;
-    foreach(glob('./images/*.*') as $filename){
+    foreach(glob('/../images/*.*') as $filename){
         echo $filename;
     }
     ?>
