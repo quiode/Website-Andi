@@ -10,6 +10,8 @@
 <body>
     <?php
     $images = scandir("images", 1);
+    unset($images[-1]);
+    unset($images[-1]);
     foreach ($images as $image){
         echo "<img src=\"images/";
         echo $image;
