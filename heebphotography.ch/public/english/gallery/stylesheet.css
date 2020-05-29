@@ -4,6 +4,9 @@
     min-width: 50px;
     min-height: 100px; */
     position: relative;
-    width: 22vw;
+    width: 23vw;
     height: auto;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 5vw;
 }
