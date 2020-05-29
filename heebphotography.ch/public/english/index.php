@@ -25,7 +25,7 @@
 
         <article>
             <header>
-                <img src="/images/example_image.jpg">
+                <img src="/gallery/images/example_image.jpg">
             </header>
         </article>
     </section>
