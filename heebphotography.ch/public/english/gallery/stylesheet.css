@@ -34,7 +34,7 @@
     margin-top: 8px;
 }
 
-@media screen and (max-width: 800px){
+/* @media screen and (max-width: 800px){
     .column {
         flex: 50%;
         padding: 0 4px;
@@ -46,4 +46,4 @@
         flex: 100%;
         padding: 0 4px;
     }
-}
+} */
