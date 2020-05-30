@@ -26,6 +26,7 @@
     flex: 25%;
     max-width: 24%;
     padding: 0 4px;
+    justify-content: space-around;
 }
 
 .image {
