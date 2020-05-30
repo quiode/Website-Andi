@@ -25,9 +25,11 @@
 .column {
     flex: 25%;
     padding: 0 4px;
+    max-width: 25%;
 }
 
 .image {
     vertical-align: middle;
     margin-top: 8px;
+    width: 100%;
 }
