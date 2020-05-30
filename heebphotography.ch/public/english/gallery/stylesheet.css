@@ -34,6 +34,10 @@
     margin-top: 8px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
 /* @media screen and (max-width: 800px){
     .column {
         flex: 50%;
