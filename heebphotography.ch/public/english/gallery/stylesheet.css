@@ -19,17 +19,17 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    /* padding: 0 4px; */
 }
 
 .column {
     flex: 25%;
-    padding: 0 4px;
+    /* padding: 0 4px; */
     max-width: 25%;
 }
 
 .image {
     vertical-align: middle;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     width: 100%;
 }
