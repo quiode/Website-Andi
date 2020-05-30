@@ -39,9 +39,10 @@ body {
     margin: 0;
     padding: 0;
 }
-/* @media screen and (max-width: 800px){
+@media screen and (max-width: 800px){
     .column {
         flex: 50%;
+        max-width: 48%;
         padding: 0 4px;
     }
 }
@@ -49,6 +50,7 @@ body {
 @media screen and (max-width: 600px){
     .column {
         flex: 100%;
+        max-width: 96%;
         padding: 0 4px;
     }
-} */
+}
