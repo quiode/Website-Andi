@@ -1,21 +1,3 @@
-/* .image {
-    max-width: 200px;
-    max-height: 400px;
-    min-width: 50px;
-    min-height: 100px;
-    position: relative;
-    height: 24vw;
-    width: auto;
-    margin-left: 0.1vw;
-    margin-right: 0.1vw;
-    margin-top: 0.2vw;
-    max-height: 100vh;
-    padding-left: 0%;
-    padding-top: 0%;
-    padding-right: 0%;
-    padding-bottom: 0%;
-} */
-
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -39,6 +21,8 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* two images for tablets/smaller computers */
 @media screen and (max-width: 800px){
     .column {
         flex: 50%;
@@ -47,6 +31,7 @@ body {
     }
 }
 
+/* one image for smartphones */
 @media screen and (max-width: 600px){
     .column {
         flex: 100%;
