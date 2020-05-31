@@ -5,8 +5,8 @@
     display: inline-block;
     cursor: pointer;
     display: fixed;
-    top: 2%;
-    left: 2%;
+    top: 5%;
+    left: 5%;
   }
   
   .bar1, .bar2, .bar3 {
@@ -36,4 +36,6 @@
 
 #navigation_bar {
     display: none;
+    position: fixed;
+
 }
