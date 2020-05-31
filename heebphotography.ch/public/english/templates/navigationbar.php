@@ -1,7 +1,7 @@
 <nav>
     <?php
     // includes the javascript file
-    echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>"
+    echo "<script src=\"" . $_SERVER['DOCUMENT_ROOT'] . "/templates/navigationbar.js" . "\"></script>"
     ?>
     <!-- makes the button for navigation -->
     <div class="navigation_button" onclick="navigation_button(this)">
