@@ -13,7 +13,7 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
-    <div id="navigation_bar">
+    <div id="navigation">
         <ul>
             <?php
         echo "<li class=\"links\"><a href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "gallery/" . "\">Gallery</a></li>";

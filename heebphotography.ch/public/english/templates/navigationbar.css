@@ -34,7 +34,7 @@
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
 
-#navigation_bar {
+#navigation {
     /* display: none; */
     height: 0%;
     position: fixed;

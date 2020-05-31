@@ -1,10 +1,11 @@
 function navigation_button(button) {
     button.classList.toggle("change");
+    var navigation = document.getElementById("navigation");
     if (button.classList.contains("change")) {
         alert("Going Down");
-        button.style.height = "100%";
+        navigation.style.height = "100%";
     } else {
         alert("Going Up");
-        button.style.height = "0%";
+        navigation.style.height = "0%";
     }
   } 
