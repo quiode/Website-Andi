@@ -4,6 +4,9 @@
 .navigation_button {
     display: inline-block;
     cursor: pointer;
+    display: fixed;
+    top: 2%;
+    left: 2%;
   }
   
   .bar1, .bar2, .bar3 {
@@ -30,3 +33,7 @@
     -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
+
+#navigation_bar {
+    display: none;
+}
