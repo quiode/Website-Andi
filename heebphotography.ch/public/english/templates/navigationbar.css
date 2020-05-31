@@ -15,10 +15,11 @@
 
 /* the navigation element */
 #navigation-content {
-    top: 25%;
+    top: 50%;
     width: 100%;
     text-align: center;
     position: relative;
+    transform: translateY(50%);
 }
 
 /* styling for the links to the other pages */
