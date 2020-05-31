@@ -38,5 +38,5 @@
     /* display: none; */
     height: 0%;
     position: fixed;
-    transition: 1s;
+    transition: width 1s;
 }
