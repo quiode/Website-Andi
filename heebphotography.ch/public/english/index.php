@@ -13,7 +13,10 @@
 
 <body>
     <header></header>
-    <?php include "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.php"?>
+    <?php 
+    $navigationbar_file = "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.php";
+    include $navigationbar_file;
+    ?>
     <section>
         <article></article>
     </section>
