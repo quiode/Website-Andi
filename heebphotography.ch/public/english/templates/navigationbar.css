@@ -39,7 +39,7 @@
     /* display: none; */
     height: 0%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     transition: height 1s;
     top: 0;
