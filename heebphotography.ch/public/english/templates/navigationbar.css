@@ -37,6 +37,8 @@
 #navigation {
     /* display: none; */
     height: 0%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     transition: height 1s;
 }
