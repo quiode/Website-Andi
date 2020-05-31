@@ -15,6 +15,7 @@
     <header></header>
     <?php 
     $navigationbar_file = "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.php";
+    echo $navigationbar_file;
     include $navigationbar_file;
     ?>
     <section>
