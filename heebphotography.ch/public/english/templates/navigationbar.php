@@ -1,4 +1,5 @@
 <!-- only temporary -->
+
 <head>
     <link rel="stylesheet" href="navigationbar.css">
 </head>
@@ -14,14 +15,12 @@
         <div class="bar3"></div>
     </div>
     <div id="navigation">
-        <ul>
-            <?php
-        echo "<li class=\"links\"><a href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "gallery/" . "\">Gallery</a></li>";
-        echo "<li class=\"links\"><a href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "about me/" . "\">About me</a></li>";
-        echo "<li class=\"links\"><a href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "linktree/" . "\">Linktree</a></li>";
-        echo "<li class=\"links\"><a href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "contact/" . "\">Contact</a></li>";
-        echo "<li class=\"links\"><a href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "impressum/" . "\">Impressum</a></li>";
+        <?php
+        echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "gallery/" . "\">Gallery</a>";
+        echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "about me/" . "\">About me</a>";
+        echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "linktree/" . "\">Linktree</a>";
+        echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "contact/" . "\">Contact</a>";
+        echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "impressum/" . "\">Impressum</a>";
         ?>
-        </ul>
     </div>
 </nav>
