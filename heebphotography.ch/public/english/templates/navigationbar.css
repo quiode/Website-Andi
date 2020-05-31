@@ -7,6 +7,7 @@
     cursor: pointer;
     top: 5%;
     left: 5%;
+    z-index: 2;
   }
   
   .bar1, .bar2, .bar3 {
