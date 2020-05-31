@@ -5,12 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
+    <?php
+    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
+    ?>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
 
 <body>
-    <nav>
-    </nav>
+    
+    <!-- navigation element -->
+    <?php include './templates/navigationbar.php'?>
+
     <div id="gallery">
         <?php
     // searches the filename of all images in the images folder
