@@ -1,8 +1,8 @@
 <!-- only temporary -->
-
 <head>
     <link rel="stylesheet" href="navigationbar.css">
 </head>
+<!-- only temporary -->
 
 <nav>
     <?php
