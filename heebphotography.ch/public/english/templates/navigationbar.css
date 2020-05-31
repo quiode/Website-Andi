@@ -34,7 +34,7 @@
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
 
-#navigation {
+#navigation-overlay {
     /* display: none; */
     height: 0%;
     width: 100%;
