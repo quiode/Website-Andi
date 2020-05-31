@@ -15,6 +15,7 @@
     height: 10px;
     background-color: black;
     margin: 12px 0;
+    transition: opacity 0.4s;
     transition: 0.8s;
   }
   
