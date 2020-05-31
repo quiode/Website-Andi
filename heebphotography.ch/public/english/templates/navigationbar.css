@@ -59,4 +59,6 @@
 
 .links {
     display: block;
+    color: white;
+    text-decoration: none;
 }
