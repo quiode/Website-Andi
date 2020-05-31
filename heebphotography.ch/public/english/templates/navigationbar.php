@@ -1,3 +1,9 @@
+<!-- only temporary -->
+
+<head>
+    <link rel="stylesheet" href="navigationbar.css">
+</head>
+
 <nav>
     <?php
     echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>"
