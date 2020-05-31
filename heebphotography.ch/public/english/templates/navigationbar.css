@@ -2,9 +2,8 @@
     list-style-type:none;
 }
 .navigation_button {
-    display: inline-block;
-    cursor: pointer;
     display: fixed;
+    cursor: pointer;
     top: 5%;
     left: 5%;
   }
