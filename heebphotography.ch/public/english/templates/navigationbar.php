@@ -2,10 +2,10 @@
     <?php
     echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>"
     ?>
-    <div id="navigation_button" onclick="navigation_button(this)">
-        <div id="bar1"></div>
-        <div id="bar2"></div>
-        <div id="bar3"></div>
+    <div class="navigation_button" onclick="navigation_button(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
     </div>
     <ul>
         <?php
