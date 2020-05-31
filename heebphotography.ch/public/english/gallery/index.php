@@ -14,7 +14,7 @@
 <body>
     
     <!-- navigation element -->
-    <?php include './templates/navigationbar.php'?>
+    <?php include '../english/templates/navigationbar.php'?>
 
     <div id="gallery">
         <?php

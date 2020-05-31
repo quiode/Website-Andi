@@ -13,7 +13,7 @@
 
 <body>
     <header></header>
-    <?php include './templates/navigationbar.php'?>
+    <?php include '../english/templates/navigationbar.php'?>
     <section>
         <article></article>
     </section>
