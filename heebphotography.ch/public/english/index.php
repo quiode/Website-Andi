@@ -7,7 +7,7 @@
     <title>Wildlifephotography Andreas Heeb</title>
     <link rel="stylesheet" href="stylesheet.css">
     <?php
-    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . ">";
+    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
     ?>
     <script src="code.js"></script>
 </head>
