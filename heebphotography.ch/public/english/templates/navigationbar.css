@@ -14,14 +14,14 @@
     width: 70px;
     height: 10px;
     background-color: black;
-    margin: 6px 0;
+    margin: 12px 0;
     transition: 0.8s;
   }
   
   /* Rotate first bar */
   .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
+    -webkit-transform: rotate(-45deg) translate(-18px, 12px) ;
+    transform: rotate(-45deg) translate(-18px, 12px) ;
   }
   
   /* Fade out the second bar */
@@ -31,8 +31,8 @@
   
   /* Rotate last bar */
   .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
+    -webkit-transform: rotate(45deg) translate(-16px, -16px) ;
+    transform: rotate(45deg) translate(-16px, -16px) ;
   }
 
 #navigation-overlay {
