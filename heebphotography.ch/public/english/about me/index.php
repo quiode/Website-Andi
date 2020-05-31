@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <?php include '../english/templates/navigationbar.php'?>
+    <?php include '../templates/navigationbar.php'?>
 
 </body>
 
