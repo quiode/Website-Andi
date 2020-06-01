@@ -18,7 +18,7 @@
     <section>
         <article>
         <img src="https://media.discordapp.net/attachments/524692091939454986/717120597267710053/perfect-perfect-owl.gif" width="100%" height="50%">
-        <img src="https://cdn.discordapp.com/attachments/679426398728749077/717118977951924314/coole_eissperber.jpg" width="200%" height="50%">
+        <img src="https://cdn.discordapp.com/attachments/679426398728749077/717118977951924314/coole_eissperber.jpg" width="100%" height="50%">
         </article>
     </section>
 
