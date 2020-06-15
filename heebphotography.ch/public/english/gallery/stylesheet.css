@@ -63,7 +63,7 @@ body {
 #close_btn{
     cursor: pointer;
     position: fixed;
-    transform: rotate(45);
+    transform: rotate(45deg);
 }
 
 #pline_1 {
@@ -76,6 +76,6 @@ body {
     background-color: black;
     width: 50px;
     height: 6px;
-    transform: rotate(90);
+    transform: rotate(90deg);
     left: 22px;
 }
