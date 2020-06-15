@@ -39,3 +39,11 @@ body {
         padding: 0 4px;
     }
 }
+
+#slideshow {
+    position: fixed;
+    top: 2.5%;
+    left: 2.5%;
+    right: 2.5%;
+    bottom: 2.5%;
+}
