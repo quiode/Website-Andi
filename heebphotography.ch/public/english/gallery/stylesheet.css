@@ -69,14 +69,12 @@ body {
 }
 
 #pline_1 {
-    position: relative;
     background-color: black;
     width: 70px;
     height: 10px;
 }
 
 #pline_2 {
-    position: relative;
     background-color: black;
     width: 70px;
     height: 10px;
