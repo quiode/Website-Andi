@@ -8,6 +8,7 @@
     <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
     ?>
+    <script src="script.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
 
@@ -93,7 +94,7 @@
 
     <!-- the slideshow that pops up when clicking on an image -->
     <div id="slideshow">
-        <img src="./images/101030189_1928756140588065_3843172269444384879_n.jpg">
+        <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg" onload="resizeToMax()">
 
         <div id="last_picture">
         </div>

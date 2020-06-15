@@ -9,7 +9,7 @@
     <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
     ?>
-    <script src="code.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
