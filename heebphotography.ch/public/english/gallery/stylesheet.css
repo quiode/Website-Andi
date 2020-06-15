@@ -69,16 +69,16 @@ body {
 }
 
 #pline_1 {
+    position: relative;
     background-color: black;
     width: 70px;
     height: 10px;
-    bottom: 40;
 }
 
 #pline_2 {
+    position: relative;
     background-color: black;
     width: 70px;
     height: 10px;
     transform: rotate(90deg);
-    left: 40;
 }
