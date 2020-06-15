@@ -73,6 +73,9 @@ body {
     background-color: black;
     width: 70px;
     height: 10px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
 }
 
 #pline_2 {
@@ -81,4 +84,7 @@ body {
     width: 70px;
     height: 10px;
     transform: rotate(90deg);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
 }
