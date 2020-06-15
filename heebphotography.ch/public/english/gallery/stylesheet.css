@@ -76,6 +76,7 @@ body {
 #pline_2 {
     background-color: black;
     width: 70px;
-    height: 6px;
+    height: 10px;
     transform: rotate(90deg);
+    left: 40;
 }
