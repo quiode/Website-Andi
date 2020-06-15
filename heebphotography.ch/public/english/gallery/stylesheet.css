@@ -42,7 +42,7 @@ body {
 
 #slideshow {
     z-index: 4;
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 2.5%;
     left: 2.5%;
@@ -55,6 +55,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 90%;
 }
