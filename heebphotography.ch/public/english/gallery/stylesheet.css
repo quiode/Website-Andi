@@ -41,6 +41,7 @@ body {
 }
 
 #slideshow {
+    z-index: 4;
     display: none;
     position: fixed;
     top: 2.5%;
