@@ -68,14 +68,14 @@ body {
 
 #pline_1 {
     background-color: black;
-    width: 50px;
-    height: 6px;
+    width: 70px;
+    height: 10px;
 }
 
 #pline_2 {
     background-color: black;
-    width: 50px;
+    width: 70px;
     height: 6px;
     transform: rotate(90deg);
-    left: 22px;
+    left: 35px;
 }
