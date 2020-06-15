@@ -59,3 +59,23 @@ body {
     max-width: 90%;
     max-height: 90%;
 }
+
+#close_btn{
+    cursor: pointer;
+    position: fixed;
+    transform: rotate(45);
+}
+
+#pline_1 {
+    background-color: black;
+    width: 10px;
+    height: 2px;
+}
+
+#pline_1 {
+    background-color: black;
+    width: 10px;
+    height: 2px;
+    transform: rotate(90);
+    left: 4px;
+}

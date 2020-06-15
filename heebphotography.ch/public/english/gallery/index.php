@@ -94,7 +94,8 @@
 
     <!-- the slideshow that pops up when clicking on an image -->
     <div id="slideshow">
-        <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg" onload="resizeToMax()">
+        <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg"
+            onload="resizeToMax()">
 
         <div id="last_picture">
         </div>
@@ -103,6 +104,10 @@
         </div>
 
         <div id="close_btn">
+            <div id="plus">
+                <div id="pline_1"></div>
+                <div id="pline_2"></div>
+            </div>
         </div>
     </div>
 </body>
