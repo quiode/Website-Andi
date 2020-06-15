@@ -91,8 +91,18 @@
         </div>
     </div>
 
+    <!-- the slideshow that pops up when clicking on an image -->
     <div id="slideshow">
         <img src="./images/101030189_1928756140588065_3843172269444384879_n.jpg">
+
+        <div id="last_picture">
+        </div>
+
+        <div id="next_picture">
+        </div>
+
+        <div id="close_btn">
+        </div>
     </div>
 </body>
 
