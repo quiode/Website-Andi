@@ -14,7 +14,7 @@
 
 <body>
     <header></header>
-    <?php include '../english/templates/navigationbar.php'?>
+    <?php require '../english/templates/navigationbar.php'?>
     <section>
         <article>
         <img src="https://media.discordapp.net/attachments/524692091939454986/717120597267710053/perfect-perfect-owl.gif" width="100%" height="50%">
