@@ -61,6 +61,8 @@ body {
 }
 
 #close_btn{
+    top: 20%;
+    left: 15%;
     cursor: pointer;
     position: fixed;
     transform: rotate(45deg);
