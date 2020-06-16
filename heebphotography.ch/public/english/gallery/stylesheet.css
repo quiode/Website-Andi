@@ -41,6 +41,19 @@ body {
     }
 }
 
+#slideshow_background {
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    position: fixed;
+    background-color: black;
+    opacity: 90%;
+    display: none;
+}
+
 #slideshow {
     z-index: 4;
     position: fixed;
@@ -52,18 +65,6 @@ body {
     opacity: 1;
 }
 
-#slideshow_background{
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
-    position: fixed;
-    color: black;
-    opacity: 90%;
-    display: none;
-}
 
 #slideshow img {
     object-fit: contain;
