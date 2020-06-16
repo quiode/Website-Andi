@@ -23,7 +23,7 @@ body {
 }
 
 /* two images for tablets/smaller computers */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .column {
         flex: 50%;
         max-width: 48%;
@@ -32,7 +32,7 @@ body {
 }
 
 /* one image for smartphones */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     .column {
         flex: 100%;
         max-width: 96%;
@@ -60,7 +60,7 @@ body {
     max-height: 90%;
 }
 
-#close_btn{
+#close_btn {
     top: 20%;
     left: 15%;
     cursor: pointer;
@@ -78,5 +78,5 @@ body {
     background-color: black;
     width: 70px;
     height: 10px;
-    transform:translateY(-10px) rotate(90deg);
+    transform: translateY(-10px) rotate(90deg);
 }
