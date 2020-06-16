@@ -32,7 +32,7 @@
 }
 
 /* everything here is for the navigation button */
-.navigation_button {
+#navigation_button {
   display: inline-block;
   position: fixed;
   cursor: pointer;
