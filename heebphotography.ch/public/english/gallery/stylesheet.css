@@ -52,10 +52,11 @@ body {
     background-color: black;
     opacity: 90%;
     display: none;
+    z-index: 4;
 }
 
 #slideshow {
-    z-index: 4;
+    z-index: 5;
     position: fixed;
     top: 2.5%;
     left: 2.5%;
