@@ -17,7 +17,7 @@
     <!-- navigation element -->
     <?php require '../templates/navigationbar.php'?>
 
-    <div id = "gallery">
+    <div id="gallery">
         <?php
         // searches the filename of all images in the images folder
         $images =  scandir("images", 1);
