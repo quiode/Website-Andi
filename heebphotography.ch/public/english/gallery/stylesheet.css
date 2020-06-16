@@ -49,6 +49,7 @@ body {
     right: 2.5%;
     bottom: 2.5%;
     display: none;
+    opacity: 1;
 }
 
 #slideshow_background{
