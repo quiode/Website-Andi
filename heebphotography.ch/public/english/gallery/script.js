@@ -10,5 +10,10 @@ function resizeToMax() {
 }
 
 function slideshow_on(_src) {
-    
+    document.getElementById("navigation_button").style.display = "none";
+    document.getElementById("slideshow").style.display = "initial";
 }
+
+// function slideshow_off() {
+
+// }
