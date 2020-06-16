@@ -84,13 +84,13 @@ body {
 }
 
 #pline_1 {
-    background-color: black;
+    background-color: white;
     width: 70px;
     height: 10px;
 }
 
 #pline_2 {
-    background-color: black;
+    background-color: white;
     width: 70px;
     height: 10px;
     transform: translateY(-10px) rotate(90deg);
