@@ -8,3 +8,7 @@ function resizeToMax() {
         img.style.height = "100%";
     }
 }
+
+function slideshow_on(_src) {
+    
+}
