@@ -93,7 +93,7 @@
     </div>
 
     <!-- the slideshow that pops up when clicking on an image -->
-    <div id="slideshow background">
+    <div id="slideshow_background">
         <div id="slideshow">
             <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg"
                 onload="resizeToMax()">
