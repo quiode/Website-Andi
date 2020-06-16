@@ -13,6 +13,7 @@ function slideshow_on(_src) {
     document.getElementById("navigation_button").style.display = "none";
     document.getElementById("slideshow_background").style.display = "block";
     document.getElementById("slideshow").style.display = "block";
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
 }
 
 // function slideshow_off() {
