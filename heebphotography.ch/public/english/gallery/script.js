@@ -16,6 +16,9 @@ function slideshow_on(_src) {
     document.getElementsByTagName("body")[0].style.overflow = "hidden";
 }
 
-// function slideshow_off() {
-
-// }
+function slideshow_off() {
+    document.getElementById("navigation_button").style.display = "inline-block";
+    document.getElementById("slideshow_background").style.display = "none";
+    document.getElementById("slideshow").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflow = "auto";
+}

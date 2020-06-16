@@ -104,7 +104,7 @@
             <div id="next_picture">
             </div>
 
-            <div id="close_btn">
+            <div id="close_btn" onclick="slideshow_off()">
                 <div id="plus">
                     <div id="pline_1"></div>
                     <div id="pline_2"></div>
