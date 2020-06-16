@@ -17,6 +17,7 @@
         </li> -->
         <li>
             <?php
+            $lol = "lol";
             echo "<a href=\"https://en.";
             echo $_SERVER['HTTP_HOST'];
             echo "\" id =\"english\">English</a>"
@@ -25,7 +26,7 @@
         </li>
         <li>
             <?php
-            echo "<a href=\"https://de.";
+            echo  "<a href=\"https://de.";
             echo $_SERVER['HTTP_HOST'];
             echo "\" id =\"deutsch\">Deutsch</a>"
             ?>
