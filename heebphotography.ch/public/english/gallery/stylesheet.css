@@ -91,3 +91,33 @@ body {
     height: 1vmax;
     transform: translateY(-1vmax) rotate(90deg);
 }
+
+.arrows {
+    font-size: 15vmax;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    color: white;
+    position: relative;
+}
+
+#last_picture {
+}
+
+#next_picture {
+}
+
+.arrows_background {
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+}
+
+#last_picture_background {
+    left: 0;
+}
+
+#next_picture_background {
+    right: 0;
+}
