@@ -101,13 +101,13 @@
             <!-- for navigation within the slideshow -->
             <div id="last_picture_background" class="arrows_background">
                 <div id="last_picture" class="arrows">
-                    &lt
+                    &#8249;
                 </div>
             </div>
 
             <div id="next_picture_background" class="arrows_background">
                 <div id="next_picture" class="arrows">
-                    &gt
+                    &#8250;
                 </div>
             </div>
 
