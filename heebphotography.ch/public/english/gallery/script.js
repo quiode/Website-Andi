@@ -7,13 +7,24 @@ function resizeToMax() {
     } else {
         img.style.height = "100%";
     }
+    var arrows_background = document.getElementsByClassName("arrows_background");
+    for (let index = 0; index < arrows_background.length; index++) {
+        const arrow = arrows_background[index];
+        arrow.style.width = (Number(img.getBoundingClientRect().width) / 2) + "px";
+    }
+    // var arrows = document.getElementsByClassName("arrows");
+    // for (let index = 0; index < arrows.length; index++) {
+    //     const arrow = arrows[index];
+    //     arrow.style.width = (Number(img.getBoundingClientRect().width) / 2) + "px";
+    // }
 }
 
-function slideshow_on(_src) {
+function slideshow_on(src) {
     document.getElementById("navigation_button").style.display = "none";
     document.getElementById("slideshow_background").style.display = "block";
     document.getElementById("slideshow").style.display = "block";
     document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    document.getElementById("slideshow_image").src = src;
 }
 
 function slideshow_off() {

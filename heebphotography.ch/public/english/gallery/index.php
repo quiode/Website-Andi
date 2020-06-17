@@ -98,10 +98,17 @@
             <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg"
                 onload="resizeToMax()">
 
-            <div id="last_picture">
+            <!-- for navigation within the slideshow -->
+            <div id="last_picture_background" class="arrows_background">
+                <div id="last_picture" class="arrows">
+                    &#8249;
+                </div>
             </div>
 
-            <div id="next_picture">
+            <div id="next_picture_background" class="arrows_background">
+                <div id="next_picture" class="arrows">
+                    &#8250;
+                </div>
             </div>
 
             <div id="close_btn" onclick="slideshow_off()">
