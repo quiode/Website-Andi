@@ -16,14 +16,16 @@ p {
 
 /*Bilder*/
 
-img:hover {
-    cursor: pointer;
-}
 
 /*Fusszeile*/
+footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
 
 /*Gallerie*/
 
 @media only screen and (max-width: 600px) {
-
+    
 }

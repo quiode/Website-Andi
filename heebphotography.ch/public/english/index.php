@@ -13,7 +13,9 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h2>Heeb Photography</h2>
+    </header>
     <?php require '../english/templates/navigationbar.php'?>
     <section>
         <article>
@@ -27,7 +29,7 @@
     </aside>
 
     <footer>
-
+        <p>&copy; Andreas Heeb 2020</p>
     </footer>
 </body>
 
