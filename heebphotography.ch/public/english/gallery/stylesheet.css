@@ -102,10 +102,22 @@ body {
     position: relative;
 }
 
-#last_picture {
+#nline_1{
+    background-color: white;
+    width: 7vmax;
+    height: 1vmax;
+    transform: rotate(-45deg);
+    transform-origin: 0% 0%;
+    position: fixed;
 }
 
-#next_picture {
+#nline_2{
+    background-color: white;
+    width: 7vmax;
+    height: 1vmax;
+    transform: rotate(45deg);
+    transform-origin: 0% 0%;
+    position: fixed;
 }
 
 .arrows_background {
