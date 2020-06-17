@@ -107,8 +107,7 @@
 
             <div id="next_picture_background" class="arrows_background">
                 <div id="next_picture" class="arrows">
-                    <div id="nline_1"></div>
-                    <div id="nline_2"></div>
+                    &gt
                 </div>
             </div>
 
