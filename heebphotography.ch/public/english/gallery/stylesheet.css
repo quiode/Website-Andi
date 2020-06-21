@@ -77,6 +77,7 @@ body {
     cursor: pointer;
     position: fixed;
     transform: rotate(45deg);
+    z-index: 6;
 }
 
 #pline_1 {
@@ -100,6 +101,7 @@ body {
     z-index: 5;
     color: white;
     position: relative;
+    text-align: center;
 }
 
 #last_picture {
@@ -112,6 +114,11 @@ body {
     height: 100%;
     position: fixed;
     z-index: 4;
+}
+
+.arrows_background:hover .arrows{
+    border-radius: 50%;
+    background-color: gray;
 }
 
 #last_picture_background {

@@ -1,4 +1,5 @@
 //  resizes the image depending on its height/width and the width/height of the window
+window.onresize = resizeToMax;
 function resizeToMax() {
     myImage = new Image();
     var img = document.getElementById("slideshow_image");
@@ -10,13 +11,17 @@ function resizeToMax() {
     var arrows_background = document.getElementsByClassName("arrows_background");
     for (let index = 0; index < arrows_background.length; index++) {
         const arrow = arrows_background[index];
-        arrow.style.width = (Number(img.getBoundingClientRect().width) / 2) + "px";
+        arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) + "px";
     }
+    
     // var arrows = document.getElementsByClassName("arrows");
     // for (let index = 0; index < arrows.length; index++) {
     //     const arrow = arrows[index];
-    //     arrow.style.width = (Number(img.getBoundingClientRect().width) / 2) + "px";
+    //     arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) - (Number((window.innerWidth - img.getBoundingClientRect().width) / 2))/2 + "px";
+    //     arrow.style.height = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) - (Number((window.innerWidth - img.getBoundingClientRect().width) / 2))/2 + "px";
     // }
+
+    // alert("resizetoMax executed");
 }
 
 function slideshow_on(src) {
