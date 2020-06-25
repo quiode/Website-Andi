@@ -8,6 +8,10 @@
     <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
     ?>
+
+    <!-- for mdi files -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <script src="script.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
@@ -101,13 +105,13 @@
             <!-- for navigation within the slideshow -->
             <div id="last_picture_background" class="arrows_background">
                 <div id="last_picture" class="arrows">
-                    &#8249;
+                    <span class="mdi mdi-arrow-left"></span>
                 </div>
             </div>
 
             <div id="next_picture_background" class="arrows_background">
                 <div id="next_picture" class="arrows">
-                    &#8250;
+                    <span class="mdi mdi-arrow-left"></span>
                 </div>
             </div>
 
