@@ -32,6 +32,9 @@
             <div id="background_deutsch"></div>
         </li>
     </ul>
+    <?php
+    echo $_SERVER['HTTP_HOST']
+    ?>
 </body>
 
 </html>
