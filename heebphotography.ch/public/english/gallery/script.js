@@ -53,7 +53,7 @@ function next_picture() {
     }
     var final_src;
     if ((images.indexOf(img_src) + 1) < (images.length)) {
-        final_src = images[images.indexOf(img_src) + 1]
+        final_src = images[images.indexOf(img_src) + 1];
     } else {
         final_src = images[0];
     }
