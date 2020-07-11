@@ -1,5 +1,8 @@
 //  resizes the image depending on its height/width and the width/height of the window
 window.onresize = resizeToMax;
+// looks for key inputs
+document.addEventListener("keydown", key_pressed);
+
 function resizeToMax() {
     myImage = new Image();
     var img = document.getElementById("slideshow_image");
@@ -13,7 +16,7 @@ function resizeToMax() {
         const arrow = arrows_background[index];
         arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) + "px";
     }
-    
+
     // var arrows = document.getElementsByClassName("arrows");
     // for (let index = 0; index < arrows.length; index++) {
     //     const arrow = arrows[index];
@@ -24,6 +27,7 @@ function resizeToMax() {
     // alert("resizetoMax executed");
 }
 
+// lets the slideshow appear/disapper
 function slideshow_on(src) {
     document.getElementById("navigation_button").style.display = "none";
     document.getElementById("slideshow_background").style.display = "block";
@@ -37,4 +41,53 @@ function slideshow_off() {
     document.getElementById("slideshow_background").style.display = "none";
     document.getElementById("slideshow").style.display = "none";
     document.getElementsByTagName("body")[0].style.overflow = "auto";
+}
+
+// shows next picture
+function next_picture() {
+    img_src = document.getElementById("slideshow_image").src;
+    var images = [];
+    // makes a list of all images
+    for (let i = 0; i < document.getElementsByClassName("image").length; i++) {
+        images.push(document.getElementsByClassName("image")[i].src);
+    }
+    var final_src;
+    if ((images.indexOf(img_src) + 1) < (images.length)) {
+        final_src = images[images.indexOf(img_src) + 1]
+    } else {
+        final_src = images[0];
+    }
+    document.getElementById("slideshow_image").src = final_src;
+}
+
+// shows last picture
+function last_picture() {
+    img_src = document.getElementById("slideshow_image").src;
+    var images = [];
+    // makes a list of all images
+    for (let i = 0; i < document.getElementsByClassName("image").length; i++) {
+        images.push(document.getElementsByClassName("image")[i].src);
+    }
+    var final_src;
+    if ((images.indexOf(img_src) - 1) >= 0) {
+        final_src = images[images.indexOf(img_src) - 1];
+    } else {
+        final_src = images[images.length - 1];
+    }
+    document.getElementById("slideshow_image").src = final_src;
+}
+
+// looks which key is pressed and executes the right funciton
+function key_pressed(event) {
+    var key = event.which || event.keyCode; // Use either which or keyCode, depending on browser support
+    if (document.getElementById("slideshow").style.display == "block") {
+        if (key == 39) {
+            next_picture();
+        } else if (key == 37) {
+            last_picture();
+        }
+        else if (key == 27) {
+            slideshow_off();
+        }
+    }
 }

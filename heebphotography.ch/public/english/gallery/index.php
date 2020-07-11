@@ -98,22 +98,20 @@
 
     <!-- the slideshow that pops up when clicking on an image -->
     <div id="slideshow_background">
-        <div id="slideshow">
+        <div id="slideshow" onkeydown="key_pressed(event)">
             <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg"
                 onload="resizeToMax()">
 
             <!-- for navigation within the slideshow -->
             <div id="last_picture_background" class="arrows_background">
-                <div id="last_picture" class="arrows">
-                    <!-- google material design icon -->
-                    <i class="material-icons">keyboard_arrow_left</i>
+                <div id="last_picture" class="arrows" onclick="last_picture()">
+                    &#8249;
                 </div>
             </div>
 
             <div id="next_picture_background" class="arrows_background">
-                <div id="next_picture" class="arrows">
-                    <!-- google material design icon -->
-                    <i class="material-icons">keyboard_arrow_right</i>
+                <div id="next_picture" class="arrows" onclick="next_picture()">
+                    &#8250;
                 </div>
             </div>
 
