@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Andreas Heeb
+N:Heeb;Andreas;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:andreas.heeb@heebphotography.ch
+TEL;TYPE=WORK:012 356 78 89
+item1.TITLE:Photographer
+item1.X-ABLabel:
+item2.URL:heebphotography.ch
+item2.X-ABLabel:homePage
+PHOTO:https://lh6.googleusercontent.com/-aCumoZFSstM/XwynJJhpYlI/AAAAAAAAAA
+ A/Vta3EIZg4hsX1L9nwILhCr2oibJ3uwD6QCOQCEAE/photo.jpg
+CATEGORIES:myContacts
+END:VCARD
