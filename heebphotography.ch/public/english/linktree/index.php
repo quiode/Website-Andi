@@ -9,22 +9,35 @@
     <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
     ?>
+    <!-- for mdi icons -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
+
 
 <body>
     <header></header>
     <?php include '../templates/navigationbar.php'?>
-    <section>
-        <article></article>
+
+    <!-- the linktree -->
+    <section id="linktree_container">
+        <article class="item" id="instagram">
+            <iconify-icon data-icon="logos:instagram-icon" class="icon" id="instagram_icon"></iconify-icon>
+            <a href="https://www.instagram.com/heebphotography/" target="_blank" class="link"
+                id="instagram_link">@heebphotography</a>
+        </article>
+
+        <article class="item" id="phone">
+            <iconify-icon data-icon="carbon:phone" class="icon" id="phone_icon"></iconify-icon>
+            <a href="./contacts.vcf" download="Andreas Heeb" class="link" id="phone_link">+41 12 345 67 78</a>
+        </article>
+
+        <article class="item" id="mail">
+            <iconify-icon data-icon="feather:mail" class="icon" id="mail_icon"></iconify-icon>
+            <a href="mailto:andreas.heeb@heebphotography.ch" target="_blank" class="link"
+                id="mail_link">andreas.heeb@heebphotography.ch</a>
+        </article>
+
     </section>
-
-    <aside>
-
-    </aside>
-
-    <footer>
-
-    </footer>
 </body>
 
 </html>
