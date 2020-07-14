@@ -32,7 +32,8 @@
 }
 
 .links:hover {
-  background-color: white;
+  background-color: #fff;
+  color: black;
   transition-duration: 0.1s;
 }
 
