@@ -32,9 +32,9 @@
 }
 
 .links:hover {
-  background-color: #fff;
+  background-color: #aaa;
   color: black;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
 }
 
 /* everything here is for the navigation button */
