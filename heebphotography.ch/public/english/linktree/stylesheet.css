@@ -83,3 +83,8 @@ body {
     user-select: none;
     overflow: hidden;
 }
+
+.item:hover{
+    border-color: black;
+    border-width: 1vw;
+}
