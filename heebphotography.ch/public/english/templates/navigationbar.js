@@ -11,8 +11,6 @@ function navigation_button(button) {
         document.getElementById("b2").style.backgroundColor = "rgb(255,255,255)";
         document.getElementById("b3").style.backgroundColor = "rgb(255,255,255)";
         document.getElementsByTagName("body")[0].style.overflow = "hidden";
-        // blur
-        document.getElementById("blur").style.height = "100%";
     } else {
         // starts transformation --> elements goes up
         navigation.style.height = "0%";
@@ -21,7 +19,5 @@ function navigation_button(button) {
         document.getElementById("b2").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b3").style.backgroundColor = "rgb(0,0,0)";
         document.getElementsByTagName("body")[0].style.overflow = "auto";
-        // blur
-        document.getElementById("blur").style.height = "0%";
     }
 }
