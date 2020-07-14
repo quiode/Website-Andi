@@ -148,3 +148,7 @@ body {
 #next_picture_background {
     right: 0;
 }
+
+* {
+    font-family: 'Raleway', sans-serif;
+}

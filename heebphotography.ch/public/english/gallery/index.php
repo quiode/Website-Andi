@@ -11,7 +11,9 @@
 
     <!-- for material design icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    
     <script src="script.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
