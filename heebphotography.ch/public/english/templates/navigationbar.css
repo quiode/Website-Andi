@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
   filter: blur();
 }
@@ -47,7 +47,7 @@
   cursor: pointer;
   top: 1%;
   left: 1%;
-  z-index: 3;
+  z-index: 4;
 }
 
 .bar1,
@@ -85,4 +85,15 @@
 
 * {
     font-family: 'Raleway', sans-serif;
+}
+
+#blur{
+  width: 100%;
+  height: 0;
+  transition: 0.8s;
+  filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }

@@ -21,5 +21,7 @@
             echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "impressum/" . "\">Impressum</a>";
             ?>
         </div>
+        <div id="blur">
+        </div>
     </div>
 </nav>
