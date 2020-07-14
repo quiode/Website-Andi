@@ -86,5 +86,6 @@ body {
 
 .item:hover{
     border-color: black;
-    border-width: 1vw;
+    border-width: 0.5vw;
+    border-style: solid;
 }
