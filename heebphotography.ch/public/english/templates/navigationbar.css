@@ -31,6 +31,12 @@
   list-style-type: none;
 }
 
+.links:hover {
+  background-color: #fff;
+  color: black;
+  transition-duration: 0.1s;
+}
+
 /* everything here is for the navigation button */
 #navigation_button {
   display: inline-block;
