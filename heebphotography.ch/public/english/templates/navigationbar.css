@@ -36,8 +36,8 @@
   display: inline-block;
   position: fixed;
   cursor: pointer;
-  top: 5%;
-  left: 5%;
+  top: 1%;
+  left: 1%;
   z-index: 3;
 }
 
