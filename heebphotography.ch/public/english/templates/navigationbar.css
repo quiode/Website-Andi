@@ -11,6 +11,7 @@
   bottom: 0;
   z-index: 2;
   overflow: hidden;
+  filter: blur();
 }
 
 /* the navigation element */
@@ -36,6 +37,7 @@
   color: black;
   opacity: 0.7;
   transition-duration: 0.2s;
+  filter: blur();
 }
 
 /* everything here is for the navigation button */
