@@ -35,8 +35,7 @@
   background-color: #aaa;
   color: black;
   opacity: 0.7;
-  transition-duration: 0.2s;
-
+  transition-duration: 0.5s;
 }
 
 /* everything here is for the navigation button */
