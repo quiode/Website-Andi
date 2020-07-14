@@ -11,6 +11,7 @@
     ?>
     <!-- for mdi icons -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">  
 </head>
 
 

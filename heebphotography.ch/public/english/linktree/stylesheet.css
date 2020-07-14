@@ -21,7 +21,6 @@
     width: 75vw;
     color: black;
     text-decoration: none;
-    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 3vw;
     position: relative;
     display: table-cell;
@@ -64,4 +63,8 @@ body {
 
 #instagram {
     background-color: #8941A7;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
 }
