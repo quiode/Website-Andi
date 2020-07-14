@@ -15,9 +15,12 @@
     left: 50%;
     margin-top: 5vh;
     white-space: nowrap;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
 }
 
-.link {
+.text {
     width: 75vw;
     color: black;
     text-decoration: none;
@@ -48,7 +51,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .link {
+    .text {
         display: none;
     }
 
@@ -77,4 +80,5 @@ body {
 
 * {
     font-family: 'Raleway', sans-serif;
+    user-select: none;
 }
