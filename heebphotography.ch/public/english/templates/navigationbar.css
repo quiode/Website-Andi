@@ -42,7 +42,7 @@
 
 /* everything here is for the navigation button */
 #navigation_button { 
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   width: 102px;
