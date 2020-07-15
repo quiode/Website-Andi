@@ -12,8 +12,9 @@ p {
 h1 {
     position: absolute;
     left: 80px;
-    top: 0;
+    top: -4vh;
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 4vw;
+    left: 6vw;
 }
