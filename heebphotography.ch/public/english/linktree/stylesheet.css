@@ -18,6 +18,9 @@
     display: inline-block;
     color: black;
     text-decoration: none;
+    border-width: 0.5vw;
+    border-style: solid;
+    border-color: transparent;
 }
 
 .text {
@@ -86,6 +89,4 @@ body {
 
 .item:hover{
     border-color: black;
-    border-width: 0.5vw;
-    border-style: solid;
 }
