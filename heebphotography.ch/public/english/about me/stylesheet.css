@@ -4,7 +4,7 @@
 
 p {
     text-align: center;
-    font-size: 8vmin;
+    font-size: 9vmin;
     top: 80px;
     position: relative;
 }
@@ -24,6 +24,6 @@ h1 {
     }
 
     br {
-        margin-bottom: 8vmin;
+        margin-bottom: 6vmin;
     }
 }
