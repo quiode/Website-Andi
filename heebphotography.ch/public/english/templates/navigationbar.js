@@ -11,7 +11,7 @@ function navigation_button(button) {
         document.getElementById("b1").style.backgroundColor = "rgb(255,255,255)";
         document.getElementById("b2").style.backgroundColor = "rgb(255,255,255)";
         document.getElementById("b3").style.backgroundColor = "rgb(255,255,255)";
-        document.getElementById("navigation_button").style.backgroundColor = "#fff";
+        document.getElementById("navigation_button").style.backgroundColor = "#000";
         document.getElementsByTagName("body")[0].style.overflow = "hidden";
     } else {
         // starts transformation --> elements goes up
@@ -20,7 +20,7 @@ function navigation_button(button) {
         document.getElementById("b1").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b2").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b3").style.backgroundColor = "rgb(0,0,0)";
-        document.getElementById("navigation_button").style.backgroundColor = "#000";
+        document.getElementById("navigation_button").style.backgroundColor = "#fff";
         document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
 }
