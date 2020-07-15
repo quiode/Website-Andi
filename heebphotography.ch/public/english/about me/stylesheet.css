@@ -11,10 +11,15 @@ p {
 
 h1 {
     position: absolute;
-    left: 80px;
-    top: -4vh;
+    top: -5vh;
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 4vw;
     left: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        display: none;
+    }
 }
