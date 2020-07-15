@@ -14,6 +14,9 @@
 
 <body>
     <?php include '../templates/navigationbar.php'?>
+    <h1>
+        About Me | Wildlifephotography Andreas Heeb
+    </h1>
     <p>
         Andreas Heeb
         <br>
