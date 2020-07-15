@@ -1,6 +1,7 @@
 function navigation_button(button) {
     // starts transformation from to button either from cross to lines or lines to cross
     button.classList.toggle("change");
+    document.getElementById("navigation_button").style.backgroundColor = "#000";
     // selects the background
     var navigation = document.getElementById("navigation-overlay");
     if (button.classList.contains("change")) {

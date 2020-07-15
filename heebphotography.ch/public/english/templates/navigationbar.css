@@ -45,11 +45,8 @@
   display: inline-block;
   width: 94px;
   height: 102px;
-  background-color: white;
-  border-top-left-radius: 47px;
-  border-top-right-radius: 47px;
-  border-bottom-left-radius: 51px;
-  border-bottom-left-radius: 51px;
+  background-color: #fff;
+  border-radius: 50%;
   transition: 0.8s;
   padding: 5px;
   position: fixed;
