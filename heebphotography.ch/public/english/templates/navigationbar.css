@@ -50,6 +50,7 @@
   border-top-right-radius: 47px;
   border-bottom-left-radius: 51px;
   border-bottom-left-radius: 51px;
+  transition: 0.8s;
   padding: 5px;
   position: fixed;
   cursor: pointer;
