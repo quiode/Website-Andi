@@ -15,15 +15,15 @@ h1 {
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 4vw;
-    left: 100px;
+    left: 120px;
 }
 
 @media screen and (max-width: 600px) {
     h1 {
         display: none;
     }
-}
 
-br {
-    margin-bottom: 8vmin;
+    br {
+        margin-bottom: 8vmin;
+    }
 }
