@@ -8,9 +8,9 @@
     </head>
 
     <body>
-        This is just for texting
+        This is just for testting
         <?php
-        include "/heebphotography.ch/private/test.php";
+        require "/heebphotography.ch/private/test.php";
         ?>
     </body>
 
