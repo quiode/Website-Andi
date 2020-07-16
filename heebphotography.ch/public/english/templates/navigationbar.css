@@ -5,7 +5,6 @@
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   transition: height 0.4s;
-  transition-delay: 0.4s;
   top: 0;
   left: 0;
   right: 0;
