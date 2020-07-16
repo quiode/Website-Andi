@@ -4,12 +4,10 @@
     echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>"
     ?>
     <!-- makes the button for navigation -->
-    <div id="navigation_button_div">
-        <div id="navigation_button" onclick="navigation_button(this)">
-            <div class="bar1" id="b1"></div>
-            <div class="bar2" id="b2"></div>
-            <div class="bar3" id="b3"></div>
-        </div>
+    <div id="navigation_button" onclick="navigation_button(this)">
+        <div class="bar1" id="b1"></div>
+        <div class="bar2" id="b2"></div>
+        <div class="bar3" id="b3"></div>
     </div>
     <!-- linkstree to the other pages -->
     <div id="navigation-overlay">
