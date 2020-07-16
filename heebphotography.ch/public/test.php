@@ -14,7 +14,7 @@
             <input type="submit" value="Submit">
         </form>
         <?php
-        require "/heebphotography.ch/private/test.php";
+        include "/private/test.php";
         ?>
     </body>
 
