@@ -4,8 +4,7 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
-  transition: height 0.4s;
-  transition-delay: 0.4s;
+  transition: height 0.8s;
   top: 0;
   left: 0;
   right: 0;
@@ -69,8 +68,8 @@
   margin-bottom: 12px;
   margin-right: 16px;
   margin-left: 16px;
-  transition-delay: 0.4s;
-  transition: 0.4s;
+  transition-delay: 0.8s;
+  transition: 0.8s;
   text-align: center;
 }
 
