@@ -9,7 +9,7 @@
 
     <body>
         This is just for testting
-        <form action="/heebphotography.ch/private/test.php" method="POST">
+        <form action="/private/test.php" method="POST">
             <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message">
             <input type="submit" value="Submit">
         </form>
