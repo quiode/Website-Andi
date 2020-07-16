@@ -33,6 +33,10 @@ header h2 {
     position: relative;
 }
 
+.slide img{
+    width: 100vw;
+    height: auto;
+}
 
 /*Fusszeile*/
 footer {
