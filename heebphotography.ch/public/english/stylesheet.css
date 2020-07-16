@@ -12,6 +12,7 @@ p {
 
 /*Header*/
 header h2 {
+    font-size: 69px;
     display: flex;
     text-align: center;
     margin: 0;
