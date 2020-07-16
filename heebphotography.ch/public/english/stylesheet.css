@@ -26,8 +26,8 @@ header h2 {
 /*Slideshow*/
 .container_slideshow {
     margin: auto;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 75vh;
     display: block;
     align-items: baseline;
     position: relative;
