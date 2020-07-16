@@ -68,8 +68,8 @@
   margin-bottom: 12px;
   margin-right: 16px;
   margin-left: 16px;
-  transition-delay: 0.8s;
   transition: 0.8s;
+  transition-delay: 0.8s;
   text-align: center;
 }
 
@@ -84,16 +84,19 @@
 /* Rotate first bar */
 .change .bar1 {
   transform: rotate(-45deg) translate(-18px, 12px);
+  transition-delay: 0.8s;
 }
 
 /* Fade out the second bar */
 .change .bar2 {
   opacity: 0;
+  transition-delay: 0.8s;
 }
 
 /* Rotate last bar */
 .change .bar3 {
   transform: rotate(45deg) translate(-16px, -16px);
+  transition-delay: 0.8s;
 }
 
 @media screen and (max-width: 600px) {
