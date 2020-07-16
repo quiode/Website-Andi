@@ -10,7 +10,7 @@
     <body>
         This is just for texting
         <?php
-        $myfile = fopen("testfile.txt", "w");
+        $myfile = fopen("testfile.txt", "a+");
         $txt = "John Doe\n";
         fwrite($myfile, $txt);
         $txt = "Jane Doe\n";
