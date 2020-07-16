@@ -134,12 +134,12 @@ body {
 
 .arrows_background:hover .arrows{
     display: inline-block;
-    transition: 0.4;
 }
 
 .arrows:hover {
     border-radius: 50%;
     background-color: gray;
+    transition: 0.4;
 }
 
 #last_picture_background {
