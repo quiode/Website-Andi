@@ -21,12 +21,12 @@ function navigation_button(button) {
         document.getElementById("b1").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b2").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b3").style.backgroundColor = "rgb(0,0,0)";
-        document.getElementById("b1").style.width = "70px";
-        document.getElementById("b1").style.height = "10px";
-        document.getElementById("b2").style.width = "70px";
-        document.getElementById("b2").style.height = "10px";
-        document.getElementById("b3").style.width = "70px";
-        document.getElementById("b3").style.height = "10px";
+        document.getElementById("b1").style.width = "72px";
+        document.getElementById("b1").style.height = "12px";
+        document.getElementById("b2").style.width = "72px";
+        document.getElementById("b2").style.height = "12px";
+        document.getElementById("b3").style.width = "72px";
+        document.getElementById("b3").style.height = "12px";
         document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
 }
