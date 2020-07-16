@@ -66,6 +66,8 @@
   background-color: black;
   margin-top: 12px;
   margin-bottom: 12px;
+  margin-right: 0;
+  margin-left: 0;
   transition: 0.8s;
   text-align: center;
 }
