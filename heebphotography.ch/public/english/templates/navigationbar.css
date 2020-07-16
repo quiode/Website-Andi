@@ -53,8 +53,8 @@
   transition: 0.4s;
   position: fixed;
   cursor: pointer;
-  top: 2%;
-  left: 2%;
+  top: 1%;
+  left: 1%;
   z-index: 4;
 }
 
