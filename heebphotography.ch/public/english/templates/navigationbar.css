@@ -65,7 +65,7 @@
   margin-bottom: 12px;
   margin-right: 16px;
   margin-left: 16px;
-  transition: 0.8s;
+  transition-duration: 0.8s;
   text-align: center;
   border: 1px white solid;
 }
