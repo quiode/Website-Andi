@@ -80,7 +80,7 @@
 
 /* Rotate first bar */
 .change .bar1 {
-  transform: rotate(-45deg) translate(-18px, 12px);
+  transform: rotate(-45deg) translate(-19px, 13px);
 }
 
 /* Fade out the second bar */
@@ -90,7 +90,7 @@
 
 /* Rotate last bar */
 .change .bar3 {
-  transform: rotate(45deg) translate(-16px, -16px);
+  transform: rotate(45deg) translate(-17px, -17px);
 }
 
 @media screen and (max-width: 600px) {
