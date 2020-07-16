@@ -52,8 +52,8 @@
   transition: 0.8s;
   position: fixed;
   cursor: pointer;
-  top: 1%;
-  left: 1%;
+  top: 2%;
+  left: 2%;
   z-index: 4;
 }
 
