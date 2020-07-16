@@ -4,24 +4,24 @@
 
 p {
     text-align: center;
-    font-size: 9vmin;
+    font-size: 7.3vmin;
     top: 80px;
     position: relative;
 }
 
-h1 {
+/* h1 {
     position: absolute;
     top: -5vh;
     text-transform: capitalize;
     font-weight: bolder;
     font-size: 4vw;
     left: 120px;
-}
+} */
 
 @media screen and (max-width: 600px) and (orientation:portrait) {
-    h1 {
+    /* h1 {
         display: none;
-    }
+    } */
 
     br {
         margin-bottom: 6vmin;
