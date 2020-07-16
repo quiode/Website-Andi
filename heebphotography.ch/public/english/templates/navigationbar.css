@@ -58,6 +58,12 @@
   z-index: 4;
 }
 
+#navigation_button_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .bar1,
 .bar2,
 .bar3 {
