@@ -19,12 +19,23 @@
     </header>
     <?php require '../english/templates/navigationbar.php'?>
     <section>
-        <article>
-            <img src="https://media.discordapp.net/attachments/524692091939454986/717120597267710053/perfect-perfect-owl.gif"
-                width="100%" height="50%">
-            <img src="https://cdn.discordapp.com/attachments/679426398728749077/717118977951924314/coole_eissperber.jpg"
-                width="100%" height="50%">
-        </article>
+        <div class="container_slideshow">
+            <div class="slide">
+                <img src="images-home/img1.jpg">
+            </div>
+            <div class="slide">
+                <img src="images-home/img2.jpg">
+            </div>
+            <div class="slide">
+                <img src="images-home/img3.jpg">
+            </div>
+            <div class="slide">
+                <img src="images-home/img4.jpg">
+            </div>
+            <div class="slide">
+                <img src="images-home/img5.jpg">
+            </div>
+        </div>
     </section>
 
     <aside>

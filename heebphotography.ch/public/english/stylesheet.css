@@ -23,7 +23,12 @@ header h2 {
 /*Navigation*/
 
 
-/*Bilder*/
+/*Slideshow*/
+.container_slideshow {
+    margin: auto;
+    width: 100vw;
+    position: relative;
+}
 
 
 /*Fusszeile*/
@@ -32,8 +37,6 @@ footer {
     display: flex;
     align-items: center;
 }
-
-/*Gallerie*/
 
 @media only screen and (max-width: 600px) {
     
