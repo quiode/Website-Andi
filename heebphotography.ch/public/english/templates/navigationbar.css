@@ -49,6 +49,7 @@
   height: 102px;
   background-color: #fff;
   border-radius: 50%;
+  padding: 24% 31%;
   transition: 0.8s;
   position: fixed;
   cursor: pointer;
