@@ -1,7 +1,6 @@
 function navigation_button(button) {
     // starts transformation from to button either from cross to lines or lines to cross
     button.classList.toggle("change");
-    document.getElementById("navigation_button").style.backgroundColor = "#000";
     // selects the background
     var navigation = document.getElementById("navigation-overlay");
     if (button.classList.contains("change")) {
@@ -11,7 +10,9 @@ function navigation_button(button) {
         document.getElementById("b1").style.backgroundColor = "rgb(255,255,255)";
         document.getElementById("b2").style.backgroundColor = "rgb(255,255,255)";
         document.getElementById("b3").style.backgroundColor = "rgb(255,255,255)";
-        document.getElementById("navigation_button").style.backgroundColor = "transparent";
+        document.getElementById("b1").style.border = "1px white solid";
+        document.getElementById("b2").style.border = "1px white solid";
+        document.getElementById("b3").style.border = "1px white solid";
         document.getElementsByTagName("body")[0].style.overflow = "hidden";
     } else {
         // starts transformation --> elements goes up
@@ -20,7 +21,12 @@ function navigation_button(button) {
         document.getElementById("b1").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b2").style.backgroundColor = "rgb(0,0,0)";
         document.getElementById("b3").style.backgroundColor = "rgb(0,0,0)";
-        document.getElementById("navigation_button").style.backgroundColor = "#fff";
+        document.getElementById("b1").style.width = "70px";
+        document.getElementById("b1").style.height = "10px";
+        document.getElementById("b2").style.width = "70px";
+        document.getElementById("b2").style.height = "10px";
+        document.getElementById("b3").style.width = "70px";
+        document.getElementById("b3").style.height = "10px";
         document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
 }

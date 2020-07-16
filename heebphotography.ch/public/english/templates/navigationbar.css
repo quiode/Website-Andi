@@ -47,8 +47,6 @@
   align-items: center;
   width: 102px;
   height: 102px;
-  background-color: #fff;
-  border-radius: 50%;
   transition: 0.8s;
   position: fixed;
   cursor: pointer;
@@ -60,8 +58,8 @@
 .bar1,
 .bar2,
 .bar3 {
-  width: 70px;
-  height: 10px;
+  width: 68px;
+  height: 8px;
   background-color: black;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -69,6 +67,7 @@
   margin-left: 16px;
   transition: 0.8s;
   text-align: center;
+  border: 1px white solid;
 }
 
 .bar1 {
