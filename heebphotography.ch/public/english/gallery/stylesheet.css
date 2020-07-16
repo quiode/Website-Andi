@@ -134,10 +134,11 @@ body {
 
 .arrows_background:hover .arrows{
     display: inline-block;
+    transition: 0.4;
 }
 
 .arrows:hover {
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: gray;
 }
 
