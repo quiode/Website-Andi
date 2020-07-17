@@ -21,7 +21,7 @@
     $header = ($_POST["how_to_contact"] = "email") ? "From: <" . $_POST[$_POST["how_to_contact"]] . ">" : "From: <admin@heebphotography.ch>";
     echo "<br>";
     if (mail("andreas.heeb@heebphotography.ch", $subject, $_POST["message"], $header)) {
-        echo "SUCCESS!";    
+        echo "SUCCESS!";
     } else {
         echo "ERROR!";
     }
