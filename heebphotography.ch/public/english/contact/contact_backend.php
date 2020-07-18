@@ -26,7 +26,7 @@
     $email = ($_POST["email"] != "") ? $email : "Contact Form <admin@heebphotography.ch>";
     // the headers
     $header = "Reply-To: " . $email . "\r\n";
-    $header .= "Return-Path: " . $email . "\r\n";
+    $header .= "Return-Path: Contact Form <admin@heebphotography.ch>\r\n";
     $header .= "From: " . $email . "\r\n";
     $header .= "MIME-Version: 1.0" . "\r\n";
     $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
