@@ -27,7 +27,7 @@
     // the headers
     $header = "Reply-To: " . $email . "\r\n";
     $header .= "Return-Path: " . $email . "\r\n";
-    $header .= "From: " . $email;
+    $header .= "From: " . $email . "\r\n";
     $header .= "MIME-Version: 1.0" . "\r\n";
     $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
     $header .= "X-Mailer: PHP". phpversion() ."\r\n";
