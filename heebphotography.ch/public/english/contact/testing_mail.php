@@ -7,18 +7,23 @@
 
 <body>
     <?php
+// for testing
+    // echo php_ini_loaded_file();
 // imports all components
+    // echo "1"; //for testing
 
-    echo "1";
+    set_include_path("PHPMailer-master");
+
+    // echo "2"; //for testing
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
+    
+    require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "Exception.php";
+    require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "PHPMailer.php";
+    require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "SMTP.php";
 
-    echo "2";
-
-    require_once "vendor\autoload.php";
-
-    echo "3";
+    // echo "3"; //for testing
 
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
@@ -52,7 +57,7 @@
         echo "Mailer Error: " . $mail->ErrorInfo;
     }
 
-    echo "4";
+    // echo "4"; //for testing
     ?>
 </body>
 
