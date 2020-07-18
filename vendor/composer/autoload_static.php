@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit22c13e5ae88762810c141fe0a39319f2
 {
     public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'M' => 
         array (
             'Mdi\\' => 4,
@@ -14,6 +18,10 @@ class ComposerStaticInit22c13e5ae88762810c141fe0a39319f2
     );
 
     public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Mdi\\' => 
         array (
             0 => __DIR__ . '/..' . '/mesavolt/mdi-php/src',
