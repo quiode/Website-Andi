@@ -30,7 +30,7 @@
     $mail->FromName = "Contact Form";
 
 //To address and name
-    $mail->addAddress("domi.schwaiger04@gmail.com", "Dominik Schwaiger");
+    $mail->addAddress("dominik.schwaiger@heebphotography.ch", "Dominik Schwaiger");
     // $mail->addAddress("recepient1@example.com"); //Recipient name is optional
 
 //Address to which recipient will reply
