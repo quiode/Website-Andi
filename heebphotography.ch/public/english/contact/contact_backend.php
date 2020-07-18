@@ -38,6 +38,8 @@
         $message .= "<h5>The following is the message from the user:</h5>";
     //p
         $message .= "<p>" . $_POST["message"] . "</p>";
+    //footer
+        $message .= "<footer><b>Please do not reply to this message!</b></footer>";
 //imports all components
     set_include_path("./PHPMailer-master");
 
@@ -62,7 +64,7 @@
 //To address and name
     $mail->addAddress("andreas.heeb@heebphotography.ch"); //Recipient
 //Address to which recipient will reply
-    $mail->addReplyTo("contact.form.heebphotography@gmail.com", "Reply");   //Replyier(?)
+    $mail->addReplyTo("contact.form.heebphotography@gmail.com", "Contact Form");   //Replyier(?)
 //the actual content of the email
     //sends html
     $mail->isHTML(true);
