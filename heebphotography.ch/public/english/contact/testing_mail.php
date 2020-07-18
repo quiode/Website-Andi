@@ -41,7 +41,13 @@
     $mail->Subject = "Testing PHP Mailer";
     $mail->Body = "<i>Mail body in HTML</i>";
     $mail->AltBody = "This is the plain text version of the email content";
-
+// SMTP Server
+    $mail->SMTPAuth   = true;                  // enable SMTP authentication
+    $mail->Host       = "smtp.migadu.com"; // sets the SMTP server
+    $mail->Port       = 587;                    // set the SMTP port
+    $mail->Username   = "admin@heebphotography.ch"; // SMTP account username
+    $mail->Password   = "5gP4!chH#BMtfCF";        // SMTP account password
+// sends the actual email
     try {
         $mail->send();
         echo "Message has been sent successfully";
