@@ -17,7 +17,6 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    echo "hi";
     require "./PHPMailer-master/src/" . "Exception.php";
     require "./PHPMailer-master/src/" . "PHPMailer.php";
     require "./PHPMailer-master/src/" . "SMTP.php";
@@ -31,7 +30,7 @@
 
 //To address and name
     $mail->addAddress("dominik.schwaiger@heebphotography.ch", "Dominik Schwaiger");
-    // $mail->addAddress("recepient1@example.com"); //Recipient name is optional
+    $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient name is optional
 
 //Address to which recipient will reply
     $mail->addReplyTo("admin@heebphotography.ch", "Reply");
