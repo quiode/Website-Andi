@@ -15,10 +15,9 @@
     use PHPMailer\PHPMailer\Exception;
 
     echo "hi";
-    echo $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "Exception.php";
-    require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "Exception.php";
-    require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "PHPMailer.php";
-    require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "SMTP.php";
+    require "/var/www/heebphotography.ch/PHPMailer-master/" . "Exception.php";
+    require "/var/www/heebphotography.ch/PHPMailer-master/" . "PHPMailer.php";
+    require "/var/www/heebphotography.ch/PHPMailer-master/" . "SMTP.php";
     echo "hi";
 
 //PHPMailer Object
