@@ -28,15 +28,15 @@
     $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
     $mail->Port       = 587;                    // sets the SMTP port
     $mail->SMTPSecure = 'tls';                  // TLS/SSL
-    $mail->Username   = "contact.form.heebphotography"; // SMTP account username
+    $mail->Username   = "contact.form.heebphotography@gmail.com"; // SMTP account username
     $mail->Password   = "Yw63Bf#@uK@t%P7";        // SMTP account password
 //From email address and name
-    $mail->From = "contact.form.heebphotography";
+    $mail->From = "contact.form.heebphotography@gmail.com";
     // $mail->FromName = "Contact Form";
 //To address and name
     $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient
 //Address to which recipient will reply
-    $mail->addReplyTo("contact.form.heebphotography", "Reply");
+    $mail->addReplyTo("contact.form.heebphotography@gmail.com", "Reply");
 //Send HTML or Plain Text email
     $mail->isHTML(true);
     $mail->Subject = "Testing PHP Mailer";
