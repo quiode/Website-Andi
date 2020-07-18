@@ -31,9 +31,9 @@
         $message .= ($_POST["last_name"] != "") ? $_POST["last_name"] : "NoLastNameGiven";
         $message .= "</b>.</h2>";
     //h3
-        $message .= "<h3>The reason for this is <b>";
+        $message .= "<h3>The reason: <b>";
         $message .= ($_POST["subject"] != "custom") ? $_POST["subject"] : $_POST["custom_subject"];
-        $message .= " </b>.</h3><h4>";
+        $message .= "</b>.</h3><h4>";
     //h4
         $message .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via <b>" . $_POST["how_to_contact"] . "</b> under <b>" . $_POST[$_POST["how_to_contact"]] . "</b>.</h4>") : "No information on how to contact is given.</h4>";
     //h5
