@@ -7,6 +7,7 @@
 
 <body>
     <?php
+    echo "hi";
 // imports all components
     set_include_path("PHPMailer-master");
 
@@ -44,6 +45,7 @@
     } catch (Exception $e) {
         echo "Mailer Error: " . $mail->ErrorInfo;
     }
+    echo "hi";
     ?>
 </body>
 
