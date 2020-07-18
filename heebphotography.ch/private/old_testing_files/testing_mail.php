@@ -7,11 +7,11 @@
 
 <body>
     <?php
-// shows errors
+//shows errors
     ini_set('display_errors', '1');
     ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
-// imports all components
+//imports all components
     set_include_path("./PHPMailer-master");
 
     use PHPMailer\PHPMailer\PHPMailer;
@@ -22,7 +22,7 @@
     require "./PHPMailer-master/src/" . "SMTP.php";
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
-// SMTP Server
+//SMTP Server
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
     $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
     $mail->Port       = 587;                    // sets the SMTP port
@@ -41,7 +41,7 @@
     $mail->Subject = "Testing PHP Mailer";
     $mail->Body = "<i>Mail body in HTML</i>";
     $mail->AltBody = "This is the plain text version of the email content";
-// sends the actual email
+//sends the actual email
     try {
         $mail->send();
         echo "Message has been sent successfully";
