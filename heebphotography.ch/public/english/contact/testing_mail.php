@@ -7,10 +7,9 @@
 
 <body>
     <?php
-    echo "hi";
 // shows errors
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
+    // ini_set('display_errors', '1');
+    // ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
 // imports all components
     set_include_path("./PHPMailer-master");
@@ -22,7 +21,6 @@
     require "./PHPMailer-master/src/" . "Exception.php";
     require "./PHPMailer-master/src/" . "PHPMailer.php";
     require "./PHPMailer-master/src/" . "SMTP.php";
-    echo "hi";
 
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
@@ -51,7 +49,6 @@
     } catch (Exception $e) {
         echo "Mailer Error: " . $mail->ErrorInfo;
     }
-    echo "hi";
     ?>
 </body>
 
