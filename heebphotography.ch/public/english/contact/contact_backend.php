@@ -12,7 +12,7 @@
     ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
 
-    print_r($_POST);
+    // print_r($_POST);
 //makes the message which is send per mail in plain text
     $plain = ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
     $plain .= " ";
