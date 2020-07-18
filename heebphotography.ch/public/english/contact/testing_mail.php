@@ -27,6 +27,7 @@
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
     $mail->Host       = "smtp.migadu.com"; // sets the SMTP server
     $mail->Port       = 587;                    // set the SMTP port
+    $mail->SMTPSecure = 'tls';
     $mail->Username   = "admin@heebphotography.ch"; // SMTP account username
     $mail->Password   = "5gP4!chH#BMtfCF";        // SMTP account password
 //From email address and name
