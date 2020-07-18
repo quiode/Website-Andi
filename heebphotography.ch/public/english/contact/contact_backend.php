@@ -28,9 +28,10 @@
     $header = "Reply-To: " . $mail . "\r\n";
     $header .= "Return-Path: " . $mail . "\r\n";
     $header .= "From: " . $mail;
-    // $header .= "MIME-Version: 1.0" . "\r\n";
-    // $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
-    // $header .= "X-Mailer: PHP". phpversion() ."\r\n";
+    $header .= "MIME-Version: 1.0" . "\r\n";
+    $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
+    $header .= "X-Mailer: PHP". phpversion() ."\r\n";
+    echo $header . ";" . $subject . ";" . $_POST;
     // sends mail and sais if it succeeded or failed
     if (mail("andreas.heeb@heebphotography.ch", $subject, $_POST["message"], $header)) {
         echo "SUCCESS!";
