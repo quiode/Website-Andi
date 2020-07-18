@@ -31,11 +31,13 @@
     $header .= "MIME-Version: 1.0" . "\r\n";
     $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
     $header .= "X-Mailer: PHP". phpversion() ."\r\n";
+    // where the mail is send to
+    $to = "Dominik Schwaiger <domi.schwaiger04@gmail.com";
     echo $header . ";" . $subject . ";";
     print_r($_POST);
     print_r($email);
     // sends mail and sais if it succeeded or failed
-    if (mail("andreas.heeb@heebphotography.ch", $subject, $_POST["message"], $header)) {
+    if (mail($to, $subject, $_POST["message"], $header)) {
         echo "SUCCESS!";
     } else {
         echo "ERROR!";
