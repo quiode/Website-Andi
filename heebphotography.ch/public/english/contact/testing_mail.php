@@ -17,6 +17,7 @@
     require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "Exception.php";
     require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "PHPMailer.php";
     require $_SERVER["DOCUMENT_ROOT"] . DIRECTORY_SEPARATOR . "PHPMailer-master" . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "SMTP.php";
+    echo "hi";
 
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
