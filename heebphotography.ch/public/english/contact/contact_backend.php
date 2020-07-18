@@ -32,7 +32,7 @@
     $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
     $header .= "X-Mailer: PHP". phpversion() ."\r\n";
     // where the mail is send to
-    $to = "Dominik Schwaiger <domi.schwaiger04@gmail.com";
+    $to = "Andreas Heeb <andreas.heeb@heebphotography.ch";
     echo $header . ";" . $subject . ";";
     print_r($_POST);
     print_r($email);
