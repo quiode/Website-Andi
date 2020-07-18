@@ -8,7 +8,7 @@
 <body>
     <?php
     // makes the message which is send per mail
-    $subject .= ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
+    $subject = ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
     $subject .= " ";
     $subject .= ($_POST["last_name"] != "") ? $_POST["last_name"] : "NoLastNameGiven";
     $subject .= " writes about the subject: ";
