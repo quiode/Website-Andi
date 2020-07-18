@@ -23,30 +23,24 @@
 
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
-
-//From email address and name
-    $mail->From = "admin@heebphotography.ch";
-    $mail->FromName = "Contact Form";
-
-//To address and name
-    $mail->addAddress("dominik.schwaiger@heebphotography.ch", "Dominik Schwaiger");
-    $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient name is optional
-
-//Address to which recipient will reply
-    $mail->addReplyTo("admin@heebphotography.ch", "Reply");
-
-//Send HTML or Plain Text email
-    $mail->isHTML(true);
-
-    $mail->Subject = "Testing PHP Mailer";
-    $mail->Body = "<i>Mail body in HTML</i>";
-    $mail->AltBody = "This is the plain text version of the email content";
 // SMTP Server
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
     $mail->Host       = "smtp.migadu.com"; // sets the SMTP server
     $mail->Port       = 587;                    // set the SMTP port
     $mail->Username   = "admin@heebphotography.ch"; // SMTP account username
     $mail->Password   = "5gP4!chH#BMtfCF";        // SMTP account password
+//From email address and name
+    $mail->From = "admin@heebphotography.ch";
+    $mail->FromName = "Contact Form";
+//To address and name
+    $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient
+//Address to which recipient will reply
+    $mail->addReplyTo("admin@heebphotography.ch", "Reply");
+//Send HTML or Plain Text email
+    $mail->isHTML(true);
+    $mail->Subject = "Testing PHP Mailer";
+    $mail->Body = "<i>Mail body in HTML</i>";
+    $mail->AltBody = "This is the plain text version of the email content";
 // sends the actual email
     try {
         $mail->send();
