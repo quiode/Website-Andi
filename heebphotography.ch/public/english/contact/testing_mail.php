@@ -25,18 +25,18 @@
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
 // SMTP Server
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
-    $mail->Host       = "smtp.migadu.com"; // sets the SMTP server
+    $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
     $mail->Port       = 587;                    // set the SMTP port
     $mail->SMTPSecure = 'tls';
-    $mail->Username   = "admin@heebphotography.ch"; // SMTP account username
-    $mail->Password   = "5gP4!chH#BMtfCF";        // SMTP account password
+    $mail->Username   = "contact.form.heebphotography"; // SMTP account username
+    $mail->Password   = "Yw63Bf#@uK@t%P7";        // SMTP account password
 //From email address and name
-    $mail->From = "admin@heebphotography.ch";
+    $mail->From = "contact.form.heebphotography";
     // $mail->FromName = "Contact Form";
 //To address and name
     $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient
 //Address to which recipient will reply
-    $mail->addReplyTo("admin@heebphotography.ch", "Reply");
+    $mail->addReplyTo("contact.form.heebphotography", "Reply");
 //Send HTML or Plain Text email
     $mail->isHTML(true);
     $mail->Subject = "Testing PHP Mailer";
