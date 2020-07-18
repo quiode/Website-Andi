@@ -31,7 +31,7 @@
     $mail->Password   = "5gP4!chH#BMtfCF";        // SMTP account password
 //From email address and name
     $mail->From = "admin@heebphotography.ch";
-    $mail->FromName = "Contact Form";
+    // $mail->FromName = "Contact Form";
 //To address and name
     $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient
 //Address to which recipient will reply
