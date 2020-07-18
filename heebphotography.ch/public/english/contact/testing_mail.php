@@ -26,7 +26,7 @@
     $mail->From = "admin@heebphotography.ch";
     $mail->FromName = "Contact Form";
 //To address and name
-    $mail->addAddress("contact.form.heebphotography@gmail.com");
+    $mail->addAddress("c_form@yahoo.com");
 //Address to which recipient will reply
     $mail->addReplyTo("admin@heebphotography.ch", "Reply");
 //Send HTML or Plain Text email
