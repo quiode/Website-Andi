@@ -19,9 +19,9 @@
     use PHPMailer\PHPMailer\Exception;
 
     echo "hi";
-    require "./PHPMailer-master/" . "Exception.php";
-    require "./PHPMailer-master/" . "PHPMailer.php";
-    require "./PHPMailer-master/" . "SMTP.php";
+    require "./PHPMailer-master/src/" . "Exception.php";
+    require "./PHPMailer-master/src/" . "PHPMailer.php";
+    require "./PHPMailer-master/src/" . "SMTP.php";
     echo "hi";
 
 //PHPMailer Object
