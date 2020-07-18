@@ -33,7 +33,7 @@
     $mail->From = "contact.form.heebphotography@gmail.com";
     // $mail->FromName = "Contact Form";
 //To address and name
-    $mail->addAddress("domi.schwaiger04@gmail.com"); //Recipient
+    $mail->addAddress("andreas.heeb@heebphotography.ch"); //Recipient
 //Address to which recipient will reply
     $mail->addReplyTo("contact.form.heebphotography@gmail.com", "Reply");
 //Send HTML or Plain Text email
