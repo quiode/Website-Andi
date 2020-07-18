@@ -8,8 +8,8 @@
 <body>
     <?php
 // shows errors
-    // ini_set('display_errors', '1');
-    // ini_set('display_startup_errors', '1');
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
 // imports all components
     set_include_path("./PHPMailer-master");
@@ -26,8 +26,8 @@
 // SMTP Server
     $mail->SMTPAuth   = true;                  // enable SMTP authentication
     $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
-    $mail->Port       = 587;                    // set the SMTP port
-    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;                    // sets the SMTP port
+    $mail->SMTPSecure = 'tls';                  // TLS/SSL
     $mail->Username   = "contact.form.heebphotography"; // SMTP account username
     $mail->Password   = "Yw63Bf#@uK@t%P7";        // SMTP account password
 //From email address and name
