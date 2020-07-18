@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
-    'Mdi\\' => array($vendorDir . '/mesavolt/mdi-php/src'),
 );

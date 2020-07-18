@@ -1,51 +1,5 @@
 [
     {
-        "name": "mesavolt/mdi-php",
-        "version": "v1.1.0",
-        "version_normalized": "1.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/chteuchteu/MaterialDesignIcons-PHP.git",
-            "reference": "8cd177bf619918b39424a91496a976b3f60d08a5"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/chteuchteu/MaterialDesignIcons-PHP/zipball/8cd177bf619918b39424a91496a976b3f60d08a5",
-            "reference": "8cd177bf619918b39424a91496a976b3f60d08a5",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=7.1"
-        },
-        "require-dev": {
-            "php-coveralls/php-coveralls": "^2.0",
-            "phpunit/phpunit": "^7"
-        },
-        "time": "2018-08-24T14:41:16+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Mdi\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "MesaVolt",
-                "email": "contact@mesavolt.com"
-            },
-            {
-                "name": "Quentin",
-                "email": "stoeckel.quentin@gmail.com"
-            }
-        ],
-        "description": "Easy MDI integration for PHP 7.1+"
-    },
-    {
         "name": "phpmailer/phpmailer",
         "version": "v6.1.7",
         "version_normalized": "6.1.7.0",
