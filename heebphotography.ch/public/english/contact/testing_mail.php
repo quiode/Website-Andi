@@ -20,7 +20,6 @@
     require "./PHPMailer-master/src/" . "Exception.php";
     require "./PHPMailer-master/src/" . "PHPMailer.php";
     require "./PHPMailer-master/src/" . "SMTP.php";
-
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
 // SMTP Server
