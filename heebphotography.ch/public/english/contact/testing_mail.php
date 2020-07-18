@@ -13,15 +13,15 @@
     ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
 // imports all components
-    set_include_path("PHPMailer-master");
+    set_include_path("./PHPMailer-master");
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
     echo "hi";
-    require "/var/www/heebphotography.ch/PHPMailer-master/" . "Exception.php";
-    require "/var/www/heebphotography.ch/PHPMailer-master/" . "PHPMailer.php";
-    require "/var/www/heebphotography.ch/PHPMailer-master/" . "SMTP.php";
+    require "./PHPMailer-master/" . "Exception.php";
+    require "./PHPMailer-master/" . "PHPMailer.php";
+    require "./PHPMailer-master/" . "SMTP.php";
     echo "hi";
 
 //PHPMailer Object
