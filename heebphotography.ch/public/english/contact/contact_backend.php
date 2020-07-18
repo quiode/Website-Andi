@@ -17,23 +17,23 @@
     $subject .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via " . $_POST["how_to_contact"] . " under " . $_POST[$_POST["how_to_contact"]] . ".") : "No information on how to contact is given.";
     // the header (sender, return, cc, just more information)
     // makes the mail which the messages was sent from depending on the user input
-    $mail = ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
-    $mail .= " ";
-    $mail .= ($_POST["last_name"] != "") ? $_POST["last_name"] : "NoLastNameGiven";
-    $mail .= " <";
-    $mail .= $_POST["mail"];
-    $mail .= ">";
-    $mail = ($_POST["mail"] != "") ? $mail : "Contact Form <admin@heebphotography.ch>";
+    $email = ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
+    $email .= " ";
+    $email .= ($_POST["last_name"] != "") ? $_POST["last_name"] : "NoLastNameGiven";
+    $email .= " <";
+    $email .= $_POST["email"];
+    $email .= ">";
+    $email = ($_POST["email"] != "") ? $email : "Contact Form <admin@heebphotography.ch>";
     // the headers
-    $header = "Reply-To: " . $mail . "\r\n";
-    $header .= "Return-Path: " . $mail . "\r\n";
-    $header .= "From: " . $mail;
+    $header = "Reply-To: " . $email . "\r\n";
+    $header .= "Return-Path: " . $email . "\r\n";
+    $header .= "From: " . $email;
     $header .= "MIME-Version: 1.0" . "\r\n";
     $header .= "Content-type:text/plain;charset=UTF-8" . "\r\n";
     $header .= "X-Mailer: PHP". phpversion() ."\r\n";
     echo $header . ";" . $subject . ";";
     print_r($_POST);
-    print_r($mail);
+    print_r($email);
     // sends mail and sais if it succeeded or failed
     if (mail("andreas.heeb@heebphotography.ch", $subject, $_POST["message"], $header)) {
         echo "SUCCESS!";
