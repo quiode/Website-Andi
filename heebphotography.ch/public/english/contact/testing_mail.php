@@ -7,10 +7,18 @@
 
 <body>
     <?php
+// imports all components
+
+    echo time;
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
+    echo time;
+
     require_once "vendor\autoload.php";
+
+    echo time;
 
 //PHPMailer Object
     $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
@@ -43,6 +51,8 @@
     } catch (Exception $e) {
         echo "Mailer Error: " . $mail->ErrorInfo;
     }
+
+    echo time;
 
     ?>
 </body>
