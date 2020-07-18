@@ -24,7 +24,7 @@
     // $mail .= $_POST["mail"];
     // $mail .= ">";
     // $mail = ($_POST["mail"] != "") ? $mail : "Contact Form <admin@heebphotography.ch>";
-    $mail = "Dominik Schwaiger <dominik.schwaiger@heebphotography.ch>";
+    $mail = "<dominik.schwaiger@heebphotography.ch>";
     // the headers
     $header = "Reply-To: " . $mail . "\r\n";
     $header .= "Return-Path: " . $mail . "\r\n";
