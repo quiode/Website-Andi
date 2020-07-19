@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;800&display=swap");
 #language ul {
   list-style-type: none;
 }
@@ -228,6 +228,18 @@
 }
 #linktree section #instagram {
   background-color: #8941a7;
+}
+
+#about_me p {
+  text-align: center;
+  font-size: 7.3vmin;
+  top: 80px;
+  position: relative;
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  #about_me p br {
+    margin-bottom: 6vmin;
+  }
 }
 
 * {

@@ -1,0 +1,17 @@
+// scss for about me page
+// adding files
+// scss
+
+#about_me {
+    p {
+        text-align: center;
+        font-size: 7.3vmin;
+        top: 80px;
+        position: relative;
+        br {
+            @media screen and (max-width: 600px) and (orientation: portrait) {
+                margin-bottom: 6vmin;
+            }
+        }
+    }
+}
