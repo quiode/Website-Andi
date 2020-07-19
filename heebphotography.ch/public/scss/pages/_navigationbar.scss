@@ -55,6 +55,7 @@
         }
         div {
             @include button_line();
+            box-sizing: content-box;
             background-color: white;
             border: none;
             width: 72px;
