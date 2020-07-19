@@ -5,14 +5,14 @@
 #gallery {
     margin: 0;
     padding: 0;
-    div {
+    > div {
         &:first-of-type {
-            div {
+            > div {
                 display: flex;
                 flex-wrap: wrap;
                 padding: 0 4px;
                 justify-content: space-around;
-                div {
+                > div {
                     flex: 25%;
                     max-width: 24%;
                     padding: 0 4px;
@@ -28,7 +28,7 @@
                         max-width: 96%;
                         padding: 0 4px;
                     }
-                    .image {
+                    > .image {
                         vertical-align: middle;
                         width: 100%;
                         margin-top: 8px;
@@ -39,7 +39,7 @@
             }
         }
     }
-    #slideshow_background {
+    > #slideshow_background {
         height: 100%;
         width: 100%;
         top: 0%;
@@ -50,11 +50,11 @@
         background-color: black;
         display: none;
         z-index: 4;
-        #slideshow {
+        > #slideshow {
             z-index: 5;
             position: fixed;
             display: none;
-            img {
+            > img {
                 object-fit: contain;
                 position: fixed;
                 top: 50%;
@@ -63,14 +63,14 @@
                 max-width: 90%;
                 max-height: 90%;
             }
-            div {
+            > div {
                 &:first-of-type {
                     left: 0;
                 }
                 &:nth-of-type(2) {
                     right: 0;
                 }
-                .arrows {
+                > .arrows {
                     font-size: 10vmax;
                     padding: 1vmax 4.5vmax;
                     transform: translate(-50%, -50%);
@@ -107,8 +107,8 @@
                     position: fixed;
                     transform: rotate(45deg);
                     z-index: 6;
-                    div {
-                        div {
+                    > div {
+                        > div {
                             background-color: white;
                             $width: 7vmax;
                             width: $width;
@@ -120,12 +120,12 @@
                     }
                 }
             }
-            .arrows_background {
+            > .arrows_background {
                 height: 100%;
                 position: fixed;
                 z-index: 4;
                 &:hover {
-                    .arrows {
+                    > .arrows {
                         display: inline-block;
                     }
                 }
