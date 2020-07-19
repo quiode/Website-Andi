@@ -4,7 +4,11 @@
 a {
     text-decoration: none;
     color: black;
-    &:checked{
+    list-style-type: none;
+    &hover{
+        color: black;
+    }
+    &:checked {
         text-decoration: none;
         color: black;
     }

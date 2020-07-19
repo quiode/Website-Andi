@@ -1,4 +1,4 @@
-<nav>
+<nav id="navigationbar">
     <?php
     // includes the javascript file
     echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>"
