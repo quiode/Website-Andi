@@ -6,8 +6,9 @@
 @use "./classes/backgrounds";
 // Pages
 @use './pages/language';
+@use './pages/home';
 // Third-Party
 // Global
 @use './global/font';
 @use './global/layout';
-@use './global/tags';
+@use './global/decoration';
