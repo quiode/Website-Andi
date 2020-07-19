@@ -20,7 +20,7 @@
             top: 50px;
         }
         div {
-            box-sizing: content-box;
+            box-sizing: initial;
             width: 70px;
             height: 10px;
             background-color: black;
@@ -50,7 +50,7 @@
             transform: rotate(45deg) translate(-17px, -17px);
         }
         div {
-            box-sizing: content-box;
+            box-sizing: initial;
             background-color: white;
             border: none;
             width: 72px;
