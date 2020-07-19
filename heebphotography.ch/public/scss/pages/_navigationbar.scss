@@ -1,5 +1,19 @@
 // the navigation bar on every site
 // adding files
+// mixin's
+@mixin button_line {
+    box-sizing: content-box;
+    width: 70px;
+    height: 10px;
+    background-color: black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-right: 16px;
+    margin-left: 16px;
+    transition-duration: 0.8s;
+    text-align: center;
+    border: 1px white solid;
+}
 // scss
 #navigationbar {
     #navigation_button {
@@ -19,20 +33,8 @@
             left: 50%;
             top: 50px;
         }
-        #bar1,
-        #bar2,
-        #bar3 {
-            box-sizing: content-box;
-            width: 70px;
-            height: 10px;
-            background-color: black;
-            margin-top: 12px;
-            margin-bottom: 12px;
-            margin-right: 16px;
-            margin-left: 16px;
-            transition-duration: 0.8s;
-            text-align: center;
-            border: 1px white solid;
+        div {
+            @include button_line();
         }
         .bar1 {
             margin-top: 24px;
@@ -52,6 +54,7 @@
             transform: rotate(45deg) translate(-17px, -17px);
         }
         div {
+            @include button_line();
             box-sizing: content-box;
             background-color: white;
             border: none;
