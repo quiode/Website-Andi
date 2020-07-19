@@ -14,26 +14,25 @@
 </head>
 
 
-<body>
-    <header></header>
+<body id="linktree">
     <?php include '../templates/navigationbar.php'?>
 
 
     <!-- the linktree (using php for eliminating white space bc fuck u html) -->
     <?php
     $html = $text = <<<EOT
-    <section id="linktree_container">
-        <a class="item" id="instagram" href="https://www.instagram.com/heebphotography/" target="_blank">
+    <section>
+        <a id="instagram" href="https://www.instagram.com/heebphotography/" target="_blank">
             <iconify-icon data-icon="logos:instagram-icon" class="icon" id="instagram_icon"></iconify-icon>
-            <p class="text">@heebphotography</p>
+            <p>@heebphotography</p>
         </a>
-        <a class="item" id="phone" href="./contacts.vcf" download="Andreas Heeb">
+        <a id="phone" href="./contacts.vcf" download="Andreas Heeb">
             <iconify-icon data-icon="carbon:phone" class="icon" id="phone_icon"></iconify-icon>
-            <p class="text">+41 12 345 67 78</p>
+            <p>+41 12 345 67 78</p>
         </a>
-        <a class="item" id="mail" href="mailto:andreas.heeb@heebphotography.ch" target="_blank">
+        <a id="mail" href="mailto:andreas.heeb@heebphotography.ch" target="_blank">
             <iconify-icon data-icon="feather:mail" class="icon" id="mail_icon"></iconify-icon>
-            <p class="text">andreas.heeb@heebphotography.ch</p>
+            <p>andreas.heeb@heebphotography.ch</p>
         </a>
     </section>
     EOT;
