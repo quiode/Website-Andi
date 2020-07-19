@@ -106,13 +106,13 @@
 #navigationbar #navigation_button .bar3 {
   margin-bottom: 24px;
 }
-#navigationbar #navigation_button .change .bar1 {
+#navigationbar .change .bar1 {
   transform: rotate(-45deg) translate(-19px, 13px);
 }
-#navigationbar #navigation_button .change .bar2 {
+#navigationbar .change .bar2 {
   opacity: 0;
 }
-#navigationbar #navigation_button .change .bar3 {
+#navigationbar .change .bar3 {
   transform: rotate(45deg) translate(-17px, -17px);
 }
 #navigationbar #navigation-overlay {
