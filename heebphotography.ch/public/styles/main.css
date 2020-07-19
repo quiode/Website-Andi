@@ -89,6 +89,7 @@
   }
 }
 #navigationbar #navigation_button div {
+  box-sizing: initial;
   width: 70px;
   height: 10px;
   background-color: black;
@@ -114,6 +115,13 @@
 }
 #navigationbar .change .bar3 {
   transform: rotate(45deg) translate(-17px, -17px);
+}
+#navigationbar .change div {
+  box-sizing: initial;
+  background-color: white;
+  border: none;
+  width: 72px;
+  height: 12px;
 }
 #navigationbar #navigation-overlay {
   height: 0%;
