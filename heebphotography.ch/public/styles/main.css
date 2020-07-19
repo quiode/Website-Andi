@@ -68,34 +68,10 @@
   height: auto;
 }
 
-#navigationbar .change .bar1 {
-  transform: rotate(-45deg) translate(-19px, 13px);
-}
-#navigationbar .change .bar2 {
-  opacity: 0;
-}
-#navigationbar .change .bar3 {
-  transform: rotate(45deg) translate(-17px, -17px);
-}
-#navigationbar .change div {
-  box-sizing: content-box;
-  width: 70px;
-  height: 10px;
-  background-color: black;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  margin-right: 16px;
-  margin-left: 16px;
-  transition-duration: 0.8s;
-  text-align: center;
-  border: 1px white solid;
-  background-color: white;
-  border: none;
-  width: 72px;
-  height: 12px;
-}
 #navigationbar #navigation_button {
   display: inline-block;
+  justify-content: center;
+  align-items: center;
   width: 102px;
   height: 102px;
   transition: 0.8s;
@@ -130,6 +106,32 @@
 }
 #navigationbar #navigation_button .bar3 {
   margin-bottom: 24px;
+}
+#navigationbar .change .bar1 {
+  transform: rotate(-45deg) translate(-19px, 13px);
+}
+#navigationbar .change .bar2 {
+  opacity: 0;
+}
+#navigationbar .change .bar3 {
+  transform: rotate(45deg) translate(-17px, -17px);
+}
+#navigationbar .change div {
+  box-sizing: content-box;
+  width: 70px;
+  height: 10px;
+  background-color: black;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-right: 16px;
+  margin-left: 16px;
+  transition-duration: 0.8s;
+  text-align: center;
+  border: 1px white solid;
+  background-color: white;
+  border: none;
+  width: 72px;
+  height: 12px;
 }
 #navigationbar #navigation-overlay {
   height: 0%;
