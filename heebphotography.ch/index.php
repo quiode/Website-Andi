@@ -3,20 +3,14 @@
 
 <head>
     <title>Wildlifephotography Andreas Heeb</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="./public/styles/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="language">
     <ul>
-        <!-- <li>
-            <a href="../public/english" id="english">English</a>
-        </li> -->
-        <!-- <li>
-            <a href="../public/deutsch" id="deutsch">Deutsch</a>
-        </li> -->
         <li>
             <?php
             echo "<a href=\"https://en.";

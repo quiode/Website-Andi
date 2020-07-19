@@ -1,0 +1,6 @@
+// for small functions that make my life easier
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}

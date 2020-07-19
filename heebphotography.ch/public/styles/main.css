@@ -1,0 +1,67 @@
+#language ul {
+  list-style-type: none;
+}
+#language ul li a {
+  position: absolute;
+  font-size: 12vw;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+#language ul li #background_english {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+  width: 50%;
+}
+#language ul li #background_deutsch {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0%;
+  left: 0%;
+  width: 50%;
+  left: 50%;
+}
+#language ul li #english {
+  left: 25%;
+  top: 50%;
+}
+#language ul li #english:hover + #background_english {
+  background-color: #c8c8c8;
+  color: black;
+  text-decoration: none;
+}
+#language ul li #deutsch {
+  left: 75%;
+  top: 50%;
+}
+#language ul li #deutsch:hover + #background_deutsch {
+  background-color: #c8c8c8;
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:checked {
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=main.css.map */
