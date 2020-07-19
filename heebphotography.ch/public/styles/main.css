@@ -89,7 +89,7 @@
   }
 }
 #navigationbar #navigation_button div {
-  box-sizing: initial;
+  box-sizing: content-box;
   width: 70px;
   height: 10px;
   background-color: black;
@@ -117,7 +117,7 @@
   transform: rotate(45deg) translate(-17px, -17px);
 }
 #navigationbar .change div {
-  box-sizing: initial;
+  box-sizing: content-box;
   background-color: white;
   border: none;
   width: 72px;
