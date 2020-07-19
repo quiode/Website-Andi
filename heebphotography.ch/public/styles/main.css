@@ -88,7 +88,9 @@
     top: 50px;
   }
 }
-#navigationbar #navigation_button div {
+#navigationbar #navigation_button #bar1,
+#navigationbar #navigation_button #bar2,
+#navigationbar #navigation_button #bar3 {
   box-sizing: content-box;
   width: 70px;
   height: 10px;
