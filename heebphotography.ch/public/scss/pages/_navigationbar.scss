@@ -20,6 +20,7 @@
             top: 50px;
         }
         div {
+            box-sizing: content-box;
             width: 70px;
             height: 10px;
             background-color: black;
@@ -42,13 +43,9 @@
         .bar1 {
             transform: rotate(-45deg) translate(-19px, 13px);
         }
-    }
-    .change {
         .bar2 {
             opacity: 0;
         }
-    }
-    .change {
         .bar3 {
             transform: rotate(45deg) translate(-17px, -17px);
         }
