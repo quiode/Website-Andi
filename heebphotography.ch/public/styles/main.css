@@ -88,7 +88,9 @@
     top: 50px;
   }
 }
-#navigationbar #navigation_button div {
+#navigationbar #navigation_button #bar1,
+#navigationbar #navigation_button #bar2,
+#navigationbar #navigation_button #bar3 {
   box-sizing: content-box;
   width: 70px;
   height: 10px;
@@ -117,17 +119,6 @@
   transform: rotate(45deg) translate(-17px, -17px);
 }
 #navigationbar .change div {
-  box-sizing: content-box;
-  width: 70px;
-  height: 10px;
-  background-color: black;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  margin-right: 16px;
-  margin-left: 16px;
-  transition-duration: 0.8s;
-  text-align: center;
-  border: 1px white solid;
   box-sizing: content-box;
   background-color: white;
   border: none;
