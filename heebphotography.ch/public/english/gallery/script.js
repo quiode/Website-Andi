@@ -16,15 +16,6 @@ function resizeToMax() {
         const arrow = arrows_background[index];
         arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) + "px";
     }
-
-    // var arrows = document.getElementsByClassName("arrows");
-    // for (let index = 0; index < arrows.length; index++) {
-    //     const arrow = arrows[index];
-    //     arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) - (Number((window.innerWidth - img.getBoundingClientRect().width) / 2))/2 + "px";
-    //     arrow.style.height = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) - (Number((window.innerWidth - img.getBoundingClientRect().width) / 2))/2 + "px";
-    // }
-
-    // alert("resizetoMax executed");
 }
 
 // lets the slideshow appear/disapper
@@ -85,8 +76,7 @@ function key_pressed(event) {
             next_picture();
         } else if (key == 37) {
             last_picture();
-        }
-        else if (key == 27) {
+        } else if (key == 27) {
             slideshow_off();
         }
     }

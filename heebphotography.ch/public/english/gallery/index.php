@@ -4,26 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <?php
+    <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
+    <!-- <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
-    ?>
-
-    <!-- for material design icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-    
+    ?>    -->
     <script src="script.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
 
-<body>
+<body id="gallery">
 
     <!-- navigation element -->
     <?php require '../templates/navigationbar.php'?>
 
-    <div id="gallery">
+    <div>
         <?php
         // searches the filename of all images in the images folder
         $images = scandir("images", 1);
@@ -55,8 +49,8 @@
         ?>
 
         <!-- makes 4 rows of images -->
-        <div class="row">
-            <div class="column">
+        <div>
+            <div>
                 <?php
                 foreach ($image_column_1 as $image) {
                         echo "<img src=\"images/";
@@ -66,7 +60,7 @@
                 ?>
             </div>
 
-            <div class="column">
+            <div>
                 <?php
                 foreach ($image_column_2 as $image) {
                         echo "<img src=\"images/";
@@ -76,7 +70,7 @@
                 ?>
             </div>
 
-            <div class="column">
+            <div>
                 <?php
                 foreach ($image_column_3 as $image) {
                         echo "<img src=\"images/";
@@ -86,7 +80,7 @@
                 ?>
             </div>
 
-            <div class="column">
+            <div>
                 <?php
                 foreach ($image_column_4 as $image) {
                         echo "<img src=\"images/";
@@ -105,22 +99,22 @@
                 onload="resizeToMax()">
 
             <!-- for navigation within the slideshow -->
-            <div id="last_picture_background" class="arrows_background">
+            <div class="arrows_background">
                 <div id="last_picture" class="arrows" onclick="last_picture()">
                     &#8249;
                 </div>
             </div>
 
-            <div id="next_picture_background" class="arrows_background">
+            <div class="arrows_background">
                 <div id="next_picture" class="arrows" onclick="next_picture()">
                     &#8250;
                 </div>
             </div>
 
-            <div id="close_btn" onclick="slideshow_off()">
-                <div id="plus">
-                    <div id="pline_1"></div>
-                    <div id="pline_2"></div>
+            <div onclick="slideshow_off()">
+                <div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
         </div>
