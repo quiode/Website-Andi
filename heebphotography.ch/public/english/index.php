@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onload="slideshow()">
 
 <head>
     <meta charset="UTF-8">
