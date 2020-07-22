@@ -1,0 +1,18 @@
+// color, text-decoration, bold, italic
+// import files
+// scss
+* {
+    user-select: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+    &hover {
+        color: black;
+    }
+    &:checked {
+        text-decoration: none;
+        color: black;
+    }
+}

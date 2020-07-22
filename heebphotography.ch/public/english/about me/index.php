@@ -5,18 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Wildlifephotography Andreas Heeb</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;800&display=swap" rel="stylesheet">
-    <?php
+    <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
+    <!-- <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
-    ?>
+    ?> -->
 </head>
 
-<body>
+<body id="about_me">
     <?php include '../templates/navigationbar.php'?>
-    <!-- <h1>
-        About Me | Wildlifephotography Andreas Heeb
-    </h1> -->
     <p>
         Andreas Heeb
         <br>
