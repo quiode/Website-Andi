@@ -76,11 +76,27 @@
 //sends the actual email
     try {
         $mail->send();
-        echo "Message has been sent successfully";
+        // sends the status of the mail sending process to javascript
+            echo <<<EOT
+            <script>
+            sessionStorage.setItem("mail_status", "true")
+            </script>
+            EOT;
     } catch (Exception $e) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
+        // sends the status of the mail sending process to javascript
+            echo <<<EOT
+            <script>
+            sessionStorage.setItem("mail_status", "false")
+            sessionStorage.setItem("mail_error", $mail->ErrorInfo)
+            </script>
+            EOT;
     }
     ?>
+
+<!-- closes the window -->
+    <script>
+        window.close();
+    </script>
 </body>
 
 </html>

@@ -69,7 +69,7 @@
             <!-- submit button -->
             <input type="submit" value="Submit">
         </form>
-        <div>
+        <div id="mail_status">
             <p>Please wait...</p>
             <img src="./images/loading.gif" alt="loading_gif">
         </div>
