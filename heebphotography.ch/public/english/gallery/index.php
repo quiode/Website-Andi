@@ -8,7 +8,7 @@
     <!-- <?php
     echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
     ?>    -->
-    <script src="script.js"></script>
+    <script src="gallery.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
 

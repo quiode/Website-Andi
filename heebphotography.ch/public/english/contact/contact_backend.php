@@ -92,10 +92,9 @@
             EOT;
     }
     ?>
-
-<!-- closes the window -->
+    <!-- closes the window -->
     <script>
-        window.close();
+    window.close();
     </script>
 </body>
 
