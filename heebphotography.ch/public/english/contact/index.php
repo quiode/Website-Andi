@@ -11,12 +11,12 @@
         ?> -->
     </head>
 
-    <body>
+    <body id="contact_form">
         <header></header>
         <!-- the navigatio bar -->
         <?php include '../templates/navigationbar.php'?>
         <!-- the contact form, you can leave a lot empty and just send it anonymous -->
-        <form action="./contact_backend.php" method="POST">
+        <form action="./contact_backend.php" method="POST" target="_blank">
             <!-- selection for how to contact the person -->
             <label for="how_to_contact">Please choose a way we can contact you:</label>
             <select name="how_to_contact" id="how_to_contact">
@@ -69,6 +69,10 @@
             <!-- submit button -->
             <input type="submit" value="Submit">
         </form>
+        <div>
+            <p>Please wait...</p>
+            <img src="./images/loading.gif" alt="loading_gif">
+        </div>
     </body>
 
 </html>
