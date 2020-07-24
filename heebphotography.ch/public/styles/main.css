@@ -378,13 +378,13 @@
 #contact_form .custom_subject {
   display: none;
 }
-#contact_form .mail_status {
+#contact_form #mail_status {
   display: none;
 }
-#contact_form .mail_status p {
+#contact_form #mail_status p {
   display: inherit;
 }
-#contact_form .mail_status img {
+#contact_form #mail_status img {
   display: inherit;
 }
 
