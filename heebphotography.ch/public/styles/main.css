@@ -381,6 +381,12 @@
 #contact_form .mail_status {
   display: none;
 }
+#contact_form .mail_status p {
+  display: inherit;
+}
+#contact_form .mail_status img {
+  display: inherit;
+}
 
 * {
   font-family: "Raleway", sans-serif;
