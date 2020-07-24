@@ -366,6 +366,22 @@
   transform: translateY(-1vmax) rotate(90deg);
 }
 
+#contact_form #email {
+  display: none;
+}
+#contact_form #phone {
+  display: none;
+}
+#contact_form #instagram {
+  display: none;
+}
+#contact_form #custom_subject {
+  display: none;
+}
+#contact_form #mail_status {
+  display: none;
+}
+
 * {
   font-family: "Raleway", sans-serif;
 }
