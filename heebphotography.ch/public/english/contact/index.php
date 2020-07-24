@@ -9,6 +9,7 @@
         <!-- <?php
         echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
         ?> -->
+        <script src="contact.js"></script>
     </head>
 
     <body id="contact_form">
@@ -16,7 +17,7 @@
         <!-- the navigatio bar -->
         <?php include '../templates/navigationbar.php'?>
         <!-- the contact form, you can leave a lot empty and just send it anonymous -->
-        <form action="./contact_backend.php" method="POST" target="_blank">
+        <form action="./contact_backend.php" method="POST" target="_blank" onsubmit="form_submit()">
             <!-- selection for how to contact the person -->
             <label for="how_to_contact">Please choose a way we can contact you:</label>
             <select name="how_to_contact" id="how_to_contact">
@@ -30,15 +31,15 @@
             </select>
             <!-- depends on what is chose in the above -->
             <!-- email -->
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="example@example.com" maxlength="256"
+            <label for="email" class="email">Email:</label>
+            <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
                 title="example@example.com" required>
             <!-- phone -->
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="012 345 67 89" maxlength="256" title="012 345 67 89" required>
+            <label for="phone" class="phone">Phone:</label>
+            <input type="tel" id="phone" class="phone" name="phone" placeholder="012 345 67 89" maxlength="256" title="012 345 67 89" required>
             <!-- instagram -->
-            <label for="instagram">Instagram:</label>
-            <input type="text" id="instagram" name="instagram" placeholder="@username" pattern="@.*" title="@username"
+            <label for="instagram" class="instagram">Instagram:</label>
+            <input type="text" id="instagram" class="instagram" name="instagram" placeholder="@username" pattern="@.*" title="@username"
                 maxlength="256" required>
             <!-- first name -->
             <label for="first_name">First Name:</label>
@@ -60,8 +61,8 @@
                 <option value="custom">Something else</option>
             </select>
             <!-- custom subject -->
-            <label for="custom_subject">Please Elaborate:</label>
-            <input type="text" id="custom_subject" name="custom_subject" maxlength="256" autocomplete="off"
+            <label for="custom_subject" class="custom_subject">Please Elaborate:</label>
+            <input type="text" id="custom_subject" class="custom_subject" name="custom_subject" maxlength="256" autocomplete="off"
                 title="Subject" autofocus>
             <!-- the actual message -->
             <label for="message">Message:</label>
