@@ -12,26 +12,26 @@
     <script src="script.js"></script>
 </head>
 
-<body id="english">
+<body id="english" onload="slideshow()">
     <header>
         <h2>Heeb Photography</h2>
     </header>
     <?php require '../english/templates/navigationbar.php'?>
     <section>
         <div class="container_slideshow">
-            <div class="slide">
+            <div class="slide fade">
                 <img src="images-home/img1.jpg">
             </div>
-            <div class="slide">
+            <div class="slide fade">
                 <img src="images-home/img2.jpg">
             </div>
-            <div class="slide">
+            <div class="slide fade">
                 <img src="images-home/img3.jpg">
             </div>
-            <div class="slide">
+            <div class="slide fade">
                 <img src="images-home/img4.jpg">
             </div>
-            <div class="slide">
+            <div class="slide fade">
                 <img src="images-home/img5.jpg">
             </div>
         </div>
