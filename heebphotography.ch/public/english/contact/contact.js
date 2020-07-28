@@ -1,5 +1,20 @@
+// looks for a change in the local storage, if it detects, does something
 window.addEventListener("storage", () => {
-    alert(document.getElementById("mail_status_message").innerHTML);
+    // when the form is beeing submitted, it gives a response to the use if the message has been sent or an error has been occurred
+    if (localStorage.getItem("finished")) {
+        if (localStorage.getItem("mail_status")) {
+            document.getElementById("mail_status_message").innerHTML = "Form has successfully been sent!";
+            document.getElementById("green_check").style.display = "inherit";
+            document.getElementById("loading_gif").style.display = "none";
+            setTimeout(form_normal(), 5000);
+        } else {
+            document.getElementById("mail_status_message").innerHTML = "An Error has occurred:" + localStorage.getItem("mail_error");
+            document.getElementById("red_x").style.display = "inherit";
+            document.getElementById("loading_gif").style.display = "none";
+            setTimeout(form_normal(), 5000);
+        }
+        localStorage.clear();
+    }
 })
 
 // the normal layout of the form
@@ -10,24 +25,9 @@ function form_normal() {
     document.getElementById("red_x").style.display = "inherit";
 }
 
-// when the form is beeing submitted, it gives a response to the use if the message has been sent or an error has been occurred
+// when the form is beeing submitted, displays processing information
 function form_submit() {
-    // document.getElementById("mail_status").style.display = "initial";
-    // while (true) {
-    //     if (localStorage.getItem("finished")) {
-    //         if (localStorage.getItem("mail_status")) {
-    //             document.getElementById("mail_status_message").innerHTML = "Form has successfully been sent!";
-    //             document.getElementById("green_check").style.display = "inherit";
-    //             document.getElementById("loading_gif").style.display = "none";
-    //             setTimeout(form_normal(), 5000);
-    //         } else {
-    //             document.getElementById("mail_status_message").innerHTML = "An Error has occurred:" + localStorage.getItem("mail_error");
-    //             document.getElementById("red_x").style.display = "inherit";
-    //             document.getElementById("loading_gif").style.display = "none";
-    //             setTimeout(form_normal(), 5000);
-    //         }
-    //     }
-    // }
+    document.getElementById("mail_status").style.display = "initial";
 }
 
 // when changing an option, display another input field
