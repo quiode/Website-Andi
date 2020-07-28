@@ -47,19 +47,19 @@ function contact_changed() {
         element.style.display = "initial";
         element.required = true;
     });
+}
 
-    // makes an input field when custom subject is selected
-    function subject_changed() {
-        if (document.getElementById("subject").value == "custom") {
-            Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
-                element.style.display = "initial";
-                element.required = true;
-            });
-        } else {
-            Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
-                element.style.display = "none";
-                element.required = false;
-            });
-        }
+// makes an input field when custom subject is selected
+function subject_changed() {
+    if (document.getElementById("subject").value == "custom") {
+        Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
+            element.style.display = "initial";
+            element.required = true;
+        });
+    } else {
+        Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
+            element.style.display = "none";
+            element.required = false;
+        });
     }
 }
