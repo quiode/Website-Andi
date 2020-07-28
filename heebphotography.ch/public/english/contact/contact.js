@@ -30,29 +30,29 @@ function form_submit() {
 // when changing an option, display another input field
 function contact_changed() {
     // changed the display of all contact input field to none
-    document.getElementsByClassName("email").forEach(element => {
+    Array.from(document.getElementsByClassName("email")).forEach(element => {
         element.style.display = "none";
     });
-    document.getElementsByClassName("phone").forEach(element => {
+    Array.from(document.getElementsByClassName("phone")).forEach(element => {
         element.style.display = "none";
     });
-    document.getElementsByClassName("instagram").forEach(element => {
+    Array.from(document.getElementsByClassName("instagram")).forEach(element => {
         element.style.display = "none";
     });
     // sets the right input field display to block
     switch (document.getElementById("how_to_contact").value) {
         case "email":
-            document.getElementsByClassName("email").forEach(element => {
+            Array.from(document.getElementsByClassName("email")).forEach(element => {
                 element.style.display = "block";
             });
             break;
         case "phone":
-            document.getElementsByClassName("phone").forEach(element => {
+            Array.from(document.getElementsByClassName("phone")).forEach(element => {
                 element.style.display = "block";
             });
             break;
         case "instagram":
-            document.getElementsByClassName("instagram").forEach(element => {
+            Array.from(document.getElementsByClassName("instagram")).forEach(element => {
                 element.style.display = "block";
             });
             break;
