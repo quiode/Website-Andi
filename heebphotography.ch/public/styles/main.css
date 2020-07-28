@@ -389,8 +389,14 @@
 #contact_form #mail_status p {
   display: inherit;
 }
-#contact_form #mail_status img {
+#contact_form #mail_status #loading_gif {
   display: inherit;
+}
+#contact_form #mail_status #green_check {
+  display: none;
+}
+#contact_form #mail_status #red_x {
+  display: none;
 }
 
 * {

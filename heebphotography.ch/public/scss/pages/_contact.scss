@@ -19,8 +19,14 @@
         p {
             display: inherit;
         }
-        img {
+        #loading_gif{
             display: inherit;
+        }
+        #green_check{
+            display: none;
+        }
+        #red_x{
+            display: none;
         }
     }
 }
