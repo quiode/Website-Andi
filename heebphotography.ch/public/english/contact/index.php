@@ -33,15 +33,15 @@
         <!-- email -->
         <label for="email" class="email">Email:</label>
         <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
-            title="example@example.com" required>
+            title="example@example.com">
         <!-- phone -->
         <label for="phone" class="phone">Phone:</label>
         <input type="tel" id="phone" class="phone" name="phone" placeholder="012 345 67 89" maxlength="256"
-            title="012 345 67 89" required>
+            title="012 345 67 89">
         <!-- instagram -->
         <label for="instagram" class="instagram">Instagram:</label>
         <input type="text" id="instagram" class="instagram" name="instagram" placeholder="@username" pattern="@.*"
-            title="@username" maxlength="256" required>
+            title="@username" maxlength="256">
         <!-- first name -->
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
@@ -67,7 +67,7 @@
             autocomplete="off" title="Subject" autofocus>
         <!-- the actual message -->
         <label for="message">Message:</label>
-        <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
+        <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message">
         <!-- submit button -->
         <input type="submit" value="Submit">
     </form>
