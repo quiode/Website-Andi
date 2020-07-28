@@ -67,7 +67,7 @@
             autocomplete="off" title="Subject" autofocus>
         <!-- the actual message -->
         <label for="message">Message:</label>
-        <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message">
+        <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
         <!-- submit button -->
         <input type="submit" value="Submit">
     </form>
