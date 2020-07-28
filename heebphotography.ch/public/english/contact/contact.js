@@ -1,5 +1,5 @@
 window.addEventListener("storage", () => {
-    alert(localStorage.length);
+    alert(document.getElementById("mail_status_message").innerHTML);
 })
 
 // the normal layout of the form
