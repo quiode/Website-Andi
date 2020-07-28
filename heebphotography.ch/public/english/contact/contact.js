@@ -60,3 +60,17 @@ function contact_changed() {
             break;
     }
 }
+
+// makes an input field when custom subject is selected
+function subject_changed() {
+    if (document.getElementById("subject").value = "custom") {
+        Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
+            element.style.display = "initial";
+        });
+    } else {
+        Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
+            element.style.display = "none";
+        });
+
+    }
+}

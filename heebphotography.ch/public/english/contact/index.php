@@ -52,7 +52,7 @@
             title="LastName">
         <!-- Subject -->
         <label for="subject">Subject:</label>
-        <select name="subject" id="subject">
+        <select name="subject" id="subject" onchange="subject_changed()">
             <option value="bug">Bug</option>
             <option value="copyright_question">Copyright Question</option>
             <option value="photography_question">Question about Photography</option>
