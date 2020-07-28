@@ -21,8 +21,6 @@ function form_submit() {
                 document.getElementById("loading_gif").style.display = "none";
                 setTimeout(form_normal(), 5000);
             }
-        } else {
-
         }
     }
 }
