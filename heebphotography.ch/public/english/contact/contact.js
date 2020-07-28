@@ -5,6 +5,7 @@ function form_normal() {
     document.getElementById("red_x").style.display = "inherit";
 }
 
+// when the form is beeing submitted, it gives a response to the use if the message has been sent or an error has been occurred
 function form_submit() {
     document.getElementById("mail_status").style.display = "block";
     while (true) {
@@ -23,5 +24,39 @@ function form_submit() {
         } else {
 
         }
+    }
+}
+
+// when changing an option, display another input field
+function contact_changed() {
+    // changed the display of all contact input field to none
+    document.getElementsByClassName("email").forEach(element => {
+        element.style.display = "none";
+    });
+    document.getElementsByClassName("phone").forEach(element => {
+        element.style.display = "none";
+    });
+    document.getElementsByClassName("instagram").forEach(element => {
+        element.style.display = "none";
+    });
+    // sets the right input field display to block
+    switch (document.getElementById("how_to_contact").value) {
+        case "email":
+            document.getElementsByClassName("email").forEach(element => {
+                element.style.display = "block";
+            });
+            break;
+        case "phone":
+            document.getElementsByClassName("phone").forEach(element => {
+                element.style.display = "block";
+            });
+            break;
+        case "instagram":
+            document.getElementsByClassName("instagram").forEach(element => {
+                element.style.display = "block";
+            });
+            break;
+        default:
+            break;
     }
 }

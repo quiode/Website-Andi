@@ -20,7 +20,7 @@
     <form action="./contact_backend.php" method="POST" target="_blank" onsubmit="form_submit()">
         <!-- selection for how to contact the person -->
         <label for="how_to_contact">Please choose a way we can contact you:</label>
-        <select name="how_to_contact" id="how_to_contact">
+        <select name="how_to_contact" id="how_to_contact" onchange="contact_changed(this)">
             <!-- <option value="none" selected disabled hidden>
                     Please select an option
                 </option> -->
