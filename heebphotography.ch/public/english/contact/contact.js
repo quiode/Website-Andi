@@ -1,26 +1,26 @@
 // looks for a change in the local storage, if it detects, does something
 window.addEventListener("storage", () => {
     // when the form is beeing submitted, it gives a response to the use if the message has been sent or an error has been occurred
-    alert("one");
+    // alert("one");
     if (localStorage.getItem("finished")) {
-        alert("1");
+        // alert("1");
         if (localStorage.getItem("mail_status")) {
             document.getElementById("mail_status_message").innerHTML = "Form has successfully been sent!";
             document.getElementById("green_check").style.display = "inherit";
             document.getElementById("loading_gif").style.display = "none";
-            alert("yey");
+            // alert("yey");
             setTimeout(form_normal(), 5000);
         } else {
             document.getElementById("mail_status_message").innerHTML = "An Error has occurred:" + localStorage.getItem("mail_error");
             document.getElementById("red_x").style.display = "inherit";
             document.getElementById("loading_gif").style.display = "none";
             setTimeout(form_normal(), 5000);
-            alert("ney");
+            // alert("ney");
         }
         localStorage.clear();
-        alert("two");
+        // alert("two");
     }
-    alert("2");
+    // alert("2");
 })
 
 // the normal layout of the form
