@@ -7,7 +7,7 @@ function form_normal() {
 
 // when the form is beeing submitted, it gives a response to the use if the message has been sent or an error has been occurred
 function form_submit() {
-    document.getElementById("mail_status").style.display = "block";
+    document.getElementById("mail_status").style.display = "initial";
     while (true) {
         if (sessionStorage.getItem("finished")) {
             if (sessionStorage.getItem("mail_status")) {
@@ -43,17 +43,17 @@ function contact_changed() {
     switch (document.getElementById("how_to_contact").value) {
         case "email":
             Array.from(document.getElementsByClassName("email")).forEach(element => {
-                element.style.display = "block";
+                element.style.display = "initial";
             });
             break;
         case "phone":
             Array.from(document.getElementsByClassName("phone")).forEach(element => {
-                element.style.display = "block";
+                element.style.display = "initial";
             });
             break;
         case "instagram":
             Array.from(document.getElementsByClassName("instagram")).forEach(element => {
-                element.style.display = "block";
+                element.style.display = "initial";
             });
             break;
         default:
