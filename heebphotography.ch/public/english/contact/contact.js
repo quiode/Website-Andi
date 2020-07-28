@@ -1,3 +1,24 @@
+// makes an object that can detect if it has changed, used for the mail sending process to look when it has finished
+mail_sending_status = {
+    aInternal: false,
+    aListener: function (val) {},
+    set a(val) {
+        this.aInternal = val;
+        this.aListener(val);
+    },
+    get a() {
+        return this.aInternal;
+    },
+    registerListener: function (listener) {
+        this.aListener = listener;
+    }
+}
+
+mail_sending_status.registerListener(function (val) {
+
+});
+
+// the normal layout of the form
 function form_normal() {
     document.getElementById("mail_status").style.display = "none";
     document.getElementById("green_check").style.display = "none";
@@ -9,14 +30,14 @@ function form_normal() {
 function form_submit() {
     document.getElementById("mail_status").style.display = "initial";
     while (true) {
-        if (sessionStorage.getItem("finished")) {
-            if (sessionStorage.getItem("mail_status")) {
+        if (localStorage.getItem("finished")) {
+            if (localStorage.getItem("mail_status")) {
                 document.getElementById("mail_status_message").innerHTML = "Form has successfully been sent!";
                 document.getElementById("green_check").style.display = "inherit";
                 document.getElementById("loading_gif").style.display = "none";
                 setTimeout(form_normal(), 5000);
             } else {
-                document.getElementById("mail_status_message").innerHTML = "An Error has occurred:" + sessionStorage.getItem("mail_error");
+                document.getElementById("mail_status_message").innerHTML = "An Error has occurred:" + localStorage.getItem("mail_error");
                 document.getElementById("red_x").style.display = "inherit";
                 document.getElementById("loading_gif").style.display = "none";
                 setTimeout(form_normal(), 5000);
