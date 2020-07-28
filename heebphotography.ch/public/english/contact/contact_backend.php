@@ -6,10 +6,13 @@
 </head>
 
 <body>
-    <script>
-    // sends the status of the mail sending process to javascript
-    localStorage.setItem("finished", "false");
-    </script>
+    <div id="mail_status">
+        <p id="mail_status_message">Please wait...</p>
+        <img src="./images/loading.gif" alt="loading_gif" id="loading_gif">
+        <img src="./images/1200px-Light_green_check.svg.png" alt="green_check" id="green_check">
+        <img src="./images/Red_X.svg.png" alt="red_X" id="red_x">
+    </div>
+    
     <?php
 //shows errors/debugging
     ini_set('display_errors', '1');
@@ -83,22 +86,24 @@
         // sends the status of the mail sending process to javascript
             echo <<<EOT
             <script>
-            localStorage.setItem("mail_status", "true");
+            sessionStorage.setItem("mail_status", "true");
             </script>
             EOT;
     } catch (Exception $e) {
         // sends the status of the mail sending process to javascript
             echo <<<EOT
             <script>
-            localStorage.setItem("mail_status", "false");
-            localStorage.setItem("mail_error", $mail->ErrorInfo);
+            sessionStorage.setItem("mail_status", "false");
+            sessionStorage.setItem("mail_error", $mail->ErrorInfo);
             </script>
             EOT;
     }
     ?>
     <!-- closes the window -->
     <script>
-    localStorage.setItem("finished", "true");
+    if (sessionStorage.getItem("mail_status")) {
+        document.getElementById("mail_status").innerHTML = "Success!"
+    }
     window.close();
     </script>
 </body>

@@ -71,12 +71,6 @@
         <!-- submit button -->
         <input type="submit" value="Submit">
     </form>
-    <div id="mail_status">
-        <p id="mail_status_message">Please wait...</p>
-        <img src="./images/loading.gif" alt="loading_gif" id="loading_gif">
-        <img src="./images/1200px-Light_green_check.svg.png" alt="green_check" id="green_check">
-        <img src="./images/Red_X.svg.png" alt="red_X" id="red_x">
-    </div>
 </body>
 
 </html>
