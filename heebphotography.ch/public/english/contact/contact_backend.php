@@ -8,7 +8,7 @@
 <body>
     <script>
     // sends the status of the mail sending process to javascript
-    sessionStorage.setItem("finished", "false");
+    localStorage.setItem("finished", "false");
     </script>
     <?php
 //shows errors/debugging
@@ -83,22 +83,22 @@
         // sends the status of the mail sending process to javascript
             echo <<<EOT
             <script>
-            sessionStorage.setItem("mail_status", "true");
+            localStorage.setItem("mail_status", "true");
             </script>
             EOT;
     } catch (Exception $e) {
         // sends the status of the mail sending process to javascript
             echo <<<EOT
             <script>
-            sessionStorage.setItem("mail_status", "false");
-            sessionStorage.setItem("mail_error", $mail->ErrorInfo);
+            localStorage.setItem("mail_status", "false");
+            localStorage.setItem("mail_error", $mail->ErrorInfo);
             </script>
             EOT;
     }
     ?>
     <!-- closes the window -->
     <script>
-    sessionStorage.setItem("finished", "true");
+    localStorage.setItem("finished", "true");
     window.close();
     </script>
 </body>

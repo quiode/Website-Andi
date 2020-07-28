@@ -1,22 +1,6 @@
-// makes an object that can detect if it has changed, used for the mail sending process to look when it has finished
-mail_sending_status = {
-    aInternal: false,
-    aListener: function (val) {},
-    set a(val) {
-        this.aInternal = val;
-        this.aListener(val);
-    },
-    get a() {
-        return this.aInternal;
-    },
-    registerListener: function (listener) {
-        this.aListener = listener;
-    }
-}
-
-mail_sending_status.registerListener(function (val) {
-
-});
+window.addEventListener("storage", () => {
+    alert(localStorage.length);
+})
 
 // the normal layout of the form
 function form_normal() {
