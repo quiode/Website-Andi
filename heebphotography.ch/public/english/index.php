@@ -19,21 +19,20 @@
     <?php require '../english/templates/navigationbar.php'?>
     <section>
         <div class="container_slideshow">
-            <div class="slide fade">
-                <img src="images-home/img1.jpg">
-            </div>
-            <div class="slide fade">
-                <img src="images-home/img2.jpg">
-            </div>
-            <div class="slide fade">
-                <img src="images-home/img3.jpg">
-            </div>
-            <div class="slide fade">
-                <img src="images-home/img4.jpg">
-            </div>
-            <div class="slide fade">
-                <img src="images-home/img5.jpg">
-            </div>
+            <?php
+            $dir = "images-home";
+            if (is_dir($dir)) {
+                $scan = scandir($dir);
+                
+                foreach ($scan as $value) {
+                    if (!(is_dir($value))) { 
+                        echo "<div class=\"slide fade\">\n
+                        <img src=\"$dir/$value\" alt=\"$value\">\n
+                        </div>";
+                    }
+                }
+            }
+            ?>
         </div>
     </section>
 
