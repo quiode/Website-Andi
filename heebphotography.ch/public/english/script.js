@@ -1,4 +1,4 @@
-document.onload = function slideshow() {
+/*document.onload = function slideshow() {
   showSlides();
 }
 
@@ -22,4 +22,4 @@ function showSlides() {
     //macht eine Slide sichtbar
     setTimeout(showSlides, 10000);
   }
-}
+}*/
