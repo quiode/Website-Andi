@@ -27,7 +27,7 @@ function showSlides() {
 document.onload = function slideshow() {
   var slides = document.getElementsByClassName("slide");
 
-  for (var i = 0; i < slides.length; i++) {
+  for (var i = 0; i <= slides.length; i++) {
     if (i == slides.Length) {
       i = 0;
     }
