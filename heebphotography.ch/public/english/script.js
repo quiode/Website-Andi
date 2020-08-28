@@ -1,4 +1,4 @@
-document.onload = function slideshow() {
+/*document.onload = function slideshow() {
   showSlides();
 }
 
@@ -22,4 +22,19 @@ function showSlides() {
     //macht eine Slide sichtbar
     setTimeout(showSlides, 10000);
   }
+}*/
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mslide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
