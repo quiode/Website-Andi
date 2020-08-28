@@ -25,18 +25,14 @@ function showSlides() {
 }*/
 
 document.onload = function slideshow() {
-  var slideIndex = 0;
-  showSlides();
-}
+  var slides = document.getElementsByClassName("slide");
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mslide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (var i = 0; i < slides.length; i++) {
+    if (i == slides.Length) {
+      i = 0;
+    }
+    slides[i].style.display = "block";
+    slides[i - 1].style.display = "none";
+    setTimeout(slideshow, 10000);
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
