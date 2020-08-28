@@ -32,6 +32,7 @@
                     }
                 }
             }
+            echo "<br>";
             ?>
         </div>
     </section>
