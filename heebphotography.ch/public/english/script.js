@@ -28,11 +28,13 @@ document.onload = function slideshow() {
   var slides = document.getElementsByClassName("slide");
 
   for (var i = 0; i <= slides.length; i++) {
-    if (i == slides.Length) {
-      i = 0;
-    }
-    slides[i].style.display = "block";
-    slides[i - 1].style.display = "none";
-    setTimeout(10000);
+    setTimeout(() => {
+        if (i == slides.Length) {
+        i = 0;
+      }
+      slides[i].style.display = "block";
+      slides[i - 1].style.display = "none"; 
+    }, 10000);
+    
   }
 }
