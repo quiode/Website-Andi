@@ -26,7 +26,7 @@
                 
                 foreach ($scan as $value) {
                     if (!(is_dir($value))) { 
-                        echo "<div class=\"slide fade\">\n
+                        echo "<div class=\"slide\">\n
                         <img src=\"$dir/$value\" alt=\"$value\">\n
                         </div>";
                     }
