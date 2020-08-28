@@ -24,8 +24,10 @@ function showSlides() {
   }
 }*/
 
-var slideIndex = 0;
-showSlides();
+document.onload = function slideshow() {
+  var slideIndex = 0;
+  showSlides();
+}
 
 function showSlides() {
   var i;
