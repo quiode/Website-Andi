@@ -28,11 +28,10 @@
                     if (!(is_dir($value))) { 
                         echo "<div class=\"slide\">\n
                         <img src=\"$dir/$value\" alt=\"$value\">\n
-                        </div>";
+                        </div>\n";
                     }
                 }
             }
-            echo "<br>";
             ?>
         </div>
     </section>
