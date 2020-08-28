@@ -1,9 +1,9 @@
 document.onload = function slideshow() {
-  var slideIndex = 1;
   showSlides();
 }
 
 function showSlides() {
+  var slideIndex = 1;
 
   var slides = document.getElementsByClassName("slide");
   //speichert alle slides in einem array    
@@ -20,6 +20,6 @@ function showSlides() {
     
     slides[slideIndex - 1].style.display = "block";
     //macht eine Slide sichtbar
-    setTimeout(showSlides, 2000);
+    setTimeout(showSlides, 10000);
   }
 }
