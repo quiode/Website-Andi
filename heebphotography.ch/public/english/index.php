@@ -12,7 +12,7 @@
     <script src="script.js"></script>
 </head>
 
-<body id="english" onload="slideshow();">
+<body id="english" onload="slideshow()">
     <header>
         <h2>Heeb Photography</h2>
     </header>
