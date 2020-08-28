@@ -1,4 +1,4 @@
-function slideshow() {
+document.onload = function slideshow() {
   var slideIndex = 1;
   showSlides();
 }
@@ -15,10 +15,10 @@ function showSlides() {
   
   for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
-    //macht alle slides unsichtbar   
-    slideIndex++;                    
+    //macht alle slides unsichtbar                       
   }
 
+  slideIndex++;
 
   slides[slideIndex - 1].style.display = "block";
   //macht eine Slide sichtbar
