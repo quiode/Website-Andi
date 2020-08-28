@@ -67,6 +67,7 @@
 }
 #english .slide img {
   display: none;
+  width: 100%;
 }
 #english .fade {
   -webkit-animation-name: fade;
