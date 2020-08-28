@@ -33,6 +33,6 @@ document.onload = function slideshow() {
     }
     slides[i].style.display = "block";
     slides[i - 1].style.display = "none";
-    setTimeout(slideshow, 10000);
+    setTimeout(10000);
   }
 }
