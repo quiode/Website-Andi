@@ -26,6 +26,7 @@
         print_r($images);
         echo $images;
         echo $images;
+        echo $path_images;
         print_r("lol help");
         // deletes the last two elements of the filename list --> are always . and .. so not usefull
         unset($images[sizeof($images)-1]);
