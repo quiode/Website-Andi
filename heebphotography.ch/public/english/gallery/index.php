@@ -55,7 +55,7 @@
             <div>
                 <?php
                 foreach ($image_column_1 as $image) {
-                        echo "<img src=\"images//testing/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
