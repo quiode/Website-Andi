@@ -101,7 +101,7 @@
     <!-- the slideshow that pops up when clicking on an image -->
     <div id="slideshow_background">
         <div id="slideshow" onkeydown="key_pressed(event)">
-            <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg"
+            <img id="slideshow_image" src="./images/testing/101030189_1928756140588065_3843172269444384879_n.jpg"
                 onload="resizeToMax()">
 
             <!-- for navigation within the slideshow -->
