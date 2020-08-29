@@ -20,7 +20,7 @@
     <div>
         <?php
         // variables
-        $path_images = "/images/testing/";
+        $path_images = "./images/testing/";
         // searches the filename of all images in the images folder
         $images = scandir($path_images, 1);
         print_r($images);
