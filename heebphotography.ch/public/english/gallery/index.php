@@ -55,7 +55,7 @@
             <div>
                 <?php
                 foreach ($image_column_1 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images//testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -65,7 +65,7 @@
             <div>
                 <?php
                 foreach ($image_column_2 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -75,7 +75,7 @@
             <div>
                 <?php
                 foreach ($image_column_3 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -85,7 +85,7 @@
             <div>
                 <?php
                 foreach ($image_column_4 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
