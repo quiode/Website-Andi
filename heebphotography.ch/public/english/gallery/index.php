@@ -24,6 +24,7 @@
         // searches the filename of all images in the images folder
         $images = scandir($path_images, 1);
         print_r($images);
+        print_r("lol help");
         // deletes the last two elements of the filename list --> are always . and .. so not usefull
         unset($images[sizeof($images)-1]);
         unset($images[sizeof($images)-1]);
