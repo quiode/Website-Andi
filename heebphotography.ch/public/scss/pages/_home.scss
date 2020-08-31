@@ -3,13 +3,14 @@
 // variables
 $slideshow_height : 75vh;
 $slideshow_width : 100vw;
+$header_height : 100px;
 // scss
 #english {
     header {
         h2 {
             font-weight: 200;
             width: 100%;
-            height: 100px;
+            height: $header_height;
             display: block;
             text-align: center;
             margin: 0;
@@ -27,7 +28,7 @@ $slideshow_width : 100vw;
 
     .slide {
         img {
-            top: 100vh - $slideshow_height;
+            top: $header_height;
             height: $slideshow_height;
             width: $slideshow_width;
             display: block;
