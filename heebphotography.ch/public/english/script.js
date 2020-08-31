@@ -22,4 +22,5 @@ function slideshow() {
 		current_slide.style.opasity = 0;
 		new_slide.style.opasity = 1;
 	}
+	alert("hi");
 }
