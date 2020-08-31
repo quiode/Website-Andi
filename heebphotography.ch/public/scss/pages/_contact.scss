@@ -5,27 +5,35 @@
     .email {
         display: none;
     }
+
     .phone {
         display: none;
     }
+
     .instagram {
         display: none;
     }
+
     .custom_subject {
         display: none;
     }
+
     #mail_status {
         display: none;
+
         p {
             display: inherit;
         }
-        #loading_gif{
+
+        #loading_gif {
             display: inherit;
         }
-        #green_check{
+
+        #green_check {
             display: none;
         }
-        #red_x{
+
+        #red_x {
             display: none;
         }
     }

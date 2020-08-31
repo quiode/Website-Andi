@@ -4,10 +4,12 @@
 @use '../classes/backgrounds';
 // variables
 $text_top: 50%;
+
 // scss
 #language {
     ul {
         list-style-type: none;
+
         li {
             a {
                 position: absolute;
@@ -15,29 +17,35 @@ $text_top: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 5;
             }
+
             #background_english {
                 @include backgrounds.simple_background(false);
                 width: 50%;
             }
+
             #background_deutsch {
                 @include backgrounds.simple_background(false);
                 width: 50%;
                 left: 50%;
             }
+
             #english {
                 left: 25%;
                 top: $text_top;
+
                 &:hover {
-                    + #background_english {
+                    +#background_english {
                         @include backgrounds.simple_background(true);
                     }
                 }
             }
+
             #deutsch {
                 left: 75%;
                 top: $text_top;
+
                 &:hover {
-                    + #background_deutsch {
+                    +#background_deutsch {
                         @include backgrounds.simple_background(true);
                     }
                 }

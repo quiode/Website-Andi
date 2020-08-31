@@ -1,13 +1,16 @@
 // mixins for standard backgrounds
 // import files
 @use './colors';
+
 // scss
 @mixin simple_background($hovered) {
     @if $hovered {
         background-color: colors.$soft_grey;
         color: black;
         text-decoration: none;
-    } @else {
+    }
+
+    @else {
         position: fixed;
         background-color: white;
         width: 100%;

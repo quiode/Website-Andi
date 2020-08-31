@@ -13,6 +13,7 @@
             margin: 0;
         }
     }
+
     .container_slideshow {
         margin: auto;
         width: 100vw;
@@ -21,15 +22,17 @@
         align-items: baseline;
         position: relative;
     }
+
     .slide {
         img {
             display: block;
         }
     }
+
     .fade {
         -webkit-animation-name: fade;
         -webkit-animation-duration: 1.5s;
         animation-name: fade;
         animation-duration: 1.5s;
-      }
+    }
 }
