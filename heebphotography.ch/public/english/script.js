@@ -10,15 +10,15 @@ function slideshow(sliding_time) {
 		alert(slides[i].src);
 	}
 
-	// // the slideshow
-	// slides.forEach(slide => {
-	// 	setTimeout(() => {
-	// 		slide.style.opacity = 1;
-	// 		if (all_img_src.indexOf(slide.src) == 0) {
-	// 			slides[all_img_src.length - 1].style.opacity = 0;
-	// 		} else {
-	// 			slides[all_img_src.indexOf(slide.src) - 1].style.opacity = 0;
-	// 		}
-	// 	}, sliding_time);
-	// });
+	// the slideshow
+	slides.forEach(slide => {
+		setTimeout(() => {
+			slide.style.opacity = 1;
+			if (all_img_src.indexOf(slide.src) == 0) {
+				slides[all_img_src.length - 1].style.opacity = 0;
+			} else {
+				slides[all_img_src.indexOf(slide.src) - 1].style.opacity = 0;
+			}
+		}, sliding_time);
+	});
 }
