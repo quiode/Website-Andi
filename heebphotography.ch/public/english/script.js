@@ -1,8 +1,9 @@
 // calls the slideshow fuction, which changes the image, every 5 seconds
-var slideshow_interval = setInterval(slideshow(), 5000);
+var slideshow_interval = setInterval(slideshow(), 500);
 
 // changes the image
 function slideshow() {
+	alert("lol");
 	// when the document has fully loaded, begin with slideshow
 	if (document.readyState == "complete") {
 		// gets every slide image
