@@ -32,6 +32,7 @@ function slideshow(sliding_time) {
 	var all_img_src = [];
 	for (let i = 0; i < slides.length; i++) {
 		all_img_src.push(slides[i].src);
+		alert(slides[i].src);
 	}
 
 	// the slideshow
