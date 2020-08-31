@@ -9,7 +9,7 @@ function slideshow() {
 		var slides = document.getElementsByClassName("slides");
 		// finds the slide image which is currently shown
 		for (let index = 0; index < slides.length; index++) {
-			if (slides[index].style.opasity == 1) {
+			if (slides[index].style.opacity == 1) {
 				current_slide = slides[index];
 			}
 		}
@@ -20,8 +20,8 @@ function slideshow() {
 			new_slide = slides[Math.floor(Math.random() * slides.length)];
 		}
 		// lets the current slide disappear and shows the new slide slide
-		current_slide.style.opasity = 0;
-		new_slide.style.opasity = 1;
+		current_slide.style.opacity = 0;
+		new_slide.style.opacity = 1;
 	}
 	alert("hi");
 }
