@@ -65,7 +65,7 @@
   align-items: baseline;
   position: relative;
 }
-#english .slide img {
+#english .slide {
   top: 100px;
   height: 75vh;
   width: 100vw;

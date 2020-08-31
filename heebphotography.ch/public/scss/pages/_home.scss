@@ -4,6 +4,7 @@
 $slideshow_height : 75vh;
 $slideshow_width : 100vw;
 $header_height : 100px;
+
 // scss
 #english {
     header {
@@ -27,16 +28,14 @@ $header_height : 100px;
     }
 
     .slide {
-        img {
-            top: $header_height;
-            height: $slideshow_height;
-            width: $slideshow_width;
-            display: block;
-            position: absolute;
-            opacity: 0;
-            transition-duration: 1s;
-            transition-property: opacity;
-        }
+        top: $header_height;
+        height: $slideshow_height;
+        width: $slideshow_width;
+        display: block;
+        position: absolute;
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
     }
 
     .fade {
