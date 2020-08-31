@@ -21,9 +21,15 @@
             if (is_dir($dir)) {
                 $scan = scandir($dir);
                 
+                $is_first_tester = true;
                 foreach ($scan as $value) {
-                    if (!(is_dir($value))) {
-                        echo "<img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n";
+                    if ($is_first_tester) {
+                        echo "<img class=\"slides\" id=\"first_slide\" src=\"$dir/$value\" alt=\"$value\">\n";
+                        $is_first_tester = false;
+                    } else {
+                        if (!(is_dir($value))) {
+                            echo "<img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n";
+                        }
                     }
                 }
             }
