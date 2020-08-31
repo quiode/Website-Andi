@@ -16,8 +16,8 @@ function slideshow() {
 		// select a new slide image
 		var new_slide = current_slide;
 		while (new_slide == current_slide) {
-			new_slide = slides[Math.floor(Math.random() * slides.length)];
 			alert(new_slide + "," + current_slide);
+			new_slide = slides[Math.floor(Math.random() * slides.length)];
 		}
 		// lets the current slide disappear and shows the new slide slide
 		current_slide.style.opasity = 0;
