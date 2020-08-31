@@ -11,13 +11,11 @@ function slideshow() {
 		for (let index = 0; index < slides.length; index++) {
 			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) { //fuck javascript
 				current_slide = slides[index];
-				alert("yey");
 			}
 		}
 		// select a new slide image
 		var new_slide = current_slide;
 		while (new_slide == current_slide) {
-			alert(new_slide + "," + current_slide);
 			new_slide = slides[Math.floor(Math.random() * slides.length)];
 		}
 		// lets the current slide disappear and shows the new slide slide
