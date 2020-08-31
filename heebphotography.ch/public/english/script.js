@@ -11,8 +11,8 @@ function slideshow() {
 		for (let index = 0; index < slides.length; index++) {
 			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) { //fuck javascript
 				current_slide = slides[index];
+				alert("yey");
 			}
-			alert(window.getComputedStyle(slides[index]).getPropertyValue("opacity"));
 		}
 		// select a new slide image
 		var new_slide = current_slide;
