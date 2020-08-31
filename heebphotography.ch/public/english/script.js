@@ -25,12 +25,14 @@ function showSlides() {
 }*/
 
 function slideshow(sliding_time) {
+	alert("first");
 	var slides = document.getElementsByClassName("slide");
 
 	// makes a list of all the src of the images
 	var all_img_src = [];
 	slides.forEach(slide => {
 		all_img_src.push(slide.src);
+		alert(sli.src);
 	});
 
 	slides.forEach(slide => {
