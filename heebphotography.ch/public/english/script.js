@@ -46,5 +46,4 @@ function slideshow(sliding_time) {
 			}
 		}, sliding_time);
 	});
-	slideshow(sliding_time);
 }
