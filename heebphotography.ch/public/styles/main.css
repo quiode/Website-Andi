@@ -67,6 +67,9 @@
 }
 #english .slide img {
   display: block;
+  opacity: 0;
+  transition-duration: 1s;
+  transition-property: opacity;
 }
 #english .fade {
   -webkit-animation-name: fade;
