@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wildlifephotography Andreas Heeb</title>
     <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-    <!-- <?php
-    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
-    ?> -->
     <script src="script.js"></script>
 </head>
 
@@ -16,7 +13,7 @@
     <header>
         <h2>Heeb Photography</h2>
     </header>
-    <?php require '../english/templates/navigationbar.php'?>
+    <?php include('../english/templates/navigationbar.php')?>
     <section>
         <div class="container_slideshow">
             <?php
