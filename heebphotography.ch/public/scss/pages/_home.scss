@@ -27,7 +27,7 @@ $header_height : 100px;
         position: relative;
     }
 
-    .slide {
+    .slides {
         top: $header_height;
         height: $slideshow_height;
         width: $slideshow_width;
@@ -36,6 +36,10 @@ $header_height : 100px;
         opacity: 0;
         transition-duration: 1s;
         transition-property: opacity;
+    }
+
+    :first-of-type(.slide) {
+        opacity: 1;
     }
 
     .fade {

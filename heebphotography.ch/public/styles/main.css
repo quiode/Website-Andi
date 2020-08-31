@@ -65,7 +65,7 @@
   align-items: baseline;
   position: relative;
 }
-#english .slide {
+#english .slides {
   top: 100px;
   height: 75vh;
   width: 100vw;
@@ -74,6 +74,9 @@
   opacity: 0;
   transition-duration: 1s;
   transition-property: opacity;
+}
+#english :first-of-type(.slide) {
+  opacity: 1;
 }
 #english .fade {
   -webkit-animation-name: fade;
