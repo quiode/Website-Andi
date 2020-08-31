@@ -3,12 +3,23 @@ setInterval(slideshow(), 5000);
 
 // changes the image
 function slideshow() {
-	if (document.readyState == "complete"){
+	// when the document has fully loaded, begin with slideshow
+	if (document.readyState == "complete") {
 		// gets every slide image
 		var slides = document.getElementsByClassName("slides");
-	
 		// finds the slide image which is currently shown
-	
-		// changes the slide image to a random one
+		for (let index = 0; index < slides.length; index++) {
+			if (slides[index].style.opasity == 1) {
+				current_slide = slides[index];
+			}
+		}
+		// select a new slide image
+		var new_slide = current_slide;
+		while (new_slide == current_slide) {
+			new_slide = slides[Math.floor(Math.random() * slides.length)];
+		}
+		// lets the current slide disappear and shows the new slide slide
+		current_slide.style.opasity = 0;
+		new_slide.style.opasity = 1;
 	}
 }
