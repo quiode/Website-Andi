@@ -13,6 +13,7 @@ function slideshow() {
 				current_slide = slides[index];
 			}
 		}
+		alert(current_slide);
 		// select a new slide image
 		var new_slide = current_slide;
 		while (new_slide == current_slide) {
@@ -23,5 +24,4 @@ function slideshow() {
 		current_slide.style.opacity = 0;
 		new_slide.style.opacity = 1;
 	}
-	alert("hi");
 }
