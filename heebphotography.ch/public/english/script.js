@@ -30,10 +30,10 @@ function slideshow(sliding_time) {
 
 	// makes a list of all the src of the images
 	var all_img_src = [];
-	Array.from(slides).forEach(slide => {
-		all_img_src.push(slide.src);
-		alert(slide.src);
-	});
+	for (let i = 0; i < slides.length; i++) {
+		all_img_src.push(slides[i].src);
+	}
+	alert(all_img_src);
 
 	// the slideshow
 	slides.forEach(slide => {
