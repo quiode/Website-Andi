@@ -23,7 +23,7 @@
                 
                 foreach ($scan as $value) {
                     if (!(is_dir($value))) {
-                        echo "<img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n";
+                        echo "<img class=\"slide\" src=\"$dir/$value\" alt=\"$value\">\n";
                     }
                 }
             }
