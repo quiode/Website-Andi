@@ -3,6 +3,7 @@ var slideshow_interval = setInterval(slideshow(), 5000);
 
 // changes the image
 function slideshow() {
+	alert("help");
 	// when the document has fully loaded, begin with slideshow
 	if (document.readyState == "complete") {
 		// gets every slide image
