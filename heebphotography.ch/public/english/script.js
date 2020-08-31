@@ -24,17 +24,24 @@ function showSlides() {
   }
 }*/
 
-document.onload = function slideshow() {
-  var slides = document.getElementsByClassName("slide");
+function slideshow(sliding_time) {
+	var slides = document.getElementsByClassName("slide");
 
-  for (var i = 0; i <= slides.length; i++) {
-    setTimeout(() => {
-        if (i == slides.Length) {
-        i = 0;
-      }
-      slides[i].style.display = "block";
-      slides[i - 1].style.display = "none"; 
-    }, 10000);
-    
-  }
+	// makes a list of all the src of the images
+	var all_img_src = [];
+	slides.forEach(slide => {
+		all_img_src.push(slide.src);
+	});
+
+	slides.forEach(slide => {
+		setTimeout(() => {
+			slide.style.opacity = 1;
+			if (all_img_src.indexOf(slide.src) == 0) {
+				slides[all_img_src.length - 1].style.opacity = 0;
+			} else {
+				slides[all_img_src.indexOf(slide.src) - 1].style.opacity = 0;
+			}
+		}, sliding_time);
+	});
+	slideshow(sliding_time);
 }

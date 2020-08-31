@@ -4,3 +4,10 @@
   -ms-transform: $property;
   transform: $property;
 }
+
+@mixin fade($property) {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: $property;
+  animation-name: fade;
+  animation-duration: $property;
+}

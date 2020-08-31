@@ -1,6 +1,5 @@
-@charset "UTF-8";
 //adding files
-
+@use "../classes/shortcuts";
 // scss
 #english {
     header {
@@ -26,13 +25,13 @@
     .slide {
         img {
             display: block;
+            opacity: 0;
+            transition-duration: 1s;
+            transition-property: opacity;
         }
     }
 
     .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
+        @include shortcuts.fade(1.5s);
     }
 }
