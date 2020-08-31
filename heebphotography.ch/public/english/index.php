@@ -13,7 +13,7 @@
     <header>
         <h2>Heeb Photography</h2>
     </header>
-    <?php include('../english/templates/navigationbar.php')?>
+    <?php require '../english/templates/navigationbar.php'?> 
     <section>
         <div class="container_slideshow">
             <?php
@@ -22,7 +22,7 @@
                 $scan = scandir($dir);
                 
                 foreach ($scan as $value) {
-                    if (!(is_dir($value))) { 
+                    if (!(is_dir($value))) {
                         echo "<div class=\"slide\">\n
                         <img src=\"$dir/$value\" alt=\"$value\">\n
                         </div>\n";
