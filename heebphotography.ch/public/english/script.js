@@ -9,11 +9,11 @@ function slideshow() {
 		var slides = document.getElementsByClassName("slides");
 		// finds the slide image which is currently shown
 		for (let index = 0; index < slides.length; index++) {
-			if (slides[index].style.opacity == 1) {
+			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) {
 				current_slide = slides[index];
 			}
+			alert(window.getComputedStyle(slides[index]).getPropertyValue("opacity"));
 		}
-		alert(current_slide);
 		// select a new slide image
 		var new_slide = current_slide;
 		while (new_slide == current_slide) {
