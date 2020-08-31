@@ -9,7 +9,7 @@ function slideshow() {
 		var slides = document.getElementsByClassName("slides");
 		// finds the slide image which is currently shown
 		for (let index = 0; index < slides.length; index++) {
-			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) {
+			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) { //fuck javascript
 				current_slide = slides[index];
 			}
 			alert(window.getComputedStyle(slides[index]).getPropertyValue("opacity"));
