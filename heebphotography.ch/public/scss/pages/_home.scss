@@ -3,11 +3,8 @@
 // variables
 $slideshow_height : 75vh;
 $slideshow_width : 100vw;
-
 // scss
 #english {
-    margin: 0;
-
     header {
         h2 {
             font-weight: 200;
@@ -43,9 +40,5 @@ $slideshow_width : 100vw;
 
     .fade {
         @include shortcuts.fade(1.5s);
-    }
-
-    footer {
-        margin: 8 8;
     }
 }
