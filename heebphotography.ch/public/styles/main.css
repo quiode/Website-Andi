@@ -65,6 +65,9 @@
   align-items: baseline;
   position: relative;
 }
+#english #first_slide {
+  opacity: 1;
+}
 #english .slides {
   top: 100px;
   height: 75vh;

@@ -27,6 +27,10 @@ $header_height : 100px;
         position: relative;
     }
 
+    #first_slide {
+        opacity: 1;
+    }
+
     .slides {
         top: $header_height;
         height: $slideshow_height;
