@@ -1,11 +1,12 @@
 function slideshow(sliding_time) {
 	// gets the slides
 	var slides = document.getElementsByClassName("slide");
-	alert("hui");
 	// makes a list of all the src of the images
 	var all_img_src = [];
+	alert(slides.length);
+	alert(slides[0]);
+	alert(slides[0].src);
 	for (let i = 0; i < slides.length; i++) {
-		alert(slides[i].src);
 		all_img_src.push(slides[i].src);
 		alert(slides[i].src);
 	}
