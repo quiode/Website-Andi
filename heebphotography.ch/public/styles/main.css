@@ -49,6 +49,9 @@
   text-decoration: none;
 }
 
+#english {
+  margin: 0;
+}
 #english header h2 {
   font-weight: 200;
   width: 100%;
@@ -80,6 +83,9 @@
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+#english footer {
+  margin: 8 8;
 }
 
 #navigationbar #navigation_button {
