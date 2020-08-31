@@ -59,7 +59,7 @@
 }
 #english .container_slideshow {
   margin: auto;
-  width: 100vw;
+  width: 90vw;
   height: 75vh;
   display: block;
   align-items: baseline;
@@ -68,7 +68,7 @@
 #english .slides {
   top: 100px;
   height: 75vh;
-  width: 100vw;
+  width: 90vw;
   display: block;
   position: absolute;
   opacity: 0;
