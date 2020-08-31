@@ -1,5 +1,5 @@
 // calls the slideshow fuction, which changes the image, every 5 seconds
-setInterval(slideshow(), 5000);
+var slideshow_interval = setInterval(slideshow(), 5000);
 
 // changes the image
 function slideshow() {
