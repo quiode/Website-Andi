@@ -17,7 +17,7 @@
     <!-- the navigatio bar -->
     <?php include '../templates/navigationbar.php'?>
     <!-- the contact form, you can leave a lot empty and just send it anonymous -->
-    <form action="./contact_backend.php" method="POST" target="_blank" onsubmit="form_submit()">
+    <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
         <!-- selection for how to contact the person -->
         <label for="how_to_contact">Please choose a way we can contact you:</label>
         <select name="how_to_contact" id="how_to_contact" onchange="contact_changed(this)">
