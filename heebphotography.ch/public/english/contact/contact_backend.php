@@ -3,11 +3,6 @@
 
     <head>
         <title>Processing</title>
-        <!-- <script>
-            var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif",
-                "Sending",
-                "height=200,width=200,resizable=off,left=200,top=200")
-        </script> -->
     </head>
 
     <body>
@@ -19,13 +14,6 @@
     </div> -->
 
         <?php
-        echo <<<EOT
-        <script>
-            var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif",
-                "Sending",
-                "height=200,width=200,resizable=off,left=200,top=200")
-        </script>
-        EOT;
 //shows errors/debugging
         ini_set('display_errors', '1');
         ini_set('display_startup_errors', '1');

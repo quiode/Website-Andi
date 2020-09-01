@@ -8,7 +8,9 @@ function form_normal() {
 
 // when the form is beeing submitted, displays processing information
 function form_submit() {
-    document.getElementById("mail_status").style.display = "initial";
+    var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif",
+        "Sending",
+        "height=200,width=200,resizable=off,left=200,top=200");
 }
 
 // when changing an option, display another input field
