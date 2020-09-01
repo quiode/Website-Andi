@@ -109,13 +109,13 @@
                 setTimeout(() => {
                     success_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png",
                         "Success", "height=200,width=200,resizable=off,left=200,top=200")
-                }, 5000);
+                }, 2000);
                 success_window.close();
             } else {
                 setTimeout(() => {
                     error_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png",
                         "Success", "height=200,width=200,resizable=off,left=200,top=200")
-                }, 5000);
+                }, 2000);
                 error_window.close();
             }
             window.close();
