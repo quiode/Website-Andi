@@ -112,7 +112,7 @@
                     "height=200,width=200,resizable=off,left=200,top=200")
                 setTimeout(error_window.close(), 5000);
             }
-            window.open("https://en.heebphotography.ch", "_self");
+            // window.open("https://en.heebphotography.ch", "_self");
         </script>
     </body>
 
