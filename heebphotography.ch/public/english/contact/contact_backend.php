@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Processing</title>
-</head>
+    <head>
+        <title>Processing</title>
+        <script>
+            var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif", "Sending",
+                "height=200,width=200,resizable=off,left=200,top=200")
+        </script>
+    </head>
 
-<body id="contact_backend">
-    <div id="mail_status">
+    <body>
+        <!-- <div id="mail_status">
         <p id="mail_status_message">Please wait...</p>
         <img src="./images/loading.gif" alt="loading_gif" id="loading_gif">
         <img src="./images/1200px-Light_green_check.svg.png" alt="green_check" id="green_check">
         <img src="./images/Red_X.svg.png" alt="red_X" id="red_x">
-    </div>
-    
-    <?php
+    </div> -->
+
+        <?php
 //shows errors/debugging
     ini_set('display_errors', '1');
     ini_set('display_startup_errors', '1');
@@ -99,13 +103,24 @@
             EOT;
     }
     ?>
-    <!-- closes the window -->
-    <script>
-    if (sessionStorage.getItem("mail_status")) {
-        document.getElementById("mail_status").innerHTML = "Success!"
-    }
-    window.close();
-    </script>
-</body>
+        <!-- closes the window -->
+        <script>
+            loading_window.close();
+            if (sessionStorage.getItem("mail_status")) {
+                setTimeout(() => {
+                    success_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png",
+                        "Success", "height=200,width=200,resizable=off,left=200,top=200")
+                }, 5000);
+                success_window.close();
+            } else {
+                setTimeout(() => {
+                    error_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png",
+                        "Success", "height=200,width=200,resizable=off,left=200,top=200")
+                }, 5000);
+                error_window.close();
+            }
+            window.close();
+        </script>
+    </body>
 
 </html>
