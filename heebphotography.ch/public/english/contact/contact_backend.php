@@ -101,6 +101,7 @@
         ?>
         <!-- closes the window -->
         <script>
+            var loading_window = window.open('', 'Sending');
             loading_window.close();
             if (sessionStorage.getItem("mail_status")) {
                 setTimeout(() => {
