@@ -5,7 +5,7 @@
     <title>Processing</title>
 </head>
 
-<body>
+<body id="contact_backend">
     <div id="mail_status">
         <p id="mail_status_message">Please wait...</p>
         <img src="./images/loading.gif" alt="loading_gif" id="loading_gif">
