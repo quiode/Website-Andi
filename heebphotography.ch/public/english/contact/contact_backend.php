@@ -106,17 +106,17 @@
             var error_window;
             loading_window.close();
             if (sessionStorage.getItem("mail_status")) {
+                success_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png", "Success",
+                    "height=200,width=200,resizable=off,left=200,top=200")
                 setTimeout(() => {
-                    success_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png",
-                        "Success", "height=200,width=200,resizable=off,left=200,top=200")
+                    success_window.close();
                 }, 2000);
-                success_window.close();
             } else {
+                error_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png", "Success",
+                    "height=200,width=200,resizable=off,left=200,top=200")
                 setTimeout(() => {
-                    error_window = window.open("https://en.heebphotography.ch/contact/images/ok_200px.png",
-                        "Success", "height=200,width=200,resizable=off,left=200,top=200")
+                    error_window.close();
                 }, 2000);
-                error_window.close();
             }
             window.close();
         </script>
