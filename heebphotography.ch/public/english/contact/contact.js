@@ -10,7 +10,7 @@ function form_normal() {
 function form_submit() {
     var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif",
         "Sending",
-        "height=200,width=200,resizable=off,left=200,top=200,location=no,menubar=no,scrollbar=no,status=no,titlebar=no,toolbar=no");
+        "height=200,width=200,resizable=no,left=200,top=200,location=no,menubar=no,scrollbar=no,status=no,titlebar=no,toolbar=no");
 }
 
 // when changing an option, display another input field
