@@ -39,8 +39,7 @@
                 }
             }
 
-            window.addEventListener("scroll", setTimeout(),
-                false);
+            window.addEventListener("scroll", scrolling(), false);
         </script>
     </head>
 
