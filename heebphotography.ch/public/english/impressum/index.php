@@ -39,7 +39,7 @@
                 }
             }
 
-            window.addEventListener("scroll", scrolling(), false);
+            window.addEventListener("scroll", scrolling, false);
         </script>
     </head>
 
