@@ -10,6 +10,7 @@ $text_font_size : 3vw;
     * {
         text-align: center;
         font-size: $text_font_size;
+        user-select: auto;
     }
 
     article {
