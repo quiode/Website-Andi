@@ -418,7 +418,7 @@
 }
 #impressum * {
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 #impressum article {
   height: 100vh;
@@ -426,7 +426,7 @@
 }
 #impressum .title {
   font-weight: 200;
-  font-size: 6vw;
+  font-size: 4.5vw;
 }
 
 * {
