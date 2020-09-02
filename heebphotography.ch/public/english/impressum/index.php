@@ -16,7 +16,7 @@
             function scrolling() {
                 d = new Date()
                 alert(d.getTime() - execution_time);
-                if (d.getTime() - execution_time >= 500) {
+                if (d.getTime() - execution_time >= 2000) {
                     execution_time = d.getTime();
                     var current_anchor = window.location.hash;
                     var st = window.pageYOffset || document.documentElement
