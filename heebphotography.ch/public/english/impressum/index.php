@@ -10,7 +10,7 @@
             // scrolls to the next id/article of the page when scrolling
             var lastScrollTop = 0;
             var section_ids = ["#contact_address", "#disclaimer", "#exclusion_of_liability_for_links", "#copyright"];
-            d = new Date()
+            var d = new Date()
             var execution_time = d.getTime();
 
             function scrolling() {
