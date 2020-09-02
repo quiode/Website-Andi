@@ -20,5 +20,6 @@ $text_font_size : 3vw;
     .title {
         font-weight: 200;
         font-size: $text_font_size * 1.5;
+        text-decoration: underline;
     }
 }

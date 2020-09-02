@@ -428,6 +428,7 @@
 #impressum .title {
   font-weight: 200;
   font-size: 4.5vw;
+  text-decoration: underline;
 }
 
 * {
