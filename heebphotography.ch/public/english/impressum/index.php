@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scrollbar-width: none;">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Impressum | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-        <script>
-            function scrolling() {
-                
-            }
-        </script>
     </head>
 
-    <body id="impressum" onscroll="">
+    <body id="impressum">
         <?php include '../templates/navigationbar.php'?>
         <section id="german" style="display: none;">
             <p><strong>Kontakt-Adresse</strong></p>
