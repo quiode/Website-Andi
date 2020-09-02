@@ -45,7 +45,7 @@
             <article id="contact_address">
                 <p class="title">Contact address</p>
                 <p>Dominik Schwaiger<br />Hofackerstrasse 3<br />8722 Kaltbrunn<br />Switzerland</p>
-                <p>e-Mail:<br />admin@heebphotography.ch</p>
+                <p>e-mail:<br />admin@heebphotography.ch</p>
             </article>
             <article id="disclaimer">
                 <p class="title">Disclaimer</p>The author assumes no liability whatsoever with regard
