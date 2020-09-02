@@ -10,7 +10,11 @@
             // scrolls to the next id/article of the page when scrolling
             var lastScrollTop = 0;
             var section_ids = ["#contact_address", "#disclaimer", "#exclusion_of_liability_for_links", "#copyright"];
-            window.addEventListener("scroll", function () {
+            var execution_time = Date.getTime()
+
+            function scrolling() {
+                if (Date.getTime() - execution_time >= 500) {
+                    execution_time = Date.getTime();
                     var current_anchor = window.location.hash;
                     var st = window.pageYOffset || document.documentElement
                         .scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
@@ -29,7 +33,10 @@
                         }
                     }
                     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-                },
+                }
+            }
+
+            window.addEventListener("scroll", setTimeout(),
                 false);
         </script>
     </head>
