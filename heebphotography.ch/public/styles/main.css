@@ -439,6 +439,9 @@
   #impressum * {
     font-size: 3vh;
   }
+  #impressum .title {
+    font-size: 4.5vh;
+  }
 }
 
 * {
