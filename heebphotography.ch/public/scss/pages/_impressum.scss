@@ -2,11 +2,12 @@
 // variables
 $article_height : 100vh;
 $article_width : 100vw;
-
+$text_font_size : 20px;
 // scss
 #impressum {
     * {
         text-align: center;
+        font-size: $text_font_size;
     }
 
     article {
@@ -15,6 +16,7 @@ $article_width : 100vw;
     }
 
     .title {
-        font-weight: 800;
+        font-weight: 200;
+        font-size: $text_font_size * 1.25;
     }
 }
