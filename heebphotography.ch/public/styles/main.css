@@ -419,6 +419,7 @@
 }
 #impressum section {
   top: 102px;
+  position: relative;
 }
 #impressum * {
   text-align: center;
