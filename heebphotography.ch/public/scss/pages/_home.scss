@@ -30,6 +30,7 @@ $header_height : 100px;
 
     #first_slide {
         opacity: 1;
+        z-index: 0;
     }
 
     .slides {
@@ -41,10 +42,12 @@ $header_height : 100px;
         opacity: 0;
         transition-duration: 1s;
         transition-property: opacity;
+        z-index: 0;
     }
 
     :first-of-type(.slide) {
         opacity: 1;
+        z-index: 0;
     }
 
     .fade {

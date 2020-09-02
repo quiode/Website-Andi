@@ -80,9 +80,11 @@
   display: block;
   align-items: baseline;
   position: relative;
+  z-index: 0;
 }
 #english #first_slide {
   opacity: 1;
+  z-index: 0;
 }
 #english .slides {
   top: 100px;
@@ -93,15 +95,20 @@
   opacity: 0;
   transition-duration: 1s;
   transition-property: opacity;
+  z-index: 0;
 }
 #english :first-of-type(.slide) {
   opacity: 1;
+  z-index: 0;
 }
 #english .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+#english footer {
+  z-index: 1;
 }
 
 #navigationbar #navigation_button {
