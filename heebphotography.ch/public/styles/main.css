@@ -4,7 +4,7 @@
   position: fixed;
   height: 30vh;
   width: 100vw;
-  z-index: 3;
+  z-index: 2;
   background-color: black;
   opacity: 0.8;
   font-size: 10vw;
@@ -128,7 +128,7 @@
   cursor: pointer;
   top: 1%;
   left: 1%;
-  z-index: 4;
+  z-index: 10;
 }
 @media screen and (max-width: 600px) {
   #navigationbar #navigation_button {
@@ -175,7 +175,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 9;
   overflow: hidden;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
