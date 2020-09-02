@@ -6,16 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linktree | Wildlifephotography Andreas Heeb</title>
     <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-    <!-- <?php
-    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
-    ?> -->
-    <!-- for mdi icons -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 
 
 <body id="linktree">
-    <?php include '../templates/navigationbar.php'?>
+    <?php require '../templates/navigationbar.php'?>
+    <?php require "../english/templates/work_in_progress.php"?>
 
 
     <!-- the linktree (using php for eliminating white space bc fuck u html) -->

@@ -16,6 +16,8 @@
 
     <!-- navigation element -->
     <?php require '../templates/navigationbar.php'?>
+    <!-- wip bar -->
+    <?php require "../english/templates/work_in_progress.php"?>
 
     <div>
         <?php
