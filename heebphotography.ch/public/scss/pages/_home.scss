@@ -25,6 +25,7 @@ $header_height : 100px;
         display: block;
         align-items: baseline;
         position: relative;
+        z-index: 0;
     }
 
     #first_slide {
@@ -48,5 +49,9 @@ $header_height : 100px;
 
     .fade {
         @include shortcuts.fade(1.5s);
+    }
+    
+    footer {
+        z-index: 1;
     }
 }
