@@ -14,7 +14,7 @@
     <!-- the navigation bar -->
     <?php require '../templates/navigationbar.php'?>
     <!-- wip bar -->
-    <?php require "../english/templates/work_in_progress.php"?>
+    <?php require "../templates/work_in_progress.php"?>
     <!-- the contact form, you can leave a lot empty and just send it anonymous -->
     <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
         <!-- selection for how to contact the person -->

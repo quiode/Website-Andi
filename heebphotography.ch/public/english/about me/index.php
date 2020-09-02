@@ -10,7 +10,9 @@
 
 <body id="about_me">
     <?php require '../templates/navigationbar.php'?>
-    <?php require "../english/templates/work_in_progress.php"?>
+    <!-- wip bar -->
+    <?php require "../templates/work_in_progress.php"?>
+    
     <p>
         Andreas Heeb
         <br>
