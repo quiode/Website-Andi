@@ -44,11 +44,11 @@
                 <!--Bitte beachten Sie die AGB von SwissAnwalt betreffend allf&auml;llig anfallenden Kosten bei Weglassen der Quelle!-->
             </article>
             <article id="english">
-                <p><strong>Contact address</strong></p>
+                <p id="contact_address"><strong>Contact address</strong></p>
                 <p>Dominik Schwaiger<br />Hofackerstrasse 3<br />8722 Kaltbrunn<br />Switzerland</p>
                 <p>e-Mail:<br />admin@heebphotography.ch</p>
                 <p>&nbsp;</p>
-                <p><strong>Disclaimer</strong></p>The author assumes no liability whatsoever with regard to the
+                <p id="disclaimer"><strong>Disclaimer</strong></p>The author assumes no liability whatsoever with regard to the
                 correctness, accuracy, topicality, reliability and completeness of the information provided.</p>
                 <p>Liability claims against the author for material or immaterial damages resulting from access to or
                     use or non-use of the published information, misuse of the connection or technical faults are
@@ -57,11 +57,11 @@
                     information might be extended, changed or partly or completely deleted by the author without
                     separate announcement.</p>
                 <p>&nbsp;</p>
-                <p><strong>Exclusion of liability for links</strong></p>
+                <p id="exclusion_of_liability_for_links"><strong>Exclusion of liability for links</strong></p>
                 <p>References and links to third party websites are outside our area of responsibility. We decline any
                     responsibility for such websites. Access and use of such websites is at the user's own risk.</p>
                 <p>&nbsp;</p>
-                <p><strong>Copyright</strong></p>
+                <p id="copyright"><strong>Copyright</strong></p>
                 <p>The copyrights and all other rights to content, images, photos or other files on this website belong
                     exclusively to Dominik Schwaiger or the specifically named rights holders. For the reproduction of
                     any elements, the written consent of the copyright holder must be obtained in advance.</p>
