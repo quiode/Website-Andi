@@ -420,7 +420,7 @@
 #impressum * {
   text-align: center;
   font-size: 3vw;
-  user-select: auto;
+  user-select: text;
 }
 #impressum article {
   height: 100vh;
