@@ -13,7 +13,8 @@
     <header>
         <h2>Heeb Photography</h2>
     </header>
-    <?php require '../english/templates/navigationbar.php'?> 
+    <?php require '../english/templates/navigationbar.php'?>
+    <?php require "../english/templates/work_in_progress.php"?>
     <section>
         <div class="container_slideshow">
             <?php

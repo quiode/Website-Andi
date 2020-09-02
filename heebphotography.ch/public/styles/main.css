@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;800&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+#work_in_progress_bar {
+  height: 10vh;
+  width: 100vw;
+  z-index: 3;
+  background-color: black;
+  opacity: 0.8;
+}
+#work_in_progress_bar div {
+  font-size: 5vw;
+  color: white;
+  text-align: center;
+}
+
 #language ul {
   list-style-type: none;
 }

@@ -1,0 +1,16 @@
+// scss for about me page
+// adding files
+// scss
+#work_in_progress_bar {
+    height: 10vh;
+    width: 100vw;
+    z-index: 3;
+    background-color: black;
+    opacity: 0.8;
+
+    div {
+        font-size: 5vw;
+        color: white;
+        text-align: center;
+    }
+}
