@@ -250,6 +250,9 @@
   background-color: #8941a7;
 }
 
+#about_me * {
+  user-select: text;
+}
 #about_me p {
   text-align: center;
   font-size: 7.3vmin;

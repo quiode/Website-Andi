@@ -2,6 +2,10 @@
 // adding files
 // scss
 #about_me {
+    * {
+        user-select: text;
+    }
+
     p {
         text-align: center;
         font-size: 7.3vmin;
