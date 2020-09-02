@@ -10,11 +10,10 @@
             // scrolls to the next id/article of the page when scrolling
             var lastScrollTop = 0;
             var section_ids = ["#contact_address", "#disclaimer", "#exclusion_of_liability_for_links", "#copyright"];
-            var current_anchor = window.location.hash;
-
             window.addEventListener("scroll", function () {
+                    var current_anchor = window.location.hash;
                     var st = window.pageYOffset || document.documentElement
-                    .scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+                        .scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
                     if (st > lastScrollTop) {
                         // downscroll
                         if (section_ids.indexOf(current_anchor) < 3) {
