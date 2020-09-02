@@ -417,6 +417,9 @@
   scrollbar-width: none;
   margin-left: 0;
 }
+#impressum section {
+  top: 102px;
+}
 #impressum * {
   text-align: center;
   font-size: 3vw;
@@ -430,6 +433,11 @@
   font-weight: 200;
   font-size: 4.5vw;
   text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  #impressum * {
+    font-size: 3vh;
+  }
 }
 
 * {

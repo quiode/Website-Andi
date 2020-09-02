@@ -2,14 +2,21 @@
 // variables
 $article_height : 100vh;
 $article_width : 100vw;
-$text_font_size : 3vw;
+$text_font_size_desktop : 3vw;
+$text_font_size_mobile : 3vh;
+
 // scss
 #impressum {
+    section {
+        top: 102px;
+    }
+
     scrollbar-width: none;
     margin-left: 0;
+
     * {
         text-align: center;
-        font-size: $text_font_size;
+        font-size: $text_font_size_desktop;
         user-select: text;
     }
 
@@ -20,7 +27,13 @@ $text_font_size : 3vw;
 
     .title {
         font-weight: 200;
-        font-size: $text_font_size * 1.5;
+        font-size: $text_font_size_desktop * 1.5;
         text-decoration: underline;
+    }
+
+    @media screen and (max-width: 600px) {
+        * {
+            font-size: $text_font_size_mobile;
+        }
     }
 }
