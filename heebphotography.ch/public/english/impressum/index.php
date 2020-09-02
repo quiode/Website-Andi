@@ -11,8 +11,8 @@
             var lastScrollTop = 0;
             var section_ids = ["#contact_address", "#disclaimer", "#exclusion_of_liability_for_links", "#copyright"];
             var execution_time = Date.getTime()
-
             function scrolling() {
+                alert(execution_time);
                 if (Date.getTime() - execution_time >= 500) {
                     execution_time = Date.getTime();
                     var current_anchor = window.location.hash;
