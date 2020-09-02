@@ -5,7 +5,8 @@ $article_width : 100vw;
 $text_font_size : 3vw;
 // scss
 #impressum {
-    overflow: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     margin-left: 0;
     * {
         text-align: center;

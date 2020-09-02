@@ -414,7 +414,8 @@
 }
 
 #impressum {
-  overflow: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
   margin-left: 0;
 }
 #impressum * {

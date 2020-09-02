@@ -6,9 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Impressum | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
+        <script>
+            function scrolling() {
+                
+            }
+        </script>
     </head>
 
-    <body id="impressum">
+    <body id="impressum" onscroll="">
         <?php include '../templates/navigationbar.php'?>
         <section id="german" style="display: none;">
             <p><strong>Kontakt-Adresse</strong></p>
