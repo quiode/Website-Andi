@@ -6,6 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Impressum | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
+        <script>
+            // scrolls to the next id/article of the page when scrolling
+            var lastScrollTop = 0;
+            var section_ids = ["#contact_address", "#disclaimer", "#exclusion_of_liability_for_links", "#copyright"];
+            var current_anchor = window.location.hash;
+
+            window.addEventListener("scroll", function () {
+                    var st = window.pageYOffset || document.documentElement
+                    .scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+                    if (st > lastScrollTop) {
+                        // downscroll
+                        if (section_ids.indexOf(current_anchor) < 3) {
+                            window.location.hash = section_ids[section_ids.indexOf(current_anchor) + 1];
+                        }
+                    } else {
+                        // upscroll
+                        if (section_ids.indexOf(current_anchor) > 0) {
+                            window.location.hash = section_ids[section_ids.indexOf(current_anchor) - 1];
+                        }
+                    }
+                    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+                },
+                false);
+        </script>
     </head>
 
     <body id="impressum">
