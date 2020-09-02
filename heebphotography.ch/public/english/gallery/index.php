@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-    <!-- <?php
-    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
-    ?>    -->
     <script src="gallery.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
@@ -16,6 +13,8 @@
 
     <!-- navigation element -->
     <?php require '../templates/navigationbar.php'?>
+    <!-- wip bar -->
+    <?php require "../templates/work_in_progress.php"?>
 
     <div>
         <?php

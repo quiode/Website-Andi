@@ -10,6 +10,8 @@
 
     <body id="impressum">
         <?php include '../templates/navigationbar.php'?>
+        <!-- wip bar -->
+        <?php require "../templates/work_in_progress.php"?>
         <section id="german" style="display: none;">
             <p><strong>Kontakt-Adresse</strong></p>
             <p>Dominik Schwaiger<br />Hofackerstrasse 3<br />8722 Kaltbrunn<br />Schweiz</p>
