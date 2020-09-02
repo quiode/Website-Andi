@@ -1,8 +1,20 @@
 //adding files
 // variables
+$article_height : 100vh;
+$article_width : 100vw;
+
 // scss
 #impressum {
     * {
         text-align: center;
+    }
+
+    article {
+        height: $article_height;
+        width: $article_width;
+    }
+
+    .title {
+        font-weight: 800;
     }
 }
