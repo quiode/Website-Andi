@@ -17,7 +17,6 @@
                 d = new Date()
                 alert(d.getTime() - execution_time);
                 if (d.getTime() - execution_time >= 2000) {
-                    execution_time = d.getTime();
                     var current_anchor = window.location.hash;
                     var st = window.pageYOffset || document.documentElement
                         .scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
