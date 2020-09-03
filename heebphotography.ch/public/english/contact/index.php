@@ -73,7 +73,8 @@
         <!-- the actual message -->
         </br>
         <label for="message">Message:</label>
-        <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
+        <br id="msg_br" style="display:none;">
+        <input onchange="message_changed()" type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
         </br>
         <!-- submit button -->
         <input id="submit" type="submit" value="Submit">

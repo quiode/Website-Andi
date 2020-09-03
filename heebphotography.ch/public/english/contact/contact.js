@@ -49,3 +49,16 @@ function subject_changed() {
         });
     }
 }
+
+// check how much text is written and makes the input box bigger
+function message_changed() {
+    if (document.getElementById("message").value.length >= 15){
+        document.getElementById("msg_br").style.display = "initial";
+        document.getElementById("message").style.width = "100vw";
+        document.getElementById("message").style.height = "50vh";
+    } else{
+        document.getElementById("msg_br").style.display = "none";
+        document.getElementById("message").style.width = "auto";
+        document.getElementById("message").style.height = "auto";
+    }
+}
