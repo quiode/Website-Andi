@@ -54,7 +54,7 @@ function subject_changed() {
 function message_changed() {
     if (document.getElementById("message").value.length >= 30){
         document.getElementById("msg_br").style.display = "initial";
-        document.getElementById("message").style.width = "90vw";
+        document.getElementById("message").style.width = "97vw";
         document.getElementById("message").style.height = "50vh";
         document.getElementById("message").rows = 10;
         document.getElementById("message").cols = 100;

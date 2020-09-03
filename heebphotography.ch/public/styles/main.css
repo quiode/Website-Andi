@@ -431,6 +431,7 @@
 #contact_form #message {
   overflow: auto;
   text-align: initial;
+  margin-bottom: 0;
 }
 #contact_form #first_name {
   width: 25vw;
