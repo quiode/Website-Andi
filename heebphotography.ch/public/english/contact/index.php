@@ -34,30 +34,24 @@
         <label for="email" class="email">Email:</label>
         <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
             title="example@example.com">
-        
-        
-        
         <!-- phone -->
         <label for="phone" class="phone">Phone:</label>
         <input type="tel" id="phone" class="phone" name="phone" placeholder="012 345 67 89" maxlength="256"
             title="012 345 67 89">
-        </br>
         <!-- instagram -->
         <label for="instagram" class="instagram">Instagram:</label>
         <input type="text" id="instagram" class="instagram" name="instagram" placeholder="@username" pattern="@.*"
             title="@username" maxlength="256">
-        </br>
         <!-- first name -->
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
             title="FirstName">
-        </br>
         <!-- last name -->
         <label for="last_name">Last Name:</label>
         <input type="text" id="last_name" name="last_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
             title="LastName">
-        </br>
         <!-- Subject -->
+        </br>
         <label for="subject">Subject:</label>
         <select name="subject" id="subject" onchange="subject_changed()">
             <option value="bug">Bug</option>
@@ -68,13 +62,13 @@
             <option value="bored">I'm bored and just wanna talk</option>
             <option value="custom">Something else</option>
         </select>
-        </br>
         <!-- custom subject -->
+        </br class="custom_subject">
         <label for="custom_subject" class="custom_subject">Please Elaborate:</label>
         <input type="text" id="custom_subject" class="custom_subject" name="custom_subject" maxlength="256"
             autocomplete="off" title="Subject" autofocus>
-        </br>
         <!-- the actual message -->
+        </br>
         <label for="message">Message:</label>
         <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
         </br>
