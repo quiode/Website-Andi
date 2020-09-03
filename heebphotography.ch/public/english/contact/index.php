@@ -14,7 +14,7 @@
     <!-- the navigation bar -->
     <?php require '../templates/navigationbar.php'?>
     <!-- wip bar -->
-    <?php require "../templates/work_in_progress.php"?>
+    <!-- <?php require "../templates/work_in_progress.php"?> -->
     <!-- the contact form, you can leave a lot empty and just send it anonymous -->
     <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
         <!-- selection for how to contact the person -->
@@ -34,14 +34,17 @@
         <label for="email" class="email">Email:</label>
         <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
             title="example@example.com">
+        <br class="email">
         <!-- phone -->
         <label for="phone" class="phone">Phone:</label>
         <input type="tel" id="phone" class="phone" name="phone" placeholder="012 345 67 89" maxlength="256"
             title="012 345 67 89">
+        <br class="phone">
         <!-- instagram -->
         <label for="instagram" class="instagram">Instagram:</label>
         <input type="text" id="instagram" class="instagram" name="instagram" placeholder="@username" pattern="@.*"
             title="@username" maxlength="256">
+        <br class="instagram">
         <!-- first name -->
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name" maxlength="256" autocomplete="on" placeholder="Anonymous"

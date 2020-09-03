@@ -436,7 +436,8 @@
   display: none;
 }
 #contact_form form * {
-  height: 10vh;
+  font-size: 4vw;
+  margin-top: 4vh;
 }
 #contact_form #mail_status {
   display: none;
