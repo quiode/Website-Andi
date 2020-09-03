@@ -52,7 +52,6 @@ function subject_changed() {
 
 // check how much text is written and makes the input box bigger
 function message_changed() {
-    alert(document.getElementById("message").value.length);
     if (document.getElementById("message").value.length >= 30){
         document.getElementById("msg_br").style.display = "initial";
         document.getElementById("message").style.width = "90vw";
