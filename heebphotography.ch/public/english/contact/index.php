@@ -72,9 +72,9 @@
             autocomplete="off" title="Subject" autofocus>
         <!-- the actual message -->
         </br>
-        <label for="message">Message:</label>
+        <label for="message" class="message">Message:</label>
         <br id="msg_br" style="display:none;">
-        <textarea rows="1" cols="30" oninput="message_changed()" type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required></textarea>
+        <textarea rows="1" cols="30" oninput="message_changed()" type="text" id="message" name="message" class="message" maxlength="1000" autocomplete="off" title="Message" required></textarea>
         </br>
         <!-- submit button -->
         <input id="submit" type="submit" value="Submit">
