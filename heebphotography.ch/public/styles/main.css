@@ -435,9 +435,12 @@
 #contact_form .custom_subject {
   display: none;
 }
+#contact_form form {
+  top: 102px;
+}
 #contact_form form * {
   font-size: 4vw;
-  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 #contact_form #mail_status {
   display: none;
