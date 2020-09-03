@@ -428,6 +428,13 @@
   left: 50vw;
   transform: translateX(-50%);
 }
+#contact_form #first_name {
+  width: 25vw;
+  margin-right: 5vw;
+}
+#contact_form #last_name {
+  width: 25vw;
+}
 #contact_form .email {
   display: none;
 }
