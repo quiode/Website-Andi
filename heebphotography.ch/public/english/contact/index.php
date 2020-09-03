@@ -63,7 +63,7 @@
             <option value="custom">Something else</option>
         </select>
         <!-- custom subject -->
-        </br class="custom_subject">
+        <br class="custom_subject">
         <label for="custom_subject" class="custom_subject">Please Elaborate:</label>
         <input type="text" id="custom_subject" class="custom_subject" name="custom_subject" maxlength="256"
             autocomplete="off" title="Subject" autofocus>
