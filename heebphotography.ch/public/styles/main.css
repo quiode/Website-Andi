@@ -437,6 +437,7 @@
 }
 #contact_form form {
   top: 102px;
+  position: relative;
 }
 #contact_form form * {
   font-size: 4vw;
