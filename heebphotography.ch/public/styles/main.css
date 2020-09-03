@@ -435,6 +435,9 @@
 #contact_form .custom_subject {
   display: none;
 }
+#contact_form form * {
+  height: 10vh;
+}
 #contact_form #mail_status {
   display: none;
 }
