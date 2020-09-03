@@ -74,7 +74,7 @@
         </br>
         <label for="message">Message:</label>
         <br id="msg_br" style="display:none;">
-        <input onchange="message_changed()" type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
+        <textarea rows="5" cols="60" onchange="message_changed()" type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
         </br>
         <!-- submit button -->
         <input id="submit" type="submit" value="Submit">
