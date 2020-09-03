@@ -18,6 +18,12 @@
         display: none;
     }
 
+    form {
+        * {
+            height: 10vh;
+        }
+    }
+
     #mail_status {
         display: none;
 
