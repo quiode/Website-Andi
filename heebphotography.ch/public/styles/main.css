@@ -424,6 +424,7 @@
 }
 
 #contact_form #submit {
+  position: relative;
   left: 50vw;
   transform: translateX(-50%);
 }
