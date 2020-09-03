@@ -53,7 +53,7 @@ function subject_changed() {
 // check how much text is written and makes the input box bigger
 function message_changed() {
     alert(document.getElementById("message").value.length);
-    if (document.getElementById("message").value.length >= 15){
+    if (document.getElementById("message").value.length >= 30){
         document.getElementById("msg_br").style.display = "initial";
         document.getElementById("message").style.width = "90vw";
         document.getElementById("message").style.height = "50vh";
@@ -64,6 +64,6 @@ function message_changed() {
         document.getElementById("message").style.width = "auto";
         document.getElementById("message").style.height = "auto";
         document.getElementById("message").rows = 1;
-        document.getElementById("message").cols = 16;
+        document.getElementById("message").cols = 30;
     }
 }
