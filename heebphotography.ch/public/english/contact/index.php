@@ -76,7 +76,7 @@
         <input type="text" id="message" name="message" maxlength="1000" autocomplete="off" title="Message" required>
         </br>
         <!-- submit button -->
-        <input type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit">
     </form>
 </body>
 

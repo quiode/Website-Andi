@@ -2,6 +2,11 @@
 // adding files
 // scss
 #contact_form {
+    #submit {
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
     .email {
         display: none;
     }

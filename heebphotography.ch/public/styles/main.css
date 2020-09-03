@@ -423,6 +423,10 @@
   transform: translateY(-1vmax) rotate(90deg);
 }
 
+#contact_form #submit {
+  left: 50vw;
+  transform: translateX(-50%);
+}
 #contact_form .email {
   display: none;
 }
