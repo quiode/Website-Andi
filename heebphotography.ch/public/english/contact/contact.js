@@ -57,9 +57,13 @@ function message_changed() {
         document.getElementById("msg_br").style.display = "initial";
         document.getElementById("message").style.width = "90vw";
         document.getElementById("message").style.height = "50vh";
+        document.getElementById("message").rows = 10;
+        document.getElementById("message").cols = 100;
     } else{
         document.getElementById("msg_br").style.display = "none";
         document.getElementById("message").style.width = "auto";
         document.getElementById("message").style.height = "auto";
+        document.getElementById("message").rows = 1;
+        document.getElementById("message").cols = 16;
     }
 }

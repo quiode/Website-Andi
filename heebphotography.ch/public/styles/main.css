@@ -529,6 +529,10 @@ h2 {
   font-size: 85px;
 }
 
+textarea {
+  resize: none;
+}
+
 * {
   user-select: none;
 }
