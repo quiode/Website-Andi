@@ -8,6 +8,11 @@
         transform: translateX(-50%);
     }
 
+    #message{
+        overflow: auto;
+        text-align: initial;
+    }
+
     #first_name {
         width: 25vw;
         margin-right: 5vw;

@@ -55,7 +55,7 @@ function message_changed() {
     alert(document.getElementById("message").value.length);
     if (document.getElementById("message").value.length >= 15){
         document.getElementById("msg_br").style.display = "initial";
-        document.getElementById("message").style.width = "100vw";
+        document.getElementById("message").style.width = "90vw";
         document.getElementById("message").style.height = "50vh";
     } else{
         document.getElementById("msg_br").style.display = "none";

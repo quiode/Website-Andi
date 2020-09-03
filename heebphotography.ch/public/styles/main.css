@@ -428,6 +428,10 @@
   left: 50vw;
   transform: translateX(-50%);
 }
+#contact_form #message {
+  overflow: auto;
+  text-align: initial;
+}
 #contact_form #first_name {
   width: 25vw;
   margin-right: 5vw;
