@@ -452,6 +452,9 @@
 #contact_form .custom_subject {
   display: none;
 }
+#contact_form .message {
+  vertical-align: middle;
+}
 #contact_form form {
   top: 102px;
   position: relative;

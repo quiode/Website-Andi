@@ -8,7 +8,7 @@
         transform: translateX(-50%);
     }
 
-    #message{
+    #message {
         overflow: auto;
         text-align: initial;
         margin-bottom: 0;
@@ -37,6 +37,10 @@
 
     .custom_subject {
         display: none;
+    }
+
+    .message {
+        vertical-align: middle;
     }
 
     form {
