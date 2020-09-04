@@ -28,13 +28,10 @@ document.onload = function slideshow() {
   var slides = document.getElementsByClassName("slide");
 
   for (var i = 0; i <= slides.length; i++) {
-    setTimeout(() => {
-        if (i == slides.Length) {
-        i = 0;
-      }
-      slides[i].style.display = "block";
-      slides[i - 1].style.display = "none"; 
-    }, 10000);
-    
+    if (i == slides.Length) {
+      i = 0;
+    }
+    slides[i].style.display = "block";
+    slides[i - 1].style.display = "none"; 
   }
 }
