@@ -2,30 +2,73 @@
 // adding files
 // scss
 #contact_form {
+    #submit {
+        position: relative;
+        left: 50vw;
+        transform: translateX(-50%);
+    }
+
+    #message {
+        overflow: auto;
+        text-align: initial;
+        margin-bottom: 0;
+    }
+
+    #first_name {
+        width: 25vw;
+        margin-right: 5vw;
+    }
+
+    #last_name {
+        width: 25vw;
+    }
+
     .email {
         display: none;
     }
+
     .phone {
         display: none;
     }
+
     .instagram {
         display: none;
     }
+
     .custom_subject {
         display: none;
     }
+
+    .message {
+        vertical-align: middle;
+    }
+
+    form {
+        top: 102px;
+        position: relative;
+
+        * {
+            font-size: 4vw;
+            margin-bottom: 4vh;
+        }
+    }
+
     #mail_status {
         display: none;
+
         p {
             display: inherit;
         }
-        #loading_gif{
+
+        #loading_gif {
             display: inherit;
         }
-        #green_check{
+
+        #green_check {
             display: none;
         }
-        #red_x{
+
+        #red_x {
             display: none;
         }
     }

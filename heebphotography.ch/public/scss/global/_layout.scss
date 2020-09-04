@@ -2,14 +2,21 @@
 * {
     box-sizing: border-box;
 }
+
 footer {
     height: 50px;
     display: flex;
     align-items: center;
 }
+
 p {
     font-size: 14px;
 }
+
 h2 {
-    font-size: 69px;
+    font-size: 85px;
+}
+
+textarea {
+    resize: none;
 }

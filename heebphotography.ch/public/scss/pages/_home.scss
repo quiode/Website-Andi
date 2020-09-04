@@ -1,35 +1,60 @@
-@charset "UTF-8";
 //adding files
+@use "../classes/shortcuts";
+// variables
+$slideshow_height : 75vh;
+$slideshow_width : 90vw;
+$header_height : 100px;
 
 // scss
 #english {
     header {
         h2 {
-            font-family: "Raleway", sans-serif;
+            font-weight: 200;
             width: 100%;
-            height: 100px;
+            height: $header_height;
             display: block;
             text-align: center;
             margin: 0;
         }
     }
+
     .container_slideshow {
         margin: auto;
-        width: 100vw;
-        height: 75vh;
+        width: $slideshow_width;
+        height: $slideshow_height;
         display: block;
         align-items: baseline;
         position: relative;
+        z-index: 0;
     }
-    .slide {
-        img {
-            display: block;
-        }
+
+    #first_slide {
+        opacity: 1;
+        z-index: 0;
     }
+
+    .slides {
+        top: $header_height;
+        height: $slideshow_height;
+        width: $slideshow_width;
+        display: block;
+        position: absolute;
+        opacity: 0;
+        transition-duration: 1s;
+        transition-property: opacity;
+        z-index: 0;
+    }
+
+    :first-of-type(.slide) {
+        opacity: 1;
+        z-index: 0;
+    }
+
     .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
+        @include shortcuts.fade(1.5s);
+    }
+    
+    footer {
+        z-index: 1;
+    }
 }

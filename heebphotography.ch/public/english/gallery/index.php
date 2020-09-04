@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-    <!-- <?php
-    echo "<link rel=\"stylesheet\" href=\"https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.css" . "\">";
-    ?>    -->
     <script src="gallery.js"></script>
     <title>Gallery | Wildlifephotography Andreas Heeb</title>
 </head>
@@ -16,11 +13,15 @@
 
     <!-- navigation element -->
     <?php require '../templates/navigationbar.php'?>
+    <!-- wip bar -->
+    <?php require "../templates/work_in_progress.php"?>
 
     <div>
         <?php
+        // variables
+        $path_images = "./images/testing/";
         // searches the filename of all images in the images folder
-        $images = scandir("images", 1);
+        $images = scandir($path_images, 1);
         // deletes the last two elements of the filename list --> are always . and .. so not usefull
         unset($images[sizeof($images)-1]);
         unset($images[sizeof($images)-1]);
@@ -53,7 +54,7 @@
             <div>
                 <?php
                 foreach ($image_column_1 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -63,7 +64,7 @@
             <div>
                 <?php
                 foreach ($image_column_2 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -73,7 +74,7 @@
             <div>
                 <?php
                 foreach ($image_column_3 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -83,7 +84,7 @@
             <div>
                 <?php
                 foreach ($image_column_4 as $image) {
-                        echo "<img src=\"images/";
+                        echo "<img src=\"images/testing/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -95,7 +96,7 @@
     <!-- the slideshow that pops up when clicking on an image -->
     <div id="slideshow_background">
         <div id="slideshow" onkeydown="key_pressed(event)">
-            <img id="slideshow_image" src="./images/101030189_1928756140588065_3843172269444384879_n.jpg"
+            <img id="slideshow_image" src="./images/testing/101030189_1928756140588065_3843172269444384879_n.jpg"
                 onload="resizeToMax()">
 
             <!-- for navigation within the slideshow -->

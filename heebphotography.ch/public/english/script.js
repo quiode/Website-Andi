@@ -1,40 +1,25 @@
-/*document.onload = function slideshow() {
-  showSlides();
-}
+// calls the slideshow fuction, which changes the image, every 5 seconds
+var slideshow_interval = setInterval(slideshow, 5000);
 
-function showSlides() {
-  var slideIndex = 1;
-
-  var slides = document.getElementsByClassName("slide");
-  //speichert alle slides in einem array    
-  
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    //macht alle slides unsichtbar
-    slideIndex++;    
-    
-    if (slideIndex > slides.length) { 
-      slideIndex = 1;  
-      //um Index zu resetten wenn er grösser als die Anzahl Bilder wird                                      
-    }      
-    
-    slides[slideIndex - 1].style.display = "block";
-    //macht eine Slide sichtbar
-    setTimeout(showSlides, 10000);
-  }
-}*/
-
-document.onload = function slideshow() {
-  var slides = document.getElementsByClassName("slide");
-
-  for (var i = 0; i <= slides.length; i++) {
-    setTimeout(() => {
-        if (i == slides.Length) {
-        i = 0;
-      }
-      slides[i].style.display = "block";
-      slides[i - 1].style.display = "none"; 
-    }, 10000);
-    
-  }
+// changes the image
+function slideshow() {
+	// when the document has fully loaded, begin with slideshow
+	if (document.readyState == "complete") {
+		// gets every slide image
+		var slides = document.getElementsByClassName("slides");
+		// finds the slide image which is currently shown
+		for (let index = 0; index < slides.length; index++) {
+			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) { //fuck javascript
+				current_slide = slides[index];
+			}
+		}
+		// select a new slide image
+		var new_slide = current_slide;
+		while (new_slide == current_slide) {
+			new_slide = slides[Math.floor(Math.random() * slides.length)];
+		}
+		// lets the current slide disappear and shows the new slide slide
+		current_slide.style.opacity = 0;
+		new_slide.style.opacity = 1;
+	}
 }

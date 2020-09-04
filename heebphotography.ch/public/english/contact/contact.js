@@ -8,7 +8,9 @@ function form_normal() {
 
 // when the form is beeing submitted, displays processing information
 function form_submit() {
-    document.getElementById("mail_status").style.display = "initial";
+    var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif",
+        "Sending",
+        "height=200,width=200,resizable=no,left=200,top=200,location=no,menubar=no,scrollbar=no");
 }
 
 // when changing an option, display another input field
@@ -45,5 +47,22 @@ function subject_changed() {
             element.style.display = "none";
             element.required = false;
         });
+    }
+}
+
+// check how much text is written and makes the input box bigger
+function message_changed() {
+    if (document.getElementById("message").value.length >= 30){
+        document.getElementById("msg_br").style.display = "initial";
+        document.getElementById("message").style.width = "97vw";
+        document.getElementById("message").style.height = "50vh";
+        document.getElementById("message").rows = 10;
+        document.getElementById("message").cols = 100;
+    } else{
+        document.getElementById("msg_br").style.display = "none";
+        document.getElementById("message").style.width = "auto";
+        document.getElementById("message").style.height = "auto";
+        document.getElementById("message").rows = 1;
+        document.getElementById("message").cols = 30;
     }
 }

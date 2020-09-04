@@ -1,4 +1,5 @@
 // Componets
+@use "./components/work_in_progress_bar";
 // Modules
 @use './classes/colors';
 @use './classes/shortcuts';
@@ -12,6 +13,7 @@
 @use './pages/about_me';
 @use './pages/gallery';
 @use './pages/contact';
+@use './pages/impressum';
 // Third-Party
 // Global
 @use './global/font';
