@@ -21,32 +21,32 @@
 
     // print_r($_POST);
 //makes the message which is send per mail in plain text
-        $plain = ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
+        $plain = ($_POST["first_name"] != "") ? strip_tags($_POST["first_name"]) : "NoFirstNameGiven";
         $plain .= " ";
-        $plain .= ($_POST["last_name"] != "") ? $_POST["last_name"] : "NoLastNameGiven";
+        $plain .= ($_POST["last_name"] != "") ? strip_tags($_POST["last_name"]) : "NoLastNameGiven";
         $plain .= " writes about the subject: ";
-        $plain .= ($_POST["subject"] != "custom") ? $_POST["subject"] : $_POST["custom_subject"];
+        $plain .= ($_POST["subject"] != "custom") ? strip_tags($_POST["subject"]) : strip_tags($_POST["custom_subject"]);
         $plain .= ". ";
-        $plain .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via " . $_POST["how_to_contact"] . " under " . $_POST[$_POST["how_to_contact"]] . ".") : "No information on how to contact is given.";
+        $plain .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via " . strip_tags($_POST["how_to_contact"]) . " under " . strip_tags($_POST[strip_tags($_POST["how_to_contact"])]) . ".") : "No information on how to contact is given.";
 //message of the email
     //h1
         $message = "<h1>This message is automated!</h1>";
     //h2
         $message .= "<h2>It was created through the Form on " . $_SERVER["HTTP_HOST"] . " by <b>";
-        $message .= ($_POST["first_name"] != "") ? $_POST["first_name"] : "NoFirstNameGiven";
+        $message .= ($_POST["first_name"] != "") ? strip_tags($_POST["first_name"]) : "NoFirstNameGiven";
         $message .= " ";
-        $message .= ($_POST["last_name"] != "") ? $_POST["last_name"] : "NoLastNameGiven";
+        $message .= ($_POST["last_name"] != "") ? strip_tags($_POST["last_name"]) : "NoLastNameGiven";
         $message .= "</b>.</h2>";
     //h3
         $message .= "<h3>The reason: <b>";
-        $message .= ($_POST["subject"] != "custom") ? $_POST["subject"] : $_POST["custom_subject"];
+        $message .= ($_POST["subject"] != "custom") ? strip_tags($_POST["subject"]) : strip_tags($_POST["custom_subject"]);
         $message .= "</b>.</h3><h4>";
     //h4
-        $message .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via <b>" . $_POST["how_to_contact"] . "</b> under <b>" . $_POST[$_POST["how_to_contact"]] . "</b>.</h4>") : "No information on how to contact is given.</h4>";
+        $message .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via <b>" . strip_tags($_POST["how_to_contact"]) . "</b> under <b>" . strip_tags($_POST[strip_tags($_POST["how_to_contact"])]) . "</b>.</h4>") : "No information on how to contact is given.</h4>";
     //h5
         $message .= "<h5>The following is the message from the user:</h5>";
     //p
-        $message .= "<p>" . $_POST["message"] . "</p>";
+        $message .= "<p>" . strip_tags($_POST["message"]) . "</p>";
     //footer
         $message .= "<footer><b>Please do not reply to this message!</b></footer>";
 //imports all components
@@ -77,9 +77,9 @@
 //the actual content of the email
     //sends html
         $mail->isHTML(true);
-        $mail->Subject = "Contact Form: " . $_POST["subject"];
+        $mail->Subject = "Contact Form: " . strip_tags($_POST["subject"]);
         $mail->Body = $message;
-        $mail->AltBody = $plain . "&NewLine;The message:&NewLine;" . $_POST["message"];
+        $mail->AltBody = $plain . "&NewLine;The message:&NewLine;" . strip_tags($_POST["message"]);
 //sends the actual email
         try {
             $mail->send();
