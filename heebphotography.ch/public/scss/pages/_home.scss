@@ -1,8 +1,8 @@
 //adding files
 @use "../classes/shortcuts";
 // variables
-$slideshow_height : 75vh;
-$slideshow_width : 90vw;
+$slideshow_height : 100vh - 100px;
+$slideshow_width : 100vw;
 $header_height : 100px;
 
 // scss
