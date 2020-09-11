@@ -79,7 +79,7 @@
 
 #english header h2 {
   font-weight: 200;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   display: block;
   text-align: center;
