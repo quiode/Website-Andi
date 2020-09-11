@@ -17,7 +17,7 @@
     <?php require "../english/templates/work_in_progress.php"?>
     <section>
         <div class="container_slideshow">
-            <?php
+        <?php
             $dir = "images-home";
             if (is_dir($dir)) {
                 $scan = scandir($dir);
@@ -26,18 +26,18 @@
                 foreach ($scan as $value) {
                     if ($is_first_tester) {
                         if (!(is_dir($value))) {
-                            echo "<img class=\"slides\" id=\"first_slide\" src=\"$dir/$value\" alt=\"$value\">\n";
+                            echo "<div class=\"image-crop\"><img class=\"slides\" id=\"first_slide\" src=\"$dir/$value\" alt=\"$value\">\n</div>\n";
                             $is_first_tester = false;
                         }
                     } else {
                         if (!(is_dir($value))) {
-                            echo "<img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n";
+                            echo "<div class=\"image-crop\"><img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n</div>\n";
                         }
                     }
                 }
             }
-            ?>
-        </div>
+        ?>
+        </div>  
     </section>
 
     <aside>

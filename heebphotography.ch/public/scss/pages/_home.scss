@@ -31,6 +31,12 @@ $header_height : 100px;
         z-index: 0;
     }
 
+    .image-crop {
+        max-width: 100vh;
+        overflow: hidden;
+        text-indent: 50%;
+    }
+
     .slides {
         top: $header_height;
         height: $slideshow_height;
