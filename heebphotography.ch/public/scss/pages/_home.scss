@@ -39,6 +39,7 @@ $header_height : 100px;
 
     .slides {
         top: $header_height;
+        max-width: initial;
         /*height: $slideshow_height;
         width: $slideshow_width;*/
         display: block;
