@@ -33,14 +33,16 @@ $header_height : 75px;
 
     .image-crop {
         max-width: 100vh;
+        max-height: 100vh;
         overflow: hidden;
         text-indent: 50%;
+        margin-top: 50%;
     }
 
     .slides {
         top: $header_height;
         max-width: inherit;
-        height: 75vh;
+        height: inherit;
         /*height: $slideshow_height;
         width: $slideshow_width;*/
         display: block;
