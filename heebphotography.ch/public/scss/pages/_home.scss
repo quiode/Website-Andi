@@ -39,7 +39,8 @@ $header_height : 75px;
 
     .slides {
         top: $header_height;
-        max-width: initial;
+        max-width: inherit;
+        height: 75vh;
         /*height: $slideshow_height;
         width: $slideshow_width;*/
         display: block;
