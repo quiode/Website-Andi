@@ -96,6 +96,11 @@
   opacity: 1;
   z-index: 0;
 }
+.image-crop {
+  max-width: 100vh;
+  overflow: hidden;
+  text-indent: 50%;
+}
 #english .slides {
   top: 100px;
   height: 100vh - 100px;
