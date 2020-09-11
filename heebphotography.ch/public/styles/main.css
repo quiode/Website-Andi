@@ -103,8 +103,8 @@
 }
 #english .slides {
   top: 100px;
-  height: 100vh - 100px;
-  width: 100vw;
+  /*height: 100vh - 100px;
+  width: 100vw;*/
   display: block;
   position: absolute;
   opacity: 0;
