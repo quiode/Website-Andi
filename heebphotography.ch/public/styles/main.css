@@ -98,10 +98,10 @@
 }
 .image-crop {
   max-width: 100vh;
-  max-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   text-indent: 50%;
-  margin-top: 50%;
+  margin-top: -50%;
 }
 #english .slides {
   top: 100px;
