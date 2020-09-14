@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;800&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 #work_in_progress_bar {
+  display: none;
   position: fixed;
   height: 30vh;
   width: 100vw;
@@ -96,7 +97,7 @@
   opacity: 1;
   z-index: 0;
 }
-.image-crop {
+#english .image-crop {
   max-width: 100vh;
   height: 100vh;
   overflow: hidden;
@@ -104,11 +105,11 @@
   margin-top: -50%;
 }
 #english .slides {
-  top: 100px;
+  top: 75px;
   max-width: inherit;
   height: inherit;
-  /*height: 100vh - 100px;
-  width: 100vw;*/
+  /*height: $slideshow_height;
+  width: $slideshow_width;*/
   display: block;
   position: absolute;
   opacity: 0;
