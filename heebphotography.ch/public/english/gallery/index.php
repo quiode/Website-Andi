@@ -37,7 +37,7 @@
         $image_column_4 = array();
         $i = 0;
         $c = 0;
-        while ($i <= sizeof($images)) {
+        while ($i <= sizeof($thumbnail_images)) {
             $image_column_1[$c] = $thumbnail_images[$i++];
             if ($i >= sizeof($thumbnail_images)) {
                 break;
@@ -59,7 +59,7 @@
             <div>
                 <?php
                 foreach ($image_column_1 as $image) {
-                        echo "<img src=\"images/testing/";
+                        echo "<img src=\"images/testing/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -69,7 +69,7 @@
             <div>
                 <?php
                 foreach ($image_column_2 as $image) {
-                        echo "<img src=\"images/testing/";
+                        echo "<img src=\"images/testing/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -79,7 +79,7 @@
             <div>
                 <?php
                 foreach ($image_column_3 as $image) {
-                        echo "<img src=\"images/testing/";
+                        echo "<img src=\"images/testing/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
@@ -89,7 +89,7 @@
             <div>
                 <?php
                 foreach ($image_column_4 as $image) {
-                        echo "<img src=\"images/testing/";
+                        echo "<img src=\"images/testing/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                 }
