@@ -42,7 +42,7 @@ function next_picture() {
     var images = [];
     // makes a list of all images
     for (let i = 0; i < document.getElementsByClassName("image").length; i++) {
-        images.push(document.getElementsByClassName("image")[i].src);
+        images.push(document.getElementsByClassName("image")[i].src.replace("/thumbnail", ""));
     }
     var final_src;
     if ((images.indexOf(img_src) + 1) < (images.length)) {
@@ -61,7 +61,7 @@ function last_picture() {
     var images = [];
     // makes a list of all images
     for (let i = 0; i < document.getElementsByClassName("image").length; i++) {
-        images.push(document.getElementsByClassName("image")[i].src);
+        images.push(document.getElementsByClassName("image")[i].src.replace("/thumbnail", ""));
     }
     var final_src;
     if ((images.indexOf(img_src) - 1) >= 0) {
