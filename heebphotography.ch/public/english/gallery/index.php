@@ -50,7 +50,7 @@
         ?>
 
         <!-- makes 4 rows of images -->
-        <div>
+        <div id="all_rows">
             <div>
                 <?php
                 foreach ($image_column_1 as $image) {

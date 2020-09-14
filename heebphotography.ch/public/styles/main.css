@@ -314,26 +314,26 @@
   margin: 0;
   padding: 0;
 }
-#gallery > div:first-of-type > div {
+#gallery #all_rows {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
   justify-content: space-around;
 }
-#gallery > div:first-of-type > div > div {
+#gallery #all_rows > div {
   flex: 25%;
   max-width: 24%;
   padding: 0 4px;
 }
 @media screen and (max-width: 800px) {
-  #gallery > div:first-of-type > div > div {
+  #gallery #all_rows > div {
     flex: 50%;
     max-width: 48%;
     padding: 0 4px;
   }
 }
 @media screen and (max-width: 600px) {
-  #gallery > div:first-of-type > div > div {
+  #gallery #all_rows > div {
     flex: 100%;
     max-width: 96%;
     padding: 0 4px;

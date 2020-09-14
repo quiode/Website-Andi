@@ -7,33 +7,29 @@
     margin: 0;
     padding: 0;
 
-    >div {
-        &:first-of-type {
-            >div {
-                display: flex;
-                flex-wrap: wrap;
+    #all_rows {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        justify-content: space-around;
+
+        > div {
+            flex: 25%;
+            max-width: 24%;
+            padding: 0 4px;
+
+            @media screen and (max-width: 800px) {
+                // two images for tablets/smaller computers
+                flex: 50%;
+                max-width: 48%;
                 padding: 0 4px;
-                justify-content: space-around;
+            }
 
-                >div {
-                    flex: 25%;
-                    max-width: 24%;
-                    padding: 0 4px;
-
-                    @media screen and (max-width: 800px) {
-                        // two images for tablets/smaller computers
-                        flex: 50%;
-                        max-width: 48%;
-                        padding: 0 4px;
-                    }
-
-                    @media screen and (max-width: 600px) {
-                        // one image for smartphones
-                        flex: 100%;
-                        max-width: 96%;
-                        padding: 0 4px;
-                    }
-                }
+            @media screen and (max-width: 600px) {
+                // one image for smartphones
+                flex: 100%;
+                max-width: 96%;
+                padding: 0 4px;
             }
         }
     }
@@ -108,7 +104,7 @@
         position: fixed;
         display: none;
 
-        >img {
+        > img {
             object-fit: contain;
             position: fixed;
             top: 50%;
@@ -118,7 +114,7 @@
             max-height: 90%;
         }
 
-        >div {
+        > div {
             &:first-of-type {
                 left: 0;
             }
@@ -135,8 +131,8 @@
                 transform: rotate(45deg);
                 z-index: 6;
 
-                >div {
-                    >div {
+                > div {
+                    > div {
                         background-color: white;
                         $width: 7vmax;
                         width: $width;
