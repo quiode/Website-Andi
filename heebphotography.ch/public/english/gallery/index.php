@@ -20,11 +20,16 @@
         <?php
         // variables
         $path_images = "./images/testing/";
+        $path_thumbnail_images = "./images/testing/thumbnail/";
         // searches the filename of all images in the images folder
         $images = scandir($path_images, 1);
+        $thumbnail_images = scandir($path_thumbnail_images, 1);
         // deletes the last two elements of the filename list --> are always . and .. so not usefull
         unset($images[sizeof($images)-1]);
         unset($images[sizeof($images)-1]);
+
+        unset($thumbnail_images[sizeof($thumbnail_images)-1]);
+        unset($thumbnail_images[sizeof($thumbnail_images)-1]);
         // splits the images in 4 seperate arrays with +- 1 the same amount of images
         $image_column_1 = array();
         $image_column_2 = array();
@@ -33,19 +38,19 @@
         $i = 0;
         $c = 0;
         while ($i <= sizeof($images)) {
-            $image_column_1[$c] = $images[$i++];
-            if ($i >= sizeof($images)) {
+            $image_column_1[$c] = $thumbnail_images[$i++];
+            if ($i >= sizeof($thumbnail_images)) {
                 break;
             }
-            $image_column_2[$c] = $images[$i++];
-            if ($i >= sizeof($images)) {
+            $image_column_2[$c] = $thumbnail_images[$i++];
+            if ($i >= sizeof($thumbnail_images)) {
                 break;
             }
-            $image_column_3[$c] = $images[$i++];
-            if ($i >= sizeof($images)) {
+            $image_column_3[$c] = $thumbnail_images[$i++];
+            if ($i >= sizeof($thumbnail_images)) {
                 break;
             }
-            $image_column_4[$c++] = $images[$i++];
+            $image_column_4[$c++] = $thumbnail_images[$i++];
         }
         ?>
 

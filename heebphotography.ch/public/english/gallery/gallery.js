@@ -24,7 +24,9 @@ function slideshow_on(src) {
     document.getElementById("slideshow_background").style.display = "block";
     document.getElementById("slideshow").style.display = "block";
     document.getElementsByTagName("body")[0].style.overflow = "hidden";
-    document.getElementById("slideshow_image").src = src;
+    // gets the original image instead of the thumbnail
+    var newPath = src.replace("/thumbnail", "");
+    document.getElementById("slideshow_image").src = newPath;
 }
 
 function slideshow_off() {
@@ -48,7 +50,9 @@ function next_picture() {
     } else {
         final_src = images[0];
     }
-    document.getElementById("slideshow_image").src = final_src;
+    // gets the original image instead of the thumbnail
+    var newPath = final_src.replace("/thumbnail", "");
+    document.getElementById("slideshow_image").src = newPath;
 }
 
 // shows last picture
@@ -65,7 +69,9 @@ function last_picture() {
     } else {
         final_src = images[images.length - 1];
     }
-    document.getElementById("slideshow_image").src = final_src;
+    // gets the original image instead of the thumbnail
+    var newPath = final_src.replace("/thumbnail", "");
+    document.getElementById("slideshow_image").src = newPath;
 }
 
 // looks which key is pressed and executes the right funciton
