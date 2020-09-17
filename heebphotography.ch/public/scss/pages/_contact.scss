@@ -68,6 +68,7 @@ $mobile_input_width : 95vw;
 
             @media screen and (max-width: 600px) {
                 width: $mobile_input_width;
+                height: $mobile_input_height;
             }
 
         }
@@ -81,6 +82,7 @@ $mobile_input_width : 95vw;
 
             @media screen and (max-width: 600px) {
                 width: $mobile_input_width;
+                height: $mobile_input_height;
             }
         }
 
@@ -90,26 +92,19 @@ $mobile_input_width : 95vw;
         }
 
         textarea {
-            height: $desktop_input_height;
+            height: $desktop_input_height*3;
             width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
 
             @media screen and (max-width: 600px) {
                 width: $mobile_input_width;
+                height: $mobile_input_height*2;
             }
         }
 
         .custom_subject {
             display: none;
-        }
-
-        #message {
-            height: $desktop_input_height*3;
-
-            @media screen and (max-width: 600px) {
-                height: $desktop_input_height*2;
-            }
         }
 
         @media screen and (max-width: 600px) {
