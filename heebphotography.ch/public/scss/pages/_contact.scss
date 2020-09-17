@@ -63,6 +63,10 @@ $mobile_input_width : 100vw;
             width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
+
+            #message {
+                height: $input_height*3;
+            }
         }
 
         .custom_subject {

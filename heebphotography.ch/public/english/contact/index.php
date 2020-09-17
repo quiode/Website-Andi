@@ -48,7 +48,7 @@
             autocomplete="off" title="Subject" autofocus>
         <!-- the actual message -->
         <label for="message" class="message">Message:</label>
-        <textarea rows="1" cols="30" oninput="message_changed()" type="text" id="message" name="message" class="message" maxlength="1000" autocomplete="off" title="Message" required></textarea>
+        <textarea rows="5" cols="100" type="text" id="message" name="message" class="message" maxlength="1000" autocomplete="off" title="Message" required></textarea>
         <!-- submit button -->
         <input id="submit" type="submit" value="Submit">
     </form>

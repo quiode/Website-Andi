@@ -481,6 +481,9 @@
   font-size: 6vmin;
   display: inherit;
 }
+#contact_form > form textarea #message {
+  height: 27vh;
+}
 #contact_form > form .custom_subject {
   display: none;
 }
