@@ -536,8 +536,12 @@
   margin-left: 0;
 }
 #impressum section {
-  top: 102px;
   position: relative;
+}
+@media screen and (max-width: 600px) {
+  #impressum section {
+    top: 102px;
+  }
 }
 #impressum * {
   text-align: center;

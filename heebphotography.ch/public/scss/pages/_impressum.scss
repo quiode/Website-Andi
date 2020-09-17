@@ -8,8 +8,11 @@ $text_font_size_mobile : 3vh;
 // scss
 #impressum {
     section {
-        top: 102px;
         position: relative;
+
+        @media screen and (max-width: 600px) {
+            top: 102px;
+        }
     }
 
     scrollbar-width: none;
