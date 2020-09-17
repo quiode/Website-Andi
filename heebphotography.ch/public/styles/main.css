@@ -452,11 +452,11 @@
   width: 13.3333333333vw;
   display: inline-block;
 }
-#contact_form > form label [for=last_name] #desktop_last_name_label {
+#contact_form > form label #desktop_last_name_label {
   width: 13.3333333333vw;
   display: inline-block;
 }
-#contact_form > form label [for=last_name] #mobile_last_name_label {
+#contact_form > form label #mobile_last_name_label {
   display: none;
 }
 #contact_form > form input {
@@ -498,10 +498,10 @@
     width: 100vw;
     display: block;
   }
-  #contact_form label [for=last_name] #desktop_last_name_label {
+  #contact_form label #desktop_last_name_label {
     display: none;
   }
-  #contact_form label [for=last_name] #mobile_last_name_label {
+  #contact_form label #mobile_last_name_label {
     width: 100vw;
     display: block;
   }

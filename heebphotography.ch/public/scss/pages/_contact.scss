@@ -24,16 +24,14 @@ $mobile_input_width : 100vw;
                 display: inline-block;
             }
 
-            [for=last_name] {
-                #desktop_last_name_label {
-                    width: $desktop_input_width/3;
-                    display: inline-block;
+            #desktop_last_name_label {
+                width: $desktop_input_width/3;
+                display: inline-block;
 
-                }
+            }
 
-                #mobile_last_name_label {
-                    display: none;
-                }
+            #mobile_last_name_label {
+                display: none;
             }
 
             font-size: $font_size/5;
@@ -70,6 +68,7 @@ $mobile_input_width : 100vw;
 
     @media screen and (max-width: 600px) {
         top: 102px;
+
         select {
             width: $mobile_input_width;
         }
@@ -88,15 +87,13 @@ $mobile_input_width : 100vw;
                 display: block;
             }
 
-            [for=last_name] {
-                #desktop_last_name_label {
-                    display: none;
-                }
+            #desktop_last_name_label {
+                display: none;
+            }
 
-                #mobile_last_name_label {
-                    width: $mobile_input_width;
-                    display: block;
-                }
+            #mobile_last_name_label {
+                width: $mobile_input_width;
+                display: block;
             }
 
         }
