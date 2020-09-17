@@ -2,45 +2,6 @@
 // adding files
 // scss
 #contact_form {
-    #submit {
-        position: relative;
-        left: 50vw;
-        transform: translateX(-50%);
-    }
-
-    #message {
-        overflow: auto;
-        text-align: initial;
-        margin-bottom: 0;
-    }
-
-    #first_name {
-        width: 25vw;
-        margin-right: 5vw;
-    }
-
-    #last_name {
-        width: 25vw;
-    }
-
-    .custom_subject {
-        display: none;
-    }
-
-    .message {
-        vertical-align: middle;
-    }
-
-    form {
-        top: 102px;
-        position: relative;
-
-        * {
-            font-size: 4vw;
-            margin-bottom: 4vh;
-        }
-    }
-
     #mail_status {
         display: none;
 

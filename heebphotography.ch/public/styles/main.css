@@ -433,37 +433,6 @@
   transform: translateY(-1vmax) rotate(90deg);
 }
 
-#contact_form #submit {
-  position: relative;
-  left: 50vw;
-  transform: translateX(-50%);
-}
-#contact_form #message {
-  overflow: auto;
-  text-align: initial;
-  margin-bottom: 0;
-}
-#contact_form #first_name {
-  width: 25vw;
-  margin-right: 5vw;
-}
-#contact_form #last_name {
-  width: 25vw;
-}
-#contact_form .custom_subject {
-  display: none;
-}
-#contact_form .message {
-  vertical-align: middle;
-}
-#contact_form form {
-  top: 102px;
-  position: relative;
-}
-#contact_form form * {
-  font-size: 4vw;
-  margin-bottom: 4vh;
-}
 #contact_form #mail_status {
   display: none;
 }
