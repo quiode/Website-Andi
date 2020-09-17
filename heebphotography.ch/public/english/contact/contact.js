@@ -17,7 +17,7 @@ function form_submit() {
 function subject_changed() {
     if (document.getElementById("subject").value == "custom") {
         Array.from(document.getElementsByClassName("custom_subject")).forEach(element => {
-            element.style.display = "initial";
+            element.style.display = "inherit";
             element.required = true;
         });
     } else {
@@ -30,12 +30,12 @@ function subject_changed() {
 
 // check how much text is written and makes the input box bigger
 function message_changed() {
-    if (document.getElementById("message").value.length >= 30){
+    if (document.getElementById("message").value.length >= 30) {
         document.getElementById("message").style.width = "97vw";
         document.getElementById("message").style.height = "50vh";
         document.getElementById("message").rows = 5;
         document.getElementById("message").cols = 60;
-    } else{
+    } else {
         document.getElementById("message").style.width = "auto";
         document.getElementById("message").style.height = "auto";
         document.getElementById("message").rows = 1;
