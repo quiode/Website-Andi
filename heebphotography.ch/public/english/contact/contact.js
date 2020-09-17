@@ -13,28 +13,6 @@ function form_submit() {
         "height=200,width=200,resizable=no,left=200,top=200,location=no,menubar=no,scrollbar=no");
 }
 
-// when changing an option, display another input field
-function contact_changed() {
-    // changed the display of all contact input field to none
-    Array.from(document.getElementsByClassName("email")).forEach(element => {
-        element.style.display = "none";
-        element.required = false;
-    });
-    Array.from(document.getElementsByClassName("phone")).forEach(element => {
-        element.style.display = "none";
-        element.required = false;
-    });
-    Array.from(document.getElementsByClassName("instagram")).forEach(element => {
-        element.style.display = "none";
-        element.required = false;
-    });
-    // sets the right input field display to block
-    Array.from(document.getElementsByClassName(document.getElementById("how_to_contact").value)).forEach(element => {
-        element.style.display = "initial";
-        element.required = true;
-    });
-}
-
 // makes an input field when custom subject is selected
 function subject_changed() {
     if (document.getElementById("subject").value == "custom") {
