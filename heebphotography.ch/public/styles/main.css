@@ -442,8 +442,9 @@
 #contact_form > form {
   display: block;
   position: absolute;
-  transform: translateX(-50%);
-  left: 50vw;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
   font-size: 6vmin;
 }
 #contact_form > form * {
