@@ -24,14 +24,10 @@ $mobile_input_width : 100vw;
                 display: inline-block;
             }
 
-            #desktop_last_name_label {
+            [for=last_name] {
                 width: $desktop_input_width/3;
                 display: inline-block;
 
-            }
-
-            #mobile_last_name_label {
-                display: none;
             }
 
             font-size: $font_size/5;
@@ -84,18 +80,11 @@ $mobile_input_width : 100vw;
         label {
             [for=first_name] {
                 width: $mobile_input_width;
-                display: block;
             }
 
-            #desktop_last_name_label {
-                display: none;
-            }
-
-            #mobile_last_name_label {
+            [for=last_name] {
                 width: $mobile_input_width;
-                display: block;
             }
-
         }
     }
 }
