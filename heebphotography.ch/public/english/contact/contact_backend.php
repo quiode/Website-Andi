@@ -6,20 +6,11 @@
     </head>
 
     <body>
-        <!-- <div id="mail_status">
-        <p id="mail_status_message">Please wait...</p>
-        <img src="./images/loading.gif" alt="loading_gif" id="loading_gif">
-        <img src="./images/1200px-Light_green_check.svg.png" alt="green_check" id="green_check">
-        <img src="./images/Red_X.svg.png" alt="red_X" id="red_x">
-    </div> -->
-
         <?php
 //shows errors/debugging
         ini_set('display_errors', '1');
         ini_set('display_startup_errors', '1');
         error_reporting(E_ALL);
-
-    // print_r($_POST);
 //makes the message which is send per mail in plain text
         $plain = ($_POST["first_name"] != "") ? strip_tags($_POST["first_name"]) : "NoFirstNameGiven";
         $plain .= " ";
@@ -42,7 +33,7 @@
         $message .= ($_POST["subject"] != "custom") ? strip_tags($_POST["subject"]) : strip_tags($_POST["custom_subject"]);
         $message .= "</b>.</h3><h4>";
     //h4
-        $message .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via <b>" . strip_tags($_POST["how_to_contact"]) . "</b> under <b>" . strip_tags($_POST[strip_tags($_POST["how_to_contact"])]) . "</b>.</h4>") : "No information on how to contact is given.</h4>";
+        $message .= "You can reach him via <b>" . "mail" . "</b> under <b>" . strip_tags($_POST["email"]) . "</b>.</h4>";
     //h5
         $message .= "<h5>The following is the message from the user:</h5>";
     //p
