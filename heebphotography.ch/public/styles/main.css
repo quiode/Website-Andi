@@ -529,6 +529,7 @@
 @media screen and (max-width: 600px) {
   #contact_form > form {
     top: 102px;
+    transform: translateX(-50%);
   }
 }
 

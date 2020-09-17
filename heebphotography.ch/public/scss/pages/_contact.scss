@@ -110,6 +110,7 @@ $mobile_input_width : 95vw;
 
         @media screen and (max-width: 600px) {
             top: 102px;
+            transform: translateX(-50%);
         }
     }
 }
