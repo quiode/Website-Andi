@@ -1,5 +1,9 @@
 // scss for the contact formular page
 // adding files
+// variables
+$input_border_width : 1vmin/10;
+$font_size : 10vmin;
+
 // scss
 #contact_form {
     overflow-x: hidden;
@@ -8,12 +12,17 @@
         position: absolute;
         transform: translateX(-50%);
         left: 50vw;
+        font-size: $font_size;
+
+        label {
+            font-size: $font_size/15;
+            font-weight: 800;
+        }
 
         input {
-            background-color: lightblue;
-
             :focus {
-                border: 3px solid #555;
+                border-width: $input_border_width*5;
+                border-color: gray;
             }
         }
     }

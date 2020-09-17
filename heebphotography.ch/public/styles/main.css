@@ -440,12 +440,15 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50vw;
+  font-size: 10vmin;
 }
-#contact_form > form input {
-  background-color: lightblue;
+#contact_form > form label {
+  font-size: 0.6666666667vmin;
+  font-weight: 800;
 }
 #contact_form > form input :focus {
-  border: 3px solid #555;
+  border-width: 0.5vmin;
+  border-color: gray;
 }
 
 #impressum {
