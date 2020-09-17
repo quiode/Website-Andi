@@ -477,6 +477,11 @@
   width: 40vw;
   font-size: 6vmin;
   height: 9vh;
+  font-weight: 100;
+}
+#contact_form > form option {
+  font-weight: inherit;
+  font-size: inherit;
 }
 #contact_form > form textarea {
   height: 9vh;

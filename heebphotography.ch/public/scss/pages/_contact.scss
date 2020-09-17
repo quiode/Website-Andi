@@ -60,6 +60,12 @@ $mobile_input_width : 100vw;
             width: $desktop_input_width;
             font-size: $font_size;
             height: $input_height;
+            font-weight: 100;
+        }
+
+        option{
+            font-weight: inherit;
+            font-size: inherit;
         }
 
         textarea {
