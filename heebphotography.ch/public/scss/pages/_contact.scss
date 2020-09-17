@@ -3,7 +3,9 @@
 // variables
 $input_border_width : 1vmin/10;
 $font_size : 10vmin;
-$input_width : 10vmin;
+$desktop_input_width : 40vw;
+$phone_input_width : 100vw;
+
 // scss
 #contact_form {
     overflow-x: hidden;
@@ -22,7 +24,7 @@ $input_width : 10vmin;
         }
 
         input {
-            width: $input_width;
+            width: $desktop_input_width;
             display: inherit;
 
             :focus {
@@ -33,14 +35,28 @@ $input_width : 10vmin;
 
         select {
             display: inherit;
-            width: $input_width;
+            width: $desktop_input_width;
             font-size: $font_size;
         }
 
         textarea {
-            width: $input_width;
+            width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        select {
+            width: $phone_input_width;
+        }
+
+        textarea {
+            width: $phone_input_width;
+        }
+
+        input {
+            width: $phone_input_width;
         }
     }
 }

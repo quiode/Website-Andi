@@ -449,7 +449,7 @@
   display: inherit;
 }
 #contact_form > form input {
-  width: 10vmin;
+  width: 40vw;
   display: inherit;
 }
 #contact_form > form input :focus {
@@ -458,13 +458,24 @@
 }
 #contact_form > form select {
   display: inherit;
-  width: 10vmin;
+  width: 40vw;
   font-size: 10vmin;
 }
 #contact_form > form textarea {
-  width: 10vmin;
+  width: 40vw;
   font-size: 10vmin;
   display: inherit;
+}
+@media screen and (max-width: 600px) {
+  #contact_form select {
+    width: 100vw;
+  }
+  #contact_form textarea {
+    width: 100vw;
+  }
+  #contact_form input {
+    width: 100vw;
+  }
 }
 
 #impressum {
