@@ -447,7 +447,7 @@
   font-size: 6vmin;
 }
 #contact_form > form label {
-  font-size: 1.2vmin;
+  font-size: 1.5vmin;
   font-weight: 800;
   display: inherit;
 }
@@ -463,7 +463,7 @@
   width: 40vw;
   display: inherit;
   font-size: 6vmin;
-  height: 10vh;
+  height: 9vh;
 }
 #contact_form > form input :focus {
   border-width: 0.5vmin;
@@ -473,10 +473,10 @@
   display: inherit;
   width: 40vw;
   font-size: 6vmin;
-  height: 10vh;
+  height: 9vh;
 }
 #contact_form > form textarea {
-  height: 10vh;
+  height: 9vh;
   width: 40vw;
   font-size: 6vmin;
   display: inherit;
