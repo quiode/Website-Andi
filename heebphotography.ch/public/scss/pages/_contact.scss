@@ -3,7 +3,7 @@
 // variables
 $input_border_width : 1vmin/10;
 $font_size : 10vmin;
-
+$input_width : 10vmin;
 // scss
 #contact_form {
     overflow-x: hidden;
@@ -22,6 +22,7 @@ $font_size : 10vmin;
         }
 
         input {
+            width: $input_width;
             display: inherit;
 
             :focus {
@@ -32,9 +33,13 @@ $font_size : 10vmin;
 
         select {
             display: inherit;
+            width: $input_width;
+            font-size: $font_size;
         }
 
         textarea {
+            width: $input_width;
+            font-size: $font_size;
             display: inherit;
         }
     }
