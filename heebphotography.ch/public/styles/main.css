@@ -450,9 +450,6 @@
 #contact_form #last_name {
   width: 25vw;
 }
-#contact_form .email {
-  display: none;
-}
 #contact_form .custom_subject {
   display: none;
 }
