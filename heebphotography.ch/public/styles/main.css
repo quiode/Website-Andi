@@ -443,7 +443,7 @@
   font-size: 10vmin;
 }
 #contact_form > form label {
-  font-size: 0.6666666667vmin;
+  font-size: 2vmin;
   font-weight: 800;
 }
 #contact_form > form input :focus {

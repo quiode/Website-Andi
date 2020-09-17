@@ -19,15 +19,19 @@
     <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
         <!-- email -->
         <label for="email" class="email">Email:</label>
+        <br>
         <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
             title="example@example.com">
-        <br class="email">
-        <!-- first name -->
+        <br>
+        <!-- first name label -->
         <label for="first_name">First Name:</label>
+        <!-- last name label -->
+        <label for="last_name">Last Name:</label>
+        <br>
+        <!-- first name -->
         <input type="text" id="first_name" name="first_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
             title="FirstName">
         <!-- last name -->
-        <label for="last_name">Last Name:</label>
         <input type="text" id="last_name" name="last_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
             title="LastName">
         <!-- Subject -->
@@ -45,12 +49,13 @@
         <!-- custom subject -->
         <br class="custom_subject">
         <label for="custom_subject" class="custom_subject">Please Elaborate:</label>
+        <br class="custom_subject">
         <input type="text" id="custom_subject" class="custom_subject" name="custom_subject" maxlength="256"
             autocomplete="off" title="Subject" autofocus>
         <!-- the actual message -->
         </br>
         <label for="message" class="message">Message:</label>
-        <br id="msg_br" style="display:none;">
+        <br>
         <textarea rows="1" cols="30" oninput="message_changed()" type="text" id="message" name="message" class="message" maxlength="1000" autocomplete="off" title="Message" required></textarea>
         </br>
         <!-- submit button -->

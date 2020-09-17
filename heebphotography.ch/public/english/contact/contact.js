@@ -31,13 +31,11 @@ function subject_changed() {
 // check how much text is written and makes the input box bigger
 function message_changed() {
     if (document.getElementById("message").value.length >= 30){
-        document.getElementById("msg_br").style.display = "initial";
         document.getElementById("message").style.width = "97vw";
         document.getElementById("message").style.height = "50vh";
-        document.getElementById("message").rows = 10;
-        document.getElementById("message").cols = 100;
+        document.getElementById("message").rows = 5;
+        document.getElementById("message").cols = 60;
     } else{
-        document.getElementById("msg_br").style.display = "none";
         document.getElementById("message").style.width = "auto";
         document.getElementById("message").style.height = "auto";
         document.getElementById("message").rows = 1;
