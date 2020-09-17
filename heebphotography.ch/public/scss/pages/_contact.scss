@@ -18,13 +18,24 @@ $font_size : 10vmin;
         label {
             font-size: $font_size/5;
             font-weight: 800;
+            display: inherit;
         }
 
         input {
+            display: inherit;
+
             :focus {
                 border-width: $input_border_width*5;
                 border-color: gray;
             }
+        }
+
+        select {
+            display: inherit;
+        }
+
+        textarea {
+            display: inherit;
         }
     }
 }

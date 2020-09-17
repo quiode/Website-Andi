@@ -446,10 +446,20 @@
 #contact_form > form label {
   font-size: 2vmin;
   font-weight: 800;
+  display: inherit;
+}
+#contact_form > form input {
+  display: inherit;
 }
 #contact_form > form input :focus {
   border-width: 0.5vmin;
   border-color: gray;
+}
+#contact_form > form select {
+  display: inherit;
+}
+#contact_form > form textarea {
+  display: inherit;
 }
 
 #impressum {
