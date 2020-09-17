@@ -490,7 +490,7 @@
 @media screen and (max-width: 600px) {
   #contact_form > form input {
     width: 95vw;
-    height: 6vh;
+    height: 7.2vh;
   }
 }
 #contact_form > form select {
@@ -503,7 +503,7 @@
 @media screen and (max-width: 600px) {
   #contact_form > form select {
     width: 95vw;
-    height: 6vh;
+    height: 7.2vh;
   }
 }
 #contact_form > form option {
@@ -519,7 +519,7 @@
 @media screen and (max-width: 600px) {
   #contact_form > form textarea {
     width: 95vw;
-    height: 12vh;
+    height: 14.4vh;
   }
 }
 #contact_form > form .custom_subject {
