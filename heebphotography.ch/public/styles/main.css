@@ -441,17 +441,17 @@
   position: absolute;
   transform: translateX(-50%);
   left: 50vw;
-  font-size: 10vmin;
+  font-size: 8vmin;
 }
 #contact_form > form label {
-  font-size: 2vmin;
+  font-size: 1.6vmin;
   font-weight: 800;
   display: inherit;
 }
 #contact_form > form input {
   width: 40vw;
   display: inherit;
-  font-size: 10vmin;
+  font-size: 8vmin;
   height: 10vh;
 }
 #contact_form > form input :focus {
@@ -461,13 +461,13 @@
 #contact_form > form select {
   display: inherit;
   width: 40vw;
-  font-size: 10vmin;
+  font-size: 8vmin;
   height: 10vh;
 }
 #contact_form > form textarea {
   height: 10vh;
   width: 40vw;
-  font-size: 10vmin;
+  font-size: 8vmin;
   display: inherit;
 }
 @media screen and (max-width: 600px) {
