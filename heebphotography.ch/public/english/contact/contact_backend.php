@@ -18,7 +18,7 @@
         $plain .= " writes about the subject: ";
         $plain .= ($_POST["subject"] != "custom") ? strip_tags($_POST["subject"]) : strip_tags($_POST["custom_subject"]);
         $plain .= ". ";
-        $plain .= ($_POST["how_to_contact"] != "anonymous") ? ("You can reach him via " . strip_tags($_POST["how_to_contact"]) . " under " . strip_tags($_POST[strip_tags($_POST["how_to_contact"])]) . ".") : "No information on how to contact is given.";
+        $plain .= "You can reach him via mail under " . strip_tags($_POST["email"]);
 //message of the email
     //h1
         $message = "<h1>This message is automated!</h1>";
