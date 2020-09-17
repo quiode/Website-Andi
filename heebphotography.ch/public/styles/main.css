@@ -496,7 +496,7 @@
   height: 27vh;
 }
 @media screen and (max-width: 600px) {
-  #contact_form {
+  #contact_form form {
     top: 102px;
   }
   #contact_form select {

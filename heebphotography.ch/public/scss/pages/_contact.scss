@@ -63,7 +63,7 @@ $mobile_input_width : 100vw;
             font-weight: 100;
         }
 
-        option{
+        option {
             font-weight: inherit;
             font-size: inherit;
         }
@@ -86,7 +86,9 @@ $mobile_input_width : 100vw;
     }
 
     @media screen and (max-width: 600px) {
-        top: 102px;
+        form {
+            top: 102px;
+        }
 
         select {
             width: $mobile_input_width;
