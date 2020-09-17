@@ -2,23 +2,19 @@
 // adding files
 // scss
 #contact_form {
-    #mail_status {
-        display: none;
+    overflow-x: hidden;
 
-        p {
-            display: inherit;
-        }
+    >form {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50vw;
 
-        #loading_gif {
-            display: inherit;
-        }
+        input {
+            background-color: lightblue;
 
-        #green_check {
-            display: none;
-        }
-
-        #red_x {
-            display: none;
+            :focus {
+                border: 3px solid #555;
+            }
         }
     }
 }

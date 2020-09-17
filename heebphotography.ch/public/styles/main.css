@@ -433,20 +433,19 @@
   transform: translateY(-1vmax) rotate(90deg);
 }
 
-#contact_form #mail_status {
-  display: none;
+#contact_form {
+  overflow-x: hidden;
 }
-#contact_form #mail_status p {
-  display: inherit;
+#contact_form > form {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50vw;
 }
-#contact_form #mail_status #loading_gif {
-  display: inherit;
+#contact_form > form input {
+  background-color: lightblue;
 }
-#contact_form #mail_status #green_check {
-  display: none;
-}
-#contact_form #mail_status #red_x {
-  display: none;
+#contact_form > form input :focus {
+  border: 3px solid #555;
 }
 
 #impressum {
