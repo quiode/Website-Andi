@@ -16,6 +16,10 @@ $mobile_input_width : 100vw;
     overflow-x: hidden;
 
     >form {
+        * {
+            padding: 0.1vh;
+        }
+
         display: block;
         position: absolute;
         transform: translateX(-50%);
