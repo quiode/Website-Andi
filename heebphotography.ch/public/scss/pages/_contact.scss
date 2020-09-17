@@ -9,6 +9,7 @@ $font_size : 10vmin;
     overflow-x: hidden;
 
     >form {
+        display: block;
         position: absolute;
         transform: translateX(-50%);
         left: 50vw;

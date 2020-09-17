@@ -437,6 +437,7 @@
   overflow-x: hidden;
 }
 #contact_form > form {
+  display: block;
   position: absolute;
   transform: translateX(-50%);
   left: 50vw;
