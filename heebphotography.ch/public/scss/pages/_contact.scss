@@ -48,6 +48,10 @@ $mobile_input_width : 100vw;
             font-size: $font_size/4;
             font-weight: 800;
             display: inherit;
+
+            @media screen and (max-width: 600px) {
+                font-size: $font_size/2;
+            }
         }
 
         input {
@@ -101,6 +105,10 @@ $mobile_input_width : 100vw;
 
         #message {
             height: $input_height*3;
+
+            @media screen and (max-width: 600px) {
+                height: $input_height*2;
+            }
         }
 
         @media screen and (max-width: 600px) {

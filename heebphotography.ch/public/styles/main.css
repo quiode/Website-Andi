@@ -472,6 +472,11 @@
     width: 100vw;
   }
 }
+@media screen and (max-width: 600px) {
+  #contact_form > form label {
+    font-size: 3vmin;
+  }
+}
 #contact_form > form input {
   width: 40vw;
   display: inherit;
@@ -519,6 +524,11 @@
 }
 #contact_form > form #message {
   height: 27vh;
+}
+@media screen and (max-width: 600px) {
+  #contact_form > form #message {
+    height: 18vh;
+  }
 }
 @media screen and (max-width: 600px) {
   #contact_form > form {
