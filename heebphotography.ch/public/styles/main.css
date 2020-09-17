@@ -460,7 +460,7 @@
 }
 @media screen and (max-width: 600px) {
   #contact_form > form label [for=first_name] {
-    width: 100vw;
+    width: 95vw;
   }
 }
 #contact_form > form label [for=last_name] {
@@ -469,7 +469,7 @@
 }
 @media screen and (max-width: 600px) {
   #contact_form > form label [for=last_name] {
-    width: 100vw;
+    width: 95vw;
   }
 }
 @media screen and (max-width: 600px) {
@@ -489,7 +489,7 @@
 }
 @media screen and (max-width: 600px) {
   #contact_form > form input {
-    width: 100vw;
+    width: 95vw;
   }
 }
 #contact_form > form select {
@@ -501,7 +501,7 @@
 }
 @media screen and (max-width: 600px) {
   #contact_form > form select {
-    width: 100vw;
+    width: 95vw;
   }
 }
 #contact_form > form option {
@@ -516,7 +516,7 @@
 }
 @media screen and (max-width: 600px) {
   #contact_form > form textarea {
-    width: 100vw;
+    width: 95vw;
   }
 }
 #contact_form > form .custom_subject {

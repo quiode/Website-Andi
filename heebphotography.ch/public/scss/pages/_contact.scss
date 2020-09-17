@@ -4,8 +4,9 @@
 $input_border_width : 1vmin/10;
 $font_size : 6vmin;
 $desktop_input_width : 40vw;
-$input_height : 9vh;
-$mobile_input_width : 100vw;
+$desktop_input_height : 9vh;
+$mobile_input_height : $desktop_input_height*(2/3);
+$mobile_input_width : 95vw;
 
 // scss
 #contact_form {
@@ -58,7 +59,7 @@ $mobile_input_width : 100vw;
             width: $desktop_input_width;
             display: inherit;
             font-size: $font_size;
-            height: $input_height;
+            height: $desktop_input_height;
 
             :focus {
                 border-width: $input_border_width*5;
@@ -75,7 +76,7 @@ $mobile_input_width : 100vw;
             display: inherit;
             width: $desktop_input_width;
             font-size: $font_size;
-            height: $input_height;
+            height: $desktop_input_height;
             font-weight: 100;
 
             @media screen and (max-width: 600px) {
@@ -89,7 +90,7 @@ $mobile_input_width : 100vw;
         }
 
         textarea {
-            height: $input_height;
+            height: $desktop_input_height;
             width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
@@ -104,10 +105,10 @@ $mobile_input_width : 100vw;
         }
 
         #message {
-            height: $input_height*3;
+            height: $desktop_input_height*3;
 
             @media screen and (max-width: 600px) {
-                height: $input_height*2;
+                height: $desktop_input_height*2;
             }
         }
 
