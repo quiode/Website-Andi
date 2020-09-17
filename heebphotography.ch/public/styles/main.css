@@ -478,6 +478,9 @@
   font-size: 6vmin;
   display: inherit;
 }
+#contact_form > form .custom_subject {
+  display: none;
+}
 @media screen and (max-width: 600px) {
   #contact_form {
     top: 102px;

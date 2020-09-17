@@ -60,6 +60,10 @@ $mobile_input_width : 100vw;
             font-size: $font_size;
             display: inherit;
         }
+
+        .custom_subject{
+            display: none;
+        }
     }
 
     @media screen and (max-width: 600px) {
