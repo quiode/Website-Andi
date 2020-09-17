@@ -31,7 +31,7 @@ function subject_changed() {
 // check how much text is written and makes the input box bigger
 function message_changed() {
     if (document.getElementById("message").value.length >= 30) {
-        document.getElementById("message").style.height = document.getElementById("message").style.height*3;
+        document.getElementById("message").style.height = "30vh";
         document.getElementById("message").rows = 5;
         document.getElementById("message").cols = 60;
     } else {
