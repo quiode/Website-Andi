@@ -451,6 +451,8 @@
 #contact_form > form input {
   width: 40vw;
   display: inherit;
+  font-size: 10vmin;
+  height: 10vh;
 }
 #contact_form > form input :focus {
   border-width: 0.5vmin;
@@ -460,8 +462,10 @@
   display: inherit;
   width: 40vw;
   font-size: 10vmin;
+  height: 10vh;
 }
 #contact_form > form textarea {
+  height: 10vh;
   width: 40vw;
   font-size: 10vmin;
   display: inherit;
