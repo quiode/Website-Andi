@@ -23,11 +23,13 @@
             title="example@example.com">
         <!-- first name label -->
         <label for="first_name">First Name:</label>
-        <!-- last name label -->
-        <label for="last_name">Last Name:</label>
+        <!-- last name label for computers-->
+        <label for="last_name" id="desktop_last_name_label">Last Name:</label>
         <!-- first name -->
         <input type="text" id="first_name" name="first_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
             title="FirstName">
+        <!-- last name label for mobile-->
+        <label for="last_name" id="mobile_last_name_label">Last Name:</label>
         <!-- last name -->
         <input type="text" id="last_name" name="last_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
             title="LastName">

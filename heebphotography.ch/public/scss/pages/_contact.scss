@@ -5,7 +5,7 @@ $input_border_width : 1vmin/10;
 $font_size : 6vmin;
 $desktop_input_width : 40vw;
 $input_height : 10vh;
-$phone_input_width : 100vw;
+$mobile_input_width : 100vw;
 
 // scss
 #contact_form {
@@ -19,6 +19,23 @@ $phone_input_width : 100vw;
         font-size: $font_size;
 
         label {
+            [for=first_name] {
+                width: $desktop_input_width/3;
+                display: inline-block;
+            }
+
+            [for=last_name] {
+                #desktop_last_name_label {
+                    width: $desktop_input_width/3;
+                    display: inline-block;
+
+                }
+
+                #mobile_last_name_label {
+                    display: none;
+                }
+            }
+
             font-size: $font_size/5;
             font-weight: 800;
             display: inherit;
@@ -53,15 +70,34 @@ $phone_input_width : 100vw;
 
     @media screen and (max-width: 600px) {
         select {
-            width: $phone_input_width;
+            width: $mobile_input_width;
         }
 
         textarea {
-            width: $phone_input_width;
+            width: $mobile_input_width;
         }
 
         input {
-            width: $phone_input_width;
+            width: $mobile_input_width;
+        }
+
+        label {
+            [for=first_name] {
+                width: $mobile_input_width;
+                display: block;
+            }
+
+            [for=last_name] {
+                #desktop_last_name_label {
+                    display: none;
+                }
+
+                #mobile_last_name_label {
+                    width: $mobile_input_width;
+                    display: block;
+                }
+            }
+
         }
     }
 }
