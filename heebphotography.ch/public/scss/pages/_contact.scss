@@ -30,12 +30,19 @@ $mobile_input_width : 100vw;
             [for=first_name] {
                 width: $desktop_input_width/3;
                 display: inline-block;
+
+                @media screen and (max-width: 600px) {
+                    width: $mobile_input_width;
+                }
             }
 
             [for=last_name] {
                 width: $desktop_input_width/3;
                 display: inline-block;
 
+                @media screen and (max-width: 600px) {
+                    width: $mobile_input_width;
+                }
             }
 
             font-size: $font_size/4;
@@ -53,6 +60,11 @@ $mobile_input_width : 100vw;
                 border-width: $input_border_width*5;
                 border-color: gray;
             }
+
+            @media screen and (max-width: 600px) {
+                width: $mobile_input_width;
+            }
+
         }
 
         select {
@@ -61,6 +73,10 @@ $mobile_input_width : 100vw;
             font-size: $font_size;
             height: $input_height;
             font-weight: 100;
+
+            @media screen and (max-width: 600px) {
+                width: $mobile_input_width;
+            }
         }
 
         option {
@@ -73,6 +89,10 @@ $mobile_input_width : 100vw;
             width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
+
+            @media screen and (max-width: 600px) {
+                width: $mobile_input_width;
+            }
         }
 
         .custom_subject {
@@ -83,33 +103,8 @@ $mobile_input_width : 100vw;
             height: $input_height*3;
         }
 
-    }
-
-    @media screen and (max-width: 600px) {
-        form {
+        @media screen and (max-width: 600px) {
             top: 102px;
-        }
-
-        select {
-            width: $mobile_input_width;
-        }
-
-        textarea {
-            width: $mobile_input_width;
-        }
-
-        input {
-            width: $mobile_input_width;
-        }
-
-        label {
-            [for=first_name] {
-                width: $mobile_input_width;
-            }
-
-            [for=last_name] {
-                width: $mobile_input_width;
-            }
         }
     }
 }
