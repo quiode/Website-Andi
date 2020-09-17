@@ -69,6 +69,7 @@ $mobile_input_width : 100vw;
     }
 
     @media screen and (max-width: 600px) {
+        top: 102px;
         select {
             width: $mobile_input_width;
         }
