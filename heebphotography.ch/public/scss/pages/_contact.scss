@@ -9,6 +9,10 @@ $mobile_input_width : 100vw;
 
 // scss
 #contact_form {
+    * {
+        user-select: text;
+    }
+
     overflow-x: hidden;
 
     >form {
@@ -61,7 +65,7 @@ $mobile_input_width : 100vw;
             display: inherit;
         }
 
-        .custom_subject{
+        .custom_subject {
             display: none;
         }
     }

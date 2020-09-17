@@ -436,6 +436,9 @@
 #contact_form {
   overflow-x: hidden;
 }
+#contact_form * {
+  user-select: text;
+}
 #contact_form > form {
   display: block;
   position: absolute;
