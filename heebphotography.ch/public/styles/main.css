@@ -412,43 +412,10 @@
   cursor: pointer;
   user-select: none;
 }
-#gallery .arrows {
-  font-size: 10vmax;
-  padding: 1vmax 4.5vmax;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-  color: white;
-  position: relative;
-  text-align: center;
-  font-family: Verdana, sans-serif;
-  white-space: normal;
-  user-select: none;
-  cursor: pointer;
-  border: none;
-  display: none;
-  vertical-align: middle;
-  overflow: hidden;
-  text-decoration: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  text-transform: none;
-  margin: 0;
-  box-sizing: inherit;
-}
-#gallery .arrows:hover {
-  border-radius: 50%;
-  background-color: #c8c8c8;
-  transition: 0.4;
-}
 #gallery .arrows_background {
   height: 100%;
   position: fixed;
   z-index: 4;
-}
-#gallery .arrows_background:hover .arrows {
-  display: inline-block;
 }
 #gallery #slideshow_background {
   height: 100%;
