@@ -27,6 +27,7 @@
         // deletes the last two elements of the filename list --> are always . and .. so not usefull
         unset($images[sizeof($images)-1]);
         unset($images[sizeof($images)-1]);
+        echo $images[-1];
 
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
