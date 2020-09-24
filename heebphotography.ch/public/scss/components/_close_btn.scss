@@ -1,3 +1,5 @@
+// extern
+@use "sass:math";
 // variables
 $line_width : 3vmin;
 $line_length : $line_width*5;
@@ -13,7 +15,8 @@ $desktop_position : 8;
     z-index: 7;
 
     @media screen and (max-width: 600px) and (orientation: portrait) {
-        transform: translateX(-50%) rotate(45deg);
+        $temp_translate_length: math.hypot(($line_width)*3, ($line_width)*3);
+        transform: translateX(-$temp_translate_length) rotate(45deg);
         left: 50vw;
         top: 2vh;
     }
