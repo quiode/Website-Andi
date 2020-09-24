@@ -58,8 +58,8 @@
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn > div {
-    width: 9vmin;
-    height: 45vmin;
+    width: 2.25vmin;
+    height: 11.25vmin;
   }
 }
 
