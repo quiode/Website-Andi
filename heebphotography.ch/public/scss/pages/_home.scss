@@ -57,10 +57,4 @@
     .fade {
         @include shortcuts.fade(1.5s);
     }
-    
-    footer {
-        z-index: 1;
-        display: flex;
-        align-items: baseline;
-    }
 }
