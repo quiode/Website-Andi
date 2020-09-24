@@ -45,8 +45,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor volutpat
             elit. Praesent pretium mauris nibh, sit amet rutrum mi lobortis non. Morbi eget ligula tristique nunc
             lobortis malesuada. Proin quis vestibulum arcu. Vestibulum at aliquet mi. Donec efficitur euismod ligula
-            sit amet lacinia. Cras ac sem quam. Maecenas maximus blandit accumsan. Ut sit amet luctus est. Maecenas
-            cursus pellentesque purus, ut egestas justo pulvinar congue. Cras vulputate semper fringilla.
+            sit amet lacinia. Cras ac sem quam.
         </aside>
     </body>
 
