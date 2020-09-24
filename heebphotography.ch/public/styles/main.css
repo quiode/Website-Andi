@@ -58,8 +58,8 @@
 }
 
 .close_btn {
-  left: 8vw;
-  top: 8vh;
+  left: 4vw;
+  top: 4vh;
   position: fixed;
   transform: rotate(45deg);
   cursor: pointer;
