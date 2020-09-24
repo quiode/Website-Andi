@@ -105,13 +105,13 @@
                 onload="resizeToMax()">
 
             <!-- for navigation within the slideshow -->
-            <div class="arrows_background">
+            <div class="arrows_background" onclick="slideshow_off()">
                 <div id="last_picture" class="arrows" onclick="last_picture()">
                     &#8249;
                 </div>
             </div>
 
-            <div class="arrows_background">
+            <div class="arrows_background" onclick="slideshow_off()">
                 <div id="next_picture" class="arrows" onclick="next_picture()">
                     &#8250;
                 </div>
