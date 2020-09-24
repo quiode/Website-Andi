@@ -25,12 +25,12 @@
                 foreach ($scan as $value) {
                     if ($is_first_tester) {
                         if (!(is_dir($value))) {
-                            echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, green, transparent), url($dir/$value);\"></div>";
+                            echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, green 20%, transparent), url($dir/$value);\"></div>";
                             $is_first_tester = false;
                         }
                     } else {
                         if (!(is_dir($value))) {
-                            echo "<div class=\"slides\" style=\"background: linear-gradient(to top, green, transparent), url($dir/$value);\"></div>";
+                            echo "<div class=\"slides\" style=\"background: linear-gradient(to top, green 20%, transparent), url($dir/$value);\"></div>";
                         }
                     }
                 }
