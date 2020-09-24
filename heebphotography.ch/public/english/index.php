@@ -19,23 +19,23 @@
         <div class="container_slideshow">
         <?php
             $dir = "images-home";
-            if (is_dir($dir)) {
-                $scan = scandir($dir);
+        if (is_dir($dir)) {
+            $scan = scandir($dir);
                 
-                $is_first_tester = true;
-                foreach ($scan as $value) {
-                    if ($is_first_tester) {
-                        if (!(is_dir($value))) {
-                            echo "<div class=\"image-crop\"><img class=\"slides\" id=\"first_slide\" src=\"$dir/$value\" alt=\"$value\">\n</div>\n";
-                            $is_first_tester = false;
-                        }
-                    } else {
-                        if (!(is_dir($value))) {
-                            echo "<div class=\"image-crop\"><img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n</div>\n";
-                        }
+            $is_first_tester = true;
+            foreach ($scan as $value) {
+                if ($is_first_tester) {
+                    if (!(is_dir($value))) {
+                        echo "<div class=\"image-crop\"><img class=\"slides\" id=\"first_slide\" src=\"$dir/$value\" alt=\"$value\">\n</div>\n";
+                        $is_first_tester = false;
+                    }
+                } else {
+                    if (!(is_dir($value))) {
+                        echo "<div class=\"image-crop\"><img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">\n</div>\n";
                     }
                 }
             }
+        }
         ?>
         </div>  
     </section>
