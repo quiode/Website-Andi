@@ -29,9 +29,11 @@ $desktop_position : 8;
         margin: 0;
         width: $line_width;
         height: $line_length;
+        z-index: 7;
 
-        @media screen and (max-width: 600px) {
-
+        @media screen and (max-width: 600px) and (orientation: portrait) {
+            width: $line_width*3;
+            height: $line_length*3;
         }
     }
 }

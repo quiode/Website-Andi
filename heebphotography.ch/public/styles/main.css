@@ -54,7 +54,15 @@
   margin: 0;
   width: 3vmin;
   height: 15vmin;
+  z-index: 7;
 }
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .close_btn > div {
+    width: 9vmin;
+    height: 45vmin;
+  }
+}
+
 #language ul {
   list-style-type: none;
 }
