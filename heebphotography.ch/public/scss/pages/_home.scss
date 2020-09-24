@@ -15,6 +15,7 @@ $header_height:25vh;
         z-index: 2;
         position: relative;
         background-color: white;
+
         h2 {
             font-weight: 200;
             display: block;
@@ -25,6 +26,10 @@ $header_height:25vh;
             transform: translateY(-50%);
             top: $header_height/2;
         }
+    }
+
+    #navigation_button {
+        top: $header_height/2;
     }
 
     #first_slide {

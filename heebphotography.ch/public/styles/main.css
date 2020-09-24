@@ -198,6 +198,9 @@
   transform: translateY(-50%);
   top: 12.5vh;
 }
+#english #navigation_button {
+  top: 12.5vh;
+}
 #english #first_slide {
   opacity: 1;
   z-index: 0;
