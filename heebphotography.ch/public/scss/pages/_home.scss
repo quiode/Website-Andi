@@ -46,7 +46,7 @@ $header_height:25vh;
         transition-property: opacity;
         z-index: 0;
 
-        @media screen and (orentation: portrait) {
+        @media screen and (orientation: portrait) {
             display: none;
         }
     }
