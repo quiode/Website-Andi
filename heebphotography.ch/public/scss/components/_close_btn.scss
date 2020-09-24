@@ -7,7 +7,7 @@ $desktop_position : 4;
 
 // scss
 .close_btn {
-    left: 1vmin*$desktop_position;
+    left: 1vmin*$desktop_position*2;
     top: 1vmin*$desktop_position;
     position: fixed;
     transform: rotate(45deg);

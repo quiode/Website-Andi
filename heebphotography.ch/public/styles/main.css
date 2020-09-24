@@ -58,7 +58,7 @@
 }
 
 .close_btn {
-  left: 4vmin;
+  left: 8vmin;
   top: 4vmin;
   position: fixed;
   transform: rotate(45deg);
