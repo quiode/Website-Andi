@@ -455,6 +455,7 @@
 }
 #gallery .arrows_background:hover .arrow_btn {
   transition-delay: 5s;
+  transition-property: display;
   display: block;
 }
 #gallery #slideshow_background {

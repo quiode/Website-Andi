@@ -49,6 +49,7 @@
         &:hover{
             .arrow_btn{
                 transition-delay: 5s;
+                transition-property: display;
                 display: block;
             }
         }
