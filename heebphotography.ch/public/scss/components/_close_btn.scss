@@ -1,10 +1,8 @@
 // extern
 @use "sass:math";
 // variables
-$desktop_line_width : 1.5vmin;
-$mobile_line_width : $desktop_line_width/(4/3);
-$desktop_line_length : $desktop_line_width*5;
-$mobile_line_length : $mobile_line_width*5;
+$line_width : 1.5vmin;
+$line_length : $line_width*5;
 $desktop_position : 4;
 
 // scss
@@ -31,13 +29,13 @@ $desktop_position : 4;
         background-color: white;
         padding: 0;
         margin: 0;
-        width: $desktop_line_width;
-        height: $desktop_line_length;
+        width: $line_width;
+        height: $line_length;
         z-index: 7;
 
         @media screen and (max-width: 600px) and (orientation: portrait) {
-            width: $mobile_line_width;
-            height: $mobile_line_length;
+            width: $line_width;
+            height: $line_length;
         }
     }
 }
