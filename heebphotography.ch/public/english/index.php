@@ -25,12 +25,12 @@
                 foreach ($scan as $value) {
                     if ($is_first_tester) {
                         if (!(is_dir($value))) {
-                            echo "<img class=\"slides\" id=\"first_slide\" src=\"$dir/$value\" alt=\"$value\">";
+                            echo "<div class=\"slides\" id=\"first_slide\" style=\"background-image:$dir/$value;\"></div>";
                             $is_first_tester = false;
                         }
                     } else {
                         if (!(is_dir($value))) {
-                            echo "<img class=\"slides\" src=\"$dir/$value\" alt=\"$value\">";
+                            echo "<div class=\"slides\" style=\"background-image:$dir/$value;\"></div>";
                         }
                     }
                 }

@@ -14,7 +14,6 @@ $header_height:25vh;
         margin: 0;
         z-index: 2;
         position: relative;
-        background-color: white;
 
         h2 {
             font-weight: 200;
@@ -45,6 +44,7 @@ $header_height:25vh;
         transition-duration: 1s;
         transition-property: opacity;
         z-index: 0;
+        
     }
 
     :first-of-type(.slide) {
