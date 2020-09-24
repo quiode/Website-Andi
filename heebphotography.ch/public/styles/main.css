@@ -180,16 +180,21 @@
 #english {
   margin: 0;
 }
-#english header h2 {
-  font-weight: 200;
+#english header {
   width: 100vw;
   height: 25vh;
-  display: block;
-  text-align: center;
   margin: 0;
   z-index: 2;
   position: relative;
   background-color: white;
+}
+#english header h2 {
+  font-weight: 200;
+  display: block;
+  text-align: center;
+  z-index: inherit;
+  margin: inherit;
+  position: inherit;
   transform: translateY(-50%);
   top: 12.5vh;
 }

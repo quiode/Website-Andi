@@ -9,16 +9,19 @@ $header_height:25vh;
     margin: 0;
 
     header {
+        width: 100vw;
+        height: $header_height;
+        margin: 0;
+        z-index: 2;
+        position: relative;
+        background-color: white;
         h2 {
             font-weight: 200;
-            width: 100vw;
-            height: $header_height;
             display: block;
             text-align: center;
-            margin: 0;
-            z-index: 2;
-            position: relative;
-            background-color: white;
+            z-index: inherit;
+            margin: inherit;
+            position: inherit;
             transform: translateY(-50%);
             top: $header_height/2;
         }
