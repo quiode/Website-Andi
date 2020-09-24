@@ -215,6 +215,8 @@
   right: 10vw;
   width: 30vw;
   height: 40vh;
+  background-color: black;
+  opacity: 0.1;
 }
 #english #profile img {
   z-index: 4;
@@ -225,6 +227,7 @@
 #english #profile div {
   z-index: inherit;
   position: relative;
+  color: white;
 }
 #english .slides {
   bottom: 0;
