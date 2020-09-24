@@ -222,8 +222,11 @@
   position: relative;
   max-width: 10vw;
   max-height: 10vh;
+  right: 0;
+  display: inline-block;
 }
 #english #profile div {
+  display: inline-block;
   z-index: inherit;
   position: relative;
   color: white;
