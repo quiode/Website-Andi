@@ -1,9 +1,11 @@
 // variables
 $line_width : 2vmin;
 $line_length : $line_width*5;
-
+$desktop_position : 1vmin;
 // scss
 .close_btn {
+    left: $desktop_position;
+    right: $desktop_position;
     position: fixed;
     transform: rotate(45deg);
 
@@ -13,7 +15,7 @@ $line_length : $line_width*5;
 
     >div {
         position: inherit;
-        background-color: black;
+        background-color: white;
         padding: 0;
         margin: 0;
         width: $line_width;
