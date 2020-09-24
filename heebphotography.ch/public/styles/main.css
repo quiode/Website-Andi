@@ -30,10 +30,10 @@
 }
 
 .arrow_btn {
-  width: 10vmin;
-  height: 10vmin;
+  width: 5vmin;
+  height: 5vmin;
   border-radius: 50%;
-  background-position: -10vmin;
+  background-position: -5vmin;
   z-index: 7;
   position: fixed;
   transform: rotate(45deg) translate(-50%, -50%);
@@ -46,15 +46,15 @@
 .arrow_btn > div {
   z-index: inherit;
   position: inherit;
-  width: 1vmin;
-  height: 5vmin;
+  width: 0.5vmin;
+  height: 2.5vmin;
   background-color: white;
-  left: 3.3333333333vmin;
-  top: 1.6666666667vmin;
+  left: 1.6666666667vmin;
+  top: 0.8333333333vmin;
 }
 .arrow_btn > div:first-child {
   transform: rotate(-90deg);
-  transform-origin: 2.5vmin;
+  transform-origin: 1.25vmin;
 }
 .arrow_btn.left {
   left: 5vw;
@@ -474,8 +474,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 90vw;
+  max-height: 95vh;
   z-index: 6;
 }
 
