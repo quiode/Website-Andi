@@ -211,8 +211,8 @@
 #english #profile {
   position: absolute;
   z-index: 3;
-  top: 50vh;
-  right: 10vw;
+  top: 45vh;
+  right: 8vw;
   width: 30vw;
   height: 40vh;
   background-color: rgba(0, 0, 0, 0.95);
