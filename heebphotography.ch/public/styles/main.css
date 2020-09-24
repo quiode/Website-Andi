@@ -60,7 +60,7 @@
 }
 .arrow_btn.right {
   right: 5vw;
-  transform: rotate(225deg) translate(-50%, -50%);
+  transform: rotate(225deg) translate(50%, 50%);
 }
 
 .close_btn {
