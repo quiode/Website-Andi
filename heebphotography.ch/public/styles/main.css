@@ -37,7 +37,7 @@
   z-index: 7;
   position: fixed;
   transform: rotate(45deg) translate(-50%, -50%);
-  top: 50vw;
+  top: 50vh;
 }
 .arrow_btn:hover {
   background-color: gray;
@@ -56,10 +56,10 @@
   transform-origin: 2.5vmin;
 }
 .arrow_btn.left {
-  left: 50%;
+  left: 5vw;
 }
 .arrow_btn.right {
-  right: 50%;
+  right: 5vw;
   transform: rotate(225deg) translate(-50%, -50%);
 }
 

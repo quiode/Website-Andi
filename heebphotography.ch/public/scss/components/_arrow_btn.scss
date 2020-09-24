@@ -14,7 +14,7 @@ $desktop_position : 8;
     z-index: 7;
     position: fixed;
     transform: rotate(45deg) translate(-50%, -50%);
-    top: 50vw;
+    top: 50vh;
 
     &:hover {
         background-color: gray;
@@ -36,11 +36,11 @@ $desktop_position : 8;
     }
 
     &.left {
-        left: 50%;
+        left: 5vw;
     }
 
     &.right {
-        right: 50%;
+        right: 5vw;
         transform: rotate(225deg) translate(-50%, -50%);
     }
 }
