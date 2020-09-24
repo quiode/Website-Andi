@@ -41,7 +41,7 @@
   .close_btn {
     transform-origin: 3vmin 15vmin;
     transform: rotate(45deg) translateX(-50%);
-    left: 44vmin;
+    left: 47vmin;
     top: 2vh;
   }
 }

@@ -19,7 +19,7 @@ $desktop_position : 8;
     @media screen and (max-width: 600px) and (orientation: portrait) {
         transform-origin: $mobile_line_width/2 $mobile_line_length/2;
         transform: rotate(45deg) translateX(-50%);
-        left: 50vmin - $mobile_line_width;
+        left: 50vmin - $mobile_line_width/2;
         top: 2vh;
     }
 
