@@ -2,12 +2,21 @@
 $line_width : 3vmin;
 $line_length : $line_width*5;
 $desktop_position : 8;
+
 // scss
 .close_btn {
     left: 1vw*$desktop_position;
     top: 1vh*$desktop_position;
     position: fixed;
     transform: rotate(45deg);
+    cursor: pointer;
+    z-index: 7;
+
+    @media screen and (max-width: 600px) and (orientation: portrait) {
+        transform: scaleX(-50%);
+        left: 50vw;
+        top: 2vh;
+    }
 
     >:first-child {
         transform: rotate(90deg);
@@ -20,5 +29,9 @@ $desktop_position : 8;
         margin: 0;
         width: $line_width;
         height: $line_length;
+
+        @media screen and (max-width: 600px) {
+
+        }
     }
 }
