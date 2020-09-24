@@ -45,6 +45,10 @@ $header_height:25vh;
         transition-duration: 1s;
         transition-property: opacity;
         z-index: 0;
+
+        @media screen and (orentation: portrait) {
+            display: none;
+        }
     }
 
     :first-of-type(.slide) {
