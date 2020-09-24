@@ -39,7 +39,7 @@
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn {
-    transform: scaleX(-50%) rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
     left: 50vw;
     top: 2vh;
   }

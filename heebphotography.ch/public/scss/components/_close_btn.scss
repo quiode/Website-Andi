@@ -13,7 +13,7 @@ $desktop_position : 8;
     z-index: 7;
 
     @media screen and (max-width: 600px) and (orientation: portrait) {
-        transform: scaleX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg);
         left: 50vw;
         top: 2vh;
     }
