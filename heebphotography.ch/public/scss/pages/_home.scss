@@ -39,6 +39,8 @@ $header_height:25vh;
         left: 0;
         height: 100vh - $header_height;
         width: 100vw;
+        background-repeat: no-repeat;
+        background-size: 100vw;
         display: block;
         position: absolute;
         opacity: 0;
