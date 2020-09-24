@@ -1,4 +1,22 @@
-.close_btn{
+// variables
+$line_width : 2vmin;
+$line_length : $line_width*5;
+
+// scss
+.close_btn {
     position: fixed;
-    
+    transform: rotate(45deg);
+
+    >:first-child {
+        transform: rotate(90deg);
+    }
+
+    >div {
+        position: inherit;
+        background-color: black;
+        padding: 0;
+        margin: 0;
+        width: $line_width;
+        height: $line_length;
+    }
 }

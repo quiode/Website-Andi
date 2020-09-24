@@ -1,9 +1,10 @@
 // Componets
 @use "./components/work_in_progress_bar";
+@use "./components/arrow_btn";
+@use './components/close_btn';
 // Modules
 @use './classes/colors';
 @use './classes/shortcuts';
-@use './classes/variables';
 @use "./classes/backgrounds";
 // Pages
 @use './pages/language';
@@ -19,3 +20,4 @@
 @use './global/font';
 @use './global/layout';
 @use './global/decoration';
+@use './global/variables';

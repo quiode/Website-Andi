@@ -118,10 +118,8 @@
             </div>
 
             <div onclick="slideshow_off()">
-                <div>
-                    <div></div>
-                    <div></div>
-                </div>
+                <!-- adds close button -->
+                <?php require '../templates/close_btn.php'?>
             </div>
         </div>
     </div>
