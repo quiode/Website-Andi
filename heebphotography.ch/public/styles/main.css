@@ -80,14 +80,14 @@
   background-color: white;
   padding: 0;
   margin: 0;
-  width: 1vmin;
-  height: 5vmin;
+  width: 2vmin;
+  height: 10vmin;
   z-index: 7;
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn > div {
-    width: 0.75vmin;
-    height: 3.75vmin;
+    width: 1.5vmin;
+    height: 7.5vmin;
   }
 }
 
