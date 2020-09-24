@@ -5,12 +5,12 @@ $desktop_line_width : 1.5vmin;
 $mobile_line_width : $desktop_line_width/(4/3);
 $desktop_line_length : $desktop_line_width*5;
 $mobile_line_length : $mobile_line_width*5;
-$desktop_position : 8;
+$desktop_position : 4;
 
 // scss
 .close_btn {
     left: 1vw*$desktop_position;
-    top: 1vh*$desktop_position/2;
+    top: 1vh*$desktop_position;
     position: fixed;
     transform: rotate(45deg);
     cursor: pointer;
