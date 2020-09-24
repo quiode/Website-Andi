@@ -232,7 +232,7 @@
 #navigationbar #navigation-overlay #navigation-content .links {
   display: block;
   color: white;
-  font-size: 10vh;
+  font-size: 10vmin;
 }
 #navigationbar #navigation-overlay #navigation-content .links:hover {
   background-color: #aaa;
