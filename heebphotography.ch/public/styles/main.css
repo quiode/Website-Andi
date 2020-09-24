@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 32 |         left: 50vw - $mobile_input_width;
+ * 22 |         left: 50vw - $mobile_input_width;
  *    |                      ^^^^^^^^^^^^^^^^^^^
  *    '
- *   heebphotography.ch\public\scss\components\_close_btn.scss 32:22  @use
+ *   heebphotography.ch\public\scss\components\_close_btn.scss 22:22  @use
  *   heebphotography.ch\public\scss\main.scss 4:1                     root stylesheet */
 
 body::before {
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 32 \2502          left: 50vw - $mobile_input_width;\d\a    \2502                       ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   heebphotography.ch\\public\\scss\\components\\_close_btn.scss 32:22  @use\a   heebphotography.ch\\public\\scss\\main.scss 4:1                     root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 22 \2502          left: 50vw - $mobile_input_width;\d\a    \2502                       ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   heebphotography.ch\\public\\scss\\components\\_close_btn.scss 22:22  @use\a   heebphotography.ch\\public\\scss\\main.scss 4:1                     root stylesheet";
 }
