@@ -40,7 +40,7 @@
   transform: rotate(45deg) translate(-50%, -50%);
   top: 50vh;
   cursor: pointer;
-  transition-delay: 0s;
+  transition-delay: 5s;
   transition-duration: 200ms;
   transition-property: visibility;
 }
@@ -456,7 +456,7 @@
   z-index: 4;
 }
 #gallery .arrows_background:hover .arrow_btn {
-  transition-delay: 5s;
+  transition-delay: 0s;
   visibility: visible;
   z-index: 7;
 }
