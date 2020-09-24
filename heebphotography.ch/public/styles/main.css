@@ -58,7 +58,7 @@
 }
 
 .close_btn {
-  left: 4vw;
+  left: 8vw;
   top: 4vh;
   position: fixed;
   transform: rotate(45deg);
@@ -80,14 +80,14 @@
   background-color: white;
   padding: 0;
   margin: 0;
-  width: 2vmin;
-  height: 10vmin;
+  width: 1.5vmin;
+  height: 7.5vmin;
   z-index: 7;
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn > div {
-    width: 1.5vmin;
-    height: 7.5vmin;
+    width: 1.125vmin;
+    height: 5.625vmin;
   }
 }
 
