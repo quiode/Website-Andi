@@ -90,7 +90,6 @@ function key_pressed(event) {
 
 // changes the images when swiping (not my code, source: http://www.javascriptkit.com/javatutors/touchevents2.shtml)
 function swipedetect(el, callback){
-    alert("yey error!");
 
     var touchsurface = el,
     swipedir,
