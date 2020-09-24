@@ -113,7 +113,7 @@
                     <?php require '../templates/arrow_btn_left.php'?>
                 </div>
 
-                <div class="arrows_background" onclick="slideshow_off()">
+                <div class="arrows_background" onclick="slideshow_off()" style="right:0;">
                     <?php require '../templates/arrow_btn_right.php'?>
                 </div>
 
