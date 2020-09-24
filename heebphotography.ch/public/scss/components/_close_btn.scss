@@ -1,7 +1,7 @@
 // extern
 @use "sass:math";
 // variables
-$desktop_line_width : 3vmin;
+$desktop_line_width : 1vmin;
 $mobile_line_width : $desktop_line_width/(4/3);
 $desktop_line_length : $desktop_line_width*5;
 $mobile_line_length : $mobile_line_width*5;
