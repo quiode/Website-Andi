@@ -40,8 +40,8 @@
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn {
     left: initial;
-    top: 2vh;
-    right: 4vw;
+    top: 3vh;
+    right: 6vw;
   }
 }
 .close_btn > :first-child {
