@@ -57,11 +57,6 @@
                 break;
             }
         }
-        print_r($image_column_1);
-        print_r($image_column_2);
-        print_r($image_column_3);
-        print_r($image_column_4);
-        print_r($thumbnail_images);
         ?>
 
         <!-- makes 4 rows of images -->
