@@ -2,7 +2,7 @@
 @use "sass:math";
 // variables
 $desktop_line_width : 3vmin;
-$mobile_line_width : $desktop_line_width*2;
+$mobile_line_width : $desktop_line_width/10;
 $desktop_line_length : $desktop_line_width*5;
 $mobile_line_length : $mobile_line_width*5;
 $desktop_position : 8;
@@ -17,10 +17,11 @@ $desktop_position : 8;
     z-index: 7;
 
     @media screen and (max-width: 600px) and (orientation: portrait) {
-        transform-origin: $mobile_line_width/2 $mobile_line_length/2;
-        transform: rotate(45deg) translateX(-50%);
-        left: 50vmin - $mobile_line_width/2;
+        // transform-origin: $mobile_line_width/2 $mobile_line_length/2;
+        // transform: rotate(45deg) translateX(-50%);
+        // left: 50vmin - $mobile_line_width/2;
         top: 2vh;
+        right: 2vw;
     }
 
     >:first-child {

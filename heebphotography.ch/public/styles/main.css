@@ -39,10 +39,8 @@
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn {
-    transform-origin: 3vmin 15vmin;
-    transform: rotate(45deg) translateX(-50%);
-    left: 47vmin;
     top: 2vh;
+    right: 2vw;
   }
 }
 .close_btn > :first-child {
@@ -59,8 +57,8 @@
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn > div {
-    width: 6vmin;
-    height: 30vmin;
+    width: 0.3vmin;
+    height: 1.5vmin;
   }
 }
 
