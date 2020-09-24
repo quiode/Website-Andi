@@ -214,6 +214,7 @@
   transition-duration: 1s;
   transition-property: opacity;
   z-index: 0;
+  background: linear-gradient(to right, transparent, mistyrose);
 }
 #english :first-of-type(.slide) {
   opacity: 1;
