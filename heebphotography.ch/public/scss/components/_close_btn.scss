@@ -29,7 +29,7 @@ $desktop_position : 8;
         // @debug $temp_translate_length_2;
         transform-origin: $mobile_line_width/2 $mobile_line_length/2;
         transform: rotate(45deg) translateX(-50%);
-        left: 50vw;
+        left: 50vw - $mobile_input_width;
         top: 2vh;
     }
 
