@@ -40,6 +40,7 @@
   transform: rotate(45deg) translate(-50%, -50%);
   top: 50vh;
   cursor: pointer;
+  transition-delay: 0s;
 }
 .arrow_btn:hover {
   background-color: gray;
@@ -453,6 +454,7 @@
   z-index: 4;
 }
 #gallery .arrows_background:hover .arrow_btn {
+  transition-delay: 5s;
   display: block;
 }
 #gallery #slideshow_background {
