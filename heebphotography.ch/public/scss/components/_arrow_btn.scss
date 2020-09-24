@@ -13,8 +13,12 @@ $desktop_position : 8;
     background-position: -$desktop_line_length -$desktop_line_length;
     z-index: 7;
     position: fixed;
-    transform: rotate(45deg);
-    background-color: gray;
+    transform: rotate(45deg) translate(-50%, -50%);
+    top: 50vw;
+
+    &:hover {
+        background-color: gray;
+    }
 
     >div {
         z-index: inherit;
@@ -30,9 +34,13 @@ $desktop_position : 8;
             transform-origin: $desktop_line_length/2;
         }
     }
-    &.left{
+
+    &.left {
+        left: 50%;
     }
-    &.right{
-        transform: rotate(225deg);
+
+    &.right {
+        right: 50%;
+        transform: rotate(225deg) translate(-50%, -50%);
     }
 }

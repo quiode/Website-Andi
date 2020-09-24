@@ -36,7 +36,10 @@
   background-position: -10vmin;
   z-index: 7;
   position: fixed;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translate(-50%, -50%);
+  top: 50vw;
+}
+.arrow_btn:hover {
   background-color: gray;
 }
 .arrow_btn > div {
@@ -52,8 +55,12 @@
   transform: rotate(-90deg);
   transform-origin: 2.5vmin;
 }
+.arrow_btn.left {
+  left: 50%;
+}
 .arrow_btn.right {
-  transform: rotate(225deg);
+  right: 50%;
+  transform: rotate(225deg) translate(-50%, -50%);
 }
 
 .close_btn {
