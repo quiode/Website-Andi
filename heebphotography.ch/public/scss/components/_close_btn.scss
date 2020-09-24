@@ -1,8 +1,10 @@
 // extern
 @use "sass:math";
 // variables
-$line_width : 3vmin;
-$line_length : $line_width*5;
+$desktop_line_width : 3vmin;
+$mobile_line_width : $desktop_line_width*3;
+$desktop_line_length : $desktop_line_width*5;
+$mobile_line_length : $mobile_line_width*5;
 $desktop_position : 8;
 
 // scss
@@ -15,8 +17,16 @@ $desktop_position : 8;
     z-index: 7;
 
     @media screen and (max-width: 600px) and (orientation: portrait) {
-        $temp_translate_length: math.hypot(($line_width)*3, ($line_width)*3);
-        transform: translateX(-$temp_translate_length) rotate(45deg);
+        $unitless_mobile_line_width : $mobile_line_width/1vmin;
+        // Hypothenuse 1
+        $temp_translate_length: math.hypot($unitless_mobile_line_width, $unitless_mobile_line_width);
+        // Hypothenuse 2
+        $temp_translate_length_2: math.pow($unitless_mobile_line_width, 2);
+        // Kathete 2
+        $temp_translate_length_2: math.pow($temp_translate_length/2, 2);
+        // Final Value
+        $temp_translate_length_3: math.sqrt($temp_translate_length_2 + $temp_translate_length_2);
+        transform: translateX(-$temp_translate_length_3*1vmin) rotate(45deg);
         left: 50vw;
         top: 2vh;
     }
@@ -30,13 +40,13 @@ $desktop_position : 8;
         background-color: white;
         padding: 0;
         margin: 0;
-        width: $line_width;
-        height: $line_length;
+        width: $desktop_line_width;
+        height: $desktop_line_length;
         z-index: 7;
 
         @media screen and (max-width: 600px) and (orientation: portrait) {
-            width: $line_width*3;
-            height: $line_length*3;
+            width: $mobile_line_width;
+            height: $desktop_line_length;
         }
     }
 }

@@ -39,7 +39,7 @@
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn {
-    transform: translateX(-12.7279220614vmin) rotate(45deg);
+    transform: translateX(-9vmin) rotate(45deg);
     left: 50vw;
     top: 2vh;
   }
@@ -59,7 +59,7 @@
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn > div {
     width: 9vmin;
-    height: 45vmin;
+    height: 15vmin;
   }
 }
 
