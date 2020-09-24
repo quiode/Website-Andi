@@ -20,6 +20,7 @@ function resizeToMax() {
 
 // lets the slideshow appear/disapper
 function slideshow_on(src) {
+    openFullscreen();
     document.getElementById("navigation_button").style.display = "none";
     document.getElementById("slideshow_background").style.display = "block";
     document.getElementById("slideshow").style.display = "block";
@@ -30,6 +31,7 @@ function slideshow_on(src) {
 }
 
 function slideshow_off() {
+    closeFullscreen();
     document.getElementById("navigation_button").style.display = "inline-block";
     document.getElementById("slideshow_background").style.display = "none";
     document.getElementById("slideshow").style.display = "none";
@@ -158,3 +160,39 @@ window.addEventListener("load", function () {
         }
     });
 });
+
+// functions for fullscreen (source:https://www.w3schools.com/jsref/met_element_exitfullscreen.asp)
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        /* Firefox */
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        /* Chrome, Safari and Opera */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        /* IE/Edge */
+        elem.msRequestFullscreen();
+    }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+        /* Firefox */
+        document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+        /* Chrome, Safari and Opera */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+        /* IE/Edge */
+        document.msExitFullscreen();
+    }
+}
