@@ -90,7 +90,7 @@ function key_pressed(event) {
 
 // changes the images when swiping (not my code, source: http://www.javascriptkit.com/javatutors/touchevents2.shtml)
 function swipedetect(callback) {
-    var el = document.getElementById("gallery");
+    var el = document.getElementById("slideshow_image");
     var touchsurface = el,
         swipedir,
         startX,
