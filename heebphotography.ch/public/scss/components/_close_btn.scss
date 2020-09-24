@@ -26,6 +26,7 @@ $desktop_position : 8;
         $temp_translate_length_2: math.pow($temp_translate_length/2, 2);
         // Final Value
         $temp_translate_length_3: math.sqrt($temp_translate_length_2 + $temp_translate_length_2);
+        @debug $temp_translate_length_2;
         transform: translateX(-$temp_translate_length_3*1vmin) rotate(45deg);
         left: 50vw;
         top: 2vh;
@@ -46,7 +47,7 @@ $desktop_position : 8;
 
         @media screen and (max-width: 600px) and (orientation: portrait) {
             width: $mobile_line_width;
-            height: $desktop_line_length;
+            height: $mobile_line_length;
         }
     }
 }
