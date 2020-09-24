@@ -46,6 +46,11 @@
         height: 100%;
         position: fixed;
         z-index: 4;
+        &:hover{
+            .arrow_btn{
+                display: initial;
+            }
+        }
     }
 
     #slideshow_background {
@@ -72,7 +77,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            max-width: 90vw;
+            max-width: 80vw;
             max-height: 95vh;
             z-index: 6;
         }

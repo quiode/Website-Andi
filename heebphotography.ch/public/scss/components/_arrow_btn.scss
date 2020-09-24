@@ -1,5 +1,5 @@
 // variables
-$desktop_line_width : 0.5vmin;
+$desktop_line_width : 1vw;
 $mobile_line_width : $desktop_line_width/(4/3);
 $desktop_line_length : $desktop_line_width*5;
 $mobile_line_length : $mobile_line_width*5;
@@ -7,6 +7,7 @@ $desktop_position : 8;
 
 // scss
 .arrow_btn {
+    display: none;
     width: 2*$desktop_line_length;
     height: 2*$desktop_line_length;
     border-radius: 50%;

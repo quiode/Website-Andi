@@ -30,10 +30,11 @@
 }
 
 .arrow_btn {
-  width: 5vmin;
-  height: 5vmin;
+  display: none;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
-  background-position: -5vmin;
+  background-position: -10vw;
   z-index: 7;
   position: fixed;
   transform: rotate(45deg) translate(-50%, -50%);
@@ -46,15 +47,15 @@
 .arrow_btn > div {
   z-index: inherit;
   position: inherit;
-  width: 0.5vmin;
-  height: 2.5vmin;
+  width: 1vw;
+  height: 5vw;
   background-color: white;
-  left: 1.6666666667vmin;
-  top: 0.8333333333vmin;
+  left: 3.3333333333vw;
+  top: 1.6666666667vw;
 }
 .arrow_btn > div:first-child {
   transform: rotate(-90deg);
-  transform-origin: 1.25vmin;
+  transform-origin: 2.5vw;
 }
 .arrow_btn.left {
   left: 50%;
@@ -451,6 +452,9 @@
   position: fixed;
   z-index: 4;
 }
+#gallery .arrows_background:hover .arrow_btn {
+  display: initial;
+}
 #gallery #slideshow_background {
   height: 100%;
   width: 100%;
@@ -474,7 +478,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90vw;
+  max-width: 80vw;
   max-height: 95vh;
   z-index: 6;
 }
