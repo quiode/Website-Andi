@@ -182,7 +182,7 @@
 }
 #english header {
   width: 100vw;
-  height: 25vh;
+  height: 20vh;
   margin: 0;
   z-index: 2;
   position: relative;
@@ -201,7 +201,7 @@
   margin: inherit;
   position: inherit;
   transform: translateY(-50%);
-  top: 12.5vh;
+  top: 10vh;
   font-size: 7vmax;
 }
 #english #first_slide {
@@ -211,7 +211,7 @@
 #english .slides {
   bottom: 0;
   left: 0;
-  height: 75vh;
+  height: 80vh;
   width: 100vw;
   display: block;
   position: absolute;
