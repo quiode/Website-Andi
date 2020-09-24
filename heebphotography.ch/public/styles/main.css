@@ -60,7 +60,7 @@
 }
 #language ul li a {
   position: absolute;
-  font-size: 12vw;
+  font-size: 12vmax;
   transform: translate(-50%, -50%);
   z-index: 5;
 }
