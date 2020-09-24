@@ -89,8 +89,8 @@ function key_pressed(event) {
 }
 
 // changes the images when swiping (not my code, source: http://www.javascriptkit.com/javatutors/touchevents2.shtml)
-function swipedetect(el, callback){
-
+function swipedetect(callback){
+    var el = document.getElementById("gallery");
     var touchsurface = el,
     swipedir,
     startX,
@@ -137,8 +137,7 @@ function swipedetect(el, callback){
 }
 
 window.addEventListener("load", swipedetect);
-var el = document.getElementById("gallery");
-swipedetect(el, function (swipedir) {
+swipedetect(function (swipedir) {
     // swipedir contains either "none", "left", "right", "top", or "down"
     switch (swipedir) {
         case "none":
