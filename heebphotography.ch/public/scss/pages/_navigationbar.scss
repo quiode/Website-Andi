@@ -84,6 +84,9 @@
                 display: block;
                 color: white;
                 font-size: 10vmin;
+                @media screen and (max-width:600px){
+                    font-size: 14vmin;
+                }
 
                 &:hover {
                     background-color: #aaa;

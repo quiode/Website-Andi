@@ -234,6 +234,11 @@
   color: white;
   font-size: 10vmin;
 }
+@media screen and (max-width: 600px) {
+  #navigationbar #navigation-overlay #navigation-content .links {
+    font-size: 14vmin;
+  }
+}
 #navigationbar #navigation-overlay #navigation-content .links:hover {
   background-color: #aaa;
   opacity: 0.7;
