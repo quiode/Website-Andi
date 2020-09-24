@@ -58,10 +58,10 @@
   transform-origin: 1.25vw;
 }
 .arrow_btn.left {
-  left: 50%;
+  left: 0;
 }
 .arrow_btn.right {
-  right: 50%;
+  right: 0;
   transform: rotate(225deg) translate(50%, 50%);
 }
 
