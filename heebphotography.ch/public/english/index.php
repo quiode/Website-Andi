@@ -25,7 +25,7 @@
                 foreach ($scan as $value) {
                     if ($is_first_tester) {
                         if (!(is_dir($value))) {
-                            echo "<div class=\"slides\" id=\"first_slide\" style=\"url(background-image:$dir/$value);\"></div>";
+                            echo "<div class=\"slides\" id=\"first_slide\" style=\"background-image:url($dir/$value);\"></div>";
                             $is_first_tester = false;
                         }
                     } else {
