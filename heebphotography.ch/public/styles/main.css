@@ -216,6 +216,8 @@
   width: 30vw;
   height: 40vh;
   background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 1vmin;
 }
 #english #profile img {
   z-index: 4;
@@ -224,12 +226,6 @@
   max-height: 10vh;
   right: 0;
   display: inline-block;
-}
-#english #profile div {
-  display: inline-block;
-  z-index: inherit;
-  position: relative;
-  color: white;
 }
 #english .slides {
   bottom: 0;

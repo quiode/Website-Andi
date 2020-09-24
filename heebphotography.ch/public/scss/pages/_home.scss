@@ -46,6 +46,8 @@ $header_height:20vh;
         width: 30vw;
         height: 40vh;
         background-color: rgb(0, 0, 0, 0.9);
+        color: white;
+        font-size: 1vmin;
 
         img {
             z-index: 4;
@@ -54,13 +56,6 @@ $header_height:20vh;
             max-height: 10vh;
             right: 0;
             display: inline-block;
-        }
-
-        div {
-            display: inline-block;
-            z-index: inherit;
-            position: relative;
-            color: white;
         }
     }
 
