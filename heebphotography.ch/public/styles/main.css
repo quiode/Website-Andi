@@ -52,6 +52,9 @@
   transform: rotate(-90deg);
   transform-origin: 2.5vmin;
 }
+.arrow_btn.left {
+  display: none;
+}
 
 .close_btn {
   left: 8vmin;

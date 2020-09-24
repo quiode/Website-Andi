@@ -30,4 +30,8 @@ $desktop_position : 8;
             transform-origin: $desktop_line_length/2;
         }
     }
+    &.left{
+        display: none;
+    }
+    
 }
