@@ -150,10 +150,8 @@ window.addEventListener("load", function () {
                 next_picture();
                 break;
             case "top":
-                last_picture();
                 break;
             case "down":
-                next_picture();
                 break;
             default:
                 break;
