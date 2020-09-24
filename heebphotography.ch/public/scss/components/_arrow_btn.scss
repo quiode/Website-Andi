@@ -38,11 +38,11 @@ $desktop_position : 8;
     }
 
     &.left {
-        left: 0;
+        left: 1vw;
     }
 
     &.right {
-        right: 0;
+        right: 1vw;
         transform: rotate(225deg) translate(50%, 50%);
     }
 }
