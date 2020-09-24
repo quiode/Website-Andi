@@ -211,12 +211,16 @@
 #english #profile {
   position: absolute;
   z-index: 3;
-  bottom: 20vh;
+  bottom: 30vh;
   right: 10vw;
+  width: 30vw;
+  height: 40vh;
 }
 #english #profile img {
   z-index: 4;
   position: relative;
+  max-width: 10vw;
+  max-height: 10vh;
 }
 #english #profile div {
   z-index: inherit;

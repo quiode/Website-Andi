@@ -41,12 +41,16 @@ $header_height:20vh;
     #profile {
         position: absolute;
         z-index: 3;
-        bottom: 20vh;
+        bottom: $header_height + 10vh;
         right: 10vw;
+        width: 30vw;
+        height: 40vh;
 
         img {
             z-index: 4;
             position: relative;
+            max-width: 10vw;
+            max-height: 10vh;
         }
 
         div {
