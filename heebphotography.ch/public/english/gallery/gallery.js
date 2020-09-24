@@ -102,7 +102,7 @@ function swipedetect(el, callback){
     allowedTime = 300, // maximum time allowed to travel that distance
     elapsedTime,
     startTime,
-    handleswipe = callback || function(swipedir){alert("error");};
+    handleswipe = callback || function(swipedir){};
   
     touchsurface.addEventListener('touchstart', function(e){
         var touchobj = e.changedTouches[0];
@@ -136,7 +136,7 @@ function swipedetect(el, callback){
     }, false);
 }
 
-var el = document.getElementById('gallery');
+var el = document.getElementById("gallery");
 swipedetect(el, function (swipedir) {
     // swipedir contains either "none", "left", "right", "top", or "down"
     switch (swipedir) {
