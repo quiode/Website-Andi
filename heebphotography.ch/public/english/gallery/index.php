@@ -109,13 +109,13 @@
                 <img id="slideshow_image" src="./images/testing/image_0.jpg" onload="resizeToMax()">
 
                 <!-- for navigation within the slideshow -->
-                <div class="arrows_background" onclick="slideshow_off()">
+                <div class="arrows_background">
                     <div onclick="last_picture()" style="z-index: 7; position: fixed;">
                         <?php require '../templates/arrow_btn_left.php'?>
                     </div>
                 </div>
 
-                <div class="arrows_background" onclick="slideshow_off()" style="right:0;">
+                <div class="arrows_background" style="right:0;">
                     <div onclick="next_picture()" style="z-index: 7; position: fixed;">
                         <?php require '../templates/arrow_btn_right.php'?>
                     </div>

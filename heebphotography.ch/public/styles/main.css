@@ -461,7 +461,7 @@
   position: fixed;
   background-color: black;
   display: none;
-  z-index: 4;
+  z-index: 6;
 }
 #gallery #slideshow {
   z-index: 5;
