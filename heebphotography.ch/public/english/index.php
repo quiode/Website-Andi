@@ -16,7 +16,6 @@
     <?php require '../english/templates/navigationbar.php'?>
     <?php require "../english/templates/work_in_progress.php"?>
     <section>
-        <div class="container_slideshow">
         <?php
             $dir = "images-home";
         if (is_dir($dir)) {
@@ -37,7 +36,6 @@
             }
         }
         ?>
-        </div>  
     </section>
 </body>
 
