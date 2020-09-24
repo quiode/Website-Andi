@@ -43,8 +43,8 @@ $header_height : 75px;
         top: $header_height;
         max-width: inherit;
         height: inherit;
-        /*height: $slideshow_height;
-        width: $slideshow_width;*/
+        height: $slideshow_height;
+        width: $slideshow_width;
         display: block;
         position: absolute;
         opacity: 0;

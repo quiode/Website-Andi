@@ -207,8 +207,8 @@
   top: 75px;
   max-width: inherit;
   height: inherit;
-  /*height: $slideshow_height;
-  width: $slideshow_width;*/
+  height: 85vh;
+  width: 100vw;
   display: block;
   position: absolute;
   opacity: 0;
