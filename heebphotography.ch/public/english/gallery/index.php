@@ -31,7 +31,9 @@
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
         // deletes the thumbnail dir
+        print_r($images);
         unset($images[0]);
+        print_r($images);
         // splits the images in 4 seperate arrays with +- 1 the same amount of images
         $image_column_1 = array();
         $image_column_2 = array();
