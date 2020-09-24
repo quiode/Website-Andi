@@ -17,8 +17,8 @@ $desktop_position : 8;
     transform: rotate(45deg) translate(-50%, -50%);
     top: 50vh;
     cursor: pointer;
-    transition-delay: 5s;
-    transition-duration: 200ms;
+    transition-delay: 2.5s;
+    transition-duration: 500ms;
     transition-property: visibility;
 
     &:hover {
