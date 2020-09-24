@@ -32,7 +32,6 @@
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
         // deletes the thumbnail dir
         unset($images[0]);
-        print_r($thumbnail_images);
         // splits the images in 4 seperate arrays with +- 1 the same amount of images
         $image_column_1 = array();
         $image_column_2 = array();
@@ -43,6 +42,7 @@
         while ($i <= sizeof($thumbnail_images)) {
             $image_column_1[$c] = $thumbnail_images[$i++];
             if ($i >= sizeof($thumbnail_images)) {
+                print_r($image_column_1);
                 break;
             }
             $image_column_2[$c] = $thumbnail_images[$i++];
