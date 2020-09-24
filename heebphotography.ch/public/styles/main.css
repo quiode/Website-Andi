@@ -215,7 +215,7 @@
   right: 10vw;
   width: 30vw;
   height: 40vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
   color: white;
   font-size: 3vmin;
   padding: 1vmin 1vmin;
@@ -228,8 +228,7 @@
   right: 0;
   display: inline-block;
   float: left;
-  margin: 1vmin 1vmin;
-  margin-bottom: 0;
+  margin-right: 1vmin;
 }
 #english .slides {
   bottom: 0;
