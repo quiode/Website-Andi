@@ -208,8 +208,6 @@
   left: 0;
   height: 75vh;
   width: 100vw;
-  background-repeat: no-repeat;
-  background-size: 100vw;
   display: block;
   position: absolute;
   opacity: 0;
