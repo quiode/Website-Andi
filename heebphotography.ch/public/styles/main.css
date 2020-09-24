@@ -218,7 +218,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   font-size: 3vmin;
-  padding: 0.5vmin 0.5vmin;
+  padding: 1vmin 1vmin;
 }
 #english #profile img {
   z-index: 4;
@@ -229,6 +229,7 @@
   display: inline-block;
   float: left;
   margin: 1vmin 1vmin;
+  margin-bottom: 0;
 }
 #english .slides {
   bottom: 0;
