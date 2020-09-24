@@ -1,4 +1,4 @@
-<div class="arrow_btn" style="transform: rotate(225deg);">
+<div class="arrow_btn" class="right">
     <div></div>
     <div></div>
 </div>
