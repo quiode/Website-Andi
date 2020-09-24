@@ -215,8 +215,7 @@
   right: 10vw;
   width: 30vw;
   height: 40vh;
-  background-color: black;
-  opacity: 0.1;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 #english #profile img {
   z-index: 4;
