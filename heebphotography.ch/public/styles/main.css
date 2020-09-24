@@ -218,6 +218,7 @@
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   font-size: 3vmin;
+  padding: 0.5vmin 0.5vmin;
 }
 #english #profile img {
   z-index: 4;
