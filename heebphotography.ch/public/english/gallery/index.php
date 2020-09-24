@@ -27,7 +27,7 @@
         // deletes the last two elements of the filename list --> are always . and .. so not usefull
         unset($images[sizeof($images)-1]);
         unset($images[sizeof($images)-1]);
-        echo "<script>alert(".$images[-1].");</script>";
+        echo "<script>alert(".$images[-2].");</script>";
 
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
         unset($thumbnail_images[sizeof($thumbnail_images)-1]);
