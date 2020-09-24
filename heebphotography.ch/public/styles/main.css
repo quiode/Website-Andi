@@ -226,6 +226,7 @@
   max-height: 10vh;
   right: 0;
   display: inline-block;
+  float: left;
 }
 #english .slides {
   bottom: 0;
