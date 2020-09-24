@@ -42,8 +42,6 @@
         while ($i <= sizeof($thumbnail_images)) {
             $image_column_1[$c] = $thumbnail_images[$i++];
             if ($i >= sizeof($thumbnail_images)) {
-                print_r($image_column_1);
-                print_r($thumbnail_images);
                 break;
             }
             $image_column_2[$c] = $thumbnail_images[$i++];
@@ -56,6 +54,11 @@
             }
             $image_column_4[$c++] = $thumbnail_images[$i++];
         }
+        print_r($image_column_1);
+        print_r($image_column_2);
+        print_r($image_column_3);
+        print_r($image_column_4);
+        print_r($thumbnail_images);
         ?>
 
         <!-- makes 4 rows of images -->
