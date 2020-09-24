@@ -38,6 +38,7 @@
   position: fixed;
   transform: rotate(45deg) translate(-50%, -50%);
   top: 50vh;
+  cursor: pointer;
 }
 .arrow_btn:hover {
   background-color: gray;
