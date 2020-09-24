@@ -37,14 +37,14 @@
   z-index: 7;
   position: fixed;
   transform: rotate(45deg);
-  background-color: lightslategray;
+  background-color: gray;
 }
 .arrow_btn > div {
   z-index: inherit;
   position: inherit;
   width: 1vmin;
   height: 5vmin;
-  background-color: black;
+  background-color: white;
   left: 3.3333333333vmin;
   top: 1.6666666667vmin;
 }
@@ -52,8 +52,8 @@
   transform: rotate(-90deg);
   transform-origin: 2.5vmin;
 }
-.arrow_btn.left {
-  display: none;
+.arrow_btn.right {
+  transform: rotate(225deg);
 }
 
 .close_btn {
