@@ -47,6 +47,10 @@
             lobortis malesuada. Proin quis vestibulum arcu. Vestibulum at aliquet mi. Donec efficitur euismod ligula
             sit amet lacinia. Cras ac sem quam.
         </aside>
+
+        <section id="instagram_feed">
+
+        </section>
     </body>
 
 </html>
