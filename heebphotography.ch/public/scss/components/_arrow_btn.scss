@@ -18,7 +18,7 @@ $desktop_position : 8;
     top: 50vh;
     cursor: pointer;
     transition-delay: 1.5s;
-    transition-duration: 1s;
+    transition-duration: 1ms;
     transition-property: visibility;
 
     &:hover {
