@@ -30,18 +30,19 @@
 }
 
 .arrow_btn {
-  display: none;
+  visibility: hidden;
   width: 5vw;
   height: 5vw;
   border-radius: 50%;
   background-position: -5vw;
-  z-index: 7;
+  z-index: -100;
   position: fixed;
   transform: rotate(45deg) translate(-50%, -50%);
   top: 50vh;
   cursor: pointer;
   transition-delay: 0s;
-  transition-property: display;
+  transition-duration: 200ms;
+  transition-property: visibility;
 }
 .arrow_btn:hover {
   background-color: gray;
@@ -456,7 +457,8 @@
 }
 #gallery .arrows_background:hover .arrow_btn {
   transition-delay: 5s;
-  display: block;
+  visibility: visible;
+  z-index: 7;
 }
 #gallery #slideshow_background {
   height: 100%;

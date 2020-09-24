@@ -7,18 +7,19 @@ $desktop_position : 8;
 
 // scss
 .arrow_btn {
-    display: none;
+    visibility: hidden;
     width: 2*$desktop_line_length;
     height: 2*$desktop_line_length;
     border-radius: 50%;
     background-position: -$desktop_line_length -$desktop_line_length;
-    z-index: 7;
+    z-index: -100;
     position: fixed;
     transform: rotate(45deg) translate(-50%, -50%);
     top: 50vh;
     cursor: pointer;
     transition-delay: 0s;
-    transition-property: display;
+    transition-duration: 200ms;
+    transition-property: visibility;
 
     &:hover {
         background-color: gray;
