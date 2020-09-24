@@ -40,7 +40,7 @@
   transform: rotate(45deg) translate(-50%, -50%);
   top: 50vh;
   cursor: pointer;
-  transition-delay: 1.5s;
+  transition-delay: 0.75s;
   transition-duration: 1ms;
   transition-property: visibility;
 }
@@ -91,14 +91,14 @@
   background-color: white;
   padding: 0;
   margin: 0;
-  width: 1vmin;
-  height: 5vmin;
+  width: 1.5vmin;
+  height: 7.5vmin;
   z-index: 7;
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
   .close_btn > div {
-    width: 1vmin;
-    height: 5vmin;
+    width: 1.5vmin;
+    height: 7.5vmin;
   }
 }
 
@@ -207,6 +207,9 @@
 #english #first_slide {
   opacity: 1;
   z-index: 0;
+}
+#english #profile {
+  position: fixed;
 }
 #english .slides {
   bottom: 0;

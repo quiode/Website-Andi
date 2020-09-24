@@ -13,8 +13,10 @@
         <header>
             <h2>Heeb Photography</h2>
         </header>
+
         <?php require '../english/templates/navigationbar.php'?>
         <?php require "../english/templates/work_in_progress.php"?>
+
         <section>
             <?php
             $dir = "images-home";
@@ -37,6 +39,10 @@
             }
             ?>
         </section>
+
+        <aside id="profile">
+
+        </aside>
     </body>
 
 </html>
