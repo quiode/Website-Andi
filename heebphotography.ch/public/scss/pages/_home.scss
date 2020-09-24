@@ -1,8 +1,11 @@
 //adding files
 @use "../classes/shortcuts";
+
 // variables
 // scss
 #english {
+    margin: 0;
+
     header {
         h2 {
             font-weight: 200;
