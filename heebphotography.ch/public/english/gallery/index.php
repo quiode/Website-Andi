@@ -104,7 +104,7 @@
         </div>
 
         <!-- the slideshow that pops up when clicking on an image -->
-        <div id="slideshow_background" onclick="slideshow_off()">
+        <div id="slideshow_background">
             <div id="slideshow" onkeydown="key_pressed(event)">
                 <img id="slideshow_image" src="./images/testing/image_0.jpg" onload="resizeToMax()">
 
