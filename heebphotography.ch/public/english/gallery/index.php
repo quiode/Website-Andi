@@ -110,11 +110,15 @@
 
                 <!-- for navigation within the slideshow -->
                 <div class="arrows_background" onclick="slideshow_off()">
-                    <?php require '../templates/arrow_btn_left.php'?>
+                    <div onclick="last_picture()">
+                        <?php require '../templates/arrow_btn_left.php'?>
+                    </div>
                 </div>
 
                 <div class="arrows_background" onclick="slideshow_off()" style="right:0;">
-                    <?php require '../templates/arrow_btn_right.php'?>
+                    <div onclick="next_picture()">
+                        <?php require '../templates/arrow_btn_right.php'?>
+                    </div>
                 </div>
 
                 <div onclick="slideshow_off()">

@@ -22,13 +22,13 @@ function resizeToMax() {
     var arrows = document.getElementsByClassName("arrow_btn left");
     for (let index = 0; index < arrows.length; index++) {
         arrow = arrows[index];
-        arrow.style.left = (Number((window.innerWidth - img.getBoundingClientRect().width) / 4)) + "px";
+        arrow.style.left = (Number((window.innerWidth - img.getBoundingClientRect().width) / 6)) + "px";
     }
     // places the arrow buttons in the middle of the filled space
     arrows = document.getElementsByClassName("arrow_btn right");
     for (let index = 0; index < arrows.length; index++) {
         arrow = arrows[index];
-        arrow.style.right = (Number((window.innerWidth - img.getBoundingClientRect().width) / 4)) + "px";
+        arrow.style.right = (Number((window.innerWidth - img.getBoundingClientRect().width) / 6)) + "px";
     }
 }
 
