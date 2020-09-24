@@ -43,6 +43,7 @@
             $image_column_1[$c] = $thumbnail_images[$i++];
             if ($i >= sizeof($thumbnail_images)) {
                 print_r($image_column_1);
+                print_r($thumbnail_images);
                 break;
             }
             $image_column_2[$c] = $thumbnail_images[$i++];
