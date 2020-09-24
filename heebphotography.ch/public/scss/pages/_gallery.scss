@@ -76,37 +76,5 @@
             max-height: 90%;
             z-index: 6;
         }
-
-        // > div {
-        //     &:first-of-type {
-        //         left: 0;
-        //     }
-
-        //     &:nth-of-type(2) {
-        //         right: 0;
-        //     }
-
-            // &:last-child {
-            //     top: 10%;
-            //     left: 2.5%;
-            //     cursor: pointer;
-            //     position: fixed;
-            //     transform: rotate(45deg);
-            //     z-index: 6;
-
-            //     > div {
-            //         > div {
-            //             background-color: white;
-            //             $width: 7vmax;
-            //             width: $width;
-            //             height: $width/7;
-
-            //             &:nth-child(2) {
-            //                 transform: translateY(-1vmax) rotate(90deg);
-            //             }
-            //         }
-            //     }
-            // }
-        // }
     }
 }
