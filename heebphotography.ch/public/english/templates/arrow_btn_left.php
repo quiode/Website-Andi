@@ -1,4 +1,4 @@
-<div class="arrow_btn" class="left">
+<div class="arrow_btn left">
     <div></div>
     <div></div>
 </div>
