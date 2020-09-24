@@ -25,11 +25,8 @@ $header_height:25vh;
             position: inherit;
             transform: translateY(-50%);
             top: $header_height/2;
+            font-size: 8vw;
         }
-    }
-
-    #navigation_button {
-        top: $header_height/2;
     }
 
     #first_slide {

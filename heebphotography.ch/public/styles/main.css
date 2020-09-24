@@ -197,9 +197,7 @@
   position: inherit;
   transform: translateY(-50%);
   top: 12.5vh;
-}
-#english #navigation_button {
-  top: 12.5vh;
+  font-size: 8vw;
 }
 #english #first_slide {
   opacity: 1;
