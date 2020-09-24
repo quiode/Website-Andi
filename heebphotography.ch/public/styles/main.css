@@ -453,7 +453,7 @@
   z-index: 4;
 }
 #gallery .arrows_background:hover .arrow_btn {
-  display: initial;
+  display: block;
 }
 #gallery #slideshow_background {
   height: 100%;
