@@ -2,6 +2,8 @@
 @use "../classes/shortcuts";
 
 // variables
+$header_height:25vh;
+
 // scss
 #english {
     margin: 0;
@@ -10,13 +12,15 @@
         h2 {
             font-weight: 200;
             width: 100vw;
-            height: 25vh;
+            height: $header_height;
             display: block;
             text-align: center;
             margin: 0;
             z-index: 2;
             position: relative;
             background-color: white;
+            transform: translateY(-50%);
+            top: $header_height/2;
         }
     }
 

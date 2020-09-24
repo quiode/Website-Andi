@@ -190,6 +190,8 @@
   z-index: 2;
   position: relative;
   background-color: white;
+  transform: translateY(-50%);
+  top: 12.5vh;
 }
 #english #first_slide {
   opacity: 1;
