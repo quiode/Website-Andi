@@ -39,7 +39,20 @@ $header_height:20vh;
     }
 
     #profile {
-        position: fixed;
+        position: absolute;
+        z-index: 3;
+        bottom: 20vh;
+        right: 10vw;
+
+        img {
+            z-index: 4;
+            position: relative;
+        }
+
+        div {
+            z-index: inherit;
+            position: relative;
+        }
     }
 
     .slides {

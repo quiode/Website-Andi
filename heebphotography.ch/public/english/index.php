@@ -41,7 +41,15 @@
         </section>
 
         <aside id="profile">
-
+            <div id="profile_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor volutpat
+                elit. Praesent pretium mauris nibh, sit amet rutrum mi lobortis non. Morbi eget ligula tristique nunc
+                lobortis malesuada. Proin quis vestibulum arcu. Vestibulum at aliquet mi. Donec efficitur euismod ligula
+                sit amet lacinia. Cras ac sem quam. Maecenas maximus blandit accumsan. Ut sit amet luctus est. Maecenas
+                cursus pellentesque purus, ut egestas justo pulvinar congue. Cras vulputate semper fringilla. Duis lacus
+                arcu, convallis viverra rhoncus vel, egestas eu dolor. Ut tempus enim eu purus dictum ullamcorper.
+                Aenean malesuada, velit in consequat porttitor, lacus diam facilisis velit, nec faucibus elit risus eu
+                libero. Duis faucibus leo non pellentesque interdum. Vivamus a nulla orci. </div>
+            <img id="profile_picture" src="./profile_picture.jpg"></img>
         </aside>
     </body>
 

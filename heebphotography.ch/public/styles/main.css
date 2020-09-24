@@ -209,7 +209,18 @@
   z-index: 0;
 }
 #english #profile {
-  position: fixed;
+  position: absolute;
+  z-index: 3;
+  bottom: 20vh;
+  right: 10vw;
+}
+#english #profile img {
+  z-index: 4;
+  position: relative;
+}
+#english #profile div {
+  z-index: inherit;
+  position: relative;
 }
 #english .slides {
   bottom: 0;
