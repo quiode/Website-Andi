@@ -18,6 +18,7 @@ $desktop_position : 8;
     top: 50vh;
     cursor: pointer;
     transition-delay: 0s;
+    transition-property: display;
 
     &:hover {
         background-color: gray;

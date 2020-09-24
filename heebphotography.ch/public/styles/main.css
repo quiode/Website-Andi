@@ -41,6 +41,7 @@
   top: 50vh;
   cursor: pointer;
   transition-delay: 0s;
+  transition-property: display;
 }
 .arrow_btn:hover {
   background-color: gray;
@@ -455,7 +456,6 @@
 }
 #gallery .arrows_background:hover .arrow_btn {
   transition-delay: 5s;
-  transition-property: display;
   display: block;
 }
 #gallery #slideshow_background {
