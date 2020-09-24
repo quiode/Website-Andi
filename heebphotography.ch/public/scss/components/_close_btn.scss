@@ -1,11 +1,11 @@
 // variables
-$line_width : 2vmin;
+$line_width : 3vmin;
 $line_length : $line_width*5;
-$desktop_position : 1vmin;
+$desktop_position : 8;
 // scss
 .close_btn {
-    left: $desktop_position;
-    right: $desktop_position;
+    left: 1vw*$desktop_position;
+    top: 1vh*$desktop_position;
     position: fixed;
     transform: rotate(45deg);
 
