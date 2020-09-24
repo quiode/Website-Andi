@@ -136,6 +136,7 @@ function swipedetect(el, callback){
     }, false);
 }
 
+window.addEventListener("load", swipedetect);
 var el = document.getElementById("gallery");
 swipedetect(el, function (swipedir) {
     // swipedir contains either "none", "left", "right", "top", or "down"
