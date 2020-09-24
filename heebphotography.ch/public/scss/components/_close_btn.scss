@@ -21,9 +21,9 @@ $desktop_position : 8;
         // transform: rotate(45deg) translateX(-50%);
         // left: 50vmin - $mobile_line_width/2;
         // top: 2vh;
-        left: none;
-        top: 0.5vh;
-        right: 2vw;
+        left: initial;
+        top: 2vh;
+        right: 4vw;
     }
 
     >:first-child {
