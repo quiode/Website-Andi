@@ -432,22 +432,6 @@
 #gallery #slideshow > div:nth-of-type(2) {
   right: 0;
 }
-#gallery #slideshow > div:last-child {
-  top: 10%;
-  left: 2.5%;
-  cursor: pointer;
-  position: fixed;
-  transform: rotate(45deg);
-  z-index: 6;
-}
-#gallery #slideshow > div:last-child > div > div {
-  background-color: white;
-  width: 7vmax;
-  height: 1vmax;
-}
-#gallery #slideshow > div:last-child > div > div:nth-child(2) {
-  transform: translateY(-1vmax) rotate(90deg);
-}
 
 #contact_form {
   overflow-x: hidden;
