@@ -39,14 +39,6 @@
         ?>
         </div>  
     </section>
-
-    <aside>
-
-    </aside>
-
-    <footer>
-        <p>&copy; Andreas Heeb 2020</p>
-    </footer>
 </body>
 
 </html>
