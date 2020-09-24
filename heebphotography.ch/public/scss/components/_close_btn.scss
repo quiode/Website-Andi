@@ -27,8 +27,8 @@ $desktop_position : 8;
         // // Final Value
         // $temp_translate_length_3: math.sqrt($temp_translate_length_2 + $temp_translate_length_2);
         // @debug $temp_translate_length_2;
-        transform-origin: $mobile_line_width/2 $desktop_line_length/2;
-        transform: rotate(45deg);
+        transform-origin: $mobile_line_width/2 $mobile_line_length/2;
+        transform: rotate(45deg) translateX(-50%);
         left: 50vw;
         top: 2vh;
     }
