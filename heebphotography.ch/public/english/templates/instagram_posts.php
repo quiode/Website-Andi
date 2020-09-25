@@ -16,7 +16,7 @@ function insta_post_url_getter($insta_user_url)
     // formats the final version to make a real link
     $insta_link = "https://www.instagram.com/p/";
     $all_posts = [];
-    for ($i=0; $i < 6; $i++) {
+    for ($i=0; $i < sizeof($allpages); $i++) {
         array_push($all_posts, $insta_link . $allpages[$i] . "/");
     }
     return $all_posts;
