@@ -224,9 +224,9 @@
 @media screen and (orientation: portrait) {
   #english #profile {
     top: 25vh;
-    transform: translateY(102px) scaleX(102px);
+    transform: translateY(102px);
     width: 90vw;
-    max-height: 75vh;
+    height: 75vh;
     padding-bottom: -102px;
     right: 5vw;
   }
