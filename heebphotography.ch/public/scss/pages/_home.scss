@@ -53,9 +53,10 @@ $header_height:20vh;
 
         @media screen and (orientation: portrait) {
             top: $header_height + 5vh;
-            transform: translateY(102px);
+            transform: translateY(102px) scaleX(102px);
             width: 90vw;
-            max-height: 100vh - ($header_height + 5vh) - 20vh; //just 100vh - top_height - some to buffer the heigt of the 
+            max-height: 100vh - ($header_height + 5vh); //just 100vh - top_height - some to buffer the heigt of the 
+            padding-bottom: -102px;
             right: 5vw;
         }
 
