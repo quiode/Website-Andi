@@ -87,7 +87,14 @@ $header_height:20vh;
         @include shortcuts.fade(1.5s);
     }
 
-    .instagram-posts{
-        
+    .instagram-posts {
+        position: relative;
+        width: 50vw;
+        height: 50vh;
+    }
+
+    #instagram_feed {
+        top: 100vh;
+        position: absolute;
     }
 }

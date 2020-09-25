@@ -256,6 +256,16 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
+#english .instagram-posts {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+}
+#english #instagram_feed {
+  top: 100vh;
+  position: absolute;
+}
+
 #navigationbar #navigation_button {
   display: inline-block;
   justify-content: center;
