@@ -6,7 +6,8 @@
     <body>
         <?php
         $dom = new DOMDocument;
-        $dom->load('https://www.instagram.com/heebphotography/');
+        $dom->loadHTML('https://www.instagram.com/heebphotography/');
+        $dom->saveHTMLFile("testlol.html");
         ?>
     </body>
 
