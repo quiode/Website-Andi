@@ -219,6 +219,7 @@
   color: white;
   font-size: 3vmin;
   padding: 1vmin 1vmin;
+  overflow: auto;
 }
 #english #profile img {
   z-index: 4;
