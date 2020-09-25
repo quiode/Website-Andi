@@ -34,4 +34,3 @@ function insta_html_getter($posts_urls)
     }
     return $all_html;
 }
-print_r(insta_html_getter(insta_post_url_getter("https://www.instagram.com/heebphotography/")));
