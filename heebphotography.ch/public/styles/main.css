@@ -261,7 +261,12 @@
   position: relative;
   width: 30vw;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  #english .instagram-posts {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 700px) {
   #english .instagram-posts {
     width: 90vw;
   }
