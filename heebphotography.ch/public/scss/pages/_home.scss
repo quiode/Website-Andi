@@ -63,6 +63,7 @@ $header_height:20vh;
     }
 
     .slides {
+        display: none;
         bottom: 0;
         left: 0;
         height: 100vh - $header_height;
