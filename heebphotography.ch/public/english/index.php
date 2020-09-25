@@ -54,7 +54,7 @@
             $insta_urls = insta_post_url_getter("https://www.instagram.com/heebphotography/");
             $embedded_html = insta_html_getter($insta_urls);
             for ($i=0; $i < sizeof($embedded_html); $i++) {
-                echo "<article class=\"instagram-post\">";
+                echo "<article class=\"instagram-posts\">";
                 echo $embedded_html[$i];
                 echo "</article>";
             }
