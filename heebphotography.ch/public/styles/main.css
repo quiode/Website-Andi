@@ -214,7 +214,7 @@
   top: 45vh;
   right: 8vw;
   width: 30vw;
-  height: 40vh;
+  max-height: 105vh;
   background-color: rgba(0, 0, 0, 0.95);
   color: white;
   font-size: 3vmin;
