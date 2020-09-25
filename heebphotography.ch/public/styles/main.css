@@ -214,12 +214,20 @@
   top: 45vh;
   right: 8vw;
   width: 30vw;
-  max-height: 105vh;
+  max-height: 55vh;
   background-color: rgba(0, 0, 0, 0.95);
   color: white;
   font-size: 3vmin;
   padding: 1vmin 1vmin;
   overflow: auto;
+}
+@media screen and (orientation: portrait) {
+  #english #profile {
+    top: 25vh;
+    width: 90vw;
+    height: 75vh;
+    right: 5vw;
+  }
 }
 #english #profile img {
   z-index: 4;

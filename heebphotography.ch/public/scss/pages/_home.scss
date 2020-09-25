@@ -44,12 +44,19 @@ $header_height:20vh;
         top: $header_height + 25vh;
         right: 8vw;
         width: 30vw;
-        max-height: 100vh - $header_height + 25vh; //just 100vh - top_height
+        max-height: 100vh - ($header_height + 25vh); //just 100vh - top_height
         background-color: rgb(0, 0, 0, 0.95);
         color: white;
         font-size: 3vmin;
         padding: 1vmin 1vmin;
         overflow: auto;
+
+        @media screen and (orientation: portrait) {
+            top: $header_height + 5vh;
+            width: 90vw;
+            height: 100vh - ($header_height + 5vh); //just 100vh - top_height
+            right: 5vw;
+        }
 
         img {
             z-index: 4;
