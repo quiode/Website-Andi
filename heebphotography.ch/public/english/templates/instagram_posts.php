@@ -21,4 +21,17 @@ function insta_post_url_getter($insta_user_url)
     }
     return $all_posts;
 }
-print_r(insta_post_url_getter("https://www.instagram.com/heebphotography/"));
+
+// print_r(insta_post_url_getter("https://www.instagram.com/heebphotography/"));
+function insta_html_getter($posts_urls)
+{
+    // gets the raw json information for every post and returns just the html
+    $all_html = [];
+    for ($i=0; $i < sizeof($posts_urls); $i++) {
+        $file_contents = file_get_contents("https://graph.facebook.com/v8.0/instagram_oembed?url=" . $posts_urls[$i] . "&access_token=1205071169874559|JqqcH3Zozl5Nh26TUzci4v5xIhQ");
+        $json_array = json_decode($file_contents, true);
+        array_push($all_html, $json_array["html"]);
+    }
+    return $all_html;
+}
+print_r(insta_html_getter(insta_post_url_getter("https://www.instagram.com/heebphotography/")));
