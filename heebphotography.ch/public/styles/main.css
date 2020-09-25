@@ -264,6 +264,10 @@
 #english #instagram_feed {
   top: 100vh;
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
 #navigationbar #navigation_button {
