@@ -117,7 +117,7 @@
             function open_starting_window() {
                 window.open("https://en.heebphotography.ch", "_self");
             }
-            setTimeout(open_starting_window, 1050);
+            setTimeout(open_starting_window, 2050);
         </script>
     </body>
 
