@@ -52,7 +52,6 @@
             <?php
             include "./templates/instagram_posts.php";
             $insta_urls = insta_post_url_getter("https://www.instagram.com/heebphotography/");
-            print_r($insta_urls);
             $embedded_html = insta_html_getter($insta_urls);
             array_unique($embedded_html); //removes possible dublicate links
             for ($i=0; $i < sizeof($embedded_html); $i++) {

@@ -3,6 +3,7 @@ function insta_post_url_getter($insta_user_url)
 {
     // gets the json of the first 10 or so posts
     $file_contents = file_get_contents($insta_user_url . "?__a=1");
+    echo $file_contents;
     $allpages = [];
     // seraches the url ending for every post and adds them to allpages
     while (substr_count($file_contents, "shortcode") > 0) {
