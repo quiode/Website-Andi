@@ -16,7 +16,7 @@ require "defines.php";
     );
 
     // creade facebook object
-    $facebook = new Facebook\Facebook($creds);
+    $facebook = new Facebook($creds);
 
     // helper
     $helper = $facebook->getRedirectLoginHelper();
@@ -27,9 +27,9 @@ require "defines.php";
     if (isset($_GET["code"])) { //get acces token
         try {
             $accesToken = $helper->getAccessToken();
-        } catch (Facebook\Exceptions\FacebookResponseException $e) { //graph error
+        } catch (\Facebook\Exceptions\FacebookResponseException $e) { //graph error
             echo "Graph returned an error " . $e->getMessage;
-        } catch (Facebook\Exceptions\FacebookSDKException $e) { //validate error
+        } catch (\Facebook\Exceptions\FacebookSDKException $e) { //validate error
             echo "Facebook SDK returned an error " . $e->getMessage;
         }
 
