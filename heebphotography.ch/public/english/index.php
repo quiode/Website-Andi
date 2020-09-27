@@ -19,7 +19,7 @@
 
         <section>
             <?php
-            echo __DIR__;
+            printf( __DIR__);
             $dir = "images-home";
             if (is_dir($dir)) {
                 $scan = scandir($dir);
