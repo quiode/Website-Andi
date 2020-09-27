@@ -44,13 +44,15 @@ if (isset($_GET["code"])) { //get acces token
         }
     }
 
-    echo "<pre>";
+    // Access Token Information
+    echo "<h1>Access Token Information</h1>";
     var_dump($accesToken);
 
-    // $accesToken = (string) $accesToken;
     echo "<h1>Long Lived Acces Token</h1>";
     print_r($accesToken);
 
+    // json file content
+    echo "<h1>Json File Content</h1>";
     file_put_contents("access_tokens.json", json_encode((array)$accesToken));
     echo "<br>";
     print_r(json_decode(file_get_contents("access_tokens.json", false)));
