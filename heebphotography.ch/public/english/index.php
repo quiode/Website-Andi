@@ -14,8 +14,8 @@
             <h2>Heeb Photography</h2>
         </header>
 
-        <?php require '../english/templates/navigationbar.php'?>
-        <?php require "../english/templates/work_in_progress.php"?>
+        <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
+        <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
 
         <section>
             <?php
@@ -50,7 +50,7 @@
 
         <section id="instagram_feed">
             <?php
-            include "../english/templates/instagram_posts.php";
+            include "./templates/instagram_posts.php";
             $insta_urls = insta_post_url_getter("https://www.instagram.com/heebphotography/");
             $embedded_html = insta_html_getter($insta_urls);
             array_unique($embedded_html); //removes possible dublicate links

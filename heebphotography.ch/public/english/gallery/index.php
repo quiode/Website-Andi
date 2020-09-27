@@ -12,15 +12,15 @@
     <body id="gallery">
 
         <!-- navigation element -->
-        <?php require '../templates/navigationbar.php'?>
+        <?php require __DIR__ . "/../templates/navigationbar.php"?>
         <!-- wip bar -->
-        <?php require "../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../templates/work_in_progress.php"?>
 
         <div>
             <?php
         // variables
-            $path_images = "./images/testing/";
-            $path_thumbnail_images = "./images/testing/thumbnail/";
+            $path_images = __DIR__ . "/./images/testing/";
+            $path_thumbnail_images = __DIR__ . "/./images/testing/thumbnail/";
         // searches the filename of all images in the images folder
             $images = scandir($path_images, 1);
             $thumbnail_images = scandir($path_thumbnail_images, 1);

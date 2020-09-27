@@ -12,9 +12,9 @@
 <body id="contact_form">
     <header></header>
     <!-- the navigation bar -->
-    <?php require '../templates/navigationbar.php'?>
+    <?php require __DIR__ . "/../templates/navigationbar.php"?>
     <!-- wip bar -->
-    <?php require "../templates/work_in_progress.php"?>
+    <?php require __DIR__ . "/../templates/work_in_progress.php"?>
     <!-- the contact form, you can leave a lot empty and just send it anonymous -->
     <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
         <!-- email -->

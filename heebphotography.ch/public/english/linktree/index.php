@@ -11,9 +11,9 @@
 
 
 <body id="linktree">
-    <?php require '../templates/navigationbar.php'?>
+    <?php require __DIR__ . "/../templates/navigationbar.php"?>
     <!-- wip bar -->
-    <?php require "../templates/work_in_progress.php"?>
+    <?php require __DIR__ . "/../templates/work_in_progress.php"?>
 
 
     <!-- the linktree (using php for eliminating white space bc fuck u html) -->

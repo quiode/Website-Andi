@@ -41,14 +41,10 @@
     //footer
         $message .= "<footer><b>Please do not reply to this message!</b></footer>";
 //imports all components
-        set_include_path("./PHPMailer-master");
-
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
 
-        require "./PHPMailer-master/src/" . "Exception.php";
-        require "./PHPMailer-master/src/" . "PHPMailer.php";
-        require "./PHPMailer-master/src/" . "SMTP.php";
+        require __DIR__ . "/../../../../vendor/autoload.php";
 //PHPMailer Object
         $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
 //SMTP Server
@@ -102,7 +98,7 @@
                 function close_success_window() {
                     success_window.close()
                 }
-                setTimeout(close_success_window, 5000);
+                setTimeout(close_success_window, 1000);
             } else {
                 var error_window = window.open("https://en.heebphotography.ch/contact/images/error_200px.png", "Error",
                     "height=200,width=200,resizable=no,left=200,top=200,location=no,menubar=no,scrollbar=no"
@@ -111,13 +107,13 @@
                 function close_error_window() {
                     error_window.close()
                 }
-                setTimeout(close_error_window, 5000);
+                setTimeout(close_error_window, 1000);
             }
 
             function open_starting_window() {
                 window.open("https://en.heebphotography.ch", "_self");
             }
-            setTimeout(open_starting_window, 5200);
+            setTimeout(open_starting_window, 1050);
         </script>
     </body>
 

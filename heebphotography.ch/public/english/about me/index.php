@@ -9,9 +9,9 @@
 </head>
 
 <body id="about_me">
-    <?php require '../templates/navigationbar.php'?>
+    <?php require __DIR__ . "/../templates/navigationbar.php"?>
     <!-- wip bar -->
-    <?php require "../templates/work_in_progress.php"?>
+    <?php require __DIR__ . "/../templates/work_in_progress.php"?>
     
     <p>
         Andreas Heeb
