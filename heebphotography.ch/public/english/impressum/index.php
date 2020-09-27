@@ -76,7 +76,7 @@
                 <!--Please note the terms and conditions of SwissAnwalt regarding any costs incurred if the source is omitted!-->
             </article>
         </section>
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php require "../templates/footer.php"?>
     </body>
 
 </html>

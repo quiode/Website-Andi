@@ -127,7 +127,7 @@
                 </div>
             </div>
         </div>
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php require "../templates/footer.php"?>
     </body>
 
 </html>
