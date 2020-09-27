@@ -14,12 +14,11 @@
             <h2>Heeb Photography</h2>
         </header>
 
-        <?php require  '../english/templates/navigationbar.php'?>
-        <?php require "../english/templates/work_in_progress.php"?>
+        <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
+        <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
 
         <section>
             <?php
-            printf( __DIR__);
             $dir = "images-home";
             if (is_dir($dir)) {
                 $scan = scandir($dir);
