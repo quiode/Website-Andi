@@ -51,9 +51,9 @@ if (isset($_GET["code"])) { //get acces token
     echo "<h1>Long Lived Acces Token</h1>";
     print_r($accesToken);
 
-    file_put_contents("access_tokens.txt", $accesToken);
+    file_put_contents("access_tokens.json", json_encode($accesToken));
     echo "<br>";
-    echo var_dump(file_get_contents($accesToken));
+    echo var_dump(file_get_contents(json_decode($accesToken)));
 } else { //display login url
     $permissions = ["public_profile", "instagram_basic", "pages_show_list"];
     $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URI, $permissions);
