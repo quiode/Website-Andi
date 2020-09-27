@@ -54,6 +54,11 @@ if (isset($_GET["code"])) { //get acces token
     // json file content
     echo "<h1>Json File Content</h1>";
     $short_temp_array = array("access_token" => $accesToken->getValue(), "ExpiresAt" => $accesToken->getExpiresAt());
+    try { //makes a new file if it doesnt exist
+        $jsoon_file = fopen("access_tokens.json", "x");
+        fclose($jsoon_file);
+    } catch (\Exception $th) {
+    }
     file_put_contents("access_tokens.json", json_encode($short_temp_array));
     echo "<br>";
     print_r(json_decode(file_get_contents("access_tokens.json"), true));
