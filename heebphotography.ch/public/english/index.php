@@ -61,7 +61,7 @@
             }
             ?>
         </section>
-        <?php require "../english/templates/footer.php"?>
+        <?php require  __DIR__ . "/../english/templates/footer.php"?>
     </body>
 
 </html>

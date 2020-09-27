@@ -30,7 +30,7 @@
         <br>
         🐦
     </p>
-    <?php require "../templates/footer.php"?>
+    <?php require  __DIR__ . "/../templates/footer.php"?>
 </body>
 
 </html>
