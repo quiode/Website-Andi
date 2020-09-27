@@ -42,16 +42,14 @@ require "defines.php";
             } catch (\Facebook\Exceptions\FacebookSDKException $e) {
                 echo "Error getting long lived access token " . $e->getMessage();
             }
-        } else {
-            echo "token is long lived";
-            echo "<br>";
-            print_r($accesToken->isExpired());
-            echo "<br>";
-            print_r($accesToken->isLongLived());
         }
 
-        echo '<h1>Long Lived Access Token</h1>';
-        print_r((string)$accesToken);
+        echo "<pre>";
+        var_dump($accesToken);
+
+        $accesToken = (string) $accesToken;
+        echo "<h1>Long Lived Acces Token</h1>";
+        print_r($accesToken);
     } else { //display login url
         $permissions = ["public_profile", "instagram_basic", "pages_show_list"];
         $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URI, $permissions);
