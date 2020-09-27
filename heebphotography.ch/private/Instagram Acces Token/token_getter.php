@@ -42,6 +42,8 @@ require "defines.php";
             } catch (\Facebook\Exceptions\FacebookSDKException $e) {
                 echo "Error getting long lived access token " . $e->getMessage();
             }
+        } else {
+            echo "token is long loved";
         }
 
         echo '<h1>Long Lived Access Token</h1>';
