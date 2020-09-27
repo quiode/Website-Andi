@@ -44,7 +44,9 @@ require "defines.php";
             }
         } else {
             echo "token is long lived";
+            echo "<br>";
             print_r($accesToken->isExpired());
+            echo "<br>";
             print_r($accesToken->isLongLived());
         }
 
