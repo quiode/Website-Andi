@@ -1,4 +1,4 @@
-AuthUserFile .htpasswd
+AuthUserFile /var/www/Website-Andi/heebphotography.ch/private/.htpasswd
 AuthType Basic
 AuthName "My Secret Folder"
 Require valid-user
