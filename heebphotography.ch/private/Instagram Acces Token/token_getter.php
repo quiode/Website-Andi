@@ -53,7 +53,7 @@ if (isset($_GET["code"])) { //get acces token
 
     file_put_contents("access_tokens.json", json_encode($accesToken));
     echo "<br>";
-    echo var_dump(file_get_contents(json_decode($accesToken)));
+    echo var_dump(json_decode(file_get_contents("access_tokens.json", false)));
 } else { //display login url
     $permissions = ["public_profile", "instagram_basic", "pages_show_list"];
     $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URI, $permissions);
