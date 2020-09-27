@@ -2,4 +2,3 @@ AuthName "Dialog prompt"
 AuthType Basic
 AuthUserFile /var/www/Website-Andi/heebphotography.ch/private/.htpasswd
 Require user admin
-Require local
