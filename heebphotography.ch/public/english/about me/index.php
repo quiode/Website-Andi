@@ -30,6 +30,7 @@
         <br>
         🐦
     </p>
+    <?php require "../templates/footer.php"?>
 </body>
 
 </html>

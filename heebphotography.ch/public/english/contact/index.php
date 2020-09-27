@@ -52,6 +52,7 @@
         <!-- submit button -->
         <input id="submit" type="submit" value="Submit">
     </form>
+    <?php require "../templates/footer.php"?>
 </body>
 
 </html>

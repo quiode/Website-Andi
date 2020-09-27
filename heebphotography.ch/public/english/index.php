@@ -61,6 +61,7 @@
             }
             ?>
         </section>
+        <?php require "../english/templates/footer.php"?>
     </body>
 
 </html>
