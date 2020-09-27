@@ -51,7 +51,7 @@ if (isset($_GET["code"])) { //get acces token
     echo "<h1>Long Lived Acces Token</h1>";
     print_r($accesToken);
 
-    file_put_contents("access_tokens.json", json_encode((array)$accesToken));
+    file_put_contents("access_tokens.json", json_encode($accesToken));
     echo "<br>";
     print_r(json_decode(file_get_contents("access_tokens.json", false)));
 } else { //display login url
