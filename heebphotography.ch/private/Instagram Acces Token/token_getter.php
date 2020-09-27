@@ -28,9 +28,9 @@ if (isset($_GET["code"])) { //get acces token
     try {
         $accesToken = $helper->getAccessToken();
     } catch (\Facebook\Exceptions\FacebookResponseException $e) { //graph error
-        echo "Graph returned an error " . $e->getMessage;
+        echo "Graph returned an error " . $e->getMessage();
     } catch (\Facebook\Exceptions\FacebookSDKException $e) { //validate error
-        echo "Facebook SDK returned an error " . $e->getMessage;
+        echo "Facebook SDK returned an error " . $e->getMessage();
     }
 
     echo '<h1>Short Lived Access Token</h1>';
@@ -53,12 +53,12 @@ if (isset($_GET["code"])) { //get acces token
 
     // json file content
     echo "<h1>Json File Content</h1>";
-    $short_temp_array = array("accessToken" => $accesToken->getValue(), "ExpiresAt" => $accesToken->getExpiresAt());
+    $short_temp_array = array("access_token" => $accesToken->getValue(), "ExpiresAt" => $accesToken->getExpiresAt());
     file_put_contents("access_tokens.json", json_encode($short_temp_array));
     echo "<br>";
     print_r(json_decode(file_get_contents("access_tokens.json"), true));
 } else { //display login url
-    $permissions = ["public_profile", "instagram_basic", "pages_show_list", "pages_read_engagement"];
+    $permissions = ["public_profile", "instagram_basic", "pages_show_list", "pages_read_engagement", "instagram_graph_user_profile"];
     $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URI, $permissions);
 
     echo '<a href="' . $loginUrl . '">
