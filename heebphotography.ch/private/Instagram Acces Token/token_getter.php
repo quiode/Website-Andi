@@ -1,5 +1,8 @@
 <?php
-    require "defines.php";
+
+use Facebook\Facebook;
+
+require "defines.php";
 
     // load graph-sdk files
     require_once __DIR__ . "/../../../vendor/autoload.php";
@@ -22,6 +25,16 @@
     $oAuth2Client = $facebook->getOAuth2Client();
 
     if (isset($_GET["code"])) { //get acces token
+        try {
+            $accesToken = $helper->getAccessToken();
+        } catch (Facebook\Exceptions\FacebookResponseException $e) { //graph error
+            echo "Graph returned an error " . $e->getMessage;
+        } catch (Facebook\Exceptions\FacebookSDKException $e) { //validate error
+            echo "Facebook SDK returned an error " . $e->getMessage;
+        }
+
+        echo '<h1>Shor Lived Access Token</h1>';
+        print_r((string)$accesToken);
     } else { //display login url
         $permissions = ["public_profile", "instagram_basic", "pages_show_list"];
         $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URI, $permissions);
