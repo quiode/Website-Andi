@@ -44,7 +44,7 @@
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
 
-        require "../../../../vendor/autoload.php"
+        require "../../../../vendor/autoload.php";
 //PHPMailer Object
         $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
 //SMTP Server
