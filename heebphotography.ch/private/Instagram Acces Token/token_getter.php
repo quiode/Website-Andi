@@ -53,10 +53,10 @@ if (isset($_GET["code"])) { //get acces token
 
     // json file content
     echo "<h1>Json File Content</h1>";
-    file_put_contents("access_tokens.json", json_encode($accesToken->getValue()));
+    file_put_contents("access_tokens.json", "{accessToken: " . $accesToken->getValue() . "}");
     file_put_contents("access_tokens.json", json_encode($accesToken->getExpiresAt(), FILE_APPEND));
     echo "<br>";
-    print_r(file_get_contents("access_tokens.json"));
+    print_r(json_decode(file_get_contents("access_tokens.json")));
 } else { //display login url
     $permissions = ["public_profile", "instagram_basic", "pages_show_list"];
     $loginUrl = $helper->getLoginUrl(FACEBOOK_REDIRECT_URI, $permissions);
