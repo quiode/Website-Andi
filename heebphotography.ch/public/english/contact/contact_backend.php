@@ -41,14 +41,10 @@
     //footer
         $message .= "<footer><b>Please do not reply to this message!</b></footer>";
 //imports all components
-        set_include_path("./PHPMailer-master");
-
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
 
-        require "./PHPMailer-master/src/" . "Exception.php";
-        require "./PHPMailer-master/src/" . "PHPMailer.php";
-        require "./PHPMailer-master/src/" . "SMTP.php";
+        require "../../../../vendor/autoload.php"
 //PHPMailer Object
         $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
 //SMTP Server
