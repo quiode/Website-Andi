@@ -33,7 +33,18 @@ require "defines.php";
             echo "Facebook SDK returned an error " . $e->getMessage;
         }
 
-        echo '<h1>Shor Lived Access Token</h1>';
+        echo '<h1>Short Lived Access Token</h1>';
+        print_r((string)$accesToken);
+
+        if (!$accesToken->isLongLived()) { //exchange short for long
+            try {
+                $accesToken = $oAuth2Client->getLongLivedAccessToken($accesToken);
+            } catch (\Facebook\Exceptions\FacebookSDKException $e) {
+                echo "Error getting long lived access token " . $e->getMessage();
+            }
+        }
+
+        echo '<h1>Long Lived Access Token</h1>';
         print_r((string)$accesToken);
     } else { //display login url
         $permissions = ["public_profile", "instagram_basic", "pages_show_list"];
