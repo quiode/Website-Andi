@@ -53,8 +53,8 @@ if (isset($_GET["code"])) { //get acces token
 
     // json file content
     echo "<h1>Json File Content</h1>";
-    file_put_contents("access_tokens.json", '{"accessToken": "' . $accesToken->getValue() . '"}');
-    file_put_contents("access_tokens.json", json_encode($accesToken->getExpiresAt(), FILE_APPEND));
+    $short_temp_array = array("accessToken" => $accesToken->getValue(), "ExpiresAt" => $accesToken->getExpiresAt());
+    file_put_contents("access_tokens.json", json_encode($short_temp_array));
     echo "<br>";
     print_r(json_decode(file_get_contents("access_tokens.json")));
 } else { //display login url
