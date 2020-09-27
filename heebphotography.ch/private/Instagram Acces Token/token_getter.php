@@ -43,7 +43,9 @@ require "defines.php";
                 echo "Error getting long lived access token " . $e->getMessage();
             }
         } else {
-            echo "token is long loved";
+            echo "token is long lived";
+            print_r($accesToken->isExpired());
+            print_r($accesToken->isLongLived());
         }
 
         echo '<h1>Long Lived Access Token</h1>';
