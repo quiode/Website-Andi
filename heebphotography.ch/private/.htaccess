@@ -1,4 +1,4 @@
-AuthUserFile /var/www/Website-Andi/heebphotography.ch/private/.htpasswd
+AuthName "Dialog prompt"
 AuthType Basic
-AuthName "My Secret Folder"
+AuthUserFile /var/www/Website-Andi/heebphotography.ch/private/.htpasswd
 Require valid-user
