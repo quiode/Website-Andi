@@ -121,14 +121,7 @@ function ShortCode_getter($media_ids, $accessToken)
         if ($result != "false") {
             $result = json_decode($result, true);
 
-            $media_ids = $result["data"];
-            //returns only the id's in an array
-            $temp_media_ids = array();
-            for ($i=0; $i < sizeof($media_ids); $i++) {
-                array_push($temp_media_ids, $media_ids[$i]["id"]);
-            }
-            $media_ids = $temp_media_ids;
-            return $media_ids;
+            return $result;
         } else { //returns an error, echos the error
             if (curl_error($curl_session) != "") {
                 echo (curl_error($curl_session));
