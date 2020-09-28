@@ -29,8 +29,7 @@ function Ig_Page_Id_getter()
     if ($result != "false") {
         $result = json_decode($result, true);
 
-        var_dump($result["data"][0]["id"]);
-        $page_id = $result["data"]["id"];
+        $page_id = $result["data"][0]["id"];
         curl_close($curl_session);
         return $page_id;
     } else { //returns an error, echos the error
