@@ -50,10 +50,8 @@
 
         <section id="instagram_feed">
             <?php
-            $insta_urls = insta_post_url_getter("https://www.instagram.com/heebphotography/");
-            $embedded_html = insta_html_getter($insta_urls);
-            array_unique($embedded_html); //removes possible dublicate links
-            for ($i=0; $i < sizeof($embedded_html); $i++) {
+            $embedded_html = file_get_contents("embeddedhtml.json", true);
+            for ($i=0; $i < sizeof($embeddedhtml); $i++) {
                 echo "<article class=\"instagram-posts\">";
                 echo $embedded_html[$i];
                 echo "</article>";
