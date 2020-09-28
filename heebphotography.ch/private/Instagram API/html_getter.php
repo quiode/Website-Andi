@@ -180,8 +180,8 @@ $embeddedhtml = EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_gette
 $file_path = "/var/www/Website-Andi/heebphotography.ch/public/english/";
     
 try { //makes a new file if it doesnt exist
-    $jsoon_file = fopen($file_path . "embeddedhtml.json", "x");
-    fclose($jsoon_file);
+    $json_file = fopen($file_path . "embeddedhtml.json", "x");
+    fclose($json_file);
 } catch (\Exception $th) {
 }
 
