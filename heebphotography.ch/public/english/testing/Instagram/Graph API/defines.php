@@ -1,6 +1,6 @@
 <?php
     session_start();
 
-    define("FACEBOOK_APP_ID", "946808705814153");
-    define("FACEBOOK_APP_SECRET", "5db3e7bd4a3e8bcb6783ab9b91e4e41b");
-    define("FACEBOOK_REDIRECT_URI", "https://heebphotography.ch/private/Instagram%20API/token_getter.php");
+    define("FACEBOOK_APP_ID", "1424456311083610");
+    define("FACEBOOK_APP_SECRET", "c9d429943c0622b8ed25e2b8c13be941");
+    define("FACEBOOK_REDIRECT_URI", "https://en.heebphotography.ch/testing/Instagram/Graph%20API/token_getter.php");
