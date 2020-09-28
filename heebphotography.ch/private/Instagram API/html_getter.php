@@ -41,7 +41,7 @@ function Facebook_Page_Id_getter($accessToken)
 
 function Ig_Id_getter($page_id, $accessToken)
 {
-    // getting user page information
+    // getting ig id
     $url =  "https://graph.facebook.com/v8.0/" . $page_id . "?fields=instagram_business_account&access_token=" . $accessToken;
     // start curl session and sets options
     $curl_session = curl_init();
@@ -71,7 +71,7 @@ function Ig_Id_getter($page_id, $accessToken)
 
 function Ig_Media_getter($ig_id, $accessToken)
 {
-    // getting user page information
+    // getting media ids
     $url =  "https://graph.facebook.com/v8.0/" . $ig_id . "/media?access_token=" . $accessToken;
     // start curl session and sets options
     $curl_session = curl_init();
@@ -108,7 +108,7 @@ function ShortCode_getter($media_ids, $accessToken)
 {
     $shortcodes = array();
     for ($i=0; $i < sizeof($media_ids); $i++) {
-        // getting user page information
+        // getting shortcode information
         $url =  "https://graph.facebook.com/v8.0/" . $media_ids[$i] . "?fields=shortcode&access_token=" . $accessToken;
         // start curl session and sets options
         $curl_session = curl_init();
@@ -121,7 +121,7 @@ function ShortCode_getter($media_ids, $accessToken)
         if ($result != "false") {
             $result = json_decode($result, true);
 
-            return $result;
+            array_push($shortcodes, $result["shortcode"]);
         } else { //returns an error, echos the error
             if (curl_error($curl_session) != "") {
                 echo (curl_error($curl_session));
@@ -133,6 +133,7 @@ function ShortCode_getter($media_ids, $accessToken)
             }
         }
     }
+    return $shortcodes;
 }
 
 // getting the accessToken
