@@ -169,16 +169,28 @@ function EmbeddedHtml_getter($shortcodes, $accessToken)
 }
 
 // getting the accessToken
-    // gets the Token Data
-    $accessTokenData = file_get_contents("access_tokens.json", true);
-    $accessTokenData = json_decode($accessTokenData, true);
-    // deconstructs the Data
-    $accessToken = $accessTokenData["access_token"];
+// gets the Token Data
+$accessTokenData = file_get_contents("access_tokens.json", true);
+$accessTokenData = json_decode($accessTokenData, true);
+// deconstructs the Data
+$accessToken = $accessTokenData["access_token"];
 
-//debugging/testing
-function Just_Get_It_Done($accessToken)
-{
-    return EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken), $accessToken);
+// saves it to a json file available for english/index.php
+$embeddedhtml = EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken), $accessToken);
+$file_path = "/var/www/Website-Andi/heebphotography.ch/public/english/";
+    
+try { //makes a new file if it doesnt exist
+    $jsoon_file = fopen($file_path . "embeddedhtml.json", "x");
+    fclose($jsoon_file);
+} catch (\Exception $th) {
 }
 
-var_dump(Just_Get_It_Done($accessToken));
+file_put_contents($file_path . "embeddedhtml.json", $embeddedhtml);
+
+// //debugging/testing
+// function Just_Get_It_Done($accessToken)
+// {
+//     return EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken), $accessToken);
+// }
+
+//     var_dump(Just_Get_It_Done($accessToken));
