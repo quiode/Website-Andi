@@ -100,6 +100,12 @@ function Ig_Media_getter($ig_id)
         $result = json_decode($result, true);
 
         $media_ids = $result["data"];
+        //returns only the id's in an array
+        $temp_media_ids = array();
+        for ($i=0; $i < sizeof($media_ids); $i++) {
+            array_push($temp_media_ids, $media_ids[$i]["id"]);
+        }
+        $media_ids = $temp_media_ids;
         return $media_ids;
     } else { //returns an error, echos the error
         if (curl_error($curl_session) != "") {
