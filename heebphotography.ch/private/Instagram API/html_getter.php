@@ -44,4 +44,41 @@ function Ig_Page_Id_getter()
     }
 }
 
-echo Ig_Page_Id_getter();
+function Ig_Instagram_Id_getter($page_id)
+{
+    {
+        // gets the Token Data
+        $accessTokenData = file_get_contents("access_tokens.json", true);
+        $accessTokenData = json_decode($accessTokenData, true);
+        // deconstructs the Data
+        $accessToken = $accessTokenData["access_token"];
+        // getting user page information
+        $url =  "https://graph.facebook.com/v8.0/" . $page_id . "?fields=instagram_business_account&access_token=" . $accessToken;
+        // start curl session and sets options
+        $curl_session = curl_init();
+    
+        curl_setopt($curl_session, CURLOPT_URL, $url);
+        curl_setopt($curl_session, CURLOPT_RETURNTRANSFER, true);
+        // gets the result
+        $result = curl_exec($curl_session);
+        // checks if the result is correct and formats it
+    if ($result != "false") {
+        $result = json_decode($result, true);
+    
+        $ig_id = $result["instagram_business_account"]["id"];
+        curl_close($curl_session);
+        return $ig_id;
+    } else { //returns an error, echos the error
+        if (curl_error($curl_session) != "") {
+            echo (curl_error($curl_session));
+            curl_close($curl_session);
+            return "error";
+        } else {
+            curl_close($curl_session);
+            return "error";
+        }
+    }
+    }
+}
+
+echo Ig_Instagram_Id_getter(Ig_Page_Id_getter());
