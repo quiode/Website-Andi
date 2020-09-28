@@ -100,7 +100,7 @@ function Ig_Media_getter($ig_id)
         $result = json_decode($result, true);
 
         $media_ids = $result["data"];
-        return $media_ids
+        return $media_ids;
     } else { //returns an error, echos the error
         if (curl_error($curl_session) != "") {
             echo (curl_error($curl_session));
