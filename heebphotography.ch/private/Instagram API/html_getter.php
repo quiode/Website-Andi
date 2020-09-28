@@ -143,4 +143,4 @@ function ShortCode_getter($media_ids, $accessToken)
     $accessToken = $accessTokenData["access_token"];
 
 //debugging/testing
-var_dump(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken));
+var_dump(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken));
