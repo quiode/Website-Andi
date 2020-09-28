@@ -27,14 +27,16 @@ function Token_updater()
                 $accessTokenExpiredate = date("Y-m-d H:i:s");
                 $accessTokenData = array("access_token" => $accessToken, "ExpiresAt" => array("date" => $accessTokenExpiredate));
                 file_put_contents("access_tokens.json", json_encode($accessTokenData));
+                curl_close($curl_session);
                 return $result;
         } else {
             if (curl_error($curl_session) != "") {
+                curl_close($curl_session);
                 return "Error: " . curl_error($curl_session);
             } else {
+                curl_close($curl_session);
                 return "Error!";
             }
         }
-        curl_close($curl_session);
     }
 }
