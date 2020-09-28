@@ -190,7 +190,6 @@ file_put_contents($file_path . "embeddedhtml.json", json_encode($embeddedhtml));
 // //debugging/testing
 $mediaid = Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken)[2];
 echo $mediaid;
-echo "<br>";
 if (strpos($mediaid, '_') !== false) {
     $pieces = explode('_', $mediaid);
     $mediaid = $pieces[0];
