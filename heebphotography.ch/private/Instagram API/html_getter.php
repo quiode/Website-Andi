@@ -176,9 +176,9 @@ function EmbeddedHtml_getter($shortcodes, $accessToken)
     $accessToken = $accessTokenData["access_token"];
 
 //debugging/testing
-function just_get_it_done($accessToken)
+function Just_Get_It_Done($accessToken)
 {
-    return EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken), $accessToken));
+    return EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken), $accessToken);
 }
 
-var_dump(just_get_it_done($accessToken));
+var_dump(Just_Get_It_Done($accessToken));
