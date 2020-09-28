@@ -188,7 +188,7 @@ try { //makes a new file if it doesnt exist
 file_put_contents($file_path . "embeddedhtml.json", json_encode($embeddedhtml));
 
 // //debugging/testing
-$id = Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken)[0];
+$id = Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken)[2];
 $parts = explode('_', $id);
 $id = $parts[0];
 $alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
