@@ -42,7 +42,7 @@ function Facebook_Page_Id_getter($accessToken)
 function Ig_Id_getter($page_id, $accessToken)
 {
     // getting ig id
-    $url =  "https://graph.facebook.com/v8.0/" . $page_id . "?fields=instagram_business_account&access_token=" . $accessToken;
+    $url = "https://graph.facebook.com/v8.0/" . $page_id . "?fields=instagram_business_account&access_token=" . $accessToken;
     // start curl session and sets options
     $curl_session = curl_init();
 
@@ -72,7 +72,7 @@ function Ig_Id_getter($page_id, $accessToken)
 function Ig_Media_getter($ig_id, $accessToken)
 {
     // getting media ids
-    $url =  "https://graph.facebook.com/v8.0/" . $ig_id . "/media?access_token=" . $accessToken;
+    $url = "https://graph.facebook.com/v8.0/" . $ig_id . "/media?access_token=" . $accessToken;
     // start curl session and sets options
     $curl_session = curl_init();
 
@@ -109,7 +109,7 @@ function ShortCode_getter($media_ids, $accessToken)
     $shortcodes = array();
     for ($i=0; $i < sizeof($media_ids); $i++) {
         // getting shortcode information
-        $url =  "https://graph.facebook.com/v8.0/" . $media_ids[$i] . "?fields=shortcode&access_token=" . $accessToken;
+        $url = "https://graph.facebook.com/v8.0/" . $media_ids[$i] . "?fields=shortcode&access_token=" . $accessToken;
         // start curl session and sets options
         $curl_session = curl_init();
 
@@ -136,6 +136,38 @@ function ShortCode_getter($media_ids, $accessToken)
     return $shortcodes;
 }
 
+function EmbeddedHtml_getter($shortcodes, $accessToken)
+{
+    $embeddedhtml = array();
+    for ($i=0; $i < sizeof($shortcodes); $i++) {
+        // getting embedded html
+        $url = "https://graph.facebook.com/v8.0/instagram_oembed?url=https://www.instagram.com/p/" . $shortcodes[$i] . "/&access_token=" . $accessToken;
+        // start curl session and sets options
+        $curl_session = curl_init();
+
+        curl_setopt($curl_session, CURLOPT_URL, $url);
+        curl_setopt($curl_session, CURLOPT_RETURNTRANSFER, true);
+        // gets the result
+        $result = curl_exec($curl_session);
+        // checks if the result is correct and formats it
+        if ($result != "false") {
+            $result = json_decode($result, true);
+
+            array_push($embeddedhtml, $result["html"]);
+        } else { //returns an error, echos the error
+            if (curl_error($curl_session) != "") {
+                echo (curl_error($curl_session));
+                curl_close($curl_session);
+                return "error";
+            } else {
+                curl_close($curl_session);
+                return "error";
+            }
+        }
+    }
+    return $embeddedhtml;
+}
+
 // getting the accessToken
     // gets the Token Data
     $accessTokenData = file_get_contents("access_tokens.json", true);
@@ -144,4 +176,4 @@ function ShortCode_getter($media_ids, $accessToken)
     $accessToken = $accessTokenData["access_token"];
 
 //debugging/testing
-var_dump(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken));
+var_dump(EmbeddedHtml_getter(ShortCode_getter(Ig_Media_getter(Ig_Id_getter(Facebook_Page_Id_getter($accessToken), $accessToken), $accessToken), $accessToken), $accessToken));
