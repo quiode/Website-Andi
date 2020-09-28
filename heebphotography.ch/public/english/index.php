@@ -51,6 +51,7 @@
         <section id="instagram_feed">
             <?php
             $embedded_html = file_get_contents("embeddedhtml.json", true);
+            var_dump($embedded_html);
             for ($i=0; $i < sizeof($embedded_html); $i++) {
                 echo "<article class=\"instagram-posts\">";
                 echo $embedded_html[$i];
