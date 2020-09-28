@@ -9,7 +9,7 @@ require_once "token_updater.php";
 // updates token
 Token_updater();
 
-function Ig_Business_Id_getter()
+function Ig_Page_Id_getter()
 {
     // gets the Token Data
     $accessTokenData = file_get_contents("access_tokens.json", true);
@@ -23,21 +23,25 @@ function Ig_Business_Id_getter()
 
     curl_setopt($curl_session, CURLOPT_URL, $url);
     curl_setopt($curl_session, CURLOPT_RETURNTRANSFER, true);
+    // gets the result
     $result = curl_exec($curl_session);
-
-    //debugging
-    var_dump(json_decode($result, true));
-
+    // checks if the result is correct and formats it
     if ($result != "false") {
         $result = json_decode($result, true);
-    } else {
+
+        $page_id = $result["data"]["id"];
+        curl_close($curl_session);
+        return $page_id;
+    } else { //returns an error, echos the error
         if (curl_error($curl_session) != "") {
-            return "Error: " . curl_error($curl_session);
+            echo (curl_error($curl_session));
+            curl_close($curl_session);
+            return "error";
         } else {
-            return "Error!";
+            curl_close($curl_session);
+            return "error";
         }
     }
-    curl_close($curl_session);
 }
 
-ig_business_id_getter();
+echo Ig_Page_Id_getter();
