@@ -87,7 +87,7 @@ function Ig_Media_getter($ig_id)
     // deconstructs the Data
     $accessToken = $accessTokenData["access_token"];
     // getting user page information
-    $url =  "https://graph.facebook.com/" . $ig_id . "/media/&access_token=" . $accessToken;
+    $url =  "https://graph.facebook.com/" . $ig_id . "/media?access_token=" . $accessToken;
     // start curl session and sets options
     $curl_session = curl_init();
 
