@@ -2,7 +2,7 @@
 
 use Facebook\Facebook;
 
-require "defines.php";
+require_once "defines.php";
 
 // load graph-sdk files
 require_once __DIR__ . "/../../../vendor/autoload.php";
