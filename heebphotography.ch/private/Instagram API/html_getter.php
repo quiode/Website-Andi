@@ -72,7 +72,7 @@ function Ig_Id_getter($page_id, $accessToken)
 function Ig_Media_getter($ig_id, $accessToken)
 {
     // getting user page information
-    $url =  "https://graph.facebook.com/" . $ig_id . "/media?access_token=" . $accessToken;
+    $url =  "https://graph.facebook.com/v8.0/" . $ig_id . "/media?access_token=" . $accessToken;
     // start curl session and sets options
     $curl_session = curl_init();
 
@@ -106,35 +106,38 @@ function Ig_Media_getter($ig_id, $accessToken)
 
 function ShortCode_getter($media_ids, $accessToken)
 {
-    // getting user page information
-    $url =  "https://graph.facebook.com/" . $ig_id . "/media?access_token=" . $accessToken;
-    // start curl session and sets options
-    $curl_session = curl_init();
+    $shortcodes = array();
+    for ($i=0; $i < sizeof($media_ids); $i++) {
+        // getting user page information
+        $url =  "https://graph.facebook.com/v8.0/" . $media_ids[$i] . "?fields=shortcode&access_token=" . $accessToken;
+        // start curl session and sets options
+        $curl_session = curl_init();
 
-    curl_setopt($curl_session, CURLOPT_URL, $url);
-    curl_setopt($curl_session, CURLOPT_RETURNTRANSFER, true);
-    // gets the result
-    $result = curl_exec($curl_session);
-    // checks if the result is correct and formats it
-    if ($result != "false") {
-        $result = json_decode($result, true);
+        curl_setopt($curl_session, CURLOPT_URL, $url);
+        curl_setopt($curl_session, CURLOPT_RETURNTRANSFER, true);
+        // gets the result
+        $result = curl_exec($curl_session);
+        // checks if the result is correct and formats it
+        if ($result != "false") {
+            $result = json_decode($result, true);
 
-        $media_ids = $result["data"];
-        //returns only the id's in an array
-        $temp_media_ids = array();
-        for ($i=0; $i < sizeof($media_ids); $i++) {
-            array_push($temp_media_ids, $media_ids[$i]["id"]);
-        }
-        $media_ids = $temp_media_ids;
-        return $media_ids;
-    } else { //returns an error, echos the error
-        if (curl_error($curl_session) != "") {
-            echo (curl_error($curl_session));
-            curl_close($curl_session);
-            return "error";
-        } else {
-            curl_close($curl_session);
-            return "error";
+            $media_ids = $result["data"];
+            //returns only the id's in an array
+            $temp_media_ids = array();
+            for ($i=0; $i < sizeof($media_ids); $i++) {
+                array_push($temp_media_ids, $media_ids[$i]["id"]);
+            }
+            $media_ids = $temp_media_ids;
+            return $media_ids;
+        } else { //returns an error, echos the error
+            if (curl_error($curl_session) != "") {
+                echo (curl_error($curl_session));
+                curl_close($curl_session);
+                return "error";
+            } else {
+                curl_close($curl_session);
+                return "error";
+            }
         }
     }
 }
