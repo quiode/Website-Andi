@@ -54,7 +54,7 @@
             var_dump($embedded_html);
             for ($i=0; $i < sizeof($embedded_html); $i++) {
                 echo "<article class=\"instagram-posts\">";
-                echo $embedded_html["html"][$i];
+                echo $embedded_html[$i];
                 echo "</article>";
             }
             ?>
