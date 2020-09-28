@@ -138,7 +138,7 @@ function ShortCode_getter($media_ids, $accessToken)
 
 function EmbeddedHtml_getter($shortcodes, $accessToken)
 {
-    $embeddedhtml = array("html" => array());
+    $embeddedhtml = array();
     for ($i=0; $i < sizeof($shortcodes); $i++) {
         // getting embedded html
         $url = "https://graph.facebook.com/v8.0/instagram_oembed?url=https://www.instagram.com/p/" . $shortcodes[$i] . "/&access_token=" . $accessToken;
@@ -153,7 +153,7 @@ function EmbeddedHtml_getter($shortcodes, $accessToken)
         if ($result != "false") {
             $result = json_decode($result, true);
 
-            array_push($embeddedhtml["html"], $result["html"]);
+            array_push($embeddedhtml, $result["html"]);
         } else { //returns an error, echos the error
             if (curl_error($curl_session) != "") {
                 echo (curl_error($curl_session));
