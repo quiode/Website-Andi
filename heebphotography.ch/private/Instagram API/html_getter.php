@@ -26,7 +26,7 @@ function Ig_Business_Id_getter()
     $result = curl_exec($curl_session);
 
     //debugging
-    var_dump($result);
+    var_dump(json_decode($result, true));
 
     if ($result != "false") {
         $result = json_decode($result, true);
