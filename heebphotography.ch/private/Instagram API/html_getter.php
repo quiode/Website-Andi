@@ -185,7 +185,7 @@ try { //makes a new file if it doesnt exist
 } catch (\Exception $th) {
 }
 
-file_put_contents($file_path . "embeddedhtml.json", $embeddedhtml);
+file_put_contents($file_path . "embeddedhtml.json", json_encode($embeddedhtml));
 
 // //debugging/testing
 // function Just_Get_It_Done($accessToken)
