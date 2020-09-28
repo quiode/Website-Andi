@@ -196,7 +196,7 @@ if (strpos($mediaid, '_') !== false) {
     $userid = $pieces[1];
 }
 
-$alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+$alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
 $shortcode = '';
 while ($mediaid > 0) {
     $remainder = $mediaid % 64;
