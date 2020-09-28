@@ -706,8 +706,8 @@ footer {
   display: flex;
   align-items: center;
   font-size: 13px;
-  margin-bottom: 10px;
-  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 p {
