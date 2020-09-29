@@ -43,20 +43,22 @@
         //imports all components
         use PHPMailer\PHPMailer\PHPMailer;
         use PHPMailer\PHPMailer\Exception;
+        use PHPMailer\PHPMailer\SMTP;
 
         require __DIR__ . "/../../../../vendor/autoload.php";
         //PHPMailer Object
         $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
         //SMTP Server
-        $mail->SMTPAuth   = true;                  // enable SMTP authentication
-        $mail->Host       = "smtp.gmail.com"; // sets the SMTP server
-        $mail->Port       = 465;                    // sets the SMTP port
+        $mail->isSMTP();    //enable SMTP
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER; //shows stuff for debuging
+        $mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
+        $mail->Host = "smtp.gmail.com"; // sets the SMTP server
+        $mail->Port = 465;                    // sets the SMTP port
         $mail->SMTPSecure = 'ssl';                  // TLS/SSL
-        $mail->Username   = "contact.form.heebphotography@gmail.com"; // SMTP account username
-        $mail->Password   = "J7lo92nfoVcb";        // SMTP account password
-        //From email address and name
-        $mail->From = "contact.form.heebphotography@gmail.com";     //sender address
-        $mail->FromName = "Contact Form";   //sender name
+        $mail->Username = "contact.form.heebphotography@gmail.com"; // SMTP account username
+        $mail->Password = "J7lo92nfoVcb";        // SMTP account password
+        //From email address and name.
+        $mail->setFrom("contact.form.heebphotography@gmail.com", "Contact Form");
         //To address and name
         $mail->addAddress("andreas.heeb@heebphotography.ch"); //Recipient
         //Address to which recipient will reply
@@ -68,15 +70,14 @@
         $mail->Body = $message;
         $mail->AltBody = $plain . "&NewLine;The message:&NewLine;" . strip_tags($_POST["message"]);
         //sends the actual email
-        try {
-            $mail->send();
+        if ($mail->send()) {
             // sends the status of the mail sending process to javascript
             echo <<<EOT
             <script>
             sessionStorage.setItem("mail_status", "true");
             </script>
             EOT;
-        } catch (Exception $e) {
+        } else {
             // sends the status of the mail sending process to javascript
             echo <<<EOT
             <script>
@@ -100,6 +101,7 @@
                 }
                 setTimeout(close_success_window, 1000);
             } else {
+                alert(sessionStorage.getItem("mail_error"));
                 var error_window = window.open("https://en.heebphotography.ch/contact/images/error_200px.png", "Error",
                     "height=200,width=200,resizable=no,left=200,top=200,location=no,menubar=no,scrollbar=no"
                 )
@@ -111,7 +113,7 @@
             }
 
             function open_starting_window() {
-                window.open("https://en.heebphotography.ch", "_self");
+                window.open("https://en.heebphotography.ch/contact/", "_self");
             }
             setTimeout(open_starting_window, 1050);
         </script>
