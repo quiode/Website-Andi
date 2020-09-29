@@ -7,6 +7,12 @@
 
     <body>
         <?php
+        //imports all components
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+        use PHPMailer\PHPMailer\SMTP;
+
+        require __DIR__ . "../../../../../vendor/autoload.php";
         //shows errors/debugging
         ini_set('display_errors', '1');
         ini_set('display_startup_errors', '1');
@@ -40,21 +46,16 @@
         $message .= "<p>" . strip_tags($_POST["message"]) . "</p>";
         //footer
         $message .= "<footer><b>Please do not reply to this message!</b></footer>";
-        //imports all components
-        use PHPMailer\PHPMailer\PHPMailer;
-        use PHPMailer\PHPMailer\Exception;
-        use PHPMailer\PHPMailer\SMTP;
-
-        require __DIR__ . "/../../../../vendor/autoload.php";
         //PHPMailer Object
-        $mail = new PHPMailer(true); //Argument true in constructor enables exceptions
+        $mail = new PHPMailer(); //Makes new PHPMailer Object
         //SMTP Server
         $mail->isSMTP();    //enable SMTP
         $mail->SMTPDebug = SMTP::DEBUG_SERVER; //shows stuff for debuging
         $mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPAuth = true; //authentication enabled
+        $mail->SMTPSecure = 'ssl';    // TLS/SSL
         $mail->Host = "smtp.gmail.com"; // sets the SMTP server
         $mail->Port = 465;                    // sets the SMTP port
-        $mail->SMTPSecure = 'ssl';                  // TLS/SSL
         $mail->Username = "contact.form.heebphotography@gmail.com"; // SMTP account username
         $mail->Password = "J7lo92nfoVcb";        // SMTP account password
         //From email address and name.
