@@ -14,7 +14,7 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     $mail = new PHPMailer();  // create a new object
     $mail->IsSMTP(); // enable SMTP
     $mail->SMTPDebug = SMTP::DEBUG_SERVER; //shows stuff for debuging
-    $mail->SMTPDebug = 0;  // debugging: 1 = errors and messages, 2 = messages only
+    $mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
     $mail->SMTPAuth = true;  // authentication enabled
     $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
     $mail->Host = 'smtp.gmail.com';
