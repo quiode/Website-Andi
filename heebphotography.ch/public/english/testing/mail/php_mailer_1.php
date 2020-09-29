@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\SMTP;
 require __DIR__ . "/../../../../../vendor/autoload.php";
 
 define('GUSER', 'contact.form.heebphotography@gmail.com'); // GMail username
-define('GPWD', 'Yw63Bf#@uK@t%P7'); // GMail password
+define('GPWD', 'J7lo92nfoVcb'); // GMail password
 
 function smtpmailer($to, $from, $from_name, $subject, $body)
 {
