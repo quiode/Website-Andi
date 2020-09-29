@@ -51,7 +51,7 @@
         //SMTP Server
         $mail->isSMTP();    //enable SMTP
         $mail->SMTPDebug = SMTP::DEBUG_SERVER; //shows stuff for debuging
-        $mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPDebug = 0;  // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; //authentication enabled
         $mail->SMTPSecure = 'ssl';    // TLS/SSL
         $mail->Host = "smtp.gmail.com"; // sets the SMTP server
