@@ -704,7 +704,7 @@
 footer {
   height: 50px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   font-size: 13px;
   padding-bottom: 10px;
   padding-left: 10px;
