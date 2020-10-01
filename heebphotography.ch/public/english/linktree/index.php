@@ -19,7 +19,7 @@
     <!-- the linktree (using php for eliminating white space bc fuck u html) -->
     <?php
     $html = $text = <<<EOT
-    <div>
+    <div class="linktree">
         <a href="https://www.instagram.com/heebphotography/" target="_blank">
             <iconify-icon data-icon="logos:instagram-icon" class="icon" id="instagram_icon"></iconify-icon>
             <p>@heebphotography</p>
