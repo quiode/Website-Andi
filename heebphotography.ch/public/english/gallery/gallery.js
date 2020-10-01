@@ -158,10 +158,10 @@ window.addEventListener("load", function () {
             case "none":
                 break;
             case "left":
-                last_picture();
+                next_picture();
                 break;
             case "right":
-                next_picture();
+                last_picture();
                 break;
             case "top":
                 break;
