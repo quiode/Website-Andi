@@ -405,8 +405,8 @@
 }
 #linktree section a {
   box-sizing: content-box;
-  height: 25vh;
-  width: 90vw;
+  height: 20vh;
+  width: 60vw;
   border-radius: 100vw;
   transform: translateX(-50%);
   position: relative;
@@ -419,7 +419,7 @@
   border-style: solid;
   border-color: transparent;
   background-color: #818181;
-  margin-top: 22.5vh;
+  margin-top: 27.5vh;
 }
 #linktree section a:hover {
   border-color: black;
@@ -440,7 +440,7 @@
   }
 }
 #linktree section a p {
-  width: 75vw;
+  width: 45vw;
   color: black;
   text-decoration: none;
   font-size: 4vw;
@@ -460,7 +460,7 @@
 }
 #linktree section a:last-child {
   margin-top: 5vh;
-  margin-bottom: 22.5vh;
+  margin-bottom: 27.5vh;
 }
 
 #about_me * {
