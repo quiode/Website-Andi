@@ -81,6 +81,7 @@ function Ig_Media_getter($ig_id, $accessToken)
     // gets the result
     $result = curl_exec($curl_session);
     // checks if the result is correct and formats it
+    var_dump($result);
     if ($result != "false") {
         $result = json_decode($result, true);
 
