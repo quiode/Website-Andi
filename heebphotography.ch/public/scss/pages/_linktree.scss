@@ -8,39 +8,27 @@
     max-width: 100vw;
     overflow: hidden;
 
-    section {
+    div {
         height: 100vh;
         width: 100vw;
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        max-height: 100vh;
+        max-width: 100vw;
+        margin: auto auto;
 
         @media screen and (max-width: 600px) {
             top: 50px;
         }
 
         a {
-            box-sizing: content-box;
             height: 20vh;
             width: 60vw;
-            border-radius: 100vw;
-            transform: translateX(-50%);
-            position: relative;
-            left: 50%;
-            white-space: nowrap;
             display: inline-block;
-            color: black;
+            border-radius: 100vw;
             text-decoration: none;
             border-width: 0.5vw;
             border-style: solid;
             border-color: transparent;
             background-color: #818181;
-            margin-top: 27.5vh;
-
-            color: black;
-            text-decoration: none;
-            font-size: 2.5vw;
-            padding: 8.75vh 20vw;
 
             &:hover {
                 border-color: black;
@@ -62,7 +50,10 @@
             }
 
             p {
-
+                color: black;
+                font-size: 2.5vw;
+                line-height: 10vh;
+                padding-left: 25vw;
 
                 @media screen and (max-width: 600px) {
                     display: none;
@@ -72,7 +63,6 @@
 
         a:last-child {
             margin-top: 5vh;
-            margin-bottom: 27.5vh;
         }
     }
 }
