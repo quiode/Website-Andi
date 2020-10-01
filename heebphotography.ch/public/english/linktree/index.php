@@ -22,11 +22,11 @@
     <section>
         <a href="https://www.instagram.com/heebphotography/" target="_blank">
             <iconify-icon data-icon="logos:instagram-icon" class="icon" id="instagram_icon"></iconify-icon>
-            <p>@heebphotography</p>
+            @heebphotography
         </a>
         <a href="mailto:andreas.heeb@heebphotography.ch" target="_blank">
             <iconify-icon data-icon="feather:mail" class="icon" id="mail_icon"></iconify-icon>
-            <p>andreas.heeb@heebphotography.ch</p>
+            andreas.heeb@heebphotography.ch
         </a>
     </section>
     EOT;
