@@ -420,6 +420,22 @@
   border-color: transparent;
   background-color: #818181;
   margin-top: 27.5vh;
+  /*p {
+      width: 45vw;
+      color: black;
+      text-decoration: none;
+      font-size: 2.5vw;
+      position: relative;
+      display: table-cell;
+      height: 12.5vh;
+      white-space: inherit;
+      transform: translateY(-50%);
+      left: 15vw;
+
+      @media screen and (max-width: 600px) {
+          display: none;
+      }
+  }*/
 }
 #linktree section a:hover {
   border-color: black;
@@ -437,23 +453,6 @@
     width: 90vw;
     top: 3.5vh;
     height: 18vh;
-  }
-}
-#linktree section a p {
-  width: 45vw;
-  color: black;
-  text-decoration: none;
-  font-size: 2.5vw;
-  position: relative;
-  display: table-cell;
-  height: 12.5vh;
-  white-space: inherit;
-  transform: translateY(-50%);
-  left: 15vw;
-}
-@media screen and (max-width: 600px) {
-  #linktree section a p {
-    display: none;
   }
 }
 #linktree section a:last-child {
