@@ -703,8 +703,10 @@
 
 footer {
   height: 50px;
-  display: flex;
-  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  padding-right: 0.5vw;
+  padding-bottom: 0.5vh;
 }
 
 footer p {
