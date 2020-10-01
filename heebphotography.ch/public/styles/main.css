@@ -704,7 +704,7 @@
 footer {
   height: 50px;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
 }
 
 footer p {
