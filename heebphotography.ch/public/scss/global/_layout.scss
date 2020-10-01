@@ -16,6 +16,9 @@ footer p {
     font-size: 3vmin;
     padding-bottom: 10px;
     padding-left: 10px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 
 p {
