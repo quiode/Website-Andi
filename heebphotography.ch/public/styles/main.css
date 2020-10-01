@@ -470,14 +470,14 @@
 #about_me * {
   user-select: text;
 }
-#about_me p {
+#about_me #p_about_me {
   text-align: center;
   font-size: 7.3vmin;
   top: 80px;
   position: relative;
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
-  #about_me p br {
+  #about_me #p_about_me br {
     margin-bottom: 6vmin;
   }
 }

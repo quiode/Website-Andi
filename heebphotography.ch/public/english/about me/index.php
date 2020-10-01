@@ -13,7 +13,7 @@
     <!-- wip bar -->
     <?php require __DIR__ . "/../templates/work_in_progress.php"?>
     
-    <p>
+    <p id="p_about_me">
         Andreas Heeb
         <br>
         🐦
