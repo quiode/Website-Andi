@@ -24,10 +24,6 @@
             <iconify-icon data-icon="logos:instagram-icon" class="icon" id="instagram_icon"></iconify-icon>
             <p>@heebphotography</p>
         </a>
-        <a id="phone" href="./contacts.vcf" download="Andreas Heeb">
-            <iconify-icon data-icon="carbon:phone" class="icon" id="phone_icon"></iconify-icon>
-            <p>+41 12 345 67 78</p>
-        </a>
         <a id="mail" href="mailto:andreas.heeb@heebphotography.ch" target="_blank">
             <iconify-icon data-icon="feather:mail" class="icon" id="mail_icon"></iconify-icon>
             <p>andreas.heeb@heebphotography.ch</p>
