@@ -395,8 +395,8 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  bottom: 0;
+  left: 0;
 }
 @media screen and (max-width: 600px) {
   #linktree section {
@@ -411,7 +411,6 @@
   transform: translateX(-50%);
   position: relative;
   left: 50%;
-  margin-top: 5vh;
   white-space: nowrap;
   display: inline-block;
   color: black;
@@ -420,6 +419,7 @@
   border-style: solid;
   border-color: transparent;
   background-color: #818181;
+  margin-top: 22.5vh;
 }
 #linktree section a:hover {
   border-color: black;
@@ -457,6 +457,10 @@
   #linktree section a p {
     display: none;
   }
+}
+#linktree section a:last-child {
+  margin-top: 5vh;
+  margin-bottom: 22.5vh;
 }
 
 #about_me * {
