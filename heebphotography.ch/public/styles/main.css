@@ -395,8 +395,8 @@
   height: 100vh;
   width: 100vw;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
 }
 @media screen and (max-width: 600px) {
   #linktree section {
@@ -419,6 +419,7 @@
   border-width: 0.5vw;
   border-style: solid;
   border-color: transparent;
+  background-color: #818181;
 }
 #linktree section a:hover {
   border-color: black;
@@ -456,15 +457,6 @@
   #linktree section a p {
     display: none;
   }
-}
-#linktree section #phone {
-  background-color: #007cff;
-}
-#linktree section #mail {
-  background-color: red;
-}
-#linktree section #instagram {
-  background-color: #8941a7;
 }
 
 #about_me * {

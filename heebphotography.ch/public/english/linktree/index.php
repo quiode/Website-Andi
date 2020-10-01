@@ -20,11 +20,11 @@
     <?php
     $html = $text = <<<EOT
     <section>
-        <a id="instagram" href="https://www.instagram.com/heebphotography/" target="_blank">
+        <a href="https://www.instagram.com/heebphotography/" target="_blank">
             <iconify-icon data-icon="logos:instagram-icon" class="icon" id="instagram_icon"></iconify-icon>
             <p>@heebphotography</p>
         </a>
-        <a id="mail" href="mailto:andreas.heeb@heebphotography.ch" target="_blank">
+        <a href="mailto:andreas.heeb@heebphotography.ch" target="_blank">
             <iconify-icon data-icon="feather:mail" class="icon" id="mail_icon"></iconify-icon>
             <p>andreas.heeb@heebphotography.ch</p>
         </a>
