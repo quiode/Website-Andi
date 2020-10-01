@@ -449,7 +449,6 @@
   height: 12.5vh;
   white-space: inherit;
   transform: translateY(-50%);
-  top: 50%;
   left: 15vw;
 }
 @media screen and (max-width: 600px) {
