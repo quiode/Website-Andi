@@ -429,7 +429,7 @@
   width: 15vw;
   height: 12.5vh;
   display: inline-block;
-  top: 6.25vh;
+  margin-top: 3.75vh;
   white-space: inherit;
 }
 @media screen and (max-width: 600px) {
