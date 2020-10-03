@@ -406,7 +406,7 @@
   max-height: 100vh;
   max-width: 100vw;
 }
-#linktree .linktree ul {
+#linktree .linktree > ul {
   height: 47vh;
   width: 61vw;
   position: relative;
@@ -414,12 +414,12 @@
   left: 20vw;
   padding: 0;
 }
-#linktree .linktree ul li {
+#linktree .linktree > ul > li {
   list-style-type: none;
   height: 20vh;
   width: 60vw;
 }
-#linktree .linktree ul li a {
+#linktree .linktree > ul > li > a {
   /*height: 20vh;
   width: 60vw;
   display: inline-block;
@@ -441,14 +441,14 @@
   background-color: #818181;
   transition-duration: 0.3s;
 }
-#linktree .linktree ul li a:hover {
+> #linktree .linktree > ul > li > a:hover {
   border-color: black;
   transition-duration: 0.5s;
 }
-#linktree .linktree ul li a a:first-child {
+#linktree .linktree > ul > li > a > a:first-child {
   margin-top: 0;
 }
-#linktree .linktree ul li a .icon {
+#linktree .linktree > ul > li > a .icon {
   position: relative;
   width: 15vw;
   height: 12.5vh;
@@ -457,13 +457,13 @@
   white-space: inherit;
 }
 @media screen and (max-width: 600px) {
-  #linktree .linktree ul li a .icon {
+  #linktree .linktree > ul > li > a .icon {
     width: 90vw;
     top: 3.5vh;
     height: 18vh;
   }
 }
-#linktree .linktree ul li a p {
+#linktree .linktree > ul > li > a > p {
   /*color: black;
   font-size: 2.5vw;
   padding-left: 25vw;
@@ -476,11 +476,11 @@
   line-height: 10.5vh;
 }
 @media screen and (max-width: 600px) {
-  #linktree .linktree ul li a p {
+  #linktree .linktree > ul > li > a > p {
     display: none;
   }
 }
-#linktree .linktree ul li a:last-child {
+#linktree .linktree > ul > li > a:last-child {
   margin-top: 5vh;
 }
 
