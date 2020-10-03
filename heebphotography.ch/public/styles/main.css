@@ -391,6 +391,9 @@
   max-width: 100vw;
   overflow: hidden;
 }
+#linktree * {
+  box-sizing: initial;
+}
 #linktree .linktree {
   height: 100vh;
   width: 100vw;
