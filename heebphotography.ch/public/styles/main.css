@@ -481,9 +481,6 @@
     display: none;
   }
 }
-#linktree .linktree ul li a:last-child {
-  margin-top: 5vh;
-}
 
 #about_me * {
   user-select: text;
