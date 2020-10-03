@@ -418,6 +418,10 @@
   list-style-type: none;
   height: 20vh;
   width: 60vw;
+  margin-top: 5vh;
+}
+#linktree .linktree ul li li:first-child a {
+  margin-top: 0;
 }
 #linktree .linktree ul li a {
   /*height: 20vh;
@@ -444,9 +448,6 @@
 #linktree .linktree ul li a:hover {
   border-color: black;
   transition-duration: 0.5s;
-}
-#linktree .linktree ul li a a:first-child {
-  margin-top: 0;
 }
 #linktree .linktree ul li a .icon {
   position: relative;
