@@ -430,29 +430,34 @@
   border-color: black;
   transition-duration: 0.5s;
 }
-#linktree .linktree ul li a .icon {
-  position: relative;
+#linktree .linktree ul li a section {
+  width: 60vw;
+  height: 12.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#linktree .linktree ul li a section .icon {
   width: 15vw;
   height: 12.5vh;
-  display: inline-block;
-  margin-top: 3.75vh;
-  white-space: inherit;
+  color: black;
 }
 @media screen and (max-width: 600px) {
-  #linktree .linktree ul li a .icon {
+  #linktree .linktree ul li a section .icon {
     width: 90vw;
     top: 3.5vh;
     height: 18vh;
   }
 }
-#linktree .linktree ul li a p {
+#linktree .linktree ul li a section p {
   color: black;
-  font-size: 2.5vw;
-  padding-left: 25vw;
-  line-height: 10.5vh;
+  font-size: 1.5vw;
+  width: 45vw;
+  height: 12.5vh;
+  line-height: 12.5vh;
 }
 @media screen and (max-width: 600px) {
-  #linktree .linktree ul li a p {
+  #linktree .linktree ul li a section p {
     display: none;
   }
 }

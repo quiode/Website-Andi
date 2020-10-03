@@ -50,29 +50,35 @@
                         transition-duration: 0.5s;
                     }
 
-                    .icon {
-                        position: relative;
-                        width: 15vw;
+                    section {
+                        width: 60vw;
                         height: 12.5vh;
-                        display: inline-block;
-                        margin-top: 3.75vh;
-                        white-space: inherit;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-                        @media screen and (max-width: 600px) {
-                            width: 90vw;
-                            top: 3.5vh;
-                            height: 18vh;
+                        .icon {
+                            width: 15vw;
+                            height: 12.5vh;
+                            color: black;
+
+                            @media screen and (max-width: 600px) {
+                                width: 90vw;
+                                top: 3.5vh;
+                                height: 18vh;
+                            }
                         }
-                    }
 
-                    p {
-                        color: black;
-                        font-size: 2.5vw;
-                        padding-left: 25vw;
-                        line-height: 10.5vh;
+                        p {
+                            color: black;
+                            font-size: 1.5vw;
+                            width: 45vw;
+                            height: 12.5vh;
+                            line-height: 12.5vh;
 
-                        @media screen and (max-width: 600px) {
-                            display: none;
+                            @media screen and (max-width: 600px) {
+                                display: none;
+                            }
                         }
                     }
                 }
