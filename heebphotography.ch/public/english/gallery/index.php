@@ -20,7 +20,7 @@
             <?php
         // variables
             $path_images = __DIR__ . "/../../images/gallery/";
-            $path_thumbnail_images = __DIR__ . "/../../images/thumbnail/";
+            $path_thumbnail_images = __DIR__ . "/../../images/gallery/thumbnail/";
         // searches the filename of all images in the images folder
             $images = scandir($path_images, 1);
             $thumbnail_images = scandir($path_thumbnail_images, 1);
@@ -64,7 +64,7 @@
                 <div>
                     <?php
                     foreach ($image_column_1 as $image) {
-                        echo "<img src=\"/../../images/thumbnail/";
+                        echo "<img src=\"/../../images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -74,7 +74,7 @@
                 <div>
                     <?php
                     foreach ($image_column_2 as $image) {
-                        echo "<img src=\"/../../images/thumbnail/";
+                        echo "<img src=\"/../../images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -84,7 +84,7 @@
                 <div>
                     <?php
                     foreach ($image_column_3 as $image) {
-                        echo "<img src=\"/../../images/thumbnail/";
+                        echo "<img src=\"/../../images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -94,7 +94,7 @@
                 <div>
                     <?php
                     foreach ($image_column_4 as $image) {
-                        echo "<img src=\"/../../images/thumbnail/";
+                        echo "<img src=\"/../../images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -106,7 +106,7 @@
         <!-- the slideshow that pops up when clicking on an image -->
         <div id="slideshow_background">
             <div id="slideshow" onkeydown="key_pressed(event)">
-                <img id="slideshow_image" src="/../../images/image_0.jpg" onload="resizeToMax()">
+                <img id="slideshow_image" src="/../../images/gallery/image_0.jpg" onload="resizeToMax()">
 
                 <!-- for navigation within the slideshow -->
                 <div class="arrows_background">
