@@ -64,7 +64,7 @@
                 <div>
                     <?php
                     foreach ($image_column_1 as $image) {
-                        echo "<img src=\"/../../images/gallery/thumbnail/";
+                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -74,7 +74,7 @@
                 <div>
                     <?php
                     foreach ($image_column_2 as $image) {
-                        echo "<img src=\"/../../images/gallery/thumbnail/";
+                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -84,7 +84,7 @@
                 <div>
                     <?php
                     foreach ($image_column_3 as $image) {
-                        echo "<img src=\"/../../images/gallery/thumbnail/";
+                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -94,7 +94,7 @@
                 <div>
                     <?php
                     foreach ($image_column_4 as $image) {
-                        echo "<img src=\"/../../images/gallery/thumbnail/";
+                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
                         echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
@@ -106,7 +106,7 @@
         <!-- the slideshow that pops up when clicking on an image -->
         <div id="slideshow_background">
             <div id="slideshow" onkeydown="key_pressed(event)">
-                <img id="slideshow_image" src="/../../images/gallery/image_0.jpg" onload="resizeToMax()">
+                <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg" onload="resizeToMax()">
 
                 <!-- for navigation within the slideshow -->
                 <div class="arrows_background">
