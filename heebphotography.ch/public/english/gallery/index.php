@@ -28,8 +28,8 @@
             $query_result = pg_query($query);
             $result = pg_fetch_all($query_result);
             $all_ids = array();
-            foreach ($result as $id) {
-                var_dump($id);
+            foreach ($result as $name) {
+                array_push($all_ids, $name["name"]);
             }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
