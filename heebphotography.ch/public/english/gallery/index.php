@@ -28,7 +28,7 @@ $_SESSION["blacklist_everything"] = array(); //blacklist for types and categorie
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
 
         <!-- filter form -->
-        <form id="gallery_filter" action="./filter_backend.php" target="_blank" method="post">
+        <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
             <?php
             if ($_SESSION["all"]) { //only selects everything if the filte is "off"
                 // connect to the database
