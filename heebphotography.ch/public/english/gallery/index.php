@@ -20,25 +20,17 @@
             <?php
             // connect to the database
             $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            $query = "SELECT * FROM images";
-            $query_result = pg_query($query) or die("Query failed: " . pg_last_error());
-            $result = pg_fetch_all($query_result);
-            pg_close($dbconn);
-            var_dump($result);
             // variables
             $path_images = __DIR__ . "/../../images/gallery/";
             $path_thumbnail_images = __DIR__ . "/../../images/gallery/thumbnail/";
-            // searches the filename of all images in the images folder
-            $images = scandir($path_images, 1);
-            $thumbnail_images = scandir($path_thumbnail_images, 1);
-            // deletes the last two elements of the filename list --> are always . and .. so not usefull
-            unset($images[sizeof($images)-1]);
-            unset($images[sizeof($images)-1]);
-
-            unset($thumbnail_images[sizeof($thumbnail_images)-1]);
-            unset($thumbnail_images[sizeof($thumbnail_images)-1]);
-            // deletes the thumbnail dir
-            unset($images[0]);
+            // gets the names of the images from the databse
+            $query = "SELECT name FROM images";
+            $query_result = pg_query($query);
+            $result = pg_fetch_all($query_result);
+            $all_ids = array();
+            foreach ($result as $id) {
+                echo $id;
+            }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
             $image_column_2 = array();
@@ -113,7 +105,8 @@
         <!-- the slideshow that pops up when clicking on an image -->
         <div id="slideshow_background">
             <div id="slideshow" onkeydown="key_pressed(event)">
-                <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg" onload="resizeToMax()">
+                <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg"
+                    onload="resizeToMax()">
 
                 <!-- for navigation within the slideshow -->
                 <div class="arrows_background">
@@ -135,6 +128,6 @@
             </div>
         </div>
         <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php pg_close($dbconn); //ends connection to database?>
     </body>
-
 </html>
