@@ -56,7 +56,7 @@ $_SESSION["blacklist_everything"] = array(); //blacklist for types and categorie
                 }
             }
             ?>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Filter">
         </form>
 
         <div>
