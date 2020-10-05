@@ -32,7 +32,7 @@ $_SESSION["all"] = true; //at the start, all categories and types are selected i
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 foreach ($all_rows as $row) {
-                    echo '<input type="checkbox" id="category_"' . $row["category"] . ' name="category_"' . $row["category"] . ' value="' . $row["category"] . '">';
+                    echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
                     echo '<label for="category_' . $row["category"] . '>' . $row["category"] . '</label>';
                 }
                 // gets all types from the database which arent NULL
@@ -41,7 +41,7 @@ $_SESSION["all"] = true; //at the start, all categories and types are selected i
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
                 foreach ($all_rows as $row) {
-                    echo '<input type="checkbox" id="type_"' . $row["type"] . ' name="type_"' . $row["type"] . ' value="' . $row["type"] . '">';
+                    echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '">';
                     echo '<label for="type_' . $row["type"] . '>' . $row["type"] . '</label>';
                 }
             }
