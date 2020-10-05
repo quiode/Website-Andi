@@ -28,6 +28,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <!-- filter form -->
         <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
             <?php
+            var_dump($_SESSION);
             if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
@@ -119,7 +120,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
             $image_column_4 = array();
             $i = 0;
             $c = 0;
-            while ($i <= sizeof($all_rows and $all_rows)) {
+            while ($i <= sizeof($all_rows)) {
                 $image_column_1[$c] = $all_rows[$i++];
                 if ($i >= sizeof($all_rows)) {
                     break;
