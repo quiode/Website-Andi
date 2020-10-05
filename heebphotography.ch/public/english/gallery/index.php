@@ -1,13 +1,15 @@
 <?php
 // start session for storing data
 session_start();
-$_SESSION["all"] = true; //at the start, all categories and types are selected in the filter
-$_SESSION["categories"] = array(); //makes an array for all categories
-$_SESSION["types"] = array(); //makes an array for all types
-$_SESSION["blacklist_categories"] = array(); //makes an array for the filter
-$_SESSION["blacklist_types"] = array(); //makes an array for the filter
-$_SESSION["everything"] =  array(); //categories and types
-$_SESSION["blacklist_everything"] = array(); //blacklist for types and categories
+if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page as been loaded, make the variables, else dont
+    $_SESSION["all"] = true; //at the start, all categories and types are selected in the filter
+    $_SESSION["categories"] = array(); //makes an array for all categories
+    $_SESSION["types"] = array(); //makes an array for all types
+    $_SESSION["blacklist_categories"] = array(); //makes an array for the filter
+    $_SESSION["blacklist_types"] = array(); //makes an array for the filter
+    $_SESSION["everything"] =  array(); //categories and types
+    $_SESSION["blacklist_everything"] = array(); //blacklist for types and categories
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
