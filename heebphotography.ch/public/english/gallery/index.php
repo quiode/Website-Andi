@@ -2,7 +2,7 @@
 // start session for storing data
 session_start();
 if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page as been loaded, make the variables, else dont
-    var_dump($_SESSION);
+    $test = $_SESSION;
     $_SESSION["all"] = true; //at the start, all categories and types are selected in the filter
     $_SESSION["categories"] = array(); //makes an array for all categories
     $_SESSION["types"] = array(); //makes an array for all types
@@ -33,6 +33,7 @@ if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page
         <!-- filter form -->
         <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
             <?php
+            var_dump($test);
             if ($_SESSION["all"]) { //only selects everything if the filte is "off"
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
