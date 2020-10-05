@@ -20,18 +20,14 @@
             <?php
             // connect to the database
             $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            // variables
-            $path_images = __DIR__ . "/../../images/gallery/";
-            $path_thumbnail_images = __DIR__ . "/../../images/gallery/thumbnail/";
             // gets the names of the images from the databse
             $query = "SELECT name FROM images";
             $query_result = pg_query($query);
             $result = pg_fetch_all($query_result);
-            $all_ids = array();
+            $img_names = array();
             foreach ($result as $name) {
-                array_push($all_ids, $name["name"]);
+                array_push($img_names, $name["name"]);
             }
-            var_dump($all_ids);
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
             $image_column_2 = array();
@@ -39,21 +35,21 @@
             $image_column_4 = array();
             $i = 0;
             $c = 0;
-            while ($i <= sizeof($thumbnail_images)) {
-                $image_column_1[$c] = $thumbnail_images[$i++];
-                if ($i >= sizeof($thumbnail_images)) {
+            while ($i <= sizeof($img_names)) {
+                $image_column_1[$c] = $img_names[$i++];
+                if ($i >= sizeof($img_names)) {
                     break;
                 }
-                $image_column_2[$c] = $thumbnail_images[$i++];
-                if ($i >= sizeof($thumbnail_images)) {
+                $image_column_2[$c] = $img_names[$i++];
+                if ($i >= sizeof($img_names)) {
                     break;
                 }
-                $image_column_3[$c] = $thumbnail_images[$i++];
-                if ($i >= sizeof($thumbnail_images)) {
+                $image_column_3[$c] = $img_names[$i++];
+                if ($i >= sizeof($img_names)) {
                     break;
                 }
-                $image_column_4[$c++] = $thumbnail_images[$i++];
-                if ($i >= sizeof($thumbnail_images)) {
+                $image_column_4[$c++] = $img_names[$i++];
+                if ($i >= sizeof($img_names)) {
                     break;
                 }
             }
