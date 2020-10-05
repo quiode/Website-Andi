@@ -21,12 +21,12 @@
             // connect to the database
             $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
             // gets the names of the images from the databse
-            $query = "SELECT name FROM images";
+            $query = "SELECT name, category, type FROM images";
             $query_result = pg_query($query);
             $result = pg_fetch_all($query_result);
-            $img_names = array();
+            $all_rows = array();
             foreach ($result as $name) {
-                array_push($img_names, $name["name"]);
+                array_push($all_rows, $name);
             }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
@@ -61,8 +61,13 @@
                     <?php
                     foreach ($image_column_1 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image;
-                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo $image["name"];
+                        echo ".jpg\" class=\"image";
+                        echo " ";
+                        echo $image["category"];
+                        echo " ";
+                        echo $image["type"];
+                        echo "\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
@@ -71,8 +76,13 @@
                     <?php
                     foreach ($image_column_2 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image;
-                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo $image["name"];
+                        echo ".jpg\" class=\"image";
+                        echo " ";
+                        echo $image["category"];
+                        echo " ";
+                        echo $image["type"];
+                        echo "\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
@@ -81,8 +91,13 @@
                     <?php
                     foreach ($image_column_3 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image;
-                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo $image["name"];
+                        echo ".jpg\" class=\"image";
+                        echo " ";
+                        echo $image["category"];
+                        echo " ";
+                        echo $image["type"];
+                        echo "\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
@@ -91,8 +106,13 @@
                     <?php
                     foreach ($image_column_4 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image;
-                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo $image["name"];
+                        echo ".jpg\" class=\"image";
+                        echo " ";
+                        echo $image["category"];
+                        echo " ";
+                        echo $image["type"];
+                        echo "\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
