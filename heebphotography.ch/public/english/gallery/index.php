@@ -18,21 +18,28 @@
 
         <div>
             <?php
-        // variables
+            // connect to the database
+            $dbconn = pg_connect("host=heebphotography.ch db_name=heebphotography user=postgres password=Y1qhk9nzfI2B port=5500");
+            $query = "SELECT * FROM images";
+            $query_result = pg_query($query) or die("Query failed: " . pg_last_error());
+            $result = pg_fetch_all($query_result);
+            pg_close($dbconn);
+            var_dump($result);
+            // variables
             $path_images = __DIR__ . "/../../images/gallery/";
             $path_thumbnail_images = __DIR__ . "/../../images/gallery/thumbnail/";
-        // searches the filename of all images in the images folder
+            // searches the filename of all images in the images folder
             $images = scandir($path_images, 1);
             $thumbnail_images = scandir($path_thumbnail_images, 1);
-        // deletes the last two elements of the filename list --> are always . and .. so not usefull
+            // deletes the last two elements of the filename list --> are always . and .. so not usefull
             unset($images[sizeof($images)-1]);
             unset($images[sizeof($images)-1]);
 
             unset($thumbnail_images[sizeof($thumbnail_images)-1]);
             unset($thumbnail_images[sizeof($thumbnail_images)-1]);
-        // deletes the thumbnail dir
+            // deletes the thumbnail dir
             unset($images[0]);
-        // splits the images in 4 seperate arrays with +- 1 the same amount of images
+            // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
             $image_column_2 = array();
             $image_column_3 = array();
