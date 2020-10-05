@@ -32,7 +32,7 @@ if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page
         <!-- filter form -->
         <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
             <?php
-            if ($_SESSION["all"]) { //only selects everything if the filte is "off"
+            if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                 // gets all categories from the database which arent NULL
