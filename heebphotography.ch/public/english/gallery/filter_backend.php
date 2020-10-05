@@ -10,6 +10,8 @@ if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was se
             array_push($_SESSION["blacklist"], $filter_option);
         }
     }
+    var_dump($_POST);
+    echo "<br>";
     var_dump($_SESSION);
 }
 // echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
