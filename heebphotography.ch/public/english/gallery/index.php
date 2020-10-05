@@ -120,6 +120,9 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
             $i = 0;
             $c = 0;
             while ($i <= sizeof($all_rows)) {
+                if ($i >= sizeof($all_rows)) {
+                    break;
+                }
                 $image_column_1[$c] = $all_rows[$i++];
                 if ($i >= sizeof($all_rows)) {
                     break;
