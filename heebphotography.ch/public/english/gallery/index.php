@@ -35,21 +35,21 @@
             $image_column_4 = array();
             $i = 0;
             $c = 0;
-            while ($i <= sizeof($img_names)) {
-                $image_column_1[$c] = $img_names[$i++];
-                if ($i >= sizeof($img_names)) {
+            while ($i <= sizeof($all_rows)) {
+                $image_column_1[$c] = $all_rows[$i++];
+                if ($i >= sizeof($all_rows)) {
                     break;
                 }
-                $image_column_2[$c] = $img_names[$i++];
-                if ($i >= sizeof($img_names)) {
+                $image_column_2[$c] = $all_rows[$i++];
+                if ($i >= sizeof($all_rows)) {
                     break;
                 }
-                $image_column_3[$c] = $img_names[$i++];
-                if ($i >= sizeof($img_names)) {
+                $image_column_3[$c] = $all_rows[$i++];
+                if ($i >= sizeof($all_rows)) {
                     break;
                 }
-                $image_column_4[$c++] = $img_names[$i++];
-                if ($i >= sizeof($img_names)) {
+                $image_column_4[$c++] = $all_rows[$i++];
+                if ($i >= sizeof($all_rows)) {
                     break;
                 }
             }
