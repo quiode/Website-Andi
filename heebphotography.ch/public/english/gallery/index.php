@@ -1,3 +1,8 @@
+<?php
+// start session for storing data
+session_start();
+$_SESSION["all"] = true; //at the start, all categories and types are selected in the filter
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,31 +22,42 @@
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
 
         <!-- filter form -->
-        <form>
+        <form id="gallery_filter">
             <?php
-            // connect to the database
-            $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            // gets all categories from the database which arent NULL
-            $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
-            $query_result = pg_query($query);
-            $result = pg_fetch_all($query_result);
-            pg_close($dbconn);
+            if ($_SESSION["all"]) { //only selects everything if the filte is "off"
+                // connect to the database
+                $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                // gets all categories from the database which arent NULL
+                $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                $query_result = pg_query($query);
+                $all_rows = pg_fetch_all($query_result);
+                foreach ($all_rows as $row) {
+                    echo '<input type="checkbox" id="category_"' . $row["category"] . ' name="category_"' . $row["category"] . ' value="' . $row["category"] . '">';
+                    echo '<label for="category_' . $row["category"] . '>' . $row["category"] . '</label>';
+                }
+                // gets all types from the database which arent NULL
+                $query = "SELECT type FROM images WHERE type IS NOT NULL GROUP BY type";
+                $query_result = pg_query($query);
+                $all_rows = pg_fetch_all($query_result);
+                foreach ($all_rows as $row) {
+                    echo '<input type="checkbox" id="type_"' . $row["type"] . ' name="type_"' . $row["type"] . ' value="' . $row["type"] . '">';
+                    echo '<label for="type_' . $row["type"] . '>' . $row["type"] . '</label>';
+                }
+            }
             ?>
         </form>
 
         <div>
             <?php
-            // connect to the database
-            $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            // gets the names of the images from the databse
-            $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
-            $query_result = pg_query($query);
-            $all_rows = pg_fetch_all($query_result);
-            // $all_rows = array();
-            // foreach ($result as $name) {
-            //     array_push($all_rows, $name);
-            // }
-            pg_close($dbconn); //ends connection to database
+            if ($_SESSION["all"]) { //only selects everything if the filte is "off"
+                // connect to the database
+                $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                // gets the names of the images from the databse
+                $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
+                $query_result = pg_query($query);
+                $all_rows = pg_fetch_all($query_result);
+                pg_close($dbconn); //ends connection to database
+            }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
             $image_column_2 = array();
