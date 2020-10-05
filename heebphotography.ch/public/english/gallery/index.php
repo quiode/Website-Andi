@@ -6,6 +6,7 @@ $_SESSION["categories"] = array(); //makes an array for all categories
 $_SESSION["types"] = array(); //makes an array for all types
 $_SESSION["blacklist_categories"] = array(); //makes an array for the filter
 $_SESSION["blacklist_types"] = array(); //makes an array for the filter
+$_SESSION["everything"] =  array(); //categories and types
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +40,7 @@ $_SESSION["blacklist_types"] = array(); //makes an array for the filter
                     echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
                     echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                     array_push($_SESSION["categories"], $row["category"]); //adds the category to the session categories list
+                    array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                 }
                 // gets all types from the database which arent NULL
                 $query = "SELECT type FROM images WHERE type IS NOT NULL GROUP BY type";
@@ -49,6 +51,7 @@ $_SESSION["blacklist_types"] = array(); //makes an array for the filter
                     echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '">';
                     echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
                     array_push($_SESSION["types"], $row["type"]); //adds the type to the session type list
+                    array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
                 }
             }
             ?>
