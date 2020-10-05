@@ -39,6 +39,7 @@ $_SESSION["all"] = true; //at the start, all categories and types are selected i
                 $query = "SELECT type FROM images WHERE type IS NOT NULL GROUP BY type";
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
+                pg_close($dbconn); //ends connection to database
                 foreach ($all_rows as $row) {
                     echo '<input type="checkbox" id="type_"' . $row["type"] . ' name="type_"' . $row["type"] . ' value="' . $row["type"] . '">';
                     echo '<label for="type_' . $row["type"] . '>' . $row["type"] . '</label>';
