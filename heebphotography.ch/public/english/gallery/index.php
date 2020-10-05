@@ -38,7 +38,7 @@ $_SESSION["blacklist_everything"] = array(); //blacklist for types and categorie
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 foreach ($all_rows as $row) {
-                    echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
+                    echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
                     echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                     array_push($_SESSION["categories"], $row["category"]); //adds the category to the session categories list
                     array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
@@ -49,7 +49,7 @@ $_SESSION["blacklist_everything"] = array(); //blacklist for types and categorie
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
                 foreach ($all_rows as $row) {
-                    echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '">';
+                    echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '" checked="checked">';
                     echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
                     array_push($_SESSION["types"], $row["type"]); //adds the type to the session type list
                     array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
