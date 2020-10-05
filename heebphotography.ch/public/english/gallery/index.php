@@ -108,6 +108,9 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 }
                 $blacklist .= ")";
                 $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "AND type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
+                $query_result = pg_query($query);
+                $all_rows = pg_fetch_all($query_result);
+                pg_close($dbconn); //ends connection to database
             }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
