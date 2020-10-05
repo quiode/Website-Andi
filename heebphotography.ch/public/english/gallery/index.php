@@ -99,8 +99,15 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
-            } else {
-                var_dump($_SESSION);
+            } else { // only selects the ones which are not in the blacklist
+                // connect to the database
+                $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                $blacklist = "(";
+                foreach ($_SESSION["blacklist"] as $item) {
+                    $blacklist .= "'" . $item . "',";
+                }
+                $blacklist .= ")";
+                $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "AND type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
             }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
