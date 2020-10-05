@@ -74,7 +74,7 @@ if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
                 foreach ($all_rows as $row) {
-                    if (in_array($row["type"], $_SESSION["blacklist"]) { // unchecks the checkbox if it is in the blacklist
+                    if (in_array($row["type"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
                         echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '>';
                         echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
                         array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
