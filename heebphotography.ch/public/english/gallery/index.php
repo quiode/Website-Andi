@@ -16,18 +16,32 @@
         <!-- wip bar -->
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
 
+        <!-- filter form -->
+        <form>
+            <?php
+            // connect to the database
+            $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+            // gets all categories from the database which arent NULL
+            $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
+            $query_result = pg_query($query);
+            $result = pg_fetch_all($query_result);
+            pg_close($dbconn);
+            ?>
+        </form>
+
         <div>
             <?php
             // connect to the database
             $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
             // gets the names of the images from the databse
-            $query = "SELECT name, category, type FROM images";
+            $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
             $query_result = pg_query($query);
-            $result = pg_fetch_all($query_result);
+            $all_rows = pg_fetch_all($query_result);
             $all_rows = array();
-            foreach ($result as $name) {
-                array_push($all_rows, $name);
-            }
+            // foreach ($result as $name) {
+            //     array_push($all_rows, $name);
+            // }
+            pg_close($dbconn); //ends connection to database
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
             $image_column_2 = array();
@@ -145,6 +159,6 @@
             </div>
         </div>
         <?php require  __DIR__ . "/../templates/footer.php"?>
-        <?php pg_close($dbconn); //ends connection to database?>
     </body>
+
 </html>
