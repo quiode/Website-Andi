@@ -54,6 +54,8 @@ $_SESSION["blacklist_everything"] = array(); //blacklist for types and categorie
                     array_push($_SESSION["types"], $row["type"]); //adds the type to the session type list
                     array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
                 }
+            } else {
+                var_dump($_SESSION);
             }
             ?>
             <input type="submit" value="Filter">
@@ -69,6 +71,8 @@ $_SESSION["blacklist_everything"] = array(); //blacklist for types and categorie
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
+            } else {
+                var_dump($_SESSION);
             }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
