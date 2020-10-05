@@ -7,6 +7,7 @@ $_SESSION["types"] = array(); //makes an array for all types
 $_SESSION["blacklist_categories"] = array(); //makes an array for the filter
 $_SESSION["blacklist_types"] = array(); //makes an array for the filter
 $_SESSION["everything"] =  array(); //categories and types
+$_SESSION["blacklist_everything"] = array(); //blacklist for types and categories
 ?>
 <!DOCTYPE html>
 <html lang="en">
