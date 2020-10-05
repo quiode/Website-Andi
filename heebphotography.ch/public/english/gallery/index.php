@@ -2,6 +2,10 @@
 // start session for storing data
 session_start();
 $_SESSION["all"] = true; //at the start, all categories and types are selected in the filter
+$_SESSION["categories"] = array(); //makes an array for all categories
+$_SESSION["types"] = array(); //makes an array for all types
+$_SESSION["blacklist_categories"] = array(); //makes an array for the filter
+$_SESSION["blacklist_types"] = array(); //makes an array for the filter
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +26,7 @@ $_SESSION["all"] = true; //at the start, all categories and types are selected i
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
 
         <!-- filter form -->
-        <form id="gallery_filter">
+        <form id="gallery_filter" action="./filter_backend.php" target="_blank" method="post">
             <?php
             if ($_SESSION["all"]) { //only selects everything if the filte is "off"
                 // connect to the database
@@ -34,6 +38,7 @@ $_SESSION["all"] = true; //at the start, all categories and types are selected i
                 foreach ($all_rows as $row) {
                     echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
                     echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                    array_push($_SESSION["categories"], $row["category"]); //adds the category to the session categories list
                 }
                 // gets all types from the database which arent NULL
                 $query = "SELECT type FROM images WHERE type IS NOT NULL GROUP BY type";
@@ -43,9 +48,11 @@ $_SESSION["all"] = true; //at the start, all categories and types are selected i
                 foreach ($all_rows as $row) {
                     echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '">';
                     echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
+                    array_push($_SESSION["types"], $row["type"]); //adds the type to the session type list
                 }
             }
             ?>
+            <input type="submit" value="Submit">
         </form>
 
         <div>
