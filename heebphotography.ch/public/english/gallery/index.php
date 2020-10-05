@@ -3,10 +3,6 @@
 session_start();
 if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page as been loaded, make the variables, else dont
     $_SESSION["all"] = true; //at the start, all categories and types are selected in the filter
-    $_SESSION["categories"] = array(); //makes an array for all categories
-    $_SESSION["types"] = array(); //makes an array for all types
-    $_SESSION["blacklist_categories"] = array(); //makes an array for the filter
-    $_SESSION["blacklist_types"] = array(); //makes an array for the filter
     $_SESSION["everything"] =  array(); //categories and types
     $_SESSION["blacklist_everything"] = array(); //blacklist for types and categories
 }
@@ -42,7 +38,6 @@ if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page
                 foreach ($all_rows as $row) {
                     echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
                     echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
-                    array_push($_SESSION["categories"], $row["category"]); //adds the category to the session categories list
                     array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                 }
                 // gets all types from the database which arent NULL
@@ -53,11 +48,10 @@ if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page
                 foreach ($all_rows as $row) {
                     echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '" checked="checked">';
                     echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
-                    array_push($_SESSION["types"], $row["type"]); //adds the type to the session type list
                     array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
                 }
             } else {
-                var_dump($_SESSION);
+
             }
             ?>
             <input type="submit" value="Filter">
