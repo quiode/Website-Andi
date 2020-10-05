@@ -6,7 +6,7 @@ if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was se
     $_SESSION["all"] = false; //not everything is selected
     $_SESSION["blacklist"] = array(); //removes everything from the blacklist
     foreach ($_SESSION["everything"] as $filter_option) { //checks for every item that can be filtered, if its selected to be filtered
-        if (in_array($filter_option, $_POST)) {
+        if (!in_array($filter_option, $_POST)) {
             array_push($_SESSION["blacklist"], $filter_option);
         }
     }
