@@ -37,7 +37,7 @@
             $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
             $query_result = pg_query($query);
             $all_rows = pg_fetch_all($query_result);
-            $all_rows = array();
+            // $all_rows = array();
             // foreach ($result as $name) {
             //     array_push($all_rows, $name);
             // }
