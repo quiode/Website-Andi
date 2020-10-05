@@ -31,6 +31,7 @@
             foreach ($result as $name) {
                 array_push($all_ids, $name["name"]);
             }
+            var_dump($all_ids);
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
             $image_column_2 = array();
