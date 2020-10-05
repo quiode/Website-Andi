@@ -4,10 +4,10 @@ if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was se
     $_SESSION["all"] = true;
 } else { //adds all selected elements to the blacklist array
     $_SESSION["all"] = false; //not everything is selected
-    $_SESSION["blacklist_everything"] = array(); //removes everything from the blacklist
+    $_SESSION["blacklist"] = array(); //removes everything from the blacklist
     foreach ($_SESSION["everything"] as $filter_option) { //checks for every item that can be filtered, if its selected to be filtered
         if (in_array($filter_option, $_POST)) {
-            array_push($_SESSION["blacklist_everything"], $filter_option);
+            array_push($_SESSION["blacklist"], $filter_option);
         }
     }
 }
