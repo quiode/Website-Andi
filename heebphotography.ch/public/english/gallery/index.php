@@ -102,9 +102,9 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
             } else { // only selects the ones which are not in the blacklist
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-                $blacklist = "(";
+                $blacklist = "(''";
                 foreach ($_SESSION["blacklist"] as $item) {
-                    $blacklist .= "'" . $item . "',";
+                    $blacklist .= ",'" . $item . "'";
                 }
                 $blacklist .= ")";
                 $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "AND type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
