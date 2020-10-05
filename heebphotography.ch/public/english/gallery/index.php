@@ -62,7 +62,7 @@
                     foreach ($image_column_1 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
-                        echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
@@ -72,7 +72,7 @@
                     foreach ($image_column_2 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
-                        echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
@@ -82,7 +82,7 @@
                     foreach ($image_column_3 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
-                        echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
@@ -92,7 +92,7 @@
                     foreach ($image_column_4 as $image) {
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image;
-                        echo "\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
+                        echo ".jpg\" class=\"image\" onclick=\"slideshow_on(this.src)\">";
                     }
                     ?>
                 </div>
