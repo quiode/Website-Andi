@@ -11,4 +11,4 @@ if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was se
         }
     }
 }
-// echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
+echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
