@@ -118,11 +118,6 @@
                     bottom: (100 - $dimension_factor)/2*1vh;
                     height: $dimension_factor/10*1vh;
                     font-size: $dimension_factor/13*1vh;
-                    background-color: white;
-                    border-color: rgba(0, 0, 0, 0.99);
-                    &:hover{
-                        background-color: gray;
-                    }
                 }
             }
 

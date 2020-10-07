@@ -611,11 +611,6 @@
   bottom: 5vh;
   height: 9vh;
   font-size: 6.9230769231vh;
-  background-color: white;
-  border-color: rgba(0, 0, 0, 0.99);
-}
-#gallery #filter_menu form input[type=submit]:hover {
-  background-color: gray;
 }
 #gallery #filter_menu form label {
   font-size: 4vmin;
