@@ -87,6 +87,7 @@
     }
 
     #filter_menu {
+        display: none;
         z-index: 6;
         width: 100vw;
         height: 100vw;
@@ -97,8 +98,7 @@
 
         form {
             $dimension_factor: 90;
-            display: none;
-            position: fixed;
+            position: inherit;
             z-index: 5;
             width: 1vw*$dimension_factor;
             height: 1vh*$dimension_factor;
