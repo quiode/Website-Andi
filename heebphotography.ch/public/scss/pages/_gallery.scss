@@ -99,7 +99,7 @@
         margin: 0;
         padding: 0;
         border: 0vmax solid rgb(255, 255, 255);
-        border: ((100 - $dimension_factor)2)*1vmax solid rgba(255, 255, 255, 0.25);
+        border: (100 - $dimension_factor)/2*1vmax solid rgba(255, 255, 255, 0.25);
         background-color: white;
         background-clip: padding-box;
         -webkit-background-clip: padding-box;
