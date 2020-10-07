@@ -107,10 +107,15 @@
   bottom: 0;
   right: 0;
   border-radius: 50%;
-  width: 5vmin;
-  height: 5vmin;
+  width: 10vmin;
+  height: 10vmin;
   border-color: black;
-  border-width: 0.5vmin;
+  border-width: 1vmin;
+  background-color: white;
+}
+.filter_btn img {
+  width: 9vmin;
+  height: 9vmin;
 }
 
 #language ul {

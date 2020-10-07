@@ -228,8 +228,11 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 </div>
             </div>
         </div>
-        
-        <img class="filter_btn" src="./icons/filter_alt-black-18dp.svg">
+
+        <div class="filter_btn">
+            <img src="./icons/filter_alt-black-18dp.svg">
+        </div>
+
         <?php require  __DIR__ . "/../templates/footer.php"?>
     </body>
 
