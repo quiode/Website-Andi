@@ -581,24 +581,22 @@
   z-index: 6;
 }
 #gallery #filter_menu {
-  display: none;
-  position: fixed;
   z-index: 6;
-  width: 90vmax;
-  height: 90vmax;
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
   left: 0;
   top: 0;
-  box-sizing: content-box;
-  margin: 0;
-  padding: 0;
-  border: 0vmax solid white;
-  border: 5vmax solid rgba(255, 255, 255, 0.5);
-  background-color: white;
-  background-clip: padding-box;
-  -webkit-background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #gallery #filter_menu form {
-  z-index: inherit;
+  display: none;
+  position: fixed;
+  z-index: 5;
+  width: 90vw;
+  height: 90vh;
+  left: 5vw;
+  top: 5vh;
 }
 
 #contact_form {
