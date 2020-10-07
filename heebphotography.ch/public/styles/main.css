@@ -601,8 +601,8 @@
   background-color: white;
 }
 #gallery #filter_menu form input {
-  width: 4vmin;
-  height: 4vmin;
+  width: 7vmin;
+  height: 7vmin;
 }
 #gallery #filter_menu form input[type=submit] {
   position: fixed;
@@ -613,7 +613,7 @@
   font-size: 6.9230769231vh;
 }
 #gallery #filter_menu form label {
-  font-size: 4vmin;
+  font-size: 10vmin;
 }
 
 #contact_form {

@@ -108,8 +108,8 @@
             background-color: white;
 
             input {
-                width: 4vmin;
-                height: 4vmin;
+                width: 7vmin;
+                height: 7vmin;
 
                 &[type="submit"] {
                     position: fixed;
@@ -122,7 +122,7 @@
             }
 
             label {
-                font-size: 4vmin;
+                font-size: 10vmin;
             }
         }
     }
