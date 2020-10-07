@@ -119,6 +119,12 @@
                     height: $dimension_factor/10*1vh;
                     color: gray;
                     font-size: $dimension_factor/13*1vh;
+                    background-color: white;
+                    border-color: black;
+                    border-width: 3vmax;
+                    &:hover{
+                        background-color: gray;
+                    }
                 }
             }
 
