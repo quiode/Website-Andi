@@ -582,7 +582,7 @@
 }
 #gallery #filter_menu {
   display: none;
-  z-index: 6;
+  z-index: 5;
   width: 100vw;
   height: 100vw;
   position: fixed;
@@ -592,7 +592,7 @@
 }
 #gallery #filter_menu form {
   position: inherit;
-  z-index: 5;
+  z-index: 6;
   width: 90vw;
   height: 90vh;
   left: 5vw;
