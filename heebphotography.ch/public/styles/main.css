@@ -612,6 +612,7 @@
   bottom: 5vh;
   height: 9vh;
   font-size: 6.9230769231vh;
+  margin-left: 0;
 }
 #gallery #filter_menu form label {
   font-size: 10vmin;
