@@ -554,6 +554,9 @@
   max-height: 95vh;
   z-index: 6;
 }
+#gallery form {
+  position: relative;
+}
 
 #contact_form {
   overflow-x: hidden;
