@@ -579,10 +579,10 @@
   max-height: 95vh;
   z-index: 6;
 }
-#gallery form {
+#gallery #filter_menu {
   display: none;
-  position: fixed;
 }
+
 #contact_form {
   overflow-x: hidden;
 }
