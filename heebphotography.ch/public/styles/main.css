@@ -584,8 +584,8 @@
   display: none;
   position: fixed;
   z-index: 6;
-  width: 90vw;
-  height: 90vh;
+  width: 90vmax;
+  height: 90vmax;
   left: 5vmax;
   top: 5vmax;
   box-sizing: content-box;

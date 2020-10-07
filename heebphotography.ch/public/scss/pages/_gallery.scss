@@ -91,8 +91,8 @@
         display: none;
         position: fixed;
         z-index: 6;
-        width: ($dimension/1vmax)*1vw;
-        height: ($dimension/1vmax)*1vh;
+        width: $dimension;
+        height: $dimension;
         left: (100 - $dimension)/2;
         top: (100 - $dimension)/2;
         box-sizing: content-box;
