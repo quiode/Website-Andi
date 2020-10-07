@@ -88,7 +88,7 @@
 
     #filter_menu {
         display: none;
-        z-index: 5;
+        z-index: 1;
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -100,7 +100,7 @@
             scrollbar-width: initial;
             $dimension_factor: 90;
             position: inherit;
-            z-index: 6;
+            z-index: 2;
             width: 1vw*$dimension_factor;
             height: 1vh*$dimension_factor;
             left: (100 - $dimension_factor)/2*1vw;

@@ -115,7 +115,7 @@
   border-style: solid;
   box-sizing: content-box;
   transition-duration: 500ms;
-  z-index: 7;
+  z-index: 3;
 }
 .filter_btn:hover {
   transform: rotate(360deg);
@@ -587,7 +587,7 @@
 }
 #gallery #filter_menu {
   display: none;
-  z-index: 5;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -598,7 +598,7 @@
 #gallery #filter_menu form {
   scrollbar-width: initial;
   position: inherit;
-  z-index: 6;
+  z-index: 2;
   width: 90vw;
   height: 90vh;
   left: 5vw;
