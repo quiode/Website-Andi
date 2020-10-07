@@ -170,8 +170,6 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         </div>
 
         <div id="filter_menu">
-            <!-- background -->
-            <div></div>
             <!-- filter form -->
             <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
                 <?php
@@ -235,6 +233,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 ?>
                 <input type="submit" value="Filter">
             </form>
+            <!-- background -->
+            <div></div>
         </div>
 
         <?php require  __DIR__ . "/../templates/footer.php"?>
