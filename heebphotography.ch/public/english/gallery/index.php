@@ -172,8 +172,6 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <div id="filter_menu">
             <!-- filter form -->
             <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
-                <!-- background -->
-                <div></div>
                 <?php
                 if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                     // connect to the database
@@ -235,6 +233,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 ?>
                 <input type="submit" value="Filter">
             </form>
+            <!-- background -->
+            <div></div>
         </div>
 
         <?php require  __DIR__ . "/../templates/footer.php"?>
