@@ -1,0 +1,11 @@
+.filter_btn {
+    $dimension : 5vmin;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    width: $dimension;
+    height: $dimension;
+    border-color: black;
+    border-width: $dimension/10;
+}

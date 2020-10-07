@@ -102,6 +102,17 @@
   }
 }
 
+.filter_btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  border-color: black;
+  border-width: 0.5vmin;
+}
+
 #language ul {
   list-style-type: none;
 }
@@ -555,7 +566,8 @@
   z-index: 6;
 }
 #gallery form {
-  position: relative;
+  display: none;
+  position: fixed;
 }
 #contact_form {
   overflow-x: hidden;
