@@ -215,9 +215,11 @@ function filter() {
         document.getElementById("filter_menu").style.display = "initial";
         document.getElementsByClassName("filter_btn")[0].style.transform = "rotate(180deg)";
         document.getElementById("navigation_button").style.display = "none";
+        document.getElementById("gallery").style.overflow = "hidden ";
     } else { // if the filtermenu is open, closes it
         document.getElementById("navigation_button").style.display = "inline-block";
         document.getElementById("filter_menu").style.display = "none";
         document.getElementsByClassName("filter_btn")[0].style.transform = "";
+        document.getElementById("gallery").style.overflow = "initial";
     }
 }
