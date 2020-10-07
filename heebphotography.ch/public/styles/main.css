@@ -592,7 +592,7 @@
   margin: 0;
   padding: 0;
   border: 0vmax solid white;
-  border: 5vmax solid rgba(255, 255, 255, 0.25);
+  border: 5vmax solid rgba(255, 255, 255, 0.5);
   background-color: white;
   background-clip: padding-box;
   -webkit-background-clip: padding-box;
