@@ -87,20 +87,21 @@
     }
 
     #filter_menu {
-        $dimension_factor: 90;
+        $dimension: 90vmax;
         display: none;
         position: fixed;
         z-index: 6;
-        width: 1vw*$dimension_factor;
-        height: 1vh*$dimension_factor;
-        left: (100 - $dimension_factor)/2*1vw;
-        top: (100 - $dimension_factor)/2*1vh;
+        width: $dimension;
+        height: $dimension;
+        left: (100 - $dimension)/2;
+        top: (100 - $dimension)/2;
         box-sizing: content-box;
         margin: 0;
         padding: 0;
-        border-width: (100 - $dimension_factor)2*1vmax;
+        border-width: (100 - $dimension)/2;
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.25);
+        background-color: white;
 
         form {
             z-index: inherit;

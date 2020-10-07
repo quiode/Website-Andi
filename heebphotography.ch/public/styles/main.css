@@ -584,16 +584,17 @@
   display: none;
   position: fixed;
   z-index: 6;
-  width: 90vw;
-  height: 90vh;
-  left: 5vw;
-  top: 5vh;
+  width: 90vmax;
+  height: 90vmax;
+  left: 5vmax;
+  top: 5vmax;
   box-sizing: content-box;
   margin: 0;
   padding: 0;
-  border-width: 10 2vmax;
+  border-width: 5vmax;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.25);
+  background-color: white;
 }
 #gallery #filter_menu form {
   z-index: inherit;
