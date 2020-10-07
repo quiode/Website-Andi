@@ -91,10 +91,8 @@
         display: none;
         position: fixed;
         z-index: 6;
-        width: 1vw*$dimension_factor;
-        height: 1vh*$dimension_factor;
-        // left: (100 - $dimension_factor)/2*1vw;
-        // top: (100 - $dimension_factor)/2*1vh;
+        width: 1vmax*$dimension_factor;
+        height: 1vmax*$dimension_factor;
         left: 0;
         top: 0;
         box-sizing: content-box;
