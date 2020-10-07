@@ -582,6 +582,21 @@
 }
 #gallery #filter_menu {
   display: none;
+  position: fixed;
+  z-index: 6;
+  width: 90vw;
+  height: 90vh;
+  left: 55vw;
+  top: 55vh;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  border-width: 55vmax;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+#gallery #filter_menu form {
+  z-index: inherit;
 }
 
 #contact_form {
