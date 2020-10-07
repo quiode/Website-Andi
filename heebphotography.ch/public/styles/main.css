@@ -115,6 +115,7 @@
   border-style: solid;
   box-sizing: content-box;
   transition-duration: 1000ms;
+  z-index: 3;
 }
 .filter_btn:hover {
   transform: rotate(360deg);
@@ -123,6 +124,7 @@
   box-sizing: inherit;
   width: 15vmin;
   height: 15vmin;
+  z-index: inherit;
 }
 
 #language ul {
