@@ -594,6 +594,7 @@
   border-width: 10 2vmax;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.25);
+  background-color: white;
 }
 #gallery #filter_menu form {
   z-index: inherit;

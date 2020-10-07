@@ -101,6 +101,7 @@
         border-width: (100 - $dimension_factor)2*1vmax;
         border-style: solid;
         border-color: rgba(255, 255, 255, 0.25);
+        background-color: white;
 
         form {
             z-index: inherit;
