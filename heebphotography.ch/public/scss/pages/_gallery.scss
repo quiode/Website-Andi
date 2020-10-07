@@ -13,7 +13,7 @@
         padding: 0 4px;
         justify-content: space-around;
 
-        > div {
+        >div {
             flex: 25%;
             max-width: 24%;
             padding: 0 4px;
@@ -46,8 +46,9 @@
         height: 100%;
         position: fixed;
         z-index: 4;
-        &:hover{
-            .arrow_btn{
+
+        &:hover {
+            .arrow_btn {
                 transition-delay: 0s;
                 visibility: visible;
                 z-index: 7;
@@ -73,7 +74,7 @@
         position: fixed;
         display: none;
 
-        > img {
+        >img {
             object-fit: contain;
             position: fixed;
             top: 50%;
@@ -87,5 +88,9 @@
 
     form {
         position: relative;
+
+        input {}
+
+        label {}
     }
 }
