@@ -591,6 +591,7 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 #gallery #filter_menu form {
+  scrollbar-width: initial;
   position: inherit;
   z-index: 6;
   width: 90vw;
@@ -599,7 +600,15 @@
   top: 5vh;
   background-color: white;
 }
-
+#gallery #filter_menu form input[type=submit] {
+  position: fixed;
+  width: 90vw;
+  left: 5vw;
+  bottom: 5vh;
+  height: 4.5vh;
+  color: gray;
+  font-size: 2.25vh;
+}
 #contact_form {
   overflow-x: hidden;
 }
