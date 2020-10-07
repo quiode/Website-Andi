@@ -121,6 +121,11 @@
   transform: rotate(360deg);
   cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+  .filter_btn:hover {
+    transform: rotate(0deg);
+  }
+}
 .filter_btn img {
   box-sizing: inherit;
   width: 15vmin;
@@ -584,7 +589,7 @@
   display: none;
   z-index: 5;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
@@ -597,7 +602,7 @@
   width: 90vw;
   height: 90vh;
   left: 5vw;
-  top: 5vh;
+  bottom: 5vh;
   background-color: white;
 }
 #gallery #filter_menu form input {

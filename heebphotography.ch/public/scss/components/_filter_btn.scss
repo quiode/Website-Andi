@@ -18,6 +18,10 @@
     &:hover {
         transform: rotate(360deg);
         cursor: pointer;
+
+        @media screen and (max-width: 600px) {
+            transform: rotate(0deg);
+        }
     }
 
     img {

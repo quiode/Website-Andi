@@ -90,7 +90,7 @@
         display: none;
         z-index: 5;
         width: 100vw;
-        height: 100vw;
+        height: 100vh;
         position: fixed;
         left: 0;
         top: 0;
@@ -104,7 +104,7 @@
             width: 1vw*$dimension_factor;
             height: 1vh*$dimension_factor;
             left: (100 - $dimension_factor)/2*1vw;
-            top: (100 - $dimension_factor)/2*1vh;
+            bottom: (100 - $dimension_factor)/2*1vh;
             background-color: white;
 
             input {
