@@ -216,6 +216,6 @@ function filter() {
         document.getElementsByClassName("filter_btn")[0].style.transform = "rotate(180deg)";
     } else { // if the filtermenu is open, closes it
         document.getElementById("filter_menu").style.display = "none";
-        document.getElementsByClassName("filter_btn")[0].style.transform = "rotate(0deg)";
+        document.getElementsByClassName("filter_btn")[0].style.transform = "";
     }
 }
