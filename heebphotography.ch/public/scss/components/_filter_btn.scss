@@ -10,8 +10,10 @@
     border-width: $dimension/10;
     background-color: white;
     border-style: solid;
+    box-sizing: content-box;
 
     img {
+        box-sizing: inherit;
         width: $dimension;
         height: $dimension;
     }

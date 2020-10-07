@@ -113,8 +113,10 @@
   border-width: 2vmin;
   background-color: white;
   border-style: solid;
+  box-sizing: content-box;
 }
 .filter_btn img {
+  box-sizing: inherit;
   width: 20vmin;
   height: 20vmin;
 }
