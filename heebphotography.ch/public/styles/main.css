@@ -119,6 +119,7 @@
 }
 .filter_btn:hover {
   transform: rotate(360deg);
+  cursor: pointer;
 }
 .filter_btn img {
   box-sizing: inherit;
