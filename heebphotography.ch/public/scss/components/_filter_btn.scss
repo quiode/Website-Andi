@@ -12,10 +12,10 @@
     background-color: white;
     border-style: solid;
     box-sizing: content-box;
+    transition-duration: 1000ms;
 
     &:hover {
-        background-color: gray;
-        border-style: dashed;
+        transform: rotate(360deg);
     }
 
     img {

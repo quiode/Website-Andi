@@ -114,10 +114,10 @@
   background-color: white;
   border-style: solid;
   box-sizing: content-box;
+  transition-duration: 1000ms;
 }
 .filter_btn:hover {
-  background-color: gray;
-  border-style: dashed;
+  transform: rotate(360deg);
 }
 .filter_btn img {
   box-sizing: inherit;
