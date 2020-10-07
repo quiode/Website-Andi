@@ -110,10 +110,14 @@
   width: 15vmin;
   height: 15vmin;
   border-color: black;
-  border-width: 1.5vmin;
+  border-width: 1vmin;
   background-color: white;
   border-style: solid;
   box-sizing: content-box;
+}
+.filter_btn:hover {
+  background-color: gray;
+  border-style: groove;
 }
 .filter_btn img {
   box-sizing: inherit;

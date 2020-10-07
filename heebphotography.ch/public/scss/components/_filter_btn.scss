@@ -1,3 +1,4 @@
+// scss
 .filter_btn {
     $dimension: 15vmin;
     position: fixed;
@@ -7,10 +8,15 @@
     width: $dimension;
     height: $dimension;
     border-color: black;
-    border-width: $dimension/10;
+    border-width: $dimension/15;
     background-color: white;
     border-style: solid;
     box-sizing: content-box;
+
+    &:hover {
+        background-color: gray;
+        border-style: groove;
+    }
 
     img {
         box-sizing: inherit;
