@@ -233,8 +233,6 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 ?>
                 <input type="submit" value="Filter">
             </form>
-            <!-- background -->
-            <div></div>
         </div>
 
         <?php require  __DIR__ . "/../templates/footer.php"?>

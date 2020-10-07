@@ -94,16 +94,7 @@
         position: fixed;
         left: 0;
         top: 0;
-
-        >div {
-            z-index: 5;
-            width: 100vw;
-            height: 100vw;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
+        background-color: rgba(0, 0, 0, 0.75);
 
         form {
             $dimension_factor: 90;
@@ -113,7 +104,7 @@
             height: 1vh*$dimension_factor;
             left: (100 - $dimension_factor)/2*1vw;
             top: (100 - $dimension_factor)/2*1vh;
-            background-color: rgba(255, 255, 255, 0.9999);
+            background-color: white;
         }
     }
 }
