@@ -110,6 +110,7 @@
             input {
                 width: 7vmin;
                 height: 7vmin;
+                margin-left: 2vmin;
 
                 &[type="submit"] {
                     position: fixed;
@@ -123,6 +124,7 @@
 
             label {
                 font-size: 10vmin;
+                margin-right: 2vmin;
             }
         }
     }
