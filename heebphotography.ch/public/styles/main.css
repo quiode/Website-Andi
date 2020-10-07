@@ -586,8 +586,8 @@
   z-index: 6;
   width: 90vw;
   height: 90vh;
-  left: 5vw;
-  top: 5vh;
+  left: 0;
+  top: 0;
   box-sizing: content-box;
   margin: 0;
   padding: 0;
