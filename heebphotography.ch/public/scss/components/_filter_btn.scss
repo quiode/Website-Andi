@@ -12,11 +12,11 @@
     background-color: white;
     border-style: solid;
     box-sizing: content-box;
-    transition-duration: 500ms;
+    transition-duration: 1000ms;
     z-index: 7;
 
     &:hover {
-        transform: rotate(360deg);
+        // transform: rotate(360deg);
         cursor: pointer;
     }
 

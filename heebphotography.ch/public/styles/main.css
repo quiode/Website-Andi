@@ -114,11 +114,10 @@
   background-color: white;
   border-style: solid;
   box-sizing: content-box;
-  transition-duration: 500ms;
+  transition-duration: 1000ms;
   z-index: 7;
 }
 .filter_btn:hover {
-  transform: rotate(360deg);
   cursor: pointer;
 }
 .filter_btn img {
@@ -589,6 +588,8 @@
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  transition-duration: 1000ms;
+  bottom: 100vw;
 }
 #gallery #filter_menu form {
   scrollbar-width: initial;
@@ -599,16 +600,18 @@
   left: 5vw;
   top: 5vh;
   background-color: white;
+  bottom: 100vw;
+  transition-duration: inherit;
 }
 #gallery #filter_menu form input {
   width: 4vmin;
   height: 4vmin;
 }
 #gallery #filter_menu form input[type=submit] {
-  position: fixed;
+  position: relative;
   width: 90vw;
-  left: 5vw;
-  bottom: 5vh;
+  left: 0;
+  bottom: 0;
   height: 9vh;
   color: gray;
   font-size: 6.9230769231vh;
