@@ -94,7 +94,16 @@
         position: fixed;
         left: 0;
         top: 0;
-        background-color: rgba(255, 255, 255, 0.5);
+
+        >div {
+            z-index: 5;
+            width: 100vw;
+            height: 100vw;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
 
         form {
             $dimension_factor: 90;
