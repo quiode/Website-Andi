@@ -117,7 +117,7 @@
 }
 .filter_btn:hover {
   background-color: gray;
-  border-style: groove;
+  border-style: dashed;
 }
 .filter_btn img {
   box-sizing: inherit;
