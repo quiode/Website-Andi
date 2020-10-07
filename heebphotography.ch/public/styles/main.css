@@ -589,15 +589,6 @@
   left: 0;
   top: 0;
 }
-#gallery #filter_menu > div {
-  z-index: 5;
-  width: 100vw;
-  height: 100vw;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-}
 #gallery #filter_menu form {
   position: inherit;
   z-index: 6;
@@ -606,6 +597,15 @@
   left: 5vw;
   top: 5vh;
   background-color: white;
+}
+#gallery #filter_menu form > div {
+  z-index: 5;
+  width: 100vw;
+  height: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #contact_form {
