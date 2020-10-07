@@ -215,13 +215,9 @@ function filter() {
         document.getElementById("filter_menu").style.display = "initial";
         document.getElementsByClassName("filter_btn")[0].style.transform = "rotate(180deg)";
         document.getElementById("navigation_button").style.display = "none";
-        document.getElementById("filter_menu").style.bottom = "0";
-        document.getElementsByTagName("form")[0].style.bottom = document.getElementsByTagName("form")[0].style.top;
     } else { // if the filtermenu is open, closes it
         document.getElementById("navigation_button").style.display = "inline-block";
         document.getElementById("filter_menu").style.display = "none";
         document.getElementsByClassName("filter_btn")[0].style.transform = "";
-        document.getElementById("filter_menu").style.bottom = "100vw";
-        document.getElementsByTagName("form")[0].style.bottom = "100vw";
     }
 }

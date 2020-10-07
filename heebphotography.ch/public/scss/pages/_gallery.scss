@@ -95,8 +95,6 @@
         left: 0;
         top: 0;
         background-color: rgba(0, 0, 0, 0.75);
-        transition-duration: 1000ms;
-        bottom: 100vw;
 
         form {
             scrollbar-width: initial;
@@ -108,18 +106,16 @@
             left: (100 - $dimension_factor)/2*1vw;
             top: (100 - $dimension_factor)/2*1vh;
             background-color: white;
-            bottom: 100vw;
-            transition-duration: inherit;
 
             input {
                 width: 4vmin;
                 height: 4vmin;
 
                 &[type="submit"] {
-                    position: relative;
+                    position: fixed;
                     width: 1vw*$dimension_factor;
-                    left: 0;
-                    bottom: 0;
+                    left: (100 - $dimension_factor)/2*1vw;
+                    bottom: (100 - $dimension_factor)/2*1vh;
                     height: $dimension_factor/10*1vh;
                     color: gray;
                     font-size: $dimension_factor/13*1vh;
