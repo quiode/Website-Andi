@@ -1,5 +1,5 @@
 .filter_btn {
-    $dimension: 10vmin;
+    $dimension: 20vmin;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -9,6 +9,7 @@
     border-color: black;
     border-width: $dimension/10;
     background-color: white;
+    border-style: solid;
 
     img {
         width: $dimension;
