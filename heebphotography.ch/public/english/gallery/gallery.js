@@ -20,6 +20,23 @@ function resizeToMax() {
     }
 }
 
+function image_description() {
+    document.getElementsByClassName("image").forEach(element => {
+        if (element.src == document.getElementById("slideshow_image").src) {
+            thumbnail_image = element;
+        }
+    });
+    category = thumbnail_image.classList.item(1);
+    type = thumbnail_image.classList.item(2);
+    category = category.replace("_", " ");
+    type = type.replace("_", " ");
+    document.getElementById("picture_description").innerHTML = category + ": " + type;
+    document.getElementById("picture_description").width = document.getElementById("slideshow_image").width;
+    document.getElementById("picture_description").height = document.getElementById("slideshow_image").height/10;
+    document.getElementById("picture_description").left = document.getElementById("slideshow_image").left;
+    document.getElementById("picture_description").bottom = document.getElementById("slideshow_image").bottom;
+}
+
 // lets the slideshow appear/disapper
 function slideshow_on(src) {
     openFullscreen();

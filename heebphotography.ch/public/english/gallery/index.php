@@ -145,6 +145,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg"
                     onload="resizeToMax()">
 
+                <div id="picture_description"></div>
+
                 <!-- for navigation within the slideshow -->
                 <div class="arrows_background">
                     <div onclick="last_picture()" style="z-index: 7; position: fixed;">

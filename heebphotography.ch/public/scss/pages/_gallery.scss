@@ -74,6 +74,15 @@
         position: fixed;
         display: none;
 
+        #picture_description {
+            opacity: 0.5;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.75);
+            width: 0;
+            height: 0;
+            z-index: 6;
+        }
+
         >img {
             object-fit: contain;
             position: fixed;
