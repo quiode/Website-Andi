@@ -4,7 +4,7 @@ window.onresize = resizeToMax;
 document.addEventListener("keydown", key_pressed);
 
 function resizeToMax() {
-    myImage = new Image();
+    // myImage = new Image();
     if (document.getElementById("slideshow_image").naturalWidth / document.body.clientWidth > document.getElementById("slideshow_image").naturalHeight / document.body.clientHeight) {
         img.style.width = "100%";
     } else {
