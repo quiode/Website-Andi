@@ -21,18 +21,19 @@ function resizeToMax() {
 }
 
 function image_description() {
-    document.getElementsByClassName("image").forEach(element => {
+    for (let index = 0; index < document.getElementsByClassName("image").length; index++) {
+        const element = array[index];
         if (element.src == document.getElementById("slideshow_image").src) {
             thumbnail_image = element;
         }
-    });
+    }
     category = thumbnail_image.classList.item(1);
     type = thumbnail_image.classList.item(2);
     category = category.replace("_", " ");
     type = type.replace("_", " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;
     document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").style.width;
-    document.getElementById("picture_description").style.height = document.getElementById("slideshow_image").style.height/10;
+    document.getElementById("picture_description").style.height = document.getElementById("slideshow_image").style.height / 10;
     document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").style.left;
     document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").style.bottom;
 }
