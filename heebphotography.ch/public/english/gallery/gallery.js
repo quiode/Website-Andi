@@ -32,10 +32,10 @@ function image_description() {
     category = category.replace("_", " ");
     type = type.replace("_", " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;
-    document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").style.width;
-    document.getElementById("picture_description").style.height = document.getElementById("slideshow_image").style.height / 10;
-    document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").style.left;
-    document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").style.bottom;
+    document.getElementById("picture_description").style.height = document.getElementById("slideshow_image").offsetHeight/10;
+    document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").offsetWidth;
+    document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").offsetLeft;
+    document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").offsetTop;
 }
 
 // lets the slideshow appear/disapper
