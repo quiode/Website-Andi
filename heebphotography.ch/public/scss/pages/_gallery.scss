@@ -75,6 +75,7 @@
         display: none;
 
         #picture_description {
+            display: inherit;
             opacity: 0.5;
             color: white;
             background-color: rgba(0, 0, 0, 0.75);

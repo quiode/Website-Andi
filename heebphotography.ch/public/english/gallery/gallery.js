@@ -35,7 +35,6 @@ function image_description() {
     document.getElementById("picture_description").style.height = document.getElementById("slideshow_image").style.height/10;
     document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").style.left;
     document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").style.bottom;
-    document.getElementById("picture_description").style.display = "initial";
 }
 
 // lets the slideshow appear/disapper
@@ -76,6 +75,7 @@ function next_picture() {
     // gets the original image instead of the thumbnail
     var newPath = final_src.replace("/thumbnail", "");
     document.getElementById("slideshow_image").src = newPath;
+    image_description();
 }
 
 // shows last picture
@@ -95,6 +95,7 @@ function last_picture() {
     // gets the original image instead of the thumbnail
     var newPath = final_src.replace("/thumbnail", "");
     document.getElementById("slideshow_image").src = newPath;
+    image_description();
 }
 
 // looks which key is pressed and executes the right funciton
