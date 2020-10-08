@@ -583,7 +583,7 @@
   background-color: black;
   z-index: 6;
   transform: translateX(-50%);
-  font-size: 3.5vw;
+  font-size: 3vw;
   padding-left: 1vw;
 }
 #gallery #slideshow > img {

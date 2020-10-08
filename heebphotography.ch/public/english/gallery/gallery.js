@@ -30,8 +30,8 @@ function image_description() {
     }
     category = thumbnail_image.classList.item(1);
     type = thumbnail_image.classList.item(2);
-    category = category.replace("_", " ");
-    type = type.replace("_", " ");
+    category = category.replace(/_/g, " ");
+    type = type.replace(/_/g, " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;
     document.getElementById("picture_description").style.height = (document.getElementById("slideshow_image").offsetHeight / 15 + 2).toString() + "px";
     document.getElementById("picture_description").style.width = (document.getElementById("slideshow_image").offsetWidth + 2).toString() + "px";
