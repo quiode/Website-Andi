@@ -31,10 +31,11 @@ function image_description() {
     category = category.replace("_", " ");
     type = type.replace("_", " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;
-    document.getElementById("picture_description").width = document.getElementById("slideshow_image").width;
-    document.getElementById("picture_description").height = document.getElementById("slideshow_image").height/10;
-    document.getElementById("picture_description").left = document.getElementById("slideshow_image").left;
-    document.getElementById("picture_description").bottom = document.getElementById("slideshow_image").bottom;
+    document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").style.width;
+    document.getElementById("picture_description").style.height = document.getElementById("slideshow_image").style.height/10;
+    document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").style.left;
+    document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").style.bottom;
+    document.getElementById("picture_description").style.display = "initial";
 }
 
 // lets the slideshow appear/disapper
@@ -47,6 +48,7 @@ function slideshow_on(src) {
     // gets the original image instead of the thumbnail
     var newPath = src.replace("/thumbnail", "");
     document.getElementById("slideshow_image").src = newPath;
+    image_description();
 }
 
 function slideshow_off() {
