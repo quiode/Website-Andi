@@ -22,7 +22,7 @@ function resizeToMax() {
 
 function image_description() {
     for (let index = 0; index < document.getElementsByClassName("image").length; index++) {
-        const element = array[index];
+        const element = document.getElementsByClassName("image")[index];
         if (element.src == document.getElementById("slideshow_image").src) {
             thumbnail_image = element;
         }
