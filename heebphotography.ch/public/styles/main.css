@@ -583,6 +583,7 @@
   background-color: black;
   z-index: 6;
   transform: translateX(-50%);
+  font-size: 4vw;
 }
 #gallery #slideshow > img {
   object-fit: contain;
