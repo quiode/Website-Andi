@@ -18,18 +18,6 @@ function resizeToMax() {
         var arrow = arrows_background[index];
         arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) + "px";
     }
-    // // places the arrow buttons in the middle of the filled space
-    // var arrows = document.getElementsByClassName("arrow_btn left");
-    // for (let index = 0; index < arrows.length; index++) {
-    //     arrow = arrows[index];
-    //     arrow.style.left = (Number((window.innerWidth - img.getBoundingClientRect().width) / 6)) + "px";
-    // }
-    // // places the arrow buttons in the middle of the filled space
-    // arrows = document.getElementsByClassName("arrow_btn right");
-    // for (let index = 0; index < arrows.length; index++) {
-    //     arrow = arrows[index];
-    //     arrow.style.right = (Number((window.innerWidth - img.getBoundingClientRect().width) / 6)) + "px";
-    // }
 }
 
 // lets the slideshow appear/disapper
