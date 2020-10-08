@@ -33,7 +33,7 @@ function image_description() {
     category = category.replace(/_/g, " ");
     type = type.replace(/_/g, " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;
-    if (document.getElementById("picture_description").style.opacity == 1) {
+    if (window.innerWidth <= 600) {
         document.getElementById("picture_description").style.height = "0px";
     } else {
         document.getElementById("picture_description").style.height = (document.getElementById("slideshow_image").offsetHeight / 15 + 2).toString() + "px";
