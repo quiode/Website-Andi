@@ -575,6 +575,14 @@
   position: fixed;
   display: none;
 }
+#gallery #slideshow #picture_description {
+  display: inherit;
+  position: fixed;
+  opacity: 0.5;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 6;
+}
 #gallery #slideshow > img {
   object-fit: contain;
   position: fixed;
