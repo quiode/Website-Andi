@@ -5,8 +5,7 @@ document.addEventListener("keydown", key_pressed);
 
 function resizeToMax() {
     myImage = new Image();
-    var img = document.getElementById("slideshow_image");
-    if (img.src.width / document.body.clientWidth > img.src.height / document.body.clientHeight) {
+    if (document.getElementById("slideshow_image").naturalWidth / document.body.clientWidth > document.getElementById("slideshow_image").naturalHeight / document.body.clientHeight) {
         img.style.width = "100%";
     } else {
         img.style.height = "100%";
@@ -22,6 +21,7 @@ function resizeToMax() {
 }
 
 function image_description() {
+    // if (document.getElementById("slideshow_image").src.width){}
     for (let index = 0; index < document.getElementsByClassName("image").length; index++) {
         const element = document.getElementsByClassName("image")[index];
         if (element.src.replace("/thumbnail", "") == document.getElementById("slideshow_image").src) {
