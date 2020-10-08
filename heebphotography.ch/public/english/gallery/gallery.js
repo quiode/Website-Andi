@@ -37,6 +37,10 @@ function image_description() {
     document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").offsetWidth.toString();
     document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").offsetLeft.toString();
     document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").offsetTop.toString();
+    alert((document.getElementById("slideshow_image").offsetHeight/10).toString());
+    alert(document.getElementById("picture_description").style.height);
+    alert(document.getElementById("slideshow_image").offsetTop.toString());
+    alert(document.getElementById("picture_description").style.bottom);
 }
 
 // lets the slideshow appear/disapper
