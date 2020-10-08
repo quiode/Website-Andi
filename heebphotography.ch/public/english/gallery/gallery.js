@@ -18,6 +18,7 @@ function resizeToMax() {
         var arrow = arrows_background[index];
         arrow.style.width = (Number((window.innerWidth - img.getBoundingClientRect().width) / 2)) + "px";
     }
+    image_description();
 }
 
 function image_description() {
@@ -48,7 +49,6 @@ function slideshow_on(src) {
     // gets the original image instead of the thumbnail
     var newPath = src.replace("/thumbnail", "");
     document.getElementById("slideshow_image").src = newPath;
-    image_description();
 }
 
 function slideshow_off() {
@@ -76,7 +76,6 @@ function next_picture() {
     // gets the original image instead of the thumbnail
     var newPath = final_src.replace("/thumbnail", "");
     document.getElementById("slideshow_image").src = newPath;
-    image_description();
 }
 
 // shows last picture
@@ -96,7 +95,6 @@ function last_picture() {
     // gets the original image instead of the thumbnail
     var newPath = final_src.replace("/thumbnail", "");
     document.getElementById("slideshow_image").src = newPath;
-    image_description();
 }
 
 // looks which key is pressed and executes the right funciton
