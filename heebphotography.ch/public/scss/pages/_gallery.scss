@@ -77,10 +77,11 @@
         #picture_description {
             display: inherit;
             position: fixed;
-            opacity: 0.5;
+            opacity: 0.75;
             color: white;
-            background-color: rgba(0, 0, 0, 0.75);
+            background-color:rgba black;
             z-index: 6;
+            transform: translateX(-50%);
         }
 
         >img {
