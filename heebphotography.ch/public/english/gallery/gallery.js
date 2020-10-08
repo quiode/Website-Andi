@@ -33,10 +33,10 @@ function image_description() {
     category = category.replace("_", " ");
     type = type.replace("_", " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;
-    document.getElementById("picture_description").style.height = (document.getElementById("slideshow_image").offsetHeight/10).toString();
-    document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").offsetWidth.toString();
-    document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").offsetLeft.toString();
-    document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").offsetTop.toString();
+    document.getElementById("picture_description").style.height = (document.getElementById("slideshow_image").offsetHeight/10).toString() + "px";
+    document.getElementById("picture_description").style.width = document.getElementById("slideshow_image").offsetWidth.toString() + "px";
+    document.getElementById("picture_description").style.left = document.getElementById("slideshow_image").offsetLeft.toString() + "px";
+    document.getElementById("picture_description").style.bottom = document.getElementById("slideshow_image").offsetTop.toString() + "px";
     alert((document.getElementById("slideshow_image").offsetHeight/10).toString());
     alert(document.getElementById("picture_description").style.height);
     alert(document.getElementById("slideshow_image").offsetTop.toString());
