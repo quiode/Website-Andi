@@ -6,9 +6,9 @@ document.addEventListener("keydown", key_pressed);
 function resizeToMax() {
     // myImage = new Image();
     if (document.getElementById("slideshow_image").naturalWidth / document.body.clientWidth > document.getElementById("slideshow_image").naturalHeight / document.body.clientHeight) {
-        img.style.width = "100%";
+        document.getElementById("slideshow_image").style.width = "100%";
     } else {
-        img.style.height = "100%";
+        document.getElementById("slideshow_image").style.height = "100%";
     }
 
     // let the arrows fill the blank space
