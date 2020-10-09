@@ -26,8 +26,9 @@ function slideshow() {
 }
 // detects the device orientation and changed the pictures
 function picture_orientation() {
-	alert(ScreenOrientation.prototype.type);
-	if (ScreenOrientation.type == "portrait-primary" || ScreenOrientation.type == "portrait-secondary") {
+	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation; // gets tbe screen orientation
+	
+	if (orientation == "portrait-primary" || orientation == "portrait-secondary") {
 		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
 			element.style.display = "block";
