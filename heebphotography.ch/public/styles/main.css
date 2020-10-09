@@ -278,7 +278,7 @@
     max-height: 30vh;
   }
 }
-#english .slides {
+#english .landscape_slides, #english .portrait_slide {
   bottom: 0;
   left: 0;
   height: 80vh;
@@ -291,11 +291,20 @@
   z-index: 0;
 }
 @media screen and (orientation: portrait) {
-  #english .slides {
+  #english .landscape_slides, #english .portrait_slide {
     display: none;
   }
 }
-#english :first-of-type(.slide) {
+@media screen and (orientation: landscape) {
+  #english .portrait_slide {
+    display: none;
+  }
+}
+#english :first-of-type(.landscape_slides) {
+  opacity: 1;
+  z-index: 0;
+}
+#english :first-of-type(.portrait_slide) {
   opacity: 1;
   z-index: 0;
 }
@@ -323,6 +332,7 @@
   top: 100vh;
   position: absolute;
   display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;

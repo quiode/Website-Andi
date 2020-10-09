@@ -77,7 +77,7 @@ $header_height:20vh;
         }
     }
 
-    .slides {
+    .landscape_slides {
         bottom: 0;
         left: 0;
         height: 100vh - $header_height;
@@ -94,7 +94,20 @@ $header_height:20vh;
         }
     }
 
-    :first-of-type(.slide) {
+    .portrait_slide {
+        @extend .landscape_slides;
+
+        @media screen and (orientation: landscape) {
+            display: none;
+        }
+    }
+
+    :first-of-type(.landscape_slides) {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    :first-of-type(.portrait_slide) {
         opacity: 1;
         z-index: 0;
     }
@@ -120,6 +133,7 @@ $header_height:20vh;
         top: 100vh;
         position: absolute;
         display: flex;
+        display: none; //doesnt work right now
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: stretch;

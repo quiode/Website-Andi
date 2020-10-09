@@ -3,13 +3,14 @@ var slideshow_interval = setInterval(slideshow, 5000);
 
 // changes the image
 function slideshow() {
+	var device_slides = picture_orientation();
 	// when the document has fully loaded, begin with slideshow
 	if (document.readyState == "complete") {
 		// gets every slide image
-		var slides = document.getElementsByClassName("slides");
+		var slides = document.getElementsByClassName(device_slides);
 		// finds the slide image which is currently shown
 		for (let index = 0; index < slides.length; index++) {
-			if (window.getComputedStyle(slides[index]).getPropertyValue("opacity") == 1) { //fuck javascript
+			if (window.getComputedStyle(slides[index]).getPropertyValue(device_slides) == 1) { //fuck javascript
 				current_slide = slides[index];
 			}
 		}
@@ -21,5 +22,29 @@ function slideshow() {
 		// lets the current slide disappear and shows the new slide slide
 		current_slide.style.opacity = 0;
 		new_slide.style.opacity = 1;
+	}
+}
+// detects the device orientation and changed the pictures
+function picture_orientation() {
+	if (ScreenOrientation.type == "portrait-primary" || ScreenOrientation.type == "portrait-secondary") {
+		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
+			const element = document.getElementsByClassName("portrait_slides")[index];
+			element.style.display = "block";
+		}
+		for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
+			const element = document.getElementsByClassName("landscape_slides")[index];
+			element.style.display = "none";
+		}
+		return "portrait_slides";
+	} else {
+		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
+			const element = document.getElementsByClassName("portrait_slides")[index];
+			element.style.display = "none";
+		}
+		for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
+			const element = document.getElementsByClassName("landscape_slides")[index];
+			element.style.display = "block";
+		}
+		return "landscape_slides";
 	}
 }
