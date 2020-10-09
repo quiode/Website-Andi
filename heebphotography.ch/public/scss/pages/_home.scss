@@ -44,7 +44,6 @@ $header_height:20vh;
     }
 
     #profile {
-        display: none;
         position: absolute;
         z-index: 3;
         top: $header_height + 25vh;
@@ -58,10 +57,10 @@ $header_height:20vh;
         overflow: auto;
 
         @media screen and (orientation: portrait) {
-            top: $header_height + 0.5vh;
+            top: 100vh;
             transform: translateY(102px);
             width: 90vw;
-            height: 100vh - ($header_height + 5vh); //just 100vh - top_height - some to buffer the heigt of the 
+            height: 100vh - (5vh); //just 100vh - some to buffer the heigt of the 
             margin-bottom: -102px;
             right: 5vw;
             font-size: 6.5vmin;
