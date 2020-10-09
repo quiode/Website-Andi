@@ -1,6 +1,7 @@
 {
     "require": {
         "phpmailer/phpmailer": "^6.1",
-        "facebook/graph-sdk": "^5.7"
+        "facebook/graph-sdk": "^5.7",
+        "mobiledetect/mobiledetectlib": "^2.8"
     }
 }
