@@ -252,17 +252,6 @@
   padding: 1vmin 1vmin;
   overflow: auto;
 }
-@media screen and (orientation: portrait) {
-  #english #profile {
-    top: 20.5vh;
-    transform: translateY(102px);
-    width: 90vw;
-    height: 75vh;
-    margin-bottom: -102px;
-    right: 5vw;
-    font-size: 6.5vmin;
-  }
-}
 #english #profile img {
   z-index: 4;
   position: relative;
@@ -271,12 +260,6 @@
   right: 0;
   float: left;
   margin-right: 1vmin;
-}
-@media screen and (orientation: portrait) {
-  #english #profile img {
-    max-width: 30vw;
-    max-height: 30vh;
-  }
 }
 #english .slides {
   bottom: 0;
@@ -289,11 +272,6 @@
   transition-duration: 1s;
   transition-property: opacity;
   z-index: 0;
-}
-@media screen and (orientation: portrait) {
-  #english .slides {
-    display: none;
-  }
 }
 #english :first-of-type(.slide) {
   opacity: 1;
