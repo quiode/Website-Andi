@@ -26,7 +26,6 @@
             $all_rows = pg_fetch_all($query_result);
             pg_close($dbconn); //ends connection to database
             // displays the images
-            var_dump($all_rows);
             $first_run = true;
             foreach ($all_rows as $name) {
                 $name = $name["name"];
