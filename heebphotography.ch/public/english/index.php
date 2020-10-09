@@ -19,41 +19,46 @@
 
         <section>
             <?php
-            // gets last 5 images from db
-            $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            $query = "SELECT name FROM images ORDER BY upload_date DESC LIMIT 5";
-            $query_result = pg_query($query);
-            $all_rows = pg_fetch_all($query_result);
-            pg_close($dbconn); //ends connection to database
-            // displays the images
-            $first_run = true;
-            foreach ($all_rows as $name) {
-                $name = $name["name"];
-                if ($first_run) {
-                    echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
-                    $first_run = false;
-                } else {
-                    echo "<div class=\"slides\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+            // looks if the device is a phone or a pc and changes which pictures get selected
+            require_once 'Mobile_Detect.php';
+            $detect = new Mobile_Detect;
+            if ($detect->isMobile()) { //if the device is a mobile device (mostly held in portrait mode)
+                // gets last 5 images from db
+                $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                $query = "SELECT name FROM images WHERE width < height ORDER BY upload_date DESC LIMIT 5";
+                $query_result = pg_query($query);
+                $all_rows = pg_fetch_all($query_result);
+                pg_close($dbconn); //ends connection to database
+                // displays the images
+                $first_run = true;
+                foreach ($all_rows as $name) {
+                    $name = $name["name"];
+                    if ($first_run) {
+                        echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                        $first_run = false;
+                    } else {
+                        echo "<div class=\"slides\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    }
+                }
+            } else { //if the device is a computer or a tablet (mostly held in landscape mode)
+                // gets last 5 images from db
+                $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                $query = "SELECT name FROM images ORDER BY upload_date DESC LIMIT 5";
+                $query_result = pg_query($query);
+                $all_rows = pg_fetch_all($query_result);
+                pg_close($dbconn); //ends connection to database
+                // displays the images
+                $first_run = true;
+                foreach ($all_rows as $name) {
+                    $name = $name["name"];
+                    if ($first_run) {
+                        echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                        $first_run = false;
+                    } else {
+                        echo "<div class=\"slides\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    }
                 }
             }
-            // $dir = "images-home";
-            // if (is_dir($dir)) {
-            //     $scan = scandir($dir);
-                
-            //     $is_first_tester = true;
-            //     foreach ($scan as $value) {
-            //         if ($is_first_tester) {
-            //             if (!(is_dir($value))) {
-            //                 echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white),left bottom/100vw no-repeat url($dir/$value);\"></div>";
-            //                 $is_first_tester = false;
-            //             }
-            //         } else {
-            //             if (!(is_dir($value))) {
-            //                 echo "<div class=\"slides\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white), left bottom/100vw no-repeat url($dir/$value);\"></div>";
-            //             }
-            //         }
-            //     }
-            // }
             ?>
         </section>
 
