@@ -282,7 +282,7 @@
     max-height: 30vh;
   }
 }
-#english .landscape_slides, #english .portrait_slide {
+#english .landscape_slides, #english .portrait_slides {
   bottom: 0;
   left: 0;
   height: 80vh;
@@ -295,12 +295,12 @@
   z-index: 0;
 }
 @media screen and (orientation: portrait) {
-  #english .landscape_slides, #english .portrait_slide {
+  #english .landscape_slides, #english .portrait_slides {
     display: none;
   }
 }
 @media screen and (orientation: landscape) {
-  #english .portrait_slide {
+  #english .portrait_slides {
     display: none;
   }
 }

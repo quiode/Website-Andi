@@ -99,7 +99,7 @@ $header_height:20vh;
         }
     }
 
-    .portrait_slide {
+    .portrait_slides {
         @extend .landscape_slides;
 
         @media screen and (orientation: landscape) {
