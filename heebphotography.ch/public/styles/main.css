@@ -300,8 +300,18 @@
   }
 }
 @media screen and (orientation: landscape) {
+  #english .landscape_slides, #english .portrait_slides {
+    display: block;
+  }
+}
+@media screen and (orientation: landscape) {
   #english .portrait_slides {
     display: none;
+  }
+}
+@media screen and (orientation: portrait) {
+  #english .portrait_slides {
+    display: block;
   }
 }
 #english :first-of-type(.landscape_slides) {

@@ -97,6 +97,10 @@ $header_height:20vh;
         @media screen and (orientation: portrait) {
             display: none;
         }
+
+        @media screen and (orientation: landscape) {
+            display: block;
+        }
     }
 
     .portrait_slides {
@@ -104,6 +108,10 @@ $header_height:20vh;
 
         @media screen and (orientation: landscape) {
             display: none;
+        }
+
+        @media screen and (orientation: portrait) {
+            display: block;
         }
     }
 
