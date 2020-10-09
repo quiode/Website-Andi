@@ -46,8 +46,8 @@
         <section id="english">
             <article id="contact_address">
                 <p class="title">Contact address</p>
-                <p>Dominik Schwaiger<br />Hofackerstrasse 3<br />8722 Kaltbrunn<br />Switzerland</p>
-                <p>e-mail:<br />admin@heebphotography.ch</p>
+                <p>Andreas Heeb<br />Bachtelstrasse 16<br />8640 Rapperswil-Jona<br />Switzerland</p>
+                <p>e-mail:<br />andreas.heeb@heebphotography.ch</p>
             </article>
             <article id="disclaimer">
                 <p class="title">Disclaimer</p>The author assumes no liability whatsoever with regard
