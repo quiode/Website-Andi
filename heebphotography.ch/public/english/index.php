@@ -27,6 +27,16 @@
             pg_close($dbconn); //ends connection to database
             // displays the images
             var_dump($all_rows);
+            $first_run = true;
+            foreach ($all_rows as $name) {
+                $name = $name["name"];
+                if ($first_run) {
+                    echo "<div class=\"slides\" id=\"first_slide\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    $first_run = false;
+                } else {
+                    echo "<div class=\"slides\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                }
+            }
             // $dir = "images-home";
             // if (is_dir($dir)) {
             //     $scan = scandir($dir);
