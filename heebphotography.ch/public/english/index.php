@@ -21,7 +21,7 @@
         <section>
             <?php
             // looks if the device is a phone or a pc and changes which pictures get selected
-            require_once 'Mobile_Detect.php';
+            // require_once 'Mobile_Detect.php'; should have a autoloader
             $detect = new Mobile_Detect;
             if ($detect->isMobile()) { //if the device is a mobile device (mostly held in portrait mode)
                 // gets last 5 images from db
