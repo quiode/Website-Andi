@@ -26,7 +26,7 @@ function slideshow() {
 }
 // detects the device orientation and changed the pictures
 function picture_orientation() {
-	alert(ScreenOrientation.toString());
+	alert(ScreenOrientation.prototype.type);
 	if (ScreenOrientation.type == "portrait-primary" || ScreenOrientation.type == "portrait-secondary") {
 		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
