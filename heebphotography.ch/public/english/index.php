@@ -32,10 +32,10 @@
             foreach ($all_rows as $name) {
                 $name = $name["name"];
                 if ($first_run) {
-                    echo "<div class=\"portrait_slides\" id=\"portrait_first_slide\" style=\"background: linear-gradient(to top, transparent 50%, transparent 50%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"portrait_slides\" id=\"portrait_first_slide\" style=\"background: linear-gradient(to top, transparent 30%, transparent 30%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                     $first_run = false;
                 } else {
-                    echo "<div class=\"portrait_slides\" style=\"background: linear-gradient(to top, transparent 50%, transparent 50%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"portrait_slides\" style=\"background: linear-gradient(to top, transparent 30%, transparent 30%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                 }
             }
             // gets landscape pictures
