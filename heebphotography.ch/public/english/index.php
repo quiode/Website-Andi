@@ -53,7 +53,7 @@
                     echo "<div class=\"landscape_slides\" id=\"landscape_first_slide\" style=\"background: linear-gradient(to top, transparent 50%, transparent 50%, white),left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                     $first_run = false;
                 } else {
-                    echo "<div class=\"landscape_slides\" style=\"background: linear-gradient(to top, transparent 70%, transparent 70%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"landscape_slides\" style=\"background: linear-gradient(to top, transparent 50%, transparent 50%, white), left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                 }
             }
             ?>
