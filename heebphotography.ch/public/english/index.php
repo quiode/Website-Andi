@@ -16,7 +16,7 @@
 
         <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
         <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../../../../vendor/autoload.php"?> <!-- external libraries -->
+        <?php require __DIR__ . "/../../../vendor/autoload.php"?> <!-- external libraries -->
 
         <section>
             <?php
