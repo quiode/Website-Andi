@@ -809,6 +809,7 @@
 }
 
 footer {
+  display: none;
   height: 50px;
   position: relative;
   bottom: 0;
