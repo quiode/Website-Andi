@@ -50,10 +50,10 @@
             foreach ($all_rows as $name) {
                 $name = $name["name"];
                 if ($first_run) {
-                    echo "<div class=\"landscape_slides\" id=\"landscape_first_slide\" style=\"background:left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"landscape_slides\" id=\"landscape_first_slide\" style=\"background:150% 100%/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                     $first_run = false;
                 } else {
-                    echo "<div class=\"landscape_slides\" style=\"background:left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"landscape_slides\" style=\"background:150% 100%/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                 }
             }
             ?>
