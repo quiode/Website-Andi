@@ -1,9 +1,9 @@
 // import variables
 @use '../pages/home';
 // scss
-.header {
+#header {
     width: 100vw;
-    height: $header_height;
+    height: home.$header_height;
     margin: 0;
     z-index: 2;
     position: relative;
@@ -21,7 +21,7 @@
         margin: inherit;
         position: inherit;
         transform: translateY(-50%);
-        top: $header_height/2;
+        top: home.$header_height/2;
         font-size: 7vmax;
     }
 }
