@@ -8,31 +8,6 @@ $header_height:20vh;
 #english {
     margin: 0;
 
-    header {
-        width: 100vw;
-        height: $header_height;
-        margin: 0;
-        z-index: 2;
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.5);
-
-        @media screen and (orientation: portrait) {
-            top: 102px;
-        }
-
-        h2 {
-            font-weight: 200;
-            display: block;
-            text-align: center;
-            z-index: inherit;
-            margin: inherit;
-            position: inherit;
-            transform: translateY(-50%);
-            top: $header_height/2;
-            font-size: 7vmax;
-        }
-    }
-
     #portrait_first_slide {
         opacity: 1;
         z-index: 0;
