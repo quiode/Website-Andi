@@ -79,11 +79,13 @@
             text-align: center;
             position: relative;
             transform: translateY(-50%);
+            z-index: inherit;
 
             .links {
                 display: block;
                 color: white;
                 font-size: 10vmin;
+                z-index: inherit;
                 @media screen and (max-width:600px){
                     font-size: 14vmin;
                 }
