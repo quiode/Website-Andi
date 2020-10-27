@@ -11,7 +11,7 @@
 
     <body id="english" onload="slideshow(5000)">
 
-        <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
+        <!-- <?php require  __DIR__ . '/../english/templates/navigationbar.php'?> -->
         <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
         <?php require __DIR__ . "/../english/templates/header.php"?>
 
