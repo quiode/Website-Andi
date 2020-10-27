@@ -20,7 +20,7 @@ $header_height:15vh;
 
     #profile {
         position: absolute;
-        z-index: 3;
+        // z-index: 3;
         top: $header_height + 25vh;
         right: 8vw;
         width: 30vw;
@@ -41,7 +41,7 @@ $header_height:15vh;
         }
 
         img {
-            z-index: 4;
+            // z-index: 4;
             position: relative;
             max-width: 15vw;
             max-height: 15vh;
