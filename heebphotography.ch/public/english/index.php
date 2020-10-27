@@ -11,9 +11,12 @@
     </head>
 
     <body id="english" onload="slideshow(5000)">
+        <header>
+            <h2>Heeb Photography</h2>
+        </header>
 
+        <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
         <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../english/templates/header.php"?>
 
         <section>
             <?php
