@@ -11,10 +11,6 @@
     position: relative;
     background-color: rgba(255, 255, 255, 0.5);
 
-    @media screen and (orientation: portrait) {
-        top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
-    }
-
     h2 {
         font-weight: 200;
         display: block;
@@ -28,6 +24,7 @@
     }
 
     @media screen and (max-width: 600px) {
+        top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
         $new_header_height: home.$header_height/2;
         height: $new_header_height;
 
