@@ -14,7 +14,6 @@
     <?php require __DIR__ . "/../templates/navigationbar.php"?>
     <!-- wip bar -->
     <?php require __DIR__ . "/../templates/work_in_progress.php"?>
-    <?php require __DIR__ . "/../english/templates/header.php"?>
 
 
     <!-- the linktree (using php for eliminating white space bc fuck u html) -->
