@@ -1,5 +1,7 @@
 // scss for the contact formular page
 // adding files
+@use '../components/navigationbar';
+@use './home';
 // variables
 $input_border_width : 1vmin/10;
 $font_size : 6vmin;
@@ -109,7 +111,8 @@ $mobile_input_width : 95vw;
         }
 
         @media screen and (max-width: 600px) {
-            top: 102px;
+            top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+            transform: translateY(home.$header_height);
             transform: translateX(-50%);
         }
     }
