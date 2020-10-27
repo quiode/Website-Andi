@@ -2,8 +2,8 @@
     <h2>Heeb Photography</h2>
     <nav id="navigationbar">
         <?php
-    // includes the javascript file
-        echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>"
+        // includes the javascript file
+        echo "<script src=\"" . "https://" . $_SERVER['HTTP_HOST'] . "/templates/navigationbar.js" . "\"></script>";
         ?>
         <!-- makes the button for navigation -->
         <div id="navigation_button" onclick="navigation_button(this)">
