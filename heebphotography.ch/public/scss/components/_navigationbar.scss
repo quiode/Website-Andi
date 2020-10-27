@@ -1,18 +1,19 @@
 // the navigation bar on every site
 // adding files
+@use '../pages/home';
 // scss
 #navigationbar {
     #navigation_button {
         display: inline-block;
         justify-content: center;
         align-items: center;
-        width: 102px;
-        height: 102px;
+        width: home.$header_height;
+        height: home.$header_height;
         transition: 0.8s;
         position: fixed;
         cursor: pointer;
-        top: 1%;
-        left: 1%;
+        // top: 1%;
+        // left: 1%;
         z-index: 10;
 
         @media screen and (max-width: 600px) {
