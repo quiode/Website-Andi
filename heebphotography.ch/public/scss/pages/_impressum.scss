@@ -7,6 +7,13 @@ $text_font_size_mobile : 3vh;
 
 // scss
 #impressum {
+
+    #contact_address {
+        p:first-of-type {
+            margin-top: 0;
+        }
+    }
+
     section {
         position: relative;
 

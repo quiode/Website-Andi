@@ -2,36 +2,11 @@
 @use "../classes/shortcuts";
 
 // variables
-$header_height:20vh;
+$header_height:15vh;
 
 // scss
 #english {
     margin: 0;
-
-    header {
-        width: 100vw;
-        height: $header_height;
-        margin: 0;
-        z-index: 2;
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.5);
-
-        @media screen and (orientation: portrait) {
-            top: 102px;
-        }
-
-        h2 {
-            font-weight: 200;
-            display: block;
-            text-align: center;
-            z-index: inherit;
-            margin: inherit;
-            position: inherit;
-            transform: translateY(-50%);
-            top: $header_height/2;
-            font-size: 7vmax;
-        }
-    }
 
     #portrait_first_slide {
         opacity: 1;
@@ -45,7 +20,7 @@ $header_height:20vh;
 
     #profile {
         position: absolute;
-        z-index: 3;
+        // z-index: 3;
         top: $header_height + 25vh;
         right: 8vw;
         width: 30vw;
@@ -66,7 +41,7 @@ $header_height:20vh;
         }
 
         img {
-            z-index: 4;
+            // z-index: 4;
             position: relative;
             max-width: 15vw;
             max-height: 15vh;

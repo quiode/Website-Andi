@@ -3,6 +3,8 @@
 @use "./components/arrow_btn";
 @use './components/close_btn';
 @use './components/filter_btn';
+@use './components/header';
+@use './components/navigationbar';
 // Modules
 @use './classes/colors';
 @use './classes/shortcuts';
@@ -10,7 +12,6 @@
 // Pages
 @use './pages/language';
 @use './pages/home';
-@use './pages/navigationbar';
 @use './pages/linktree';
 @use './pages/about_me';
 @use './pages/gallery';
