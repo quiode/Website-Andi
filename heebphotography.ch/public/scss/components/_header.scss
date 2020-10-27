@@ -1,6 +1,7 @@
 // import variables
 @use '../pages/home';
 @use "./navigationbar";
+
 // scss
 #header {
     width: 100vw;
@@ -24,5 +25,14 @@
         transform: translateY(-50%);
         top: home.$header_height/2;
         font-size: 5vmax;
+    }
+
+    @media screen and (max-width: 600px) {
+        $new_header_height: home.$header_height/2;
+        height: $new_header_height;
+
+        h2 {
+            top: $new_header_height/2;
+        }
     }
 }
