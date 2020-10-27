@@ -11,8 +11,8 @@
         transition: 0.8s;
         position: fixed;
         cursor: pointer;
-        top: 1%;
-        left: 1%;
+        top: 0;
+        left: 0;
         z-index: 10;
 
         @media screen and (max-width: 600px) {
