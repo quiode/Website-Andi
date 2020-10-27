@@ -11,10 +11,10 @@ $height_multiplier: 10;
 #navigationbar {
     #navigation_button {
         display: inline-block;
-        justify-content: center;
-        align-items: center;
-        width: home.$header_height;
-        height: home.$header_height;
+        // justify-content: center;
+        // align-items: center;
+        // width: home.$header_height;
+        // height: home.$header_height;
         transition: 0.8s;
         position: fixed;
         cursor: pointer;
@@ -24,7 +24,7 @@ $height_multiplier: 10;
 
         @media screen and (max-width: 600px) {
             left: 50vw;
-            transform: translateX(-1*(home.$header_height));
+            transform: translateX(-50%);
         }
 
         div {
