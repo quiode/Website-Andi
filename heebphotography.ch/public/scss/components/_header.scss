@@ -11,7 +11,7 @@
     background-color: rgba(255, 255, 255, 0.5);
 
     @media screen and (orientation: portrait) {
-        top: 102px;
+        top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
     }
 
     h2 {
