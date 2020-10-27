@@ -3,6 +3,9 @@
 @use '../pages/home';
 // variables
 $bar_unit: 0.15vmin;
+$border_multiplier: 1;
+$width_multiplier: 70;
+$height_multiplier: 10;
 
 // scss
 #navigationbar {
@@ -27,8 +30,8 @@ $bar_unit: 0.15vmin;
 
         div {
             box-sizing: content-box;
-            width: 70*$bar_unit;
-            height: 10*$bar_unit;
+            width: $width_multiplier*$bar_unit;
+            height: $height_multiplier*$bar_unit;
             background-color: black;
             margin-top: 12*$bar_unit;
             margin-bottom: 12*$bar_unit;
@@ -36,7 +39,7 @@ $bar_unit: 0.15vmin;
             margin-left: 16*$bar_unit;
             transition-duration: 0.8s;
             text-align: center;
-            border: 1*$bar_unit white solid;
+            border: $border_multiplier*$bar_unit white solid;
         }
 
         .bar1 {
@@ -51,14 +54,26 @@ $bar_unit: 0.15vmin;
     .change {
         .bar1 {
             transform: rotate(-45deg) translate(-19*$bar_unit, 13*$bar_unit);
+            background-color: rgb(255,255,255);
+            border: none;
+            width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+            height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
         }
 
         .bar2 {
             opacity: 0;
+            background-color: rgb(255,255,255);
+            border: none;
+            width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+            height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
         }
 
         .bar3 {
             transform: rotate(45deg) translate(-17*$bar_unit, -17*$bar_unit);
+            background-color: rgb(255,255,255);
+            border: none;
+            width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+            height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
         }
     }
 
