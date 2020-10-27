@@ -23,9 +23,9 @@ $mobile_input_width : 95vw;
 
         display: block;
         position: absolute;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
         left: 50%;
-        top: 50%;
+        bottom: 1vh;
         font-size: $font_size;
 
         label {
@@ -93,7 +93,7 @@ $mobile_input_width : 95vw;
         }
 
         textarea {
-            height: $desktop_input_height*3;
+            height: $desktop_input_height*2;
             width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
