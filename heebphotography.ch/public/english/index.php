@@ -13,7 +13,7 @@
 
         <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
         <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
-        <?php require __DIR__ . "../english/templates/header.php"?>
+        <?php require __DIR__ . "/../english/templates/header.php"?>
 
         <section>
             <?php
