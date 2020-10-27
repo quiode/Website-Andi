@@ -50,32 +50,32 @@ $height_multiplier: 10;
             margin-bottom: 24*$bar_unit;
         }
 
-        .change {
-            #b1 {
-                transform: rotate(-45deg) translate(-19*$bar_unit, 13*$bar_unit);
-                background-color: rgb(255, 255, 255);
-                border: none;
-                width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
-                height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
-            }
+    }
 
-            #b2 {
-                opacity: 0;
-                background-color: rgb(255, 255, 255);
-                border: none;
-                width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
-                height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
-            }
-
-            #bar3 {
-                transform: rotate(45deg) translate(-17*$bar_unit, -17*$bar_unit);
-                background-color: rgb(255, 255, 255);
-                border: none;
-                width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
-                height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
-            }
+    .change {
+        #b1 {
+            transform: rotate(-45deg) translate(-19*$bar_unit, 13*$bar_unit);
+            background-color: rgb(255, 255, 255);
+            border: none;
+            width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+            height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
         }
 
+        #b2 {
+            opacity: 0;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+            height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+        }
+
+        #bar3 {
+            transform: rotate(45deg) translate(-17*$bar_unit, -17*$bar_unit);
+            background-color: rgb(255, 255, 255);
+            border: none;
+            width: $width_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+            height: $height_multiplier*$bar_unit + $border_multiplier*$bar_unit*2;
+        }
     }
 
     #navigation-overlay {
