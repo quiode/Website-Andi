@@ -6,6 +6,13 @@
 #gallery {
     padding: 0;
 
+    #filter_bar {
+        position: sticky;
+        width: 100vw;
+        background-color: white;
+        min-height: 5vh;
+    }
+
     #all_rows {
         margin-bottom: 1vmin;
         display: flex;
@@ -86,10 +93,10 @@
             padding-left: 1vw;
 
             @media screen and (max-width: 600px) {
-            //     background-color: white;
-            //     color: black;
-            //     opacity: 1;
-            //     text-align: center;
+                //     background-color: white;
+                //     color: black;
+                //     opacity: 1;
+                //     text-align: center;
                 font-size: 8vw;
             }
         }

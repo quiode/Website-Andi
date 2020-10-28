@@ -235,6 +235,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
             </form>
         </div>
 
+        <div id="filter_bar"></div>
+
         <?php require  __DIR__ . "/../templates/footer.php"?>
     </body>
 
