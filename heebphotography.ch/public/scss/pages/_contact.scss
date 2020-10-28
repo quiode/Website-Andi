@@ -1,7 +1,5 @@
 // scss for the contact formular page
 // adding files
-@use '../components/navigationbar';
-@use './home';
 // variables
 $input_border_width : 1vmin/10;
 $font_size : 6vmin;
@@ -25,9 +23,9 @@ $mobile_input_width : 95vw;
 
         display: block;
         position: absolute;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         left: 50%;
-        bottom: 1vh;
+        top: 50%;
         font-size: $font_size;
 
         label {
@@ -95,7 +93,7 @@ $mobile_input_width : 95vw;
         }
 
         textarea {
-            height: $desktop_input_height*2;
+            height: $desktop_input_height*3;
             width: $desktop_input_width;
             font-size: $font_size;
             display: inherit;
@@ -111,8 +109,8 @@ $mobile_input_width : 95vw;
         }
 
         @media screen and (max-width: 600px) {
-            top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
-            transform: translate(-50%, home.$header_height);
+            top: 102px;
+            transform: translateX(-50%);
         }
     }
 }
