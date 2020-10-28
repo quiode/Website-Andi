@@ -14,19 +14,19 @@
         <?php require __DIR__ . "/../templates/header.php"?>
         <p id="p_about_me">
             Andreas Heeb
-            &NewLine;
+            <!-- &NewLine; -->
             🐦
-            &NewLine;
+            <!-- &NewLine; -->
             17y
-            &NewLine;
+            <!-- &NewLine; -->
             Wildlifephotographer
-            &NewLine;
+            <!-- &NewLine; -->
             Switzerland🇨🇭
-            &NewLine;
+            <!-- &NewLine; -->
             Nikon D500 with Sigma 150-600mm f/5-6.3
-            &NewLine;
+            <!-- &NewLine; -->
             Sport and Tamron 70-200mm f/2.8 G2
-            &NewLine;
+            <!-- &NewLine; -->
             🐦
         </p>
         <?php require  __DIR__ . "/../templates/footer.php"?>
