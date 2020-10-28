@@ -1,0 +1,35 @@
+// import variables
+@use '../pages/home';
+@use "./navigationbar";
+
+// scss
+#header {
+    width: 100vw;
+    height: home.$header_height;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    h2 {
+        font-weight: 200;
+        display: block;
+        text-align: center;
+        z-index: inherit;
+        margin: inherit;
+        position: inherit;
+        transform: translateY(-50%);
+        top: home.$header_height/2;
+        font-size: 5vmax;
+    }
+
+    @media screen and (max-width: 600px) {
+        top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+        $new_header_height: home.$header_height/2;
+        height: $new_header_height;
+
+        h2 {
+            top: $new_header_height/2;
+        }
+    }
+}
