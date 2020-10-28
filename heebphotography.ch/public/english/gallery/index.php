@@ -23,6 +23,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
         <?php require __DIR__ . "/../templates/header.php"?>
 
+        <div id="filter_bar"></div>
+
         <div>
             <?php
             if ($_SESSION["all"]) { //only selects everything if the filte is "off"
@@ -234,8 +236,6 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                 <input type="submit" value="Filter">
             </form>
         </div>
-
-        <div id="filter_bar"></div>
 
         <?php require  __DIR__ . "/../templates/footer.php"?>
     </body>
