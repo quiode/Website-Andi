@@ -17,6 +17,9 @@
         background-color: white;
         height: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
         top: 0;
+        white-space: nowrap;
+        font-size: 5vw;
+        scrollbar-width: initial;
     }
 
     #all_rows {
