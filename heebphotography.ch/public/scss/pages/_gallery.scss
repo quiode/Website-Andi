@@ -24,10 +24,14 @@
         scrollbar-width: thin;
         overflow-x: auto;
 
-        * {
-            position: relative;
-            transform: translateY(-50%);
-            top: 50%;
+        form {
+            height: inherit;
+
+            * {
+                position: relative;
+                transform: translateY(-50%);
+                top: 50%;
+            }
         }
 
         #gallery_filter {
