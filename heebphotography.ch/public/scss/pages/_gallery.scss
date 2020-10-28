@@ -4,10 +4,10 @@
 
 // scss
 #gallery {
-    margin: 0, 0, 1vmin, 0;
     padding: 0;
 
     #all_rows {
+        margin-bottom: 1vmin;
         display: flex;
         flex-wrap: wrap;
         padding: 0 4px;
