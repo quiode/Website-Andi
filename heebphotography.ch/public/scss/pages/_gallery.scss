@@ -13,6 +13,7 @@
     }
 
     #filter_bar {
+        $go_left: navigationbar.$width_multiplier*navigationbar.$bar_unit + 2*16*navigationbar.$bar_unit;
         position: sticky;
         width: 100vw;
         background-color: white;
@@ -22,6 +23,10 @@
         font-size: 4.5vw;
         scrollbar-width: initial;
         overflow-x: auto;
+
+        #gallery_filter {
+            left: $go_left;
+        }
 
         input {
             $size: 3vw;
