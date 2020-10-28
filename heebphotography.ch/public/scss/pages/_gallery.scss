@@ -7,6 +7,10 @@
 #gallery {
     padding: 0;
 
+    .filter_btn {
+        display: none;
+    }
+
     #filter_bar {
         position: sticky;
         width: 100vw;
