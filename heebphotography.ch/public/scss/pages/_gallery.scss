@@ -21,11 +21,16 @@
         white-space: nowrap;
         font-size: 5vw;
         scrollbar-width: initial;
+        overflow-x: auto;
 
         input {
-            $size: 5vh;
+            $size: 5vw;
             width: $size;
             height: $size;
+        }
+
+        label {
+            margin-right: 3vw;
         }
     }
 
