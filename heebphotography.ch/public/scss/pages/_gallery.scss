@@ -3,6 +3,7 @@
 @use "../classes/colors";
 @use "./home";
 @use "../components/navigationbar";
+
 // scss
 #gallery {
     padding: 0;
@@ -20,6 +21,12 @@
         white-space: nowrap;
         font-size: 5vw;
         scrollbar-width: initial;
+
+        input {
+            $size: 5vh;
+            width: $size;
+            height: $size;
+        }
     }
 
     #all_rows {
