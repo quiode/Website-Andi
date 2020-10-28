@@ -24,17 +24,19 @@
         scrollbar-width: thin;
         overflow-x: auto;
 
-        #gallery_filter {
+        * {
             height: inherit;
+        }
+
+        #gallery_filter {
             position: relative;
             left: $go_left;
         }
 
         input {
-            height: inherit;
             $size: 3vw;
             width: $size;
-            height: $size;
+            // height: $size;
 
             &[type="submit"] {
                 display: none;
