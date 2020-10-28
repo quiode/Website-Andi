@@ -9,9 +9,9 @@
     </head>
 
     <body id="impressum">
-        <?php require __DIR__ . "/../templates/navigationbar.php"?>
         <!-- wip bar -->
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../templates/header.php"?>
         <section id="german" style="display: none;">
             <p><strong>Kontakt-Adresse</strong></p>
             <p>Dominik Schwaiger<br />Hofackerstrasse 3<br />8722 Kaltbrunn<br />Schweiz</p>
@@ -35,7 +35,8 @@
             <p>&nbsp;</p>
             <p><strong>Urheberrechte</strong></p>
             <p>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf dieser
-                Website, geh&ouml;ren ausschliesslich <strong>Dominik Schwaiger, Andreas Heeb and Milena Bachofen</strong> oder den speziell genannten
+                Website, geh&ouml;ren ausschliesslich <strong>Dominik Schwaiger, Andreas Heeb and Milena
+                    Bachofen</strong> oder den speziell genannten
                 Rechteinhabern. F&uuml;r die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung des
                 Urheberrechtstr&auml;gers im Voraus einzuholen.</p>
             <p>&nbsp;</p>
@@ -68,7 +69,8 @@
             <article id="copyright">
                 <p class="title">Copyright</p>
                 <p>The copyrights and all other rights to content, images, photos or other files on this website belong
-                    exclusively to Dominik Schwaiger, Andreas Heeb and Milena Bachofen or the specifically named rights holders. For the reproduction of
+                    exclusively to Dominik Schwaiger, Andreas Heeb and Milena Bachofen or the specifically named rights
+                    holders. For the reproduction of
                     any elements, the written consent of the copyright holder must be obtained in advance.</p>
                 <!--ATTENTION: If you remove the source without permission from SwissAnwalt, you are committing a copyright infringement which will be punished in any case.-->
                 <br />Source:
