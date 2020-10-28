@@ -16,13 +16,14 @@
         font-size: 7.3vmin;
         position: relative;
         white-space: pre-line;
+        margin: 0;
         top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
 
 
-        br {
-            @media screen and (max-width: 600px) and (orientation: portrait) {
-                margin-bottom: 6vmin;
-            }
-        }
+        // br {
+        //     @media screen and (max-width: 600px) and (orientation: portrait) {
+        //         margin-bottom: 6vmin;
+        //     }
+        // }
     }
 }
