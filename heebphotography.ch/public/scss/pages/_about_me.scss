@@ -1,5 +1,7 @@
 // scss for about me page
 // adding files
+@use './home';
+@use '../components/navigationbar';
 // scss
 #about_me {
     overflow: hidden; // off for now, can change if new text
@@ -12,6 +14,8 @@
         text-align: center;
         font-size: 7.3vmin;
         position: relative;
+        top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+
 
         br {
             @media screen and (max-width: 600px) and (orientation: portrait) {
