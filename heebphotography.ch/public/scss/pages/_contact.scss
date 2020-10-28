@@ -111,7 +111,7 @@ $mobile_input_width : 95vw;
         }
 
         @media screen and (max-width: 600px) {
-            top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+            top: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
             transform: translate(-50%, home.$header_height);
         }
     }

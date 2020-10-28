@@ -25,7 +25,7 @@
     }
 
     @media screen and (max-width: 600px) {
-        top: navigationbar.$bar_unit*24*4 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+        top: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
         $new_header_height: home.$header_height/2;
         height: $new_header_height;
 
