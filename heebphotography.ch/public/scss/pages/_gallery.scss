@@ -25,11 +25,13 @@
         overflow-x: auto;
 
         #gallery_filter {
+            height: inherit;
             position: relative;
             left: $go_left;
         }
 
         input {
+            height: inherit;
             $size: 3vw;
             width: $size;
             height: $size;
