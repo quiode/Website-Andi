@@ -25,7 +25,8 @@
         overflow-x: auto;
 
         * {
-            height: inherit;
+            transform: translateY(-50%);
+            top: 50%;
         }
 
         #gallery_filter {
@@ -36,7 +37,7 @@
         input {
             $size: 3vw;
             width: $size;
-            // height: $size;
+            height: $size;
 
             &[type="submit"] {
                 display: none;
