@@ -37,6 +37,7 @@ function picture_orientation() {
 			const element = document.getElementsByClassName("landscape_slides")[index];
 			element.style.display = "block";
 		}
+		alert("test");
 		return "landscape_slides";
 	}
 
