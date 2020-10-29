@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php include("/../templates/meta-tags.php")?>
         <title>Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="script.js"></script>
@@ -11,9 +12,8 @@
 
     <body id="english" onload="slideshow(5000)">
 
-        <?php require  __DIR__ . '/../english/templates/navigationbar.php'?>
         <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
-        <?php require __DIR__ . "../english/templates/header.php"?>
+        <?php require __DIR__ . "/../english/templates/header.php"?>
 
         <section>
             <?php
@@ -30,10 +30,10 @@
             foreach ($all_rows as $name) {
                 $name = $name["name"];
                 if ($first_run) {
-                    echo "<div class=\"portrait_slides\" id=\"portrait_first_slide\" style=\"background:left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"portrait_slides\" id=\"portrait_first_slide\" style=\"background:top left/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                     $first_run = false;
                 } else {
-                    echo "<div class=\"portrait_slides\" style=\"background:left bottom/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"portrait_slides\" style=\"background:top left/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                 }
             }
             // gets landscape pictures

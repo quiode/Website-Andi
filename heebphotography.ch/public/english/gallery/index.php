@@ -19,11 +19,75 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
     </head>
 
     <body id="gallery">
-
-        <!-- navigation element -->
-        <?php require __DIR__ . "/../templates/navigationbar.php"?>
         <!-- wip bar -->
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../templates/header.php"?>
+
+        <div id="filter_bar">
+            <!-- filter form -->
+            <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
+                <?php
+                if ($_SESSION["all"]) { //only selects everything if the filter is "off"
+                    // connect to the database
+                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                    // gets all categories from the database which arent NULL
+                    $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    foreach ($all_rows as $row) {
+                        echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
+                        echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                        array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                    }
+                    // gets all types from the database which arent NULL
+                    $query = "SELECT type FROM images WHERE type IS NOT NULL GROUP BY type";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    pg_close($dbconn); //ends connection to database
+                    foreach ($all_rows as $row) {
+                        echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '" checked="checked">';
+                        echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
+                        array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
+                    }
+                } else {
+                    // connect to the database
+                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                    // gets all categories from the database which arent NULL
+                    $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    foreach ($all_rows as $row) {
+                        if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
+                            echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
+                            echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                            array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                        } else {
+                            echo '<input type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
+                            echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                            array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                        }
+                    }
+                    // gets all types from the database which arent NULL
+                    $query = "SELECT type FROM images WHERE type IS NOT NULL GROUP BY type";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    pg_close($dbconn); //ends connection to database
+                    foreach ($all_rows as $row) {
+                        if (in_array($row["type"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
+                            echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '">';
+                            echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
+                            array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
+                        } else {
+                            echo '<input type="checkbox" id="type_' . $row["type"] . '" name="type_' . $row["type"] . '" value="' . $row["type"] . '" checked="checked">';
+                            echo '<label for="type_' . $row["type"] . '">' . $row["type"] . '</label>';
+                            array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
+                        }
+                    }
+                }
+                ?>
+                <input type="submit" value="Filter">
+            </form>
+        </div>
 
         <div>
             <?php

@@ -1,7 +1,11 @@
 // scss for about me page
 // adding files
+@use '../global/variables';
+
 // scss
 #about_me {
+    overflow: hidden; // off for now, can change if new text
+
     * {
         user-select: text;
     }
@@ -9,13 +13,21 @@
     #p_about_me {
         text-align: center;
         font-size: 7.3vmin;
-        top: 80px;
         position: relative;
+        white-space: pre-line;
+        margin: 0;
 
-        br {
-            @media screen and (max-width: 600px) and (orientation: portrait) {
-                margin-bottom: 6vmin;
-            }
+        @media screen and (max-width: 600px) {
+            top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
         }
+
+        // top: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+
+
+        // br {
+        //     @media screen and (max-width: 600px) and (orientation: portrait) {
+        //         margin-bottom: 6vmin;
+        //     }
+        // }
     }
 }

@@ -1,27 +1,34 @@
-// import variables
-@use '../pages/home';
+// import files
+@use '../global/variables';
 // scss
 #header {
     width: 100vw;
-    height: home.$header_height;
+    height: variables.$header_height;
     margin: 0;
     z-index: 2;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.5);
-
-    @media screen and (orientation: portrait) {
-        top: 102px;
-    }
+    background-color: rgba(0, 0, 0, 0.8);
 
     h2 {
-        font-weight: 200;
+        font-weight: 100;
         display: block;
         text-align: center;
         z-index: inherit;
         margin: inherit;
         position: inherit;
         transform: translateY(-50%);
-        top: home.$header_height/2;
-        font-size: 7vmax;
+        top: variables.$header_height/2;
+        font-size: 5vmax;
+        color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+        top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+        $new_header_height: variables.$header_height/2;
+        height: $new_header_height;
+
+        h2 {
+            top: $new_header_height/2;
+        }
     }
 }
