@@ -31,14 +31,13 @@ function picture_orientation() {
 	if (orientation != "portrait-primary" && orientation != "portrait-secondary" && orientation != "landscape-primary" && orientation != "landscape-secondary") {
 		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
-			element.style.display = "none";
+			element.style.display = "block";
 		}
 		for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
 			const element = document.getElementsByClassName("landscape_slides")[index];
-			element.style.display = "block";
+			element.style.display = "none";
 		}
-		alert("test");
-		return "landscape_slides";
+		return "portrait_slides";
 	}
 
 	alert("test2");
