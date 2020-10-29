@@ -80,7 +80,6 @@ $header_height:15vh;
 
     .portrait_slides {
         @extend .landscape_slides;
-        top: 0;
 
         @media screen and (orientation: landscape) {
             display: none;
