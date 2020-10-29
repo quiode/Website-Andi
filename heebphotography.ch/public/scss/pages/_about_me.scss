@@ -1,7 +1,6 @@
 // scss for about me page
 // adding files
-@use './home';
-@use '../components/navigationbar';
+@use '../global/variables';
 
 // scss
 #about_me {
@@ -19,7 +18,7 @@
         margin: 0;
 
         @media screen and (max-width: 600px) {
-            top: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+            top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
         }
 
         // top: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;

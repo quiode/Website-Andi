@@ -1,8 +1,7 @@
 // scss file for the gallery page
 // adding files
 @use "../classes/colors";
-@use "./home";
-@use "../components/navigationbar";
+@use "../global/variables";
 
 // scss
 #gallery {
@@ -13,11 +12,11 @@
     }
 
     #filter_bar {
-        $go_left: navigationbar.$width_multiplier*navigationbar.$bar_unit + 2*16*navigationbar.$bar_unit;
+        $go_left: variables.$width_multiplier*variables.$bar_unit + 2*16*variables.$bar_unit;
         position: sticky;
         width: 100vw;
         background-color: white;
-        height: navigationbar.$bar_unit*24*3 + navigationbar.$bar_unit*navigationbar.$height_multiplier*3;
+        height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
         top: 0;
         white-space: nowrap;
         font-size: 4.5vw;

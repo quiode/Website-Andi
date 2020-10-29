@@ -1,9 +1,6 @@
 //adding files
 @use "../classes/shortcuts";
-
-// variables
-$header_height:15vh;
-
+@use "../global/variables";
 // scss
 #english {
     margin: 0;
@@ -22,10 +19,10 @@ $header_height:15vh;
         display: none; // just for now until there is actually some fucking text or idea :)
         position: absolute;
         // z-index: 3;
-        top: $header_height + 25vh;
+        top: variables.$header_height + 25vh;
         right: 8vw;
         width: 30vw;
-        max-height: 100vh - ($header_height + 25vh); //just 100vh - top_height
+        max-height: 100vh - (variables.$header_height + 25vh); //just 100vh - top_height
         background-color: rgb(0, 0, 0, 0.95);
         color: white;
         font-size: 3vmin;
@@ -80,6 +77,8 @@ $header_height:15vh;
 
     .portrait_slides {
         @extend .landscape_slides;
+        height: calc(100vh - variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3 + variables.$header_height/2);
+        top: calc(variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3 + variables.$header_height/2);
 
         @media screen and (orientation: landscape) {
             display: none;
