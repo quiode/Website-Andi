@@ -40,9 +40,6 @@ function picture_orientation() {
 		return "portrait_slides";
 	}
 
-	alert("test2");
-	alert(screen.orientation.type);
-
 	if (orientation == "portrait-primary" || orientation == "portrait-secondary") {
 		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
