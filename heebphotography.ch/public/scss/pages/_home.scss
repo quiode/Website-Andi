@@ -19,6 +19,7 @@ $header_height:15vh;
     }
 
     #profile {
+        display: none; // just for now until there is actually some fucking text or idea :)
         position: absolute;
         // z-index: 3;
         top: $header_height + 25vh;
