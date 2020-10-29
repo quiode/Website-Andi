@@ -29,11 +29,16 @@ function picture_orientation() {
 	console.log(screen.orientation);
 	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation; // gets tbe screen orientation
 	if (orientation == undefined) {
-		orientation = "landscape-primary";
+		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
+			const element = document.getElementsByClassName("portrait_slides")[index];
+			element.style.display = "none";
+		}
+		for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
+			const element = document.getElementsByClassName("landscape_slides")[index];
+			element.style.display = "block";
+		}
+		return "landscape_slides";
 	}
-
-	alert(orientation.type);
-	alert(orientation);
 
 	if (orientation == "portrait-primary" || orientation == "portrait-secondary") {
 		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
