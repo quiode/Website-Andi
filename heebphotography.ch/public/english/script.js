@@ -29,7 +29,7 @@ function picture_orientation() {
 	console.log(screen.orientation);
 	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation; // gets tbe screen orientation
 	if (orientation != "portrait-primary" && orientation != "portrait-secondary" && orientation != "landscape-primary" && orientation != "landscape-secondary") {
-		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
+		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
 			element.style.display = "none";
 		}
@@ -42,7 +42,7 @@ function picture_orientation() {
 	}
 
 	if (orientation == "portrait-primary" || orientation == "portrait-secondary") {
-		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
+		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
 			element.style.display = "block";
 		}
@@ -52,7 +52,7 @@ function picture_orientation() {
 		}
 		return "portrait_slides";
 	} else if (orientation == "landscape-primary" || orientation == "landscape-secondary") {
-		for (let index = 0; index < document.getElementsByClassName("portrait_slide").length; index++) {
+		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
 			element.style.display = "none";
 		}
