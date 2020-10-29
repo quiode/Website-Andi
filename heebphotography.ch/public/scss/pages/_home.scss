@@ -1,6 +1,7 @@
 //adding files
 @use "../classes/shortcuts";
 @use "../global/variables";
+
 // scss
 #english {
     margin: 0;
@@ -77,8 +78,8 @@
 
     .portrait_slides {
         @extend .landscape_slides;
-        height: calc(100vh - variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3 + variables.$header_height/2);
-        top: calc(variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3 + variables.$header_height/2);
+        height: calc(100vh - #{variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3} + #{variables.$header_height/2});
+        top: calc(#{variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3} + #{variables.$header_height/2});
 
         @media screen and (orientation: landscape) {
             display: none;
