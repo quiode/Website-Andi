@@ -26,7 +26,7 @@ function slideshow() {
 }
 // detects the device orientation and changed the pictures
 function picture_orientation() {
-	alert(screen.orientation);
+	console.log(screen.orientation);
 	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation; // gets tbe screen orientation
 	
 	if (orientation == "portrait-primary" || orientation == "portrait-secondary") {
