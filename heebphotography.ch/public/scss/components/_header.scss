@@ -47,20 +47,21 @@
             position: fixed;
             width: variables.$header_mobile_width;
             font-size: 7vw;
+
+            &#desktop_header {
+                display: none;
+            }
+
+            &#mobile_headers_heeb {
+                left: 0;
+                display: inline-block;
+            }
+
+            &#mobile_header_photography {
+                right: 0;
+                display: inline-block;
+            }
         }
 
-        #desktop_header {
-            display: none;
-        }
-
-        #mobile_headers_heeb {
-            left: 0;
-            display: inline-block;
-        }
-
-        #mobile_header_photography {
-            right: 0;
-            display: inline-block;
-        }
     }
 }
