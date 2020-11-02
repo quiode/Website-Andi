@@ -24,16 +24,10 @@
 
         #mobile_headers_heeb {
             display: none;
-            left: 0;
-            width: auto;
-            font-size: 2vmax;
         }
 
         #mobile_header_photography {
             display: none;
-            @extend #mobile_headers_heeb;
-            right: 0;
-            width: auto;
         }
     }
 
@@ -46,16 +40,24 @@
         //     top: $new_header_height/2;
         // }
 
+        height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+
         #desktop_header {
             display: none;
         }
 
         #mobile_headers_heeb {
             display: inline-block;
+            left: 0;
+            width: auto;
+            font-size: 2vmax;
         }
 
         #mobile_header_photography {
             display: inline-block;
+            right: 0;
+            width: auto;
+            font-size: 2vmax;
         }
     }
 }
