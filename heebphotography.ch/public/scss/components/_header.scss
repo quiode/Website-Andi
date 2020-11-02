@@ -24,10 +24,16 @@
 
         #mobile_headers_heeb {
             display: none;
+            left: 0;
+            width: auto;
+            font-size: 2vmax;
         }
 
         #mobile_header_photography {
             display: none;
+            @extend #mobile_headers_heeb;
+            right: 0;
+            width: auto;
         }
     }
 
@@ -39,25 +45,17 @@
         // h2 {
         //     top: $new_header_height/2;
         // }
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        align-items: flex-start;
-        align-content: center;
 
         #desktop_header {
             display: none;
         }
 
         #mobile_headers_heeb {
-            display: inline-flex;
-            align-self: flex-start;
+            display: inline-block;
         }
 
         #mobile_header_photography {
-            display: inline-flex;
-            align-self: flex-end;
-            flex-grow: 2;
+            display: inline-block;
         }
     }
 }
