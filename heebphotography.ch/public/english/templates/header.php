@@ -1,5 +1,5 @@
 <header id="header">
-    <h2>Heeb Photography</h2>
+    <h2 id="desktop_header">Heeb Photography</h2>
     <nav id="navigationbar">
         <?php
         // includes the javascript file
@@ -26,4 +26,6 @@
         </div>
     </nav>
 
+    <h2 id="mobile_headers_heeb">Heeb</h2>
+    <h2 id="mobile_header_photography">Photography</h2>
 </header>

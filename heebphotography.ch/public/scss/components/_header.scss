@@ -1,5 +1,6 @@
 // import files
 @use '../global/variables';
+
 // scss
 #header {
     width: 100vw;
@@ -20,15 +21,43 @@
         top: variables.$header_height/2;
         font-size: 5vmax;
         color: white;
+
+        #mobile_headers_heeb {
+            display: none;
+        }
+
+        #mobile_header_photography {
+            display: none;
+        }
     }
 
     @media screen and (max-width: 600px) {
-        top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
-        $new_header_height: variables.$header_height/2;
-        height: $new_header_height;
+        // top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+        // $new_header_height: variables.$header_height/2;
+        // height: $new_header_height;
 
-        h2 {
-            top: $new_header_height/2;
+        // h2 {
+        //     top: $new_header_height/2;
+        // }
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: flex-start;
+        align-content: center;
+
+        #desktop_header {
+            display: none;
+        }
+
+        #mobile_headers_heeb {
+            display: inline-flex;
+            align-self: flex-start;
+        }
+
+        #mobile_header_photography {
+            display: inline-flex;
+            align-self: flex-end;
+            flex-grow: 2;
         }
     }
 }
