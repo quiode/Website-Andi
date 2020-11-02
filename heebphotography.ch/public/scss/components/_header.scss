@@ -42,22 +42,24 @@
 
         height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
 
+        h2 {
+            top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+            position: fixed;
+            display: inline-block;
+            width: auto;
+            font-size: 10vw;
+        }
+
         #desktop_header {
             display: none;
         }
 
         #mobile_headers_heeb {
-            display: inline-block;
             left: 0;
-            width: auto;
-            font-size: 2vmax;
         }
 
         #mobile_header_photography {
-            display: inline-block;
             right: 0;
-            width: auto;
-            font-size: 2vmax;
         }
     }
 }
