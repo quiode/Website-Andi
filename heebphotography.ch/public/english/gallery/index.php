@@ -16,6 +16,11 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="gallery.js"></script>
         <title>Gallery | Wildlifephotography Andreas Heeb</title>
+        <script>
+        var d = new Date();
+        d.setTime(d.getTime() + 5000 * 60);
+        document.cookie = "all_first_clicked=false;expires=" + d.toUTCString() + ";path=/";
+        </script>
     </head>
 
     <body id="gallery">
@@ -282,11 +287,6 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         </div> -->
 
         <?php require  __DIR__ . "/../templates/footer.php"?>
-        <script>
-        var d = new Date();
-        d.setTime(d.getTime() + 5000 * 60);
-        document.cookie = "all_first_clicked=false;expires=" + d.toUTCString() + ";path=/";
-        </script>
     </body>
 
 </html>
