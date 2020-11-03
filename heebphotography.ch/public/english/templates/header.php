@@ -26,6 +26,6 @@
         </div>
     </nav>
 
-    <h2 id="mobile_headers_heeb">Heeb</h2>
+    <h2 id="mobile_headers_heeb">Andreas Heeb</h2>
     <h2 id="mobile_header_photography">Photography</h2>
 </header>
