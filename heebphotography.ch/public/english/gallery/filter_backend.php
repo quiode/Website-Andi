@@ -1,6 +1,7 @@
 <?php
 session_start();
 $all_first_clicked = $_COOKIE["all_first_clicked"];
+setcookie("all_first_clicked", "false", time() + 5000 * 60 * 60, "/") // sets the cookie to false to avoid confusion
 if (in_array("all", $_POST) and $all_first_clicked == "true") { // if the filter button was selected and clicked, display everything
     $_SESSION["all"] = true;
 } elseif (!in_array("all", $_POST) and $all_first_clicked == "true") { // if the filter button not selected but clicked, display nothing
