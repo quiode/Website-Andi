@@ -16,6 +16,11 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="gallery.js"></script>
         <title>Gallery | Wildlifephotography Andreas Heeb</title>
+        <script>
+        var d = new Date();
+        d.setTime(d.getTime() + 5000 * 60);
+        document.cookie = "all_first_clicked=false;expires=" + d.toUTCString() + ";path=/";
+        </script>
     </head>
 
     <body id="gallery">
@@ -216,9 +221,9 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         </div>
 
         <!-- <div id="filter_menu"> -->
-            <!-- filter form -->
-            <!-- <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post"> -->
-                <?php /*
+        <!-- filter form -->
+        <!-- <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post"> -->
+        <?php /*
                 if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
@@ -276,8 +281,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                         }
                     }
                 } */
-                ?>
-                <!-- <input type="submit" value="Filter">
+        ?>
+        <!-- <input type="submit" value="Filter">
             </form>
         </div> -->
 
