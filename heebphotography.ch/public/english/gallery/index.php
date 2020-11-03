@@ -39,14 +39,15 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
+                    // button to select everything
+                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked">';
+                    echo '<label for="all">Everything</label>';
+                    // checkbox for each category
                     foreach ($all_rows as $row) {
                         echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
                         echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                         array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                     }
-                    // button to select everything
-                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked">';
-                    echo '<label for="all">Everything</label>';
                 } else {
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
@@ -54,6 +55,10 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
+                    // button to select everything (not checked)
+                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
+                    echo '<label for="all">Everything</label>';
+                    // checkbox for each row
                     foreach ($all_rows as $row) {
                         if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
                             echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
@@ -65,9 +70,6 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
                     }
-                    // button to select everything (not checked)
-                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
-                    echo '<label for="all">Everything</label>';
                 }
                 ?>
                 <input type="submit" value="Filter">
