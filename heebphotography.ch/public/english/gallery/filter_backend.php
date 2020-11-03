@@ -1,6 +1,5 @@
 <?php
 session_start();
-var_dump($_SESSION);
 if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was selected, change nothing
     $_SESSION["all"] = true;
 } else { //adds all selected elements to the blacklist array
@@ -12,4 +11,4 @@ if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was se
         }
     }
 }
-// echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
+echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
