@@ -243,6 +243,6 @@ function filter() {
 function all_button(element) {
     var d = new Date();
     d.setTime(d.getTime() + 5000 * 60 * 60);
-    document.cookie = "all_first_clicked=true;expires=" + d.toUTCString() + ";path=/";
+    document.cookie = "all_first_clicked=true;expires=" + d.toUTCString() + ";path=/;samesite=lax";
     element.form.submit();
 }
