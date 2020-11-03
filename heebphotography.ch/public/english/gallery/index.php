@@ -59,10 +59,10 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                             echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
-                        // button to select everything (not checked)
-                        echo '<input onChange="this.form.submit()" type="checkbox" id="all" name="all" value="all">';
-                        echo '<label for="all">Everything</label>';
                     }
+                    // button to select everything (not checked)
+                    echo '<input onChange="this.form.submit()" type="checkbox" id="all" name="all" value="all">';
+                    echo '<label for="all">Everything</label>';
                 }
                 ?>
                 <input type="submit" value="Filter">
