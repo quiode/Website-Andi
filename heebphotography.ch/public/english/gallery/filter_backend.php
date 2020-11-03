@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_SESSION);
 if (sizeof($_SESSION["everything"]) == sizeof($_POST)) { // if everything was selected, change nothing
     $_SESSION["all"] = true;
 } else { //adds all selected elements to the blacklist array
