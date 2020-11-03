@@ -1,7 +1,7 @@
 <?php
 session_start();
 $all_first_clicked = $_COOKIE["all_first_clicked"];
-var_dump($all_first_clicked):
+var_dump($all_first_clicked);
 if (sizeof($_SESSION["everything"]) == sizeof($_POST) and !in_array("all", $_POST) and $all_first_clicked == false) { // if everything was selected, change nothing
     $_SESSION["all"] = true;
 } elseif (in_array("all", $_POST)) {
