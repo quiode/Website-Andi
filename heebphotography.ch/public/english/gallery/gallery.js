@@ -242,7 +242,7 @@ function filter() {
 // special event for all button
 function all_button(element) {
     var d = new Date();
-    d.setTime(d.getTime() + 5000 * 60);
+    d.setTime(d.getTime() + 5000 * 60 * 60);
     document.cookie = "all_first_clicked=true;expires=" + d.toUTCString() + ";path=/";
     element.form.submit();
 }

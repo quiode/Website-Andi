@@ -18,7 +18,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <title>Gallery | Wildlifephotography Andreas Heeb</title>
         <script>
         var d = new Date();
-        d.setTime(d.getTime() + 5000 * 60);
+        d.setTime(d.getTime() + 5000 * 60 * 60);
         document.cookie = "all_first_clicked=false;expires=" + d.toUTCString() + ";path=/";
         </script>
     </head>
