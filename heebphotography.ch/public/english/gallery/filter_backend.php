@@ -18,4 +18,4 @@ if (sizeof($_SESSION["everything"]) == sizeof($_POST) and !in_array("all", $_POS
         }
     }
 }
-echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
+// echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
