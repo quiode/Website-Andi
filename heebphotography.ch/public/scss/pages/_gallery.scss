@@ -29,7 +29,7 @@
             * {
                 position: relative;
                 transform: translateY(-50%);
-                top: 50%;
+                top: (variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3)/2;
             }
         }
 
