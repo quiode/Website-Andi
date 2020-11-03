@@ -1,6 +1,13 @@
 <?php
 session_start();
-if (sizeof($_SESSION["everything"]) == sizeof($_POST)-1 or in_array("all", $_POST)) { // if everything was selected, change nothing
+$all_first_clicked = $_COOKIE["all_first_clicked"];
+echo $all_first_clicked;
+if (sizeof($_SESSION["everything"]) == sizeof($_POST) and !in_array("all", $_POST)) { // if everything was selected, change nothing
+    $_SESSION["all"] = true;
+} elseif (in_array("all", $_POST)) {
+    if (sizeof($_SESSION["everything"]) == sizeof($_POST)-1) {
+        $_SESSION["all"] = true;
+    }
     $_SESSION["all"] = true;
 } else { //adds all selected elements to the blacklist array
     $_SESSION["all"] = false; //not everything is selected

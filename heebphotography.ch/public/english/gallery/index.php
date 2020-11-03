@@ -40,7 +40,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                         array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                     }
                     // button to select everything
-                    echo '<input onChange="this.form.submit()" type="checkbox" id="all" name="all" value="all" checked="checked">';
+                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked">';
                     echo '<label for="all">Everything</label>';
                 } else {
                     // connect to the database
@@ -61,7 +61,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                         }
                     }
                     // button to select everything (not checked)
-                    echo '<input onChange="this.form.submit()" type="checkbox" id="all" name="all" value="all">';
+                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
                     echo '<label for="all">Everything</label>';
                 }
                 ?>
