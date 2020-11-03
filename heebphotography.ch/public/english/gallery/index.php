@@ -209,10 +209,10 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
             <img src="./icons/filter_alt-black-18dp.svg">
         </div>
 
-        <div id="filter_menu">
+        <!-- <div id="filter_menu"> -->
             <!-- filter form -->
-            <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
-                <?php
+            <!-- <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post"> -->
+                <?php /*
                 if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
@@ -269,11 +269,11 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                             array_push($_SESSION["everything"], $row["type"]); //adds the type to the session list of categories and types
                         }
                     }
-                }
+                } */
                 ?>
-                <input type="submit" value="Filter">
+                <!-- <input type="submit" value="Filter">
             </form>
-        </div>
+        </div> -->
 
         <?php require  __DIR__ . "/../templates/footer.php"?>
     </body>
