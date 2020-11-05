@@ -19,7 +19,7 @@
         position: inherit;
         transform: translateY(-50%);
         top: variables.$header_height/2;
-        font-size: 5vmax;
+        font-size: 5vmax/3;
         color: white;
 
         &#mobile_headers_heeb {
@@ -46,7 +46,7 @@
             top: (variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3)/2;
             position: fixed;
             width: variables.$header_mobile_width;
-            font-size: 6vw;
+            font-size: 6vw/3;
 
             &#desktop_header {
                 display: none;

@@ -2,11 +2,10 @@
 // home
 $header_height:5vh;
 // navigationbar
-$bar_unit: 0.15vmin;
+$bar_unit: 0.5vmin;
 $border_multiplier: 1;
 $width_multiplier: 70;
 $height_multiplier: 10;
-
-$nav_width: $width_multiplier*$bar_unit + 2*16*$bar_unit;
+$nav_width: $width_multiplier*$bar_unit+2*16*$bar_unit;
 // header
 $header_mobile_width: calc(calc(100vw - #{$nav_width})/2);
