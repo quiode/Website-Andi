@@ -1,5 +1,6 @@
 <?php
 session_start();
+var_dump($_COOKIE);
 var_dump($_SESSION);
 $all_first_clicked = $_COOKIE["all_first_clicked"];
 setcookie("all_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite' => 'Lax']); // sets the cookie to false to avoid confusion
