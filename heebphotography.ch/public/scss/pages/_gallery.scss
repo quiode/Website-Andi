@@ -24,7 +24,7 @@
         color: variables.$header_text_color;
         position: sticky;
         width: 100vw;
-        background-color: white;
+        // background-color: white;
         height: auto;
         top: variables.$header_height;
         white-space: nowrap;
@@ -34,31 +34,33 @@
 
         form {
             height: inherit;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
 
-            * {
+            * {}
+
+            #gallery_filter {
                 position: relative;
-                transform: translateY(-50%);
-                top: variables.$header_height;
             }
-        }
 
-        #gallery_filter {
-            position: relative;
-        }
+            input {
+                &[type="submit"] {
+                    display: none;
+                }
+            }
 
-        input {
-            $size: 3vw;
-            width: $size;
-            height: $size;
+            label {}
 
-            &[type="submit"] {
+            #searchbar {
+                flex-grow: 2;
                 display: none;
             }
         }
 
-        label {
-            margin-right: 3vw;
-        }
+
     }
 
     #all_rows {
