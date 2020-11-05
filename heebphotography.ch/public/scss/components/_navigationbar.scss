@@ -74,7 +74,7 @@
     #navigation-overlay {
         height: 0%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: variables.$header_bg_color;
         position: fixed;
         transition: height 0.8s;
         top: 0;
@@ -96,7 +96,7 @@
 
             .links {
                 display: block;
-                color: white;
+                color: variables.$header_text_color;
                 font-size: 10vmin;
                 z-index: inherit;
 

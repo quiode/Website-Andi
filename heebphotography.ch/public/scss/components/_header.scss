@@ -8,7 +8,7 @@
     margin: 0;
     z-index: 2;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: variables.$header_bg_color;
 
     h2 {
         font-weight: 100;
@@ -20,7 +20,7 @@
         transform: translateY(-50%);
         top: variables.$header_height/2;
         font-size: 2vmax;
-        color: white;
+        color: variables.$header_text_color;
 
         &#mobile_headers_heeb {
             display: none;

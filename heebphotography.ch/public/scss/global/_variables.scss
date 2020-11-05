@@ -9,3 +9,5 @@ $height_multiplier: 10;
 $nav_width: $width_multiplier*$bar_unit+2*16*$bar_unit;
 // header
 $header_mobile_width: calc(calc(100vw - #{$nav_width})/2);
+$header_bg_color: rgba(0, 0, 0, 0.8);
+$header_text_color: white;

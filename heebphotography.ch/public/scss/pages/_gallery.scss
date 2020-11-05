@@ -20,6 +20,8 @@
     }
 
     #filter_bar {
+        background-color: variables.$header_bg_color;
+        color: variables.$header_text_color;
         position: sticky;
         width: 100vw;
         background-color: white;
