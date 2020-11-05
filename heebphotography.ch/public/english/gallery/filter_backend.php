@@ -6,6 +6,8 @@ var_dump($_COOKIE);
 echo '<br>';
 var_dump($_SESSION);
 echo '<br>';
+var_dump($_POST);
+echo '<br>';
 //debug
 
 $all_first_clicked = $_COOKIE["all_first_clicked"];
