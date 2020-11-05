@@ -7,9 +7,9 @@
 #gallery {
     #header {
         position: fixed;
-        border-bottom-color:  white;
-        border-bottom-style: solid;
-        border-bottom-width: 0.01vh;
+        border-color: white;
+        border-style: solid;
+        border-width: 0.01vh;
 
         h2 {
             position: relative;
@@ -23,6 +23,10 @@
     }
 
     #filter_bar {
+        position: fixed;
+        border-color: white;
+        border-style: solid;
+        border-width: 0.01vh;
         background-color: variables.$header_bg_color;
         color: variables.$header_text_color;
         position: sticky;
@@ -56,7 +60,11 @@
             }
 
             label {
-                margin-right: 1vw;
+                // margin-right: 1vw;
+                border-right-color: white;
+                border-right-style: solid;
+                border-right-width: 0.01vh;
+                padding-right: 1vw;
             }
 
             #searchbar {
