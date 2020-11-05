@@ -30,5 +30,5 @@ if (in_array("all", $_POST) and $all_first_clicked == "true") { // if the filter
         }
     }
 }
-echo '<script>alert("' . (string)$_SESSION["all"] . ' ' . (string)$_SESSION["blacklist"] . ' ' . (string)$_SESSION["everything"] . '");</script>';
+var_dump($_SESSION);
 // echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
