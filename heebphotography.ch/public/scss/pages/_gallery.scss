@@ -52,7 +52,9 @@
                 }
             }
 
-            label {}
+            label {
+                margin-right: 1vw;
+            }
 
             #searchbar {
                 flex-grow: 1;
