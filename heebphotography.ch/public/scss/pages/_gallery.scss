@@ -64,6 +64,7 @@
 
             input {
                 visibility: collapse;
+                display: none;
 
                 &[type="submit"] {
                     display: none;
@@ -75,12 +76,12 @@
                 transition-property: text-decoration-color;
                 transition-duration: 0.25s;
                 text-decoration-color: rgba(255, 255, 255, 0);
-                display: none;
 
                 &:hover {
                     text-decoration-color: rgba(255, 255, 255, 1);
                     text-decoration-line: underline;
                     text-decoration-style: solid;
+                    cursor: pointer;
                 }
             }
         }
