@@ -5,6 +5,11 @@
 #header {
     width: 100vw;
     height: variables.$header_height;
+
+    @media screen and (max-width: 600px) {
+        height: variables.$header_height + variables.$header_height/10;
+    }
+
     margin: 0;
     z-index: 2;
     position: relative;
