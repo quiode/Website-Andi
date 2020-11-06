@@ -52,7 +52,7 @@
             }
 
             input {
-                display: none;
+                visibility: none;
 
                 &[type="submit"] {
                     display: none;
