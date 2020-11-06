@@ -40,28 +40,28 @@
         //     top: $new_header_height/2;
         // }
 
-        height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+        // height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
 
-        h2 {
-            top: (variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3)/2;
-            position: fixed;
-            width: variables.$header_mobile_width;
-            font-size: 6vw;
+        // h2 {
+        //     top: (variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3)/2;
+        //     position: fixed;
+        //     width: variables.$header_mobile_width;
+        //     font-size: 6vw;
 
-            &#desktop_header {
-                display: none;
-            }
+        //     &#desktop_header {
+        //         display: none;
+        //     }
 
-            &#mobile_headers_heeb {
-                left: 0;
-                display: inline-block;
-            }
+        //     &#mobile_headers_heeb {
+        //         left: 0;
+        //         display: inline-block;
+        //     }
 
-            &#mobile_header_photography {
-                right: 0;
-                display: inline-block;
-            }
-        }
+        //     &#mobile_header_photography {
+        //         right: 0;
+        //         display: inline-block;
+        //     }
+        // }
 
     }
 }
