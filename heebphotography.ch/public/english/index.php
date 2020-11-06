@@ -30,10 +30,10 @@
             foreach ($all_rows as $name) {
                 $name = $name["name"];
                 if ($first_run) {
-                    echo "<div class=\"portrait_slides\" id=\"portrait_first_slide\" style=\"background:top left/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"portrait_slides\" id=\"portrait_first_slide\" style=\"background:top left/contain no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                     $first_run = false;
                 } else {
-                    echo "<div class=\"portrait_slides\" style=\"background:top left/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"portrait_slides\" style=\"background:top left/contain no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                 }
             }
             // gets landscape pictures
@@ -48,10 +48,10 @@
             foreach ($all_rows as $name) {
                 $name = $name["name"];
                 if ($first_run) {
-                    echo "<div class=\"landscape_slides\" id=\"landscape_first_slide\" style=\"background:150% 50%/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"landscape_slides\" id=\"landscape_first_slide\" style=\"background:175% 50%/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                     $first_run = false;
                 } else {
-                    echo "<div class=\"landscape_slides\" style=\"background:150% 50%/100vw no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
+                    echo "<div class=\"landscape_slides\" style=\"background:175% 50%/cover no-repeat url(https://heebphotography.ch/public/images/gallery/" . $name . ".jpg);\"></div>";
                 }
             }
             ?>
