@@ -52,9 +52,6 @@
             }
 
             input {
-                width: 0;
-                height: 0;
-                margin: 0;
                 visibility: collapse;
 
                 &[type="submit"] {
@@ -64,7 +61,10 @@
 
             label {
                 .selected {
-                    background-color: rgb(200, 200, 200);
+                    text-decoration-color: white;
+                    text-decoration-line: underline;
+                    text-decoration-style: solid;
+                    // text-decoration-thickness: auto;
                 }
 
                 margin-right: 0.5vw;

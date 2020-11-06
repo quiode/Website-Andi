@@ -69,8 +69,8 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                             echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         } else {
-                            echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
-                            echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                            echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
+                            echo '<label for="category_' . $row["category"] . '" class="selected">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
                     }
