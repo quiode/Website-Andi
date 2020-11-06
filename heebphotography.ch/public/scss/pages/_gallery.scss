@@ -87,7 +87,7 @@
         #searchbar {
             background-image: url(https://en.heebphotography.ch/gallery/icons/search_icon.svg);
             background-repeat: no-repeat;
-            background-position: left bottom;
+            background-position: left center;
             background-size: auto (variables.$header_height/2)*(2/3) - ((variables.$header_height/2)*(2/3))/5;
             padding-left: (variables.$header_height/2)*(2/3);
             border: 0;
