@@ -75,6 +75,7 @@
                 transition-property: text-decoration-color;
                 transition-duration: 0.25s;
                 text-decoration-color: rgba(255, 255, 255, 0);
+                display: none;
 
                 &:hover {
                     text-decoration-color: rgba(255, 255, 255, 1);
@@ -98,12 +99,9 @@
             margin-left: 0.5vw;
             // align-self: flex-end;
             visibility: visible;
-            // display: none;
+            display: initial;
         }
     }
-
-
-
 
     #all_rows {
         top: variables.$header_height*1.5;
