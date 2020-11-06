@@ -26,10 +26,10 @@
         // position: sticky;
         width: 100vw;
         // background-color: white;
-        height: auto;
+        height: variables.$header_height/2;
         top: variables.$header_height;
         white-space: nowrap;
-        font-size: 2vw;
+        font-size: 1vmin;
         scrollbar-width: thin;
         overflow-x: auto;
 
@@ -54,7 +54,7 @@
             }
 
             label {
-                margin-right: 1vw;
+                margin-right: 0.5vw;
             }
 
             #searchbar {
