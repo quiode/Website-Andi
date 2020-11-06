@@ -40,16 +40,16 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
                     // button to select everything
-                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked">';
-                    echo '<label for="all">Everything</label>';
+                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
+                    echo '<label for="all" class="selected">Everything</label>';
                     // checkbox for each category
                     foreach ($all_rows as $row) {
-                        echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked">';
-                        echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                        echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
+                        echo '<label for="category_' . $row["category"] . '" class="selected">' . $row["category"] . '</label>';
                         array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                     }
                     // selects all types and categories and makes a searchbar
-                    echo '<input list="searchbar_elements" name="searchbar" id="searchbar">';                    
+                    echo '<input list="searchbar_elements" name="searchbar" id="searchbar" class="selected">';
                     echo '<datalist id="searchbar_elements">';
                     echo '</datalist>';
                 } else {

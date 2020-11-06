@@ -52,12 +52,18 @@
             }
 
             input {
+                display: none;
+
                 &[type="submit"] {
                     display: none;
                 }
             }
 
             label {
+                .selected {
+                    background-color: rgb(200, 200, 200);
+                }
+
                 margin-right: 0.5vw;
             }
 
