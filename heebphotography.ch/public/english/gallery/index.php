@@ -52,13 +52,13 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     echo '<input list="searchbar_elements" name="searchbar" id="searchbar" class="selected">';
                     echo '<datalist id="searchbar_elements">';
                     // gets all distinct types and categories from the database
-                    $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category;"));
+                    $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
                     $temp = [];
                     foreach ($categories as $category) {
                         $temp = array_merge($temp, $category["category"]);
                     }
                     $all_distinct_rows_and_types = $temp;
-                    $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type;"));
+                    $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
                     $temp = [];
                     foreach ($types as $type) {
                         $temp = array_merge($temp, $type["type"]);
