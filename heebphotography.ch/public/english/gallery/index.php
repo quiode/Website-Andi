@@ -57,12 +57,11 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     foreach ($categories as $category) {
                         array_push($temp, $category["category"]);
                     }
-                    var_dump($categories, $temp);
                     $all_distinct_rows_and_types = $temp;
                     $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
                     $temp = [];
                     foreach ($types as $type) {
-                        $temp = array_merge($temp, $type["type"]);
+                        array_push($temp, $type["type"]);
                     }
                     $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
                     foreach ($all_distinct_rows_and_types as $item) {
