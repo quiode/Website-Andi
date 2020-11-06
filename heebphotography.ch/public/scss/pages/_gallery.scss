@@ -65,12 +65,6 @@
             input {
                 visibility: collapse;
 
-                &:hover {
-                    text-decoration-color: white;
-                    text-decoration-line: underline;
-                    text-decoration-style: solid;
-                }
-
                 &[type="submit"] {
                     display: none;
                 }
@@ -78,6 +72,12 @@
 
             label {
                 margin-left: 0.5vw;
+
+                &:hover {
+                    text-decoration-color: white;
+                    text-decoration-line: underline;
+                    text-decoration-style: solid;
+                }
             }
         }
 
