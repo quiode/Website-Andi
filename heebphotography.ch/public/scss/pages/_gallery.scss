@@ -29,7 +29,7 @@
         height: variables.$header_height/2;
         top: variables.$header_height;
         white-space: nowrap;
-        font-size: 1vmin;
+        font-size: 2vmin;
         scrollbar-width: thin;
         overflow-x: auto;
 
@@ -67,6 +67,7 @@
     }
 
     #all_rows {
+        top: variables.$header_height*1.5;
         margin-bottom: 1vmin;
         display: flex;
         flex-wrap: wrap;
