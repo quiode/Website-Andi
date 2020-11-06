@@ -55,7 +55,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
                     $temp = [];
                     foreach ($categories as $category) {
-                        $temp += $category["category"];
+                        array_push($temp, $category["category"]);
                     }
                     var_dump($categories, $temp);
                     $all_distinct_rows_and_types = $temp;
