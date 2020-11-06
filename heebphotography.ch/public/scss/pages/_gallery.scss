@@ -32,6 +32,7 @@
         font-size: 2vmin;
         scrollbar-width: thin;
         overflow-x: auto;
+        z-index: 1;
 
         form {
             height: inherit;
@@ -73,6 +74,7 @@
         flex-wrap: wrap;
         padding: 0 4px;
         justify-content: space-around;
+        position: relative;
 
         >div {
             flex: 25%;
