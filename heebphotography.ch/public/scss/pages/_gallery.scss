@@ -85,8 +85,9 @@
         }
 
         #searchbar {
-            flex-grow: 1;
+            // flex-grow: 1;
             align-self: flex-end;
+            visibility: visible;
             // display: none;
         }
     }
