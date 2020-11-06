@@ -5,6 +5,17 @@
 
 // scss
 #gallery {
+    #header {
+        position: fixed;
+        border-bottom-color: white;
+        border-bottom-style: solid;
+        border-bottom-width: 0.01vw;
+
+        h2 {
+            position: relative;
+        }
+    }
+
     padding: 0;
 
     .filter_btn {
@@ -12,53 +23,70 @@
     }
 
     #filter_bar {
-        $go_left: variables.$width_multiplier*variables.$bar_unit + 2*16*variables.$bar_unit;
-        position: sticky;
+        position: fixed;
+        background-color: variables.$header_bg_color;
+        color: variables.$header_text_color;
+        // position: sticky;
         width: 100vw;
-        background-color: white;
-        height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
-        top: 0;
+        // background-color: white;
+        height: variables.$header_height/2;
+        top: variables.$header_height;
         white-space: nowrap;
-        font-size: 4.5vw;
+        font-size: 2vmin;
         scrollbar-width: thin;
         overflow-x: auto;
+        z-index: 1;
 
         form {
             height: inherit;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
 
-            * {
+            * {}
+
+            #gallery_filter {
                 position: relative;
-                transform: translateY(-50%);
-                top: 50%;
             }
-        }
 
-        #gallery_filter {
-            position: relative;
-            left: $go_left;
-        }
+            input {
+                width: 0;
+                height: 0;
+                margin: 0;
+                visibility: collapse;
 
-        input {
-            $size: 3vw;
-            width: $size;
-            height: $size;
+                &[type="submit"] {
+                    display: none;
+                }
+            }
 
-            &[type="submit"] {
+            label {
+                .selected {
+                    background-color: rgb(200, 200, 200);
+                }
+
+                margin-right: 0.5vw;
+            }
+
+            #searchbar {
+                flex-grow: 1;
                 display: none;
             }
         }
 
-        label {
-            margin-right: 3vw;
-        }
+
     }
 
     #all_rows {
+        top: variables.$header_height*1.5;
         margin-bottom: 1vmin;
         display: flex;
         flex-wrap: wrap;
         padding: 0 4px;
         justify-content: space-around;
+        position: relative;
 
         >div {
             flex: 25%;

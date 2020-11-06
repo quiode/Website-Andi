@@ -1,8 +1,13 @@
 // all global variables
-// home
-$header_height:15vh;
 // navigationbar
-$bar_unit: 0.15vmin;
+$bar_unit: 0.07vmin;
 $border_multiplier: 1;
 $width_multiplier: 70;
 $height_multiplier: 10;
+$nav_width: $width_multiplier*$bar_unit+2*16*$bar_unit;
+$nav_icon_height: $height_multiplier*$bar_unit*3+24*$bar_unit*3;
+// header
+$header_mobile_width: calc(calc(100vw - #{$nav_width})/2);
+$header_bg_color: rgba(50, 50, 50);
+$header_text_color: white;
+$header_height: $nav_icon_height;

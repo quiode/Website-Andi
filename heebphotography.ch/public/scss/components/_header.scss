@@ -1,5 +1,6 @@
 // import files
 @use '../global/variables';
+
 // scss
 #header {
     width: 100vw;
@@ -7,7 +8,7 @@
     margin: 0;
     z-index: 2;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: variables.$header_bg_color;
 
     h2 {
         font-weight: 100;
@@ -18,17 +19,49 @@
         position: inherit;
         transform: translateY(-50%);
         top: variables.$header_height/2;
-        font-size: 5vmax;
-        color: white;
+        font-size: 2vmax;
+        color: variables.$header_text_color;
+
+        &#mobile_headers_heeb {
+            display: none;
+        }
+
+        &#mobile_header_photography {
+            display: none;
+        }
     }
 
     @media screen and (max-width: 600px) {
-        top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
-        $new_header_height: variables.$header_height/2;
-        height: $new_header_height;
+        // top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+        // $new_header_height: variables.$header_height/2;
+        // height: $new_header_height;
+
+        // h2 {
+        //     top: $new_header_height/2;
+        // }
+
+        height: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
 
         h2 {
-            top: $new_header_height/2;
+            top: (variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3)/2;
+            position: fixed;
+            width: variables.$header_mobile_width;
+            font-size: 6vw;
+
+            &#desktop_header {
+                display: none;
+            }
+
+            &#mobile_headers_heeb {
+                left: 0;
+                display: inline-block;
+            }
+
+            &#mobile_header_photography {
+                right: 0;
+                display: inline-block;
+            }
         }
+
     }
 }

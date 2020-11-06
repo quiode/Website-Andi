@@ -1,6 +1,7 @@
 // the navigation bar on every site
 // adding files
 @use "../global/variables";
+
 // scss
 #navigationbar {
     #navigation_button {
@@ -96,7 +97,7 @@
 
             .links {
                 display: block;
-                color: white;
+                color: variables.$header_text_color;
                 font-size: 10vmin;
                 z-index: inherit;
 
