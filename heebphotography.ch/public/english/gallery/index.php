@@ -50,12 +50,12 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     }
                     // selects all types and categories and makes a searchbar
                     echo '<input list="searchbar_elements" name="searchbar" id="searchbar" class="selected">';
+                    echo '<datalist id="searchbar_elements">';
                     $all_distinct_rows_and_types = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category;"));
                     $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type;"));)
                     foreach ($all_distinct_rows_and_types as $item) {
                         echo '<option value="' . $item . '">';
                     }
-                    echo '<datalist id="searchbar_elements">';
                     echo '</datalist>';
                 } else {
                     // connect to the database
