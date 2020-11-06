@@ -91,7 +91,7 @@
             background-size: auto (variables.$header_height/2)*(2/3);
             padding-left: (variables.$header_height/2)*(2/3);
             border: 0;
-            max-height: (variables.$header_height/2)*(2/3);
+            height: (variables.$header_height/2)*(2/3);
             max-width: 10vw;
             // flex-grow: 1;
             margin-left: 0.5vw;
