@@ -1,6 +1,7 @@
 // the navigation bar on every site
 // adding files
 @use "../global/variables";
+
 // scss
 #navigationbar {
     #navigation_button {
@@ -74,7 +75,7 @@
     #navigation-overlay {
         height: 0%;
         width: 100%;
-        background-color: variables.$header_bg_color;
+        background-color: rba(0, 0, 0, 0.8);
         position: fixed;
         transition: height 0.8s;
         top: 0;
