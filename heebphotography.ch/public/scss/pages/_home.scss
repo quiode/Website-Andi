@@ -58,7 +58,7 @@
     .landscape_slides {
         bottom: 0;
         left: 0;
-        height: 100vh;
+        height: calc(100vh - #{variables.$header_height});
         width: 100vw;
         display: block;
         position: absolute;
@@ -66,6 +66,7 @@
         transition-duration: 1s;
         transition-property: opacity;
         z-index: 0;
+        top: variables.$header_height;
 
         @media screen and (orientation: portrait) {
             display: none;
@@ -79,7 +80,7 @@
     .portrait_slides {
         @extend .landscape_slides;
         height: calc(100vh - (#{variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3}));
-        top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
+        top: variables.$header_height;
 
         @media screen and (orientation: landscape) {
             display: none;
