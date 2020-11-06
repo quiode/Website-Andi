@@ -36,7 +36,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                     // gets all categories from the database which arent NULL
-                    $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                    $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
                     // button to select everything
@@ -50,13 +50,18 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     }
                     // selects all types and categories and makes a searchbar
                     echo '<input list="searchbar_elements" name="searchbar" id="searchbar" class="selected">';
+                    $all_distinct_rows_and_types = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category;"));
+                    $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type;"));)
+                    foreach ($all_distinct_rows_and_types as $item) {
+                        echo '<option value="' . $item . '">';
+                    }
                     echo '<datalist id="searchbar_elements">';
                     echo '</datalist>';
                 } else {
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                     // gets all categories from the database which arent NULL
-                    $query = "SELECT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                    $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
                     // button to select everything (not checked)

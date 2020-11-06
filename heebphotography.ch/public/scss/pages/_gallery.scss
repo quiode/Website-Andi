@@ -86,7 +86,8 @@
 
         #searchbar {
             flex-grow: 1;
-            display: none;
+            align-self: flex-end;
+            // display: none;
         }
     }
 
