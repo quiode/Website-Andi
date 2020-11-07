@@ -72,4 +72,4 @@ if ($searchbar_first_clicked == "true") { // if something was searched, evaluate
     // var_dump($_SESSION);
     // debug
 }
-echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
+// echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
