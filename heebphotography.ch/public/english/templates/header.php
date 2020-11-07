@@ -26,6 +26,6 @@
         </div>
     </nav>
 
-    <h2 id="mobile_headers_heeb">Andreas Heeb</h2>
-    <h2 id="mobile_header_photography">Photography</h2>
+    <a id="mobile_headers_heeb" href="https://en.heebphotography.ch">Andreas Heeb</a>
+    <a id="mobile_header_photography" href="https://en.heebphotography.ch">Photography</a>
 </header>
