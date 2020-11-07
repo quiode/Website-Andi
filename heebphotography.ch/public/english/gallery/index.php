@@ -42,7 +42,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
             <!-- filter form -->
             <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
                 <?php
-                if ($_SESSION["searchbar_input"] != "") { // if no searchbar_input was sent from the backend, just do the normal thing
+                if ($_SESSION["searchbar_input"] == "") { // if no searchbar_input was sent from the backend, just do the normal thing
                     if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                         // connect to the database
                         $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
