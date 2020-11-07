@@ -38,7 +38,8 @@
         z-index: 1;
 
         @media screen and (max-width: 600px) {
-            height: variables.$header_height;
+            height: variables.$header_height + variables.$header_height*0.5;
+            font-size: 3vmin;
         }
 
         form {
@@ -81,6 +82,10 @@
                 transition-duration: 0.25s;
                 text-decoration-color: rgba(255, 255, 255, 0);
 
+                @media screen and (max-width:600px) {
+                    margin-left: 1vmin;
+                }
+
                 &:hover {
                     text-decoration-color: rgba(255, 255, 255, 1);
                     text-decoration-line: underline;
@@ -108,6 +113,7 @@
 
             @media screen and (max-width:600px) {
                 max-width: 20vw;
+                margin-left: 1vmin;
             }
         }
     }
