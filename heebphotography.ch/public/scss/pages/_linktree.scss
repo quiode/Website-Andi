@@ -1,6 +1,7 @@
 // scss for the linktree
 // additional files
 @use '../classes/colors';
+@use '../global/variables';
 
 // scss
 #linktree {
@@ -15,8 +16,9 @@
     .linktree {
         height: 100vh;
         width: 100vw;
-        max-height: 100vh;
+        max-height: calc(100vh - variables.$header_height);
         max-width: 100vw;
+        top: 0;
 
         ul {
             height: 47vh;
