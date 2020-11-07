@@ -1,5 +1,5 @@
 <header id="header">
-    <h2 id="desktop_header">Heeb Photography</h2>
+    <a id="desktop_header" href="https://en.heebphotography.ch">Heeb Photography</a>
     <nav id="navigationbar">
         <?php
         // includes the javascript file
