@@ -51,7 +51,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     // checkbox for each category
                     foreach ($all_rows as $row) {
                         echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
-                        echo '<label for="category_' . $row["category"] . '" class="selected">' . $row["category"] . '</label>';
+                        echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
                         array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                     }
                 } else {
@@ -68,17 +68,17 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     foreach ($all_rows as $row) {
                         if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
                             echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                            echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
+                            echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         } else {
                             echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
-                            echo '<label for="category_' . $row["category"] . '" class="selected">' . $row["category"] . '</label>';
+                            echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
                     }
                 }
                 // selects all types and categories and makes a searchbar
-                echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
+                echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
                 echo '<datalist id="searchbar_elements">';
                 // gets all distinct types and categories from the database
                 $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
