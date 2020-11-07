@@ -40,6 +40,10 @@ $text_font_size_mobile : 3vh;
         font-weight: 200;
         font-size: $text_font_size_desktop * 1.5;
         text-decoration: underline;
+        background: white;
+        position: sticky;
+        top: 0;
+        width: 100vw;
     }
 
     @media screen and (max-width: 600px) {
