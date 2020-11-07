@@ -30,6 +30,11 @@ $mobile_input_width : 95vw;
         font-size: $font_size;
         // height: calc(100vh - #{variables.$header_height});
 
+        @media screen and (orientation: portrait){
+            transform: translateX(-50%);
+            top: variables.$header_height;
+        }
+
         label {
             [for=first_name] {
                 width: $desktop_input_width/3;
