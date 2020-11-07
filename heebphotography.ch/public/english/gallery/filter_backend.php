@@ -1,12 +1,12 @@
 <?php
 session_start();
 // debug
-// var_dump($_COOKIE);
-// echo '<br>';
-// var_dump($_SESSION);
-// echo '<br>';
-// var_dump($_POST);
-// echo '<br>';
+var_dump($_COOKIE);
+echo '<br>';
+var_dump($_SESSION);
+echo '<br>';
+var_dump($_POST);
+echo '<br>';
 //debug
 $searchbar_first_clicked = $_COOKIE["searchbar_first_clicked"];
 $all_first_clicked = $_COOKIE["all_first_clicked"];
@@ -14,7 +14,6 @@ setcookie("all_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite
 setcookie("searchbar_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite' => 'Lax']); // sets the cookie to false to avoid confusion
 if ($searchbar_first_clicked == "true") { // if something was searched, evaluate it
     $_SESSION["all"] = false; // not everything is selected
-    var_dump($_POST);
 } else { // if nothing was searched, do the normal thing
     if (in_array("all", $_POST) and $all_first_clicked == "true") { // if the filter button was selected and clicked, display everything
         $_SESSION["all"] = true;
