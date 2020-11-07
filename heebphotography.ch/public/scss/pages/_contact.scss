@@ -28,7 +28,7 @@ $mobile_input_width : 95vw;
         left: 50%;
         top: calc((100vh - #{variables.$header_height})/2 + #{variables.$header_height});
         font-size: $font_size;
-        height: calc(100vh - #{variables.$header_height});
+        // height: calc(100vh - #{variables.$header_height});
 
         label {
             [for=first_name] {
