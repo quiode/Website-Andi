@@ -14,6 +14,15 @@ setcookie("all_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite
 setcookie("searchbar_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite' => 'Lax']); // sets the cookie to false to avoid confusion
 if ($searchbar_first_clicked == "true") { // if something was searched, evaluate it
     $_SESSION["all"] = false; // not everything is selected
+    if (in_array(strtolower($_POST["searchbar"]), array_map('strtolower', $_SESSION["everything"]))) { // if the user has selected a category, only disable all other categories
+        foreach ($_SESSION["everything"] as $item) {
+            if (strtolower($item) != strtolower($_POST["searchbar"])) {
+                array_push($_SESSION["blacklist"], $item);
+            }
+        }
+    } else { // if the user has selected something else, send it back to the "front end"
+        // code
+    }
 } else { // if nothing was searched, do the normal thing
     if (in_array("all", $_POST) and $all_first_clicked == "true") { // if the filter button was selected and clicked, display everything
         $_SESSION["all"] = true;
