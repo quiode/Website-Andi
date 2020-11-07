@@ -1,9 +1,10 @@
 //adding files
+@use '../global/variables';
 // variables
 $article_height : 100vh;
 $article_width : 100vw;
 $text_font_size_desktop : 3vw;
-$text_font_size_mobile : 3vh;
+$text_font_size_mobile : 2vh;
 
 // scss
 #impressum {
@@ -44,6 +45,10 @@ $text_font_size_mobile : 3vh;
         position: sticky;
         top: 0;
         width: 100vw;
+
+        @media screen and (orientation: portrait) {
+            height: variables.$header_height;
+        }
     }
 
     @media screen and (max-width: 600px) {
