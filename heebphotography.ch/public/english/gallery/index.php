@@ -82,6 +82,26 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                             }
                         }
                     }
+                    // selects all types and categories and makes a searchbar
+                    echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
+                    echo '<datalist id="searchbar_elements">';
+                    // gets all distinct types and categories from the database
+                    $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
+                    $temp = [];
+                    foreach ($categories as $category) {
+                        array_push($temp, str_replace("_", " ", $category["category"]));
+                    }
+                    $all_distinct_rows_and_types = $temp;
+                    $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
+                    $temp = [];
+                    foreach ($types as $type) {
+                        array_push($temp, str_replace("_", " ", $type["type"]));
+                    }
+                    $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
+                    foreach ($all_distinct_rows_and_types as $item) {
+                        echo '<option value="' . $item . '">';
+                    }
+                    echo '</datalist>';
                 } else { // if a searchbar_input was sent from the backend, underline nothing and send value to gallery maker
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
