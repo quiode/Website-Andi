@@ -47,7 +47,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $all_rows = pg_fetch_all($query_result);
                     // button to select everything
                     echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
-                    echo '<label for="all" class="selected">Everything</label>';
+                    echo '<label for="all" class="selected" tabindex="0">Everything</label>';
                     // checkbox for each category
                     foreach ($all_rows as $row) {
                         echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
@@ -63,7 +63,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $all_rows = pg_fetch_all($query_result);
                     // button to select everything (not checked)
                     echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
-                    echo '<label for="all">Everything</label>';
+                    echo '<label for="all" tabindex="0">Everything</label>';
                     // checkbox for each row
                     foreach ($all_rows as $row) {
                         if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
