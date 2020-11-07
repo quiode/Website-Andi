@@ -24,10 +24,11 @@ $mobile_input_width : 95vw;
 
         display: block;
         position: absolute;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         left: 50%;
-        bottom: 1vh;
+        top: calc((100vh - #{variables.$header_height})/2);
         font-size: $font_size;
+        height: calc(100vh - #{variables.$header_height});
 
         label {
             [for=first_name] {
@@ -107,11 +108,6 @@ $mobile_input_width : 95vw;
 
         .custom_subject {
             display: none;
-        }
-
-        @media screen and (max-width: 600px) {
-            top: variables.$bar_unit*24*3 + variables.$bar_unit*variables.$height_multiplier*3;
-            transform: translate(-50%, variables.$header_height);
         }
     }
 }
