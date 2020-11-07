@@ -20,6 +20,7 @@ if ($searchbar_first_clicked == "true") { // if something was searched, evaluate
                 array_push($_SESSION["blacklist"], $item);
             }
         }
+        var_dump($_SESSION);
     } else { // if the user has selected something else, send it back to the "front end"
         // code
     }
@@ -80,4 +81,4 @@ if ($searchbar_first_clicked == "true") { // if something was searched, evaluate
     // var_dump($_SESSION);
     // debug
 }
-echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
+// echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
