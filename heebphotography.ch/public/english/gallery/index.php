@@ -149,6 +149,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
         <div>
             <?php
             if (isset($searched_item)) { // if the user has searched something, only show the images that mach this item
+                $searched_item = str_replace(" ", "_", $searched_item); // makes the searchstring ready for the databse
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                 // gets the names of the images from the databse
