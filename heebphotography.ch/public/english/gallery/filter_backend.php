@@ -1,12 +1,12 @@
 <?php
 session_start();
 // debug
-var_dump($_COOKIE);
-echo '<br>';
-var_dump($_SESSION);
-echo '<br>';
-var_dump($_POST);
-echo '<br>';
+// var_dump($_COOKIE);
+// echo '<br>';
+// var_dump($_SESSION);
+// echo '<br>';
+// var_dump($_POST);
+// echo '<br>';
 //debug
 $searchbar_first_clicked = $_COOKIE["searchbar_first_clicked"];
 $all_first_clicked = $_COOKIE["all_first_clicked"];
@@ -71,4 +71,4 @@ if ($searchbar_first_clicked == "true") { // if something was searched, evaluate
     // var_dump($_SESSION);
     // debug
 }
-// echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
+echo '<script> window.open("https://en.heebphotography.ch/gallery/", "_self");</script>';
