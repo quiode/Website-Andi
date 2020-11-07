@@ -4,7 +4,7 @@
 $article_height : 100vh;
 $article_width : 100vw;
 $text_font_size_desktop : 3vw;
-$text_font_size_mobile : 2vh;
+$text_font_size_mobile : 2.5vh;
 
 // scss
 #impressum {
@@ -57,7 +57,7 @@ $text_font_size_mobile : 2vh;
         }
 
         .title {
-            font-size: $text_font_size_mobile * 1.5;
+            font-size: $text_font_size_mobile * 1.25;
         }
     }
 }
