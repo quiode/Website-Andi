@@ -12,11 +12,11 @@ $searchbar_first_clicked = $_COOKIE["searchbar_first_clicked"];
 $all_first_clicked = $_COOKIE["all_first_clicked"];
 setcookie("all_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite' => 'Lax']); // sets the cookie to false to avoid confusion
 setcookie("searchbar_first_clicked", "false", time() + 5000 * 60 * 60, "/", ['samesite' => 'Lax']); // sets the cookie to false to avoid confusion
+$_SESSION["searchbar_input"] = ""; // clears the searchbar_input value to eliminate bugs/confusion
 if ($searchbar_first_clicked == "true") { // if something was searched, evaluate it
     $_SESSION["all"] = false; // not everything is selected
     if (in_array(strtolower($_POST["searchbar"]), array_map('strtolower', $_SESSION["everything"]))) { // if the user has selected a category, only disable all other categories
         $_SESSION["blacklist"] = array(); //removes everything from the blacklist
-        $_SESSION["searchbar_input"] = ""; // clears the searchbar_input value to eliminate bugs/confusion
         foreach ($_SESSION["everything"] as $item) {
             if (strtolower($item) != strtolower($_POST["searchbar"])) {
                 array_push($_SESSION["blacklist"], $item);

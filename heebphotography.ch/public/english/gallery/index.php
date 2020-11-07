@@ -104,7 +104,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                     echo '</datalist>';
                 } else { // if a searchbar_input was sent from the backend, only show the pictures that match the searchword
                     // do smth
-                    echo '<style>alert("' . $_SESSION["searchbar_input"] . '");</style>';
+                    echo '<script>alert("' . $_SESSION["searchbar_input"] . '");</script>';
                 }
                 ?>
                 <input type="submit" value="Filter">
