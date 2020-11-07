@@ -248,8 +248,7 @@ function all_button(element) {
 }
 
 // makes a cookie that something was searched and sends the form
-function searchbar() {
-    element = document.getElementById("searchbar");
+function searchbar_clicked(element) {
     var d = new Date();
     d.setTime(d.getTime() + 5000 * 60 * 60);
     document.cookie = "searchbar_first_clicked=true;expires=" + d.toUTCString() + ";path=/;samesite=lax";
