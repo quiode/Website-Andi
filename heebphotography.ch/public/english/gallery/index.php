@@ -78,7 +78,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     }
                 }
                 // selects all types and categories and makes a searchbar
-                echo '<input type="search" list="searchbar_elements" name="searchbar" id="searchbar" class="selected" onchange="searchbar(this)">';
+                echo '<input onchange="searchbar(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" class="selected">';
                 echo '<datalist id="searchbar_elements">';
                 // gets all distinct types and categories from the database
                 $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
