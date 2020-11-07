@@ -102,9 +102,24 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo '<option value="' . $item . '">';
                     }
                     echo '</datalist>';
-                } else { // if a searchbar_input was sent from the backend, only show the pictures that match the searchword
-                    // do smth
-                    echo '<script>alert("' . $_SESSION["searchbar_input"] . '");</script>';
+                } else { // if a searchbar_input was sent from the backend, underline nothing and send value to gallery maker
+                    // connect to the database
+                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                    // gets all categories from the database which arent NULL
+                    $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    // button to select everything
+                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
+                    echo '<label for="all" class="selected" tabindex="0">Everything</label>';
+                    // checkbox for each category
+                    foreach ($all_rows as $row) {
+                        echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
+                        echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
+                        array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                    }
+                    $_SESSION["searchbar_input"] = ""; // clears the $_SESSION["searchbar_input"] to avoid confusion
+                    $test = "lololol";
                 }
                 ?>
                 <input type="submit" value="Filter">
@@ -113,6 +128,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
 
         <div>
             <?php
+            echo '<script>alert("' . $test . '");</script>';
             if ($_SESSION["all"]) { //only selects everything if the filte is "off"
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
