@@ -38,7 +38,7 @@
         z-index: 1;
 
         @media screen and (max-width: 600px) {
-            height: variables.$header_height + variables.$header_height*0.5;
+            height: variables.$header_height*(2/3);
             font-size: 3vmin;
         }
 
