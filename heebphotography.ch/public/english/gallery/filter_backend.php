@@ -16,13 +16,14 @@ if ($searchbar_first_clicked == "true") { // if something was searched, evaluate
     $_SESSION["all"] = false; // not everything is selected
     if (in_array(strtolower($_POST["searchbar"]), array_map('strtolower', $_SESSION["everything"]))) { // if the user has selected a category, only disable all other categories
         $_SESSION["blacklist"] = array(); //removes everything from the blacklist
+        $_SESSION["searchbar_input"] = ""; // clears the searchbar_input value to eliminate bugs/confusion
         foreach ($_SESSION["everything"] as $item) {
             if (strtolower($item) != strtolower($_POST["searchbar"])) {
                 array_push($_SESSION["blacklist"], $item);
             }
         }
     } else { // if the user has selected something else, send it back to the "front end"
-        // code
+        $_SESSION["searchbar_input"] = $_POST["searchbar"];
     }
 } else { // if nothing was searched, do the normal thing
     if (in_array("all", $_POST) and $all_first_clicked == "true") { // if the filter button was selected and clicked, display everything

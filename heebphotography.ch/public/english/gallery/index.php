@@ -6,6 +6,10 @@ if (!array_key_exists("all", $_SESSION)) { // if this is the first time the page
     $_SESSION["blacklist"] = array(); //blacklist for types and categories
 }
 $_SESSION["everything"] =  array(); //categories and types (clears it if the page had been reloaded)
+
+if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_input key if it doesnt exist already
+    $_SESSION["searchbar_input"] = "";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,65 +42,70 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
             <!-- filter form -->
             <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post">
                 <?php
-                if ($_SESSION["all"]) { //only selects everything if the filter is "off"
-                    // connect to the database
-                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-                    // gets all categories from the database which arent NULL
-                    $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
-                    $query_result = pg_query($query);
-                    $all_rows = pg_fetch_all($query_result);
-                    // button to select everything
-                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
-                    echo '<label for="all" class="selected" tabindex="0">Everything</label>';
-                    // checkbox for each category
-                    foreach ($all_rows as $row) {
-                        echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
-                        echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
-                        array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
-                    }
-                } else {
-                    // connect to the database
-                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-                    // gets all categories from the database which arent NULL
-                    $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
-                    $query_result = pg_query($query);
-                    $all_rows = pg_fetch_all($query_result);
-                    // button to select everything (not checked)
-                    echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
-                    echo '<label for="all" tabindex="0">Everything</label>';
-                    // checkbox for each row
-                    foreach ($all_rows as $row) {
-                        if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
-                            echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                            echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
-                            array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
-                        } else {
+                if ($_SESSION["searchbar_input"] != "") { // if no searchbar_input was sent from the backend, just do the normal thing
+                    if ($_SESSION["all"]) { //only selects everything if the filter is "off"
+                        // connect to the database
+                        $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                        // gets all categories from the database which arent NULL
+                        $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                        $query_result = pg_query($query);
+                        $all_rows = pg_fetch_all($query_result);
+                        // button to select everything
+                        echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
+                        echo '<label for="all" class="selected" tabindex="0">Everything</label>';
+                        // checkbox for each category
+                        foreach ($all_rows as $row) {
                             echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
                             echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
+                    } else {
+                        // connect to the database
+                        $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                        // gets all categories from the database which arent NULL
+                        $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                        $query_result = pg_query($query);
+                        $all_rows = pg_fetch_all($query_result);
+                        // button to select everything (not checked)
+                        echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
+                        echo '<label for="all" tabindex="0">Everything</label>';
+                        // checkbox for each row
+                        foreach ($all_rows as $row) {
+                            if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
+                                echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
+                                echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
+                                array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                            } else {
+                                echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
+                                echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
+                                array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                            }
+                        }
                     }
+                    // selects all types and categories and makes a searchbar
+                    echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
+                    echo '<datalist id="searchbar_elements">';
+                    // gets all distinct types and categories from the database
+                    $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
+                    $temp = [];
+                    foreach ($categories as $category) {
+                        array_push($temp, str_replace("_", " ", $category["category"]));
+                    }
+                    $all_distinct_rows_and_types = $temp;
+                    $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
+                    $temp = [];
+                    foreach ($types as $type) {
+                        array_push($temp, str_replace("_", " ", $type["type"]));
+                    }
+                    $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
+                    foreach ($all_distinct_rows_and_types as $item) {
+                        echo '<option value="' . $item . '">';
+                    }
+                    echo '</datalist>';
+                } else { // if a searchbar_input was sent from the backend, only show the pictures that match the searchword
+                    // do smth
+                    echo '<style>alert("' . $_SESSION["searchbar_input"] . '");</style>';
                 }
-                // selects all types and categories and makes a searchbar
-                echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
-                echo '<datalist id="searchbar_elements">';
-                // gets all distinct types and categories from the database
-                $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
-                $temp = [];
-                foreach ($categories as $category) {
-                    array_push($temp, str_replace("_", " ", $category["category"]));
-                }
-                $all_distinct_rows_and_types = $temp;
-                $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
-                $temp = [];
-                foreach ($types as $type) {
-                    array_push($temp, str_replace("_", " ", $type["type"]));
-                }
-                $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
-                foreach ($all_distinct_rows_and_types as $item) {
-                    echo '<option value="' . $item . '">';
-                }
-                echo '</datalist>';
                 ?>
                 <input type="submit" value="Filter">
             </form>
@@ -120,7 +129,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     $blacklist .= ",'" . $item . "'";
                 }
                 $blacklist .= ")";
-                $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "AND type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
+                $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "and type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
