@@ -6,6 +6,7 @@ function navigation_button(button) {
     if (button.classList.contains("change")) {
         // starts transformation --> element goes down
         navigation.style.height = "100%";
+        navigation.style.display = "initial";
         // makes the cross black when the background gets whiter
         // document.getElementById("b1").style.backgroundColor = "rgb(255,255,255)";
         // document.getElementById("b1").style.border = "none";
@@ -26,6 +27,7 @@ function navigation_button(button) {
     } else {
         // starts transformation --> elements goes up
         navigation.style.height = "0%";
+        navigation.style.display = "none";
         // makes the cross white when the background gets darker
         // document.getElementById("b1").style.backgroundColor = "rgb(0,0,0)";
         // document.getElementById("b1").style.border = "1px #fff solid";
