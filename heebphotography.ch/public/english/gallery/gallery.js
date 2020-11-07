@@ -239,10 +239,18 @@ function filter() {
     }
 }
 
-// special event for all button
+// makes a cookie that the everything button was last pressed and sends the form
 function all_button(element) {
     var d = new Date();
     d.setTime(d.getTime() + 5000 * 60 * 60);
     document.cookie = "all_first_clicked=true;expires=" + d.toUTCString() + ";path=/;samesite=lax";
+    element.form.submit();
+}
+
+// makes a cookie that something was searched and sends the form
+function searchbar(element) {
+    var d = new Date();
+    d.setTime(d.getTime() + 5000 * 60 * 60);
+    document.cookie = "searchbar_first_clicked=true;expires=" + d.toUTCString() + ";path=/;samesite=lax";
     element.form.submit();
 }

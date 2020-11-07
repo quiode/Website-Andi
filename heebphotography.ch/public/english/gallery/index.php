@@ -17,9 +17,15 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
         <script src="gallery.js"></script>
         <title>Gallery | Wildlifephotography Andreas Heeb</title>
         <script>
+        // sets the cookies to false so that there are no bugs
+        // everything button
         var d = new Date();
         d.setTime(d.getTime() + 5000 * 60 * 60);
         document.cookie = "all_first_clicked=false;expires=" + d.toUTCString() + ";path=/;samesite=lax";
+        // searchfield
+        var d = new Date();
+        d.setTime(d.getTime() + 5000 * 60 * 60);
+        document.cookie = "searchbar_first_clicked=false;expires=" + d.toUTCString() + ";path=/;samesite=lax";
         </script>
     </head>
 
@@ -72,7 +78,7 @@ $_SESSION["everything"] =  array(); //categories and types (clears it if the pag
                     }
                 }
                 // selects all types and categories and makes a searchbar
-                echo '<input list="searchbar_elements" name="searchbar" id="searchbar" class="selected">';
+                echo '<input type="search" list="searchbar_elements" name="searchbar" id="searchbar" class="selected" onsearch="searchbar(this)">';
                 echo '<datalist id="searchbar_elements">';
                 // gets all distinct types and categories from the database
                 $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
