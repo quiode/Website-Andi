@@ -118,8 +118,8 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
                         array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                     }
+                    $searched_item = $_SESSION["searchbar_input"];
                     $_SESSION["searchbar_input"] = ""; // clears the $_SESSION["searchbar_input"] to avoid confusion
-                    $test = "lololol";
                 }
                 ?>
                 <input type="submit" value="Filter">
@@ -128,27 +128,36 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
 
         <div>
             <?php
-            echo '<script>alert("' . $test . '");</script>';
-            if ($_SESSION["all"]) { //only selects everything if the filte is "off"
+            if (isset($searched_item)) { // if the user has searched something, only show the images that mach this item
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                 // gets the names of the images from the databse
-                $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
+                $query = "SELECT name, category, type FROM images WHERE LOWER(category) LIKE '%" . $searched_item . "%' OR LOWER(type) LIKE '%" . $searched_item . "%' ORDER BY upload_date DESC";
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
-            } else { // only selects the ones which are not in the blacklist
-                // connect to the database
-                $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-                $blacklist = "(''";
-                foreach ($_SESSION["blacklist"] as $item) {
-                    $blacklist .= ",'" . $item . "'";
+            } else { // if the user didn't search something, display everything normally
+                if ($_SESSION["all"]) { //only selects everything if the filte is "off"
+                    // connect to the database
+                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                    // gets the names of the images from the databse
+                    $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    pg_close($dbconn); //ends connection to database
+                } else { // only selects the ones which are not in the blacklist
+                    // connect to the database
+                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                    $blacklist = "(''";
+                    foreach ($_SESSION["blacklist"] as $item) {
+                        $blacklist .= ",'" . $item . "'";
+                    }
+                    $blacklist .= ")";
+                    $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "and type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
+                    $query_result = pg_query($query);
+                    $all_rows = pg_fetch_all($query_result);
+                    pg_close($dbconn); //ends connection to database
                 }
-                $blacklist .= ")";
-                $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "and type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
-                $query_result = pg_query($query);
-                $all_rows = pg_fetch_all($query_result);
-                pg_close($dbconn); //ends connection to database
             }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
             $image_column_1 = array();
