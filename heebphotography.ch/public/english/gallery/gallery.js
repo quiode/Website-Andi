@@ -28,8 +28,10 @@ function image_description() {
             thumbnail_image = element;
         }
     }
-    category = thumbnail_image.classList.item(1);
-    type = thumbnail_image.classList.item(2);
+    
+    let cat_and_type = thumbnail_image.id.split(" ");
+    category = cat_and_type[0];
+    type = cat_and_type[1];
     category = category.replace(/_/g, " ");
     type = type.replace(/_/g, " ");
     document.getElementById("picture_description").innerHTML = category + ": " + type;

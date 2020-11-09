@@ -220,92 +220,102 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                     pg_close($dbconn); //ends connection to database
                 }
             }
-            // splits the images in 4 seperate arrays with +- 1 the same amount of images
-                $image_column_1 = array();
-                $image_column_2 = array();
-                $image_column_3 = array();
-                $image_column_4 = array();
-                $i = 0;
-                $c = 0;
-            while ($i <= sizeof($all_rows)) {
-                $image_column_1[$c] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-                $image_column_2[$c] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-                $image_column_3[$c] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-                $image_column_4[$c++] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
+            echo '<style>let images_array = [];';
+            for ($i=0; $i < sizeof($all_rows); $i++) { 
+                echo 'images_array.push({"category":"';
+                echo $all_rows[$i]["category"];
+                echo '", "name":"';
+                echo $all_rows[$i]["name"];
+                echo '", "type":"';
+                echo $all_rows[$i]["type"];
+                echo '"});';
             }
+            // // splits the images in 4 seperate arrays with +- 1 the same amount of images
+            //     $image_column_1 = array();
+            //     $image_column_2 = array();
+            //     $image_column_3 = array();
+            //     $image_column_4 = array();
+            //     $i = 0;
+            //     $c = 0;
+            // while ($i <= sizeof($all_rows)) {
+            //     $image_column_1[$c] = $all_rows[$i++];
+            //     if ($i >= sizeof($all_rows)) {
+            //         break;
+            //     }
+            //     $image_column_2[$c] = $all_rows[$i++];
+            //     if ($i >= sizeof($all_rows)) {
+            //         break;
+            //     }
+            //     $image_column_3[$c] = $all_rows[$i++];
+            //     if ($i >= sizeof($all_rows)) {
+            //         break;
+            //     }
+            //     $image_column_4[$c++] = $all_rows[$i++];
+            //     if ($i >= sizeof($all_rows)) {
+            //         break;
+            //     }
+            // }
             ?>
 
             <!-- makes 4 rows of images -->
             <div id="all_rows">
                 <div>
                     <?php
-                    foreach ($image_column_1 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo "\" id=\"";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
-                    }
+                    // foreach ($image_column_1 as $image) {
+                    //     echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                    //     echo $image["name"];
+                    //     echo ".jpg\" class=\"image";
+                    //     echo "\" id=\"";
+                    //     echo $image["category"];
+                    //     echo " ";
+                    //     echo $image["type"];
+                    //     echo "\" onclick=\"slideshow_on(this.src)\">";
+                    // }
                     ?>
                 </div>
 
                 <div>
                     <?php
-                    foreach ($image_column_2 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo "\" id=\"";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
-                    }
+                    // foreach ($image_column_2 as $image) {
+                    //     echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                    //     echo $image["name"];
+                    //     echo ".jpg\" class=\"image";
+                    //     echo "\" id=\"";
+                    //     echo $image["category"];
+                    //     echo " ";
+                    //     echo $image["type"];
+                    //     echo "\" onclick=\"slideshow_on(this.src)\">";
+                    // }
                     ?>
                 </div>
 
                 <div>
                     <?php
-                    foreach ($image_column_3 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo "\" id=\"";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
-                    }
+                    // foreach ($image_column_3 as $image) {
+                    //     echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                    //     echo $image["name"];
+                    //     echo ".jpg\" class=\"image";
+                    //     echo "\" id=\"";
+                    //     echo $image["category"];
+                    //     echo " ";
+                    //     echo $image["type"];
+                    //     echo "\" onclick=\"slideshow_on(this.src)\">";
+                    // }
                     ?>
                 </div>
 
                 <div>
                     <?php
-                    foreach ($image_column_4 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo "\" id=\"";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
-                    }
+                    // foreach ($image_column_4 as $image) {
+                    //     echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                    //     echo $image["name"];
+                    //     echo ".jpg\" class=\"image";
+                    //     echo "\" id=\"";
+                    //     echo $image["category"];
+                    //     echo " ";
+                    //     echo $image["type"];
+                    //     echo "\" onclick=\"slideshow_on(this.src)\">";
+                    // }
                     ?>
                 </div>
             </div>
