@@ -155,7 +155,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 $all_rows = pg_fetch_all($query_result);
                 // button to select everything
                 // echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
-                echo '<p for="all" class="selected" tabindex="0">Everything</p>';
+                echo '<p id="everything" class="selected" tabindex="0" onclick="filter(this)">Everything</p>';
                 // checkbox for each category
                 foreach ($all_rows as $row) {
                     // echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row[" category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
