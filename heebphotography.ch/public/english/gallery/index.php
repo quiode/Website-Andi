@@ -255,7 +255,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image["name"];
                         echo ".jpg\" class=\"image";
-                        echo " id=\"";
+                        echo "\" id=\"";
                         echo $image["category"];
                         echo " ";
                         echo $image["type"];
@@ -270,7 +270,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image["name"];
                         echo ".jpg\" class=\"image";
-                        echo " id=\"";
+                        echo "\" id=\"";
                         echo $image["category"];
                         echo " ";
                         echo $image["type"];
@@ -285,7 +285,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image["name"];
                         echo ".jpg\" class=\"image";
-                        echo " id=\"";
+                        echo "\" id=\"";
                         echo $image["category"];
                         echo " ";
                         echo $image["type"];
@@ -300,7 +300,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
                         echo $image["name"];
                         echo ".jpg\" class=\"image";
-                        echo " id=\"";
+                        echo "\" id=\"";
                         echo $image["category"];
                         echo " ";
                         echo $image["type"];
