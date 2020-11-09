@@ -256,6 +256,9 @@ function searchbar_clicked(element) {
 }
 
 function filter(filter_element) {
-    alert(filter_element.value);
-    alert(filter_element.innerHTML);
+    if (filter_element.value === undefined && filter_element.innerHTML != "") {
+        alert("Button");
+    } else if (filter_element.value != "") {
+        alert("Searchbar");
+    }
 }
