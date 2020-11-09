@@ -55,8 +55,8 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         echo '<label for="all" class="selected" tabindex="0">Everything</label>';
                         // checkbox for each category
                         foreach ($all_rows as $row) {
-                            echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
-                            echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
+                            echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
+                            echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
                     } else {
