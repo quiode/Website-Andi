@@ -25,7 +25,6 @@
     #filters {
         height: inherit;
         display: flex;
-        display: none;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
@@ -74,7 +73,6 @@
                 cursor: pointer;
             }
         }
-
 
         #searchbar {
             background-image: url(https://en.heebphotography.ch/gallery/icons/search_icon.svg);
