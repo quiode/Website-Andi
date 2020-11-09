@@ -260,7 +260,12 @@ function filter(filter_element) {
     // depending on the input, set the filter value
     if (filter_element.value === undefined && filter_element.innerHTML != "") {
         alert("Button");
-        filter_element.classList.toggle("selected");
+        let all_buttons = document.getElementsByClassName("filter_option");
+        for (let index = 0; index < all_buttons.length; index++) {
+            const button = all_buttons[index];
+            button.classList.remove("selected");
+        }
+        filter_element.classList.add("selected");
         filter_value = filter_element.innerHTML;
     } else if (filter_element.value != "") {
         alert("Searchbar");
@@ -268,6 +273,22 @@ function filter(filter_element) {
     }
     // filter the images for the filter value
     if (filter_value != "") {
-        
+        filter_value = filter_value.toLowerCase(); // for easier searching
+        // filter images
+        var images = document.getElementsByClassName("image");
+        for (let index = 0; index < images.length; index++) {
+            const image = images[index];
+            // get id for filtering
+            let image_id = image.id;
+            // formatting id
+            image_id = image_id.toLowerCase();
+            image_id = image_id.replace("_", " ");
+            let regex = RegExp(".*" + filter_value + ".*", 'i');
+            if (image_id.search(regex) != -1) {
+                image.style.display = "initail";
+            } else {
+                image.style.display = "none";
+            }
+        }
     }
 }
