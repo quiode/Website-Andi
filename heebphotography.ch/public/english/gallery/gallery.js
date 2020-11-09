@@ -284,21 +284,33 @@ function filter(filter_element) {
         load_images(JSON.parse(sessionStorage.getItem("all_images"))); //loads all images
     } else if (filter_value != "") {
         // filter images
-        let images = document.getElementsByClassName("image");
-        for (let index = 0; index < images.length; index++) {
-            const image = images[index];
-            // get id for filtering
-            let image_id = image.id;
-            // formatting id
-            image_id = image_id.toLowerCase();
-            image_id = image_id.replace("_", " ");
-            // let regex = RegExp(".*" + filter_value + ".*", 'i');
-            if (image_id.includes(filter_value)) {
-                image.style.display = "initial";
-            } else {
-                image.style.display = "none";
+        let allowed_images = [];
+        let all_images = JSON.parse(sessionStorage.getItem("all_images"));
+        all_images.forEach(image => {
+            let image_all = image.category + " " + image.type;
+            image_all = image_all.toLowerCase();
+            image_all = image_all.replace("_", " ");
+            if (image_all.includes(filter_value)) {
+                allowed_images.push(image);
             }
-        }
+        });
+        load_images(allowed_images); // loads all allowed images
+
+        // let images = document.getElementsByClassName("image");
+        // for (let index = 0; index < images.length; index++) {
+        //     const image = images[index];
+        //     // get id for filtering
+        //     let image_id = image.id;
+        //     // formatting id
+        //     image_id = image_id.toLowerCase();
+        //     image_id = image_id.replace("_", " ");
+        //     // let regex = RegExp(".*" + filter_value + ".*", 'i');
+        //     if (image_id.includes(filter_value)) {
+        //         image.style.display = "initial";
+        //     } else {
+        //         image.style.display = "none";
+        //     }
+        // }
     }
 }
 
