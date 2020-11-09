@@ -312,5 +312,25 @@ function load_images(images) {
     while (all_rows.firstChild) { // removes all old script/all old images
         all_rows.removeChild(parent.firstChild);
     }
+
+    var counter = 0;
+    // makes the four columns
+    all_rows.appendChild(document.createElement("div"));
+    all_rows.appendChild(document.createElement("div"));
+    all_rows.appendChild(document.createElement("div"));
+    all_rows.appendChild(document.createElement("div"));
+    // adds all images
+    while (images.length) {
+        // adds all images
+        for (let i = 0; i < 4; i++) {
+            let div = all_rows.getElementsByTagName("div");
+            let image = document.createElement("img");
+            image.src = "";       
+        }
+        counter++;
+    }
 }
 
+function body_load() {
+    load_images(JSON.parse(sessionStorage.getItem("all_images"))); // loads all images at the beginning of the page
+}

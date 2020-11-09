@@ -33,7 +33,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
         </script>
     </head>
 
-    <body id="gallery">
+    <body id="gallery" onload="body_load()">
         <!-- wip bar -->
         <?php require __DIR__ . "/../templates/work_in_progress.php"?>
         <?php require __DIR__ . "/../templates/header.php"?>
