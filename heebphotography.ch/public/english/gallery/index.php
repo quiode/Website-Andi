@@ -220,7 +220,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                     pg_close($dbconn); //ends connection to database
                 }
             }
-            echo '<style>let images_array = [];';
+            echo '<script>let images_array = [];';
             for ($i=0; $i < sizeof($all_rows); $i++) {
                 echo 'images_array.push({"category":"';
                 echo $all_rows[$i]["category"];
@@ -231,7 +231,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 echo '"});';
             }
             echo 'sessionStorage.setItem("all_images", JSON.stringify(images_array));';
-            echo "</style>";
+            echo "</script>";
             // // splits the images in 4 seperate arrays with +- 1 the same amount of images
             //     $image_column_1 = array();
             //     $image_column_2 = array();
