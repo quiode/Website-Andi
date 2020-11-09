@@ -22,6 +22,83 @@
         display: none;
     }
 
+    #filters {
+        height: inherit;
+        display: flex;
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        // * {}
+
+        .selected {
+            text-decoration-color: white;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+
+            // text-decoration-thickness: auto;
+            &:hover {
+                text-decoration-color: rgba(255, 255, 255, 0);
+            }
+        }
+
+        #gallery_filter {
+            // position: relative;
+        }
+
+        // input {
+        //     visibility: collapse;
+        //     display: none;
+
+        //     &[type="submit"] {
+        //         display: none;
+        //     }
+        // }
+
+        p {
+            margin-left: 2vw;
+            transition-property: text-decoration-color;
+            transition-duration: 0.25s;
+            text-decoration-color: rgba(255, 255, 255, 0);
+
+            @media screen and (max-width:600px) {
+                margin-left: 1vmin;
+            }
+
+            &:hover {
+                text-decoration-color: rgba(255, 255, 255, 1);
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                cursor: pointer;
+            }
+        }
+
+
+        #searchbar {
+            background-image: url(https://en.heebphotography.ch/gallery/icons/search_icon.svg);
+            background-repeat: no-repeat;
+            background-position: 1% center;
+            background-size: auto (variables.$header_height/2)*(2/3) - ((variables.$header_height/2)*(2/3))/5;
+            font-size: (variables.$header_height/2)*(2/3) - ((variables.$header_height/2)*(2/3))/5;
+            padding-left: (variables.$header_height/2)*(2/3);
+            border: 0;
+            height: (variables.$header_height/2)*(2/3);
+            max-width: 10vw;
+            // flex-grow: 1;
+            margin-left: 2vw;
+            // align-self: flex-end;
+            visibility: visible;
+            display: initial;
+
+            @media screen and (max-width:600px) {
+                max-width: 20vw;
+                margin-left: 1vmin;
+            }
+        }
+    }
+
     #filter_bar {
         position: fixed;
         background-color: variables.$header_bg_color;
