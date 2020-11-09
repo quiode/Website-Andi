@@ -255,6 +255,6 @@ function searchbar_clicked(element) {
     element.form.submit();
 }
 
-function filter_clicked(filter_element) {
-    
+function filter(filter_element) {
+    alert("a button was pressed");
 }

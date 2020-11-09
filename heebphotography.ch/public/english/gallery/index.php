@@ -159,9 +159,29 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 // checkbox for each category
                 foreach ($all_rows as $row) {
                     // echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row[" category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                    echo '<p for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</p>';
+                    echo '<p id="' . $row["category"] . '" tabindex="0" onclick="filter(this)">' . $row["category"] . '</p>';
                     array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                 }
+                // selects all types and categories and makes a searchbar
+                echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
+                echo '<datalist id="searchbar_elements">';
+                // gets all distinct types and categories from the database
+                $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
+                $temp = [];
+                foreach ($categories as $category) {
+                    array_push($temp, str_replace("_", " ", $category["category"]));
+                }
+                $all_distinct_rows_and_types = $temp;
+                $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
+                $temp = [];
+                foreach ($types as $type) {
+                    array_push($temp, str_replace("_", " ", $type["type"]));
+                }
+                $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
+                foreach ($all_distinct_rows_and_types as $item) {
+                    echo '<option value="' . $item . '">';
+                }
+                echo '</datalist>';
                 ?>
             </div>
         </div>
