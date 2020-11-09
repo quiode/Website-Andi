@@ -254,3 +254,7 @@ function searchbar_clicked(element) {
     document.cookie = "searchbar_first_clicked=true;expires=" + d.toUTCString() + ";path=/;samesite=lax";
     element.form.submit();
 }
+
+function filter_clicked(filter_element) {
+    
+}

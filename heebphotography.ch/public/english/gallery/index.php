@@ -144,6 +144,8 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 ?>
                 <input type="submit" value="Filter">
             </form>
+            <!-- all filters -->
+            <div id="filters"></div>
         </div>
 
         <div>
