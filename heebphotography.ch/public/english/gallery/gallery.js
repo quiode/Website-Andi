@@ -256,9 +256,18 @@ function searchbar_clicked(element) {
 }
 
 function filter(filter_element) {
+    var filter_value = "";
+    // depending on the input, set the filter value
     if (filter_element.value === undefined && filter_element.innerHTML != "") {
         alert("Button");
+        filter_element.classList.toggle("selected");
+        filter_value = filter_element.innerHTML;
     } else if (filter_element.value != "") {
         alert("Searchbar");
+        filter_value = filter_element.value;
+    }
+    // filter the images for the filter value
+    if (filter_value != "") {
+        
     }
 }
