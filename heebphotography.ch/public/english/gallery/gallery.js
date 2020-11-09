@@ -283,8 +283,8 @@ function filter(filter_element) {
             // formatting id
             image_id = image_id.toLowerCase();
             image_id = image_id.replace("_", " ");
-            let regex = RegExp(".*" + filter_value + ".*", 'i');
-            if (image_id.search(regex) != -1) {
+            // let regex = RegExp(".*" + filter_value + ".*", 'i');
+            if (image_id.includes(filter_value)) {
                 image.style.display = "initail";
             } else {
                 image.style.display = "none";
