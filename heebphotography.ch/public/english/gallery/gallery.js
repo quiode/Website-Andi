@@ -310,7 +310,7 @@ function filter(filter_element) {
 function load_images(images) {
     let all_rows = document.getElementById("all_rows");
     while (all_rows.firstChild) { // removes all old script/all old images
-        all_rows.removeChild(parent.firstChild);
+        all_rows.removeChild(all_rows.firstChild);
     }
 
     var counter = 0;
