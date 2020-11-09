@@ -259,7 +259,7 @@ function filter(filter_element) {
     var filter_value = "";
     // depending on the input, set the filter value
     if (filter_element.value === undefined && filter_element.innerHTML != "") {
-        alert("Button");
+        // alert("Button");
         let all_buttons = document.getElementsByClassName("filter_option");
         for (let index = 0; index < all_buttons.length; index++) {
             const button = all_buttons[index];
@@ -268,7 +268,7 @@ function filter(filter_element) {
         filter_element.classList.add("selected");
         filter_value = filter_element.innerHTML;
     } else if (filter_element.value != "") {
-        alert("Searchbar");
+        // alert("Searchbar");
         filter_value = filter_element.value;
     }
     // filter the images for the filter value
