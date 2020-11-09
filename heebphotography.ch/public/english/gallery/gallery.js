@@ -256,5 +256,5 @@ function searchbar_clicked(element) {
 }
 
 function filter(filter_element) {
-    alert("a button was pressed");
+    alert(filter_element.value);
 }
