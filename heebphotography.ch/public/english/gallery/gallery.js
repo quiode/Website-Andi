@@ -257,4 +257,5 @@ function searchbar_clicked(element) {
 
 function filter(filter_element) {
     alert(filter_element.value);
+    alert(filter_element.innerHTML);
 }
