@@ -291,7 +291,7 @@ function filter(filter_element) {
             image_id = image_id.replace("_", " ");
             // let regex = RegExp(".*" + filter_value + ".*", 'i');
             if (image_id.includes(filter_value)) {
-                image.style.display = "inital";
+                image.style.display = "initial";
             } else {
                 image.style.display = "none";
             }
