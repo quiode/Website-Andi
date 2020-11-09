@@ -270,6 +270,10 @@ function filter(filter_element) {
     } else if (filter_element.value != "") {
         // alert("Searchbar");
         filter_value = filter_element.value;
+        for (let index = 0; index < all_buttons.length; index++) {
+            const button = all_buttons[index];
+            button.classList.remove("selected");
+        }
     }
     // filter the images for the filter value
     filter_value = filter_value.toLowerCase(); // for easier searching
