@@ -229,7 +229,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 echo '", "type":"';
                 echo $all_rows[$i]["type"];
                 echo '"});';
-                echo 'sessionStorage.setItem("all_images", JSON.stringify(images_array));'
+                echo 'sessionStorage.setItem("all_images", JSON.stringify(images_array));';
             }
             // // splits the images in 4 seperate arrays with +- 1 the same amount of images
             //     $image_column_1 = array();
