@@ -323,9 +323,16 @@ function load_images(images) {
     while (images.length) {
         // adds all images
         for (let i = 0; i < 4; i++) {
-            let div = all_rows.getElementsByTagName("div");
+            let div = all_rows.getElementsByTagName("div")[i];
             let image = document.createElement("img");
-            image.src = "";       
+            image.src = "https://heebphotography.ch/public/images/gallery/thumbnail/" + images[counter].name + ".jpg";
+            image.classList.add("image");
+            image.id = images[counter].category + " " + images[counter].type;
+            image.addEventListener("click", function () {
+                slideshow_on(this.src);
+            });
+            div.appendChild(image);
+            counter++;
         }
         counter++;
     }
