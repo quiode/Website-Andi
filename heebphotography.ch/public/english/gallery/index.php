@@ -145,170 +145,187 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 <input type="submit" value="Filter">
             </form>
             <!-- all filters -->
-            <div id="filters"></div>
-        </div>
-
-        <div>
-            <?php
-            if (isset($searched_item)) { // if the user has searched something, only show the images that mach this item
-                $searched_item = strtolower(str_replace(" ", "_", $searched_item)); // makes the searchstring ready for the databse
+            <div id="filters">
+                <?php
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-                // gets the names of the images from the databse
-                $query = "SELECT name, category, type FROM images WHERE LOWER(category) LIKE '%" . $searched_item . "%' OR LOWER(type) LIKE '%" . $searched_item . "%' ORDER BY upload_date DESC";
+                // gets all categories from the database which arent NULL
+                $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
-                pg_close($dbconn); //ends connection to database
-            } else { // if the user didn't search something, display everything normally
-                if ($_SESSION["all"]) { //only selects everything if the filter is "off"
+                // button to select everything
+                echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
+                echo '<label for="all" class="selected" tabindex="0">Everything</label>';
+                // checkbox for each category
+                foreach ($all_rows as $row) {
+                    echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row[" category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
+                    echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
+                    array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                }
+                ?>
+            </div>
+
+            <div>
+                <?php
+                if (isset($searched_item)) { // if the user has searched something, only show the images that mach this item
+                    $searched_item = strtolower(str_replace(" ", "_", $searched_item)); // makes the searchstring ready for the databse
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                     // gets the names of the images from the databse
-                    $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
+                    $query = "SELECT name, category, type FROM images WHERE LOWER(category) LIKE '%" . $searched_item . "%' OR LOWER(type) LIKE '%" . $searched_item . "%' ORDER BY upload_date DESC";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
                     pg_close($dbconn); //ends connection to database
-                } else { // only selects the ones which are not in the blacklist
-                    // connect to the database
-                    $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-                    $blacklist = "(''";
-                    foreach ($_SESSION["blacklist"] as $item) {
-                        $blacklist .= ",'" . $item . "'";
+                } else { // if the user didn't search something, display everything normally
+                    if ($_SESSION["all"]) { //only selects everything if the filter is "off"
+                        // connect to the database
+                        $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                        // gets the names of the images from the databse
+                        $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
+                        $query_result = pg_query($query);
+                        $all_rows = pg_fetch_all($query_result);
+                        pg_close($dbconn); //ends connection to database
+                    } else { // only selects the ones which are not in the blacklist
+                        // connect to the database
+                        $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
+                        $blacklist = "(''";
+                        foreach ($_SESSION["blacklist"] as $item) {
+                            $blacklist .= ",'" . $item . "'";
+                        }
+                        $blacklist .= ")";
+                        $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "and type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
+                        $query_result = pg_query($query);
+                        $all_rows = pg_fetch_all($query_result);
+                        pg_close($dbconn); //ends connection to database
                     }
-                    $blacklist .= ")";
-                    $query = "SELECT name, category, type FROM images WHERE category NOT IN " . $blacklist . "and type NOT IN " . $blacklist . " ORDER BY upload_date DESC";
-                    $query_result = pg_query($query);
-                    $all_rows = pg_fetch_all($query_result);
-                    pg_close($dbconn); //ends connection to database
                 }
-            }
             // splits the images in 4 seperate arrays with +- 1 the same amount of images
-            $image_column_1 = array();
-            $image_column_2 = array();
-            $image_column_3 = array();
-            $image_column_4 = array();
-            $i = 0;
-            $c = 0;
-            while ($i <= sizeof($all_rows)) {
-                $image_column_1[$c] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-                $image_column_2[$c] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-                $image_column_3[$c] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-                $image_column_4[$c++] = $all_rows[$i++];
-                if ($i >= sizeof($all_rows)) {
-                    break;
-                }
-            }
-            ?>
-
-            <!-- makes 4 rows of images -->
-            <div id="all_rows">
-                <div>
-                    <?php
-                    foreach ($image_column_1 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo " ";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
+                $image_column_1 = array();
+                $image_column_2 = array();
+                $image_column_3 = array();
+                $image_column_4 = array();
+                $i = 0;
+                $c = 0;
+                while ($i <= sizeof($all_rows)) {
+                    $image_column_1[$c] = $all_rows[$i++];
+                    if ($i >= sizeof($all_rows)) {
+                        break;
                     }
-                    ?>
-                </div>
-
-                <div>
-                    <?php
-                    foreach ($image_column_2 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo " ";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
+                    $image_column_2[$c] = $all_rows[$i++];
+                    if ($i >= sizeof($all_rows)) {
+                        break;
                     }
-                    ?>
-                </div>
-
-                <div>
-                    <?php
-                    foreach ($image_column_3 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo " ";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
+                    $image_column_3[$c] = $all_rows[$i++];
+                    if ($i >= sizeof($all_rows)) {
+                        break;
                     }
-                    ?>
-                </div>
-
-                <div>
-                    <?php
-                    foreach ($image_column_4 as $image) {
-                        echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
-                        echo $image["name"];
-                        echo ".jpg\" class=\"image";
-                        echo " ";
-                        echo $image["category"];
-                        echo " ";
-                        echo $image["type"];
-                        echo "\" onclick=\"slideshow_on(this.src)\">";
+                    $image_column_4[$c++] = $all_rows[$i++];
+                    if ($i >= sizeof($all_rows)) {
+                        break;
                     }
-                    ?>
-                </div>
-            </div>
-        </div>
+                }
+                ?>
 
-        <!-- the slideshow that pops up when clicking on an image -->
-        <div id="slideshow_background">
-            <div id="slideshow" onkeydown="key_pressed(event)">
-                <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg"
-                    onload="resizeToMax()">
+                <!-- makes 4 rows of images -->
+                <div id="all_rows">
+                    <div>
+                        <?php
+                        foreach ($image_column_1 as $image) {
+                            echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                            echo $image["name"];
+                            echo ".jpg\" class=\"image";
+                            echo " ";
+                            echo $image["category"];
+                            echo " ";
+                            echo $image["type"];
+                            echo "\" onclick=\"slideshow_on(this.src)\">";
+                        }
+                        ?>
+                    </div>
 
-                <div id="picture_description"></div>
+                    <div>
+                        <?php
+                        foreach ($image_column_2 as $image) {
+                            echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                            echo $image["name"];
+                            echo ".jpg\" class=\"image";
+                            echo " ";
+                            echo $image["category"];
+                            echo " ";
+                            echo $image["type"];
+                            echo "\" onclick=\"slideshow_on(this.src)\">";
+                        }
+                        ?>
+                    </div>
 
-                <!-- for navigation within the slideshow -->
-                <div class="arrows_background">
-                    <div onclick="last_picture()" style="z-index: 7; position: fixed;">
-                        <?php require '../templates/arrow_btn_left.php'?>
+                    <div>
+                        <?php
+                        foreach ($image_column_3 as $image) {
+                            echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                            echo $image["name"];
+                            echo ".jpg\" class=\"image";
+                            echo " ";
+                            echo $image["category"];
+                            echo " ";
+                            echo $image["type"];
+                            echo "\" onclick=\"slideshow_on(this.src)\">";
+                        }
+                        ?>
+                    </div>
+
+                    <div>
+                        <?php
+                        foreach ($image_column_4 as $image) {
+                            echo "<img src=\"https://heebphotography.ch/public/images/gallery/thumbnail/";
+                            echo $image["name"];
+                            echo ".jpg\" class=\"image";
+                            echo " ";
+                            echo $image["category"];
+                            echo " ";
+                            echo $image["type"];
+                            echo "\" onclick=\"slideshow_on(this.src)\">";
+                        }
+                        ?>
                     </div>
                 </div>
+            </div>
 
-                <div class="arrows_background" style="right:0;">
-                    <div onclick="next_picture()" style="z-index: 7; position: fixed;">
-                        <?php require '../templates/arrow_btn_right.php'?>
+            <!-- the slideshow that pops up when clicking on an image -->
+            <div id="slideshow_background">
+                <div id="slideshow" onkeydown="key_pressed(event)">
+                    <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg"
+                        onload="resizeToMax()">
+
+                    <div id="picture_description"></div>
+
+                    <!-- for navigation within the slideshow -->
+                    <div class="arrows_background">
+                        <div onclick="last_picture()" style="z-index: 7; position: fixed;">
+                            <?php require '../templates/arrow_btn_left.php'?>
+                        </div>
+                    </div>
+
+                    <div class="arrows_background" style="right:0;">
+                        <div onclick="next_picture()" style="z-index: 7; position: fixed;">
+                            <?php require '../templates/arrow_btn_right.php'?>
+                        </div>
+                    </div>
+
+                    <div onclick="slideshow_off()">
+                        <!-- adds close button -->
+                        <?php require '../templates/close_btn.php'?>
                     </div>
                 </div>
-
-                <div onclick="slideshow_off()">
-                    <!-- adds close button -->
-                    <?php require '../templates/close_btn.php'?>
-                </div>
             </div>
-        </div>
 
-        <div class="filter_btn" onclick="filter()">
-            <img src="./icons/filter_alt-black-18dp.svg">
-        </div>
+            <div class="filter_btn" onclick="filter()">
+                <img src="./icons/filter_alt-black-18dp.svg">
+            </div>
 
-        <!-- <div id="filter_menu"> -->
-        <!-- filter form -->
-        <!-- <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post"> -->
-        <?php /*
+            <!-- <div id="filter_menu"> -->
+            <!-- filter form -->
+            <!-- <form id="gallery_filter" action="./filter_backend.php" target="_self" method="post"> -->
+            <?php /*
                 if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
@@ -366,12 +383,12 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         }
                     }
                 } */
-        ?>
-        <!-- <input type="submit" value="Filter">
+            ?>
+            <!-- <input type="submit" value="Filter">
             </form>
         </div> -->
 
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+            <?php require  __DIR__ . "/../templates/footer.php"?>
     </body>
 
 </html>
