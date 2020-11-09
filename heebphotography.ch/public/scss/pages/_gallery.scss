@@ -90,6 +90,7 @@
             // align-self: flex-end;
             visibility: visible;
             display: initial;
+            user-select: text;
 
             @media screen and (max-width:600px) {
                 max-width: 20vw;
