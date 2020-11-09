@@ -158,7 +158,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 $all_rows = pg_fetch_all($query_result);
                 pg_close($dbconn); //ends connection to database
             } else { // if the user didn't search something, display everything normally
-                if ($_SESSION["all"]) { //only selects everything if the filte is "off"
+                if ($_SESSION["all"]) { //only selects everything if the filter is "off"
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                     // gets the names of the images from the databse
