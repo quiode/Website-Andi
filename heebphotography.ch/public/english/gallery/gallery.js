@@ -28,7 +28,7 @@ function image_description() {
             thumbnail_image = element;
         }
     }
-    
+
     let cat_and_type = thumbnail_image.id.split(" ");
     category = cat_and_type[0];
     type = cat_and_type[1];
@@ -305,3 +305,12 @@ function filter(filter_element) {
         }
     }
 }
+
+// loads all images from the name given
+function load_images(images) {
+    let all_rows = document.getElementById("all_rows");
+    while (all_rows.firstChild) { // removes all old script/all old images
+        all_rows.removeChild(parent.firstChild);
+    }
+}
+
