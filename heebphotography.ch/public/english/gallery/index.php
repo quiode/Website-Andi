@@ -221,7 +221,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 }
             }
             echo '<style>let images_array = [];';
-            for ($i=0; $i < sizeof($all_rows); $i++) { 
+            for ($i=0; $i < sizeof($all_rows); $i++) {
                 echo 'images_array.push({"category":"';
                 echo $all_rows[$i]["category"];
                 echo '", "name":"';
@@ -230,8 +230,8 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 echo $all_rows[$i]["type"];
                 echo '"});';
                 echo 'sessionStorage.setItem("all_images", JSON.stringify(images_array));';
-                echo "</style>";
             }
+            echo "</style>";
             // // splits the images in 4 seperate arrays with +- 1 the same amount of images
             //     $image_column_1 = array();
             //     $image_column_2 = array();
