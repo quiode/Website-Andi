@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Me | Wildlifephotography Andreas Heeb</title>
+        <title>Über Mich | Tierfotografie Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <link rel="shortcut icon" type="image/x-icon" href="https://heebphotography.ch/public/images/favicon/favicon.ico"/>
     </head>
@@ -16,11 +16,11 @@
         <p id="p_about_me">
             Andreas Heeb
             🐦
-            17y
-            Wildlifephotographer
-            Switzerland🇨🇭
-            Nikon D500 with Sigma 150-600mm f/5-6.3
-            Sport and Tamron 70-200mm f/2.8 G2
+            17 Jahre
+            Tierfotografierer
+            Schweiz🇨🇭
+            Nikon D500 mit Sigma 150-600mm f/5-6.3
+            Sport und Tamron 70-200mm f/2.8 G2
             🐦
         </p>
         <?php require  __DIR__ . "/../../templates/footer.php"?>
