@@ -18,8 +18,8 @@
         <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
             <!-- email -->
             <label for="email" class="email">Email:</label>
-            <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
-                title="beispiel@beispiel.com">
+            <input type="email" id="email" class="email" name="email" placeholder="beispiel@beispiel.com" maxlength="256"
+                title="example@example.com">
             <!-- first name label -->
             <label for="first_name">Vorname:</label>
             <!-- first name -->
