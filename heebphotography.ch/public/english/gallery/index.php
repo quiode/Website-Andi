@@ -353,7 +353,7 @@
         </div>
 
         <div class="filter_btn" onclick="filter()">
-            <img src="./icons/filter_alt-black-18dp.svg">
+            <img src="https://heebphotography.ch/public/images/gallery/icons/filter_alt-black-18dp.svg">
         </div>
 
         <!-- <div id="filter_menu"> -->
