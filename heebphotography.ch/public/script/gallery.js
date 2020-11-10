@@ -328,9 +328,12 @@ function load_images(images) {
     all_rows.appendChild(document.createElement("div"));
     all_rows.appendChild(document.createElement("div"));
     // adds all images
-    while (images.length) {
+    while (counter < images.length) {
         // adds all images
         for (let i = 0; i < 4; i++) {
+            if (counter >= images.length) {
+                break;
+            }
             let div = all_rows.getElementsByTagName("div")[i];
             let image = document.createElement("img");
             image.src = "https://heebphotography.ch/public/images/gallery/thumbnail/" + images[counter].name + ".jpg";
