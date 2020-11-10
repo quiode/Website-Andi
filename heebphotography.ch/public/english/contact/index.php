@@ -7,6 +7,7 @@
         <title>Contact | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="https://heebphotography.ch/public/script/contact.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="https://heebphotography.ch/public/images/favicon/favicon.ico"/>
     </head>
 
     <body id="contact_form">

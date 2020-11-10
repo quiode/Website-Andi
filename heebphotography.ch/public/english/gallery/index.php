@@ -31,6 +31,7 @@
         // d.setTime(d.getTime() + 5000 * 60 * 60);
         // document.cookie = "searchbar_first_clicked=false;expires=" + d.toUTCString() + ";path=/;samesite=lax";
         </script>
+        <link rel="shortcut icon" type="image/x-icon" href="https://heebphotography.ch/public/images/favicon/favicon.ico"/>
     </head>
 
     <body id="gallery" onload="body_load()">
