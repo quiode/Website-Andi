@@ -18,7 +18,7 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-        <script src="gallery.js"></script>
+        <script src="https://heebphotography.ch/public/script/gallery.js"></script>
         <title>Gallery | Wildlifephotography Andreas Heeb</title>
         <script>
         // sets the cookies to false so that there are no bugs

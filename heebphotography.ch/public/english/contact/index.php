@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-        <script src="contact.js"></script>
+        <script src="https://heebphotography.ch/public/script/contact.js"></script>
     </head>
 
     <body id="contact_form">
