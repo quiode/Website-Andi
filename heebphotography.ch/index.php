@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Wildlifephotography Andreas Heeb</title>
+        <title>Tierfotografie Andreas Heeb</title>
         <link rel="stylesheet" href="./public/styles/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- font -->

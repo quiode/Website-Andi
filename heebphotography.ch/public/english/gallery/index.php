@@ -327,7 +327,7 @@
         <!-- the slideshow that pops up when clicking on an image -->
         <div id="slideshow_background">
             <div id="slideshow" onkeydown="key_pressed(event)">
-                <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg"
+                <img id="slideshow_image" src=""
                     onload="resizeToMax()">
 
                 <div id="picture_description"></div>

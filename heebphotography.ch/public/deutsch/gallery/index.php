@@ -19,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="https://heebphotography.ch/public/script/gallery.js"></script>
-        <title>Gallery | Wildlifephotography Andreas Heeb</title>
+        <title>Bildergalerie | Tierfotografie Andreas Heeb</title>
         <script>
         // // sets the cookies to false so that there are no bugs
         // // everything button
@@ -151,12 +151,12 @@
                 // connect to the database
                 $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                 // gets all categories from the database which arent NULL
-                $query = "SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category";
+                $query = "SELECT DISTINCT de_category FROM images WHERE de_category IS NOT NULL GROUP BY de_category";
                 $query_result = pg_query($query);
                 $all_rows = pg_fetch_all($query_result);
                 // button to select everything
                 // echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
-                echo '<p id="everything" class="filter_option selected" onclick="filter(this)">Everything</p>';
+                echo '<p id="everything" class="filter_option selected" onclick="filter(this)">Alles</p>';
                 // checkbox for each category
                 foreach ($all_rows as $row) {
                     // echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row[" category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
@@ -167,13 +167,13 @@
                 echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
                 echo '<datalist id="searchbar_elements">';
                 // gets all distinct types and categories from the database
-                $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
+                $categories = pg_fetch_all(pg_query("SELECT DISTINCT de_category FROM images WHERE de_category IS NOT NULL GROUP BY de_category"));
                 $temp = [];
                 foreach ($categories as $category) {
                     array_push($temp, str_replace("_", " ", $category["category"]));
                 }
                 $all_distinct_rows_and_types = $temp;
-                $types = pg_fetch_all(pg_query("SELECT DISTINCT type FROM images WHERE type IS NOT NULL GROUP BY type"));
+                $types = pg_fetch_all(pg_query("SELECT DISTINCT de_type FROM images WHERE de_type IS NOT NULL GROUP BY de_type"));
                 $temp = [];
                 foreach ($types as $type) {
                     array_push($temp, str_replace("_", " ", $type["type"]));
@@ -203,7 +203,7 @@
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                     // gets the names of the images from the databse
-                    $query = "SELECT name, category, type FROM images ORDER BY upload_date DESC";
+                    $query = "SELECT name, de_category, de_type FROM images ORDER BY upload_date DESC";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
                     pg_close($dbconn); //ends connection to database
@@ -327,7 +327,7 @@
         <!-- the slideshow that pops up when clicking on an image -->
         <div id="slideshow_background">
             <div id="slideshow" onkeydown="key_pressed(event)">
-                <img id="slideshow_image" src="https://heebphotography.ch/public/images/gallery/image_0.jpg"
+                <img id="slideshow_image" src=""
                     onload="resizeToMax()">
 
                 <div id="picture_description"></div>
