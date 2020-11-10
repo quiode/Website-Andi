@@ -342,7 +342,6 @@ function load_images(images) {
             div.appendChild(image);
             counter++;
         }
-        counter++;
     }
 }
 
