@@ -59,7 +59,7 @@
         </section>
 
         <aside id="profile">
-            <img id="profile_picture" src="./profile_picture.jpg"></img>
+            <img id="profile_picture" src="https://heebphotography.ch/public/images/home/profile_picture.jpg"></img>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor volutpat
             elit. Praesent pretium mauris nibh, sit amet rutrum mi lobortis non. Morbi eget ligula tristique nunc
             lobortis malesuada. Proin quis vestibulum arcu. Vestibulum at aliquet mi. Donec efficitur euismod ligula
