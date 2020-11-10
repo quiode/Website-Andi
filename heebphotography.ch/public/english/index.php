@@ -21,7 +21,7 @@
             // gets portrait images
             // gets last 5 images from db
             $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            $query = "SELECT name FROM images WHERE width < height ORDER BY upload_date DESC LIMIT 5";
+            $query = "SELECT name FROM images WHERE width < height ORDER BY upload_date DESC LIMIT 10";
             $query_result = pg_query($query);
             $all_rows = pg_fetch_all($query_result);
             pg_close($dbconn); //ends connection to database
@@ -39,7 +39,7 @@
             // gets landscape pictures
             // gets last 5 images from db
             $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
-            $query = "SELECT name FROM images WHERE width > height ORDER BY upload_date DESC LIMIT 5";
+            $query = "SELECT name FROM images WHERE width > height ORDER BY upload_date DESC LIMIT 10";
             $query_result = pg_query($query);
             $all_rows = pg_fetch_all($query_result);
             pg_close($dbconn); //ends connection to database
