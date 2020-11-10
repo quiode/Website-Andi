@@ -3,7 +3,7 @@
 @use "../global/variables";
 
 // scss
-#english {
+#home {
     @media screen and (orientation: portrait) {
         background-color: variables.$header_bg_color;
     }

@@ -10,7 +10,7 @@
         <script src="script.js"></script>
     </head>
 
-    <body id="english" onload="slideshow(5000)">
+    <body id="home" onload="slideshow(5000)">
 
         <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
         <?php require __DIR__ . "/../english/templates/header.php"?>
