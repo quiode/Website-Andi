@@ -8,7 +8,7 @@ function form_normal() {
 
 // when the form is beeing submitted, displays processing information
 function form_submit() {
-    var loading_window = window.open("https://en.heebphotography.ch/contact/images/sending_image.gif",
+    var loading_window = window.open("https://heebphotography.ch/public/images/contact/sending_image.gif",
         "Sending",
         "height=200,width=200,resizable=no,left=200,top=200,location=no,menubar=no,scrollbar=no");
 }

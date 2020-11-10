@@ -114,7 +114,7 @@
             }
 
             function open_starting_window() {
-                window.open("https://en.heebphotography.ch/contact/", "_self");
+                window.open("https://de.heebphotography.ch/contact/", "_self");
             }
             setTimeout(open_starting_window, 1050);
         </script>

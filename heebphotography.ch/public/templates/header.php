@@ -1,5 +1,5 @@
 <header id="header">
-    <a id="desktop_header" href="https://en.heebphotography.ch">Heeb Photography</a>
+    <?php echo '<a id="desktop_header" href="https://' . $_SERVER['HTTP_HOST'] . '">Heeb Photography</a>'; ?>
     <nav id="navigationbar">
         <?php
         // includes the javascript file
@@ -25,6 +25,6 @@
             </div>
         </div>
     </nav>
-    <a id="mobile_headers_heeb" href="https://en.heebphotography.ch">Andreas Heeb</a>
-    <a id="mobile_header_photography" href="https://en.heebphotography.ch">Photography</a>
-</header>
+    <?php echo '<a id="mobile_headers_heeb" href="https://' . $_SERVER['HTTP_HOST'] . '">Andreas Heeb</a>'; ?>
+    <?php echo '<a id="mobile_header_photography" href="https://' . $_SERVER['HTTP_HOST'] . '">Photography</a>' ?>
+    </header>
