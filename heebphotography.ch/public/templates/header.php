@@ -15,7 +15,7 @@
         <div id="navigation-overlay">
             <div id="navigation-content">
                 <?php
-                var_dump($_SESSION['HTTP_HOST']);
+                var_dump($_SERVER['HTTP_HOST']);
                 var_dump("en");
                 var_dump(strpos($_SERVER['HTTP_HOST'], "en"));
                 if (strpos($_SERVER['HTTP_HOST'], "en") != false) {
