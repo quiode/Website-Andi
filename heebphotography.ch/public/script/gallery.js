@@ -280,7 +280,13 @@ function filter(filter_element) {
     }
     // filter the images for the filter value
     filter_value = filter_value.toLowerCase(); // for easier searching
-    if (filter_value == "everything") { // display everything
+    let everything = "";
+    if (document.location.hostname.includes("en")) {
+        everything = "everything";
+    } else {
+        everything = "alles";
+    }
+    if (filter_value == everything) { // display everything
         load_images(JSON.parse(sessionStorage.getItem("all_images"))); //loads all images
     } else if (filter_value != "") {
         // filter images
