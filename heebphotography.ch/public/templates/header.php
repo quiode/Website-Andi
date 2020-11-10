@@ -18,7 +18,7 @@
                 var_dump($_SERVER['HTTP_HOST']);
                 var_dump("en");
                 var_dump(strpos($_SERVER['HTTP_HOST'], "en"));
-                var_dump((strpos($_SERVER['HTTP_HOST'], "en") != false));
+                var_dump((strpos($_SERVER['HTTP_HOST'], "en") === false));
                 if (strpos($_SERVER['HTTP_HOST'], "en") != false) {
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "" . "\">Home</a>";
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "gallery/" . "\">Gallery</a>";
