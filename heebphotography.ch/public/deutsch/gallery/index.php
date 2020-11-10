@@ -160,8 +160,8 @@
                 // checkbox for each category
                 foreach ($all_rows as $row) {
                     // echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row[" category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                    echo '<p id="' . $row["category"] . '" class="filter_option" onclick="filter(this)">' . $row["category"] . '</p>';
-                    array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
+                    echo '<p id="' . $row["de_category"] . '" class="filter_option" onclick="filter(this)">' . $row["de_category"] . '</p>';
+                    array_push($_SESSION["everything"], $row["de_category"]); //adds the category to the session list of categories and types
                 }
                 // selects all types and categories and makes a searchbar
                 echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
@@ -170,13 +170,13 @@
                 $categories = pg_fetch_all(pg_query("SELECT DISTINCT de_category FROM images WHERE de_category IS NOT NULL GROUP BY de_category"));
                 $temp = [];
                 foreach ($categories as $category) {
-                    array_push($temp, str_replace("_", " ", $category["category"]));
+                    array_push($temp, str_replace("_", " ", $category["de_category"]));
                 }
                 $all_distinct_rows_and_types = $temp;
                 $types = pg_fetch_all(pg_query("SELECT DISTINCT de_type FROM images WHERE de_type IS NOT NULL GROUP BY de_type"));
                 $temp = [];
                 foreach ($types as $type) {
-                    array_push($temp, str_replace("_", " ", $type["type"]));
+                    array_push($temp, str_replace("_", " ", $type["de_type"]));
                 }
                 $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
                 foreach ($all_distinct_rows_and_types as $item) {
@@ -224,11 +224,11 @@
             echo '<script>let images_array = [];';
             for ($i=0; $i < sizeof($all_rows); $i++) {
                 echo 'images_array.push({"category":"';
-                echo $all_rows[$i]["category"];
+                echo $all_rows[$i]["de_category"];
                 echo '", "name":"';
                 echo $all_rows[$i]["name"];
                 echo '", "type":"';
-                echo $all_rows[$i]["type"];
+                echo $all_rows[$i]["de_type"];
                 echo '"});';
             }
             echo 'sessionStorage.setItem("all_images", JSON.stringify(images_array));';
