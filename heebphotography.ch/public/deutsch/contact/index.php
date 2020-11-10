@@ -19,16 +19,16 @@
             <!-- email -->
             <label for="email" class="email">Email:</label>
             <input type="email" id="email" class="email" name="email" placeholder="example@example.com" maxlength="256"
-                title="example@example.com">
+                title="beispiel@beispiel.com">
             <!-- first name label -->
             <label for="first_name">Vorname:</label>
             <!-- first name -->
             <input type="text" id="first_name" name="first_name" maxlength="256" autocomplete="on"
-                placeholder="Anonymous" title="FirstName">
+                placeholder="Anonym" title="FirstName">
             <!-- last name label-->
             <label for="last_name">Nachname:</label>
             <!-- last name -->
-            <input type="text" id="last_name" name="last_name" maxlength="256" autocomplete="on" placeholder="Anonymous"
+            <input type="text" id="last_name" name="last_name" maxlength="256" autocomplete="on" placeholder="Anonym"
                 title="LastName">
             <!-- Subject -->
             <label for="subject">Grund:</label>
@@ -50,7 +50,7 @@
             <textarea rows="5" cols="100" type="text" id="message" name="message" class="message" maxlength="1000"
                 autocomplete="off" title="Message" required></textarea>
             <!-- submit button -->
-            <input id="submit" type="submit" value="Submit">
+            <input id="submit" type="submit" value="Absenden">
         </form>
         <?php require  __DIR__ . "/../../templates/footer.php"?>
     </body>
