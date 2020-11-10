@@ -164,7 +164,7 @@
                     array_push($_SESSION["everything"], $row["de_category"]); //adds the category to the session list of categories and types
                 }
                 // selects all types and categories and makes a searchbar
-                echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
+                echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" autocomplete="off">';
                 echo '<datalist id="searchbar_elements">';
                 // gets all distinct types and categories from the database
                 $categories = pg_fetch_all(pg_query("SELECT DISTINCT de_category FROM images WHERE de_category IS NOT NULL GROUP BY de_category"));
