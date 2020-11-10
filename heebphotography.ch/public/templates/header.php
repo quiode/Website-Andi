@@ -15,6 +15,7 @@
         <div id="navigation-overlay">
             <div id="navigation-content">
                 <?php
+                var_dump($_SERVER);
                 if (strpos($_SERVER['HTTP_HOST'], "en") != false) {
                     var_dump($_SERVER);
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "" . "\">Home</a>";
