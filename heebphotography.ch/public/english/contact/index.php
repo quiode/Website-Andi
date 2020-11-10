@@ -38,7 +38,7 @@
                 <option value="photography_question">Question about Photography</option>
                 <option value="animal_question">Question about Animals</option>
                 <option value="business_question">Business Question</option>
-                <option value="bored">I'm bored and just wanna talk</option>
+                <!-- <option value="bored">I'm bored and just wanna talk</option> -->
                 <option value="custom">Something else</option>
             </select>
             <!-- custom subject -->
