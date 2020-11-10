@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Me | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
+        <link rel="shortcut icon" type="image/ico" href="https://heebphotography.ch/public/images/favicon/favicon.ico"/>
     </head>
 
     <body id="about_me">
