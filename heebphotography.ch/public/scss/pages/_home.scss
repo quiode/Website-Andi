@@ -4,6 +4,10 @@
 
 // scss
 #english {
+    @media screen and (orientation: portrait) {
+        background-color: variables.$header_bg_color;
+    }
+
     margin: 0;
 
     #portrait_first_slide {
