@@ -11,8 +11,8 @@
 
     <body id="contact_form">
         <!-- wip bar -->
-        <?php require __DIR__ . "/../templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../templates/header.php"?>
+        <?php require __DIR__ . "/../../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../../templates/header.php"?>
         <!-- the contact form, you can leave a lot empty and just send it anonymous -->
         <form action="./contact_backend.php" method="POST" onsubmit="form_submit()">
             <!-- email -->
@@ -51,7 +51,7 @@
             <!-- submit button -->
             <input id="submit" type="submit" value="Submit">
         </form>
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php require  __DIR__ . "/../../templates/footer.php"?>
     </body>
 
 </html>

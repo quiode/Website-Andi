@@ -12,8 +12,8 @@
 
     <body id="linktree">
         <!-- wip bar -->
-        <?php require __DIR__ . "/../templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../templates/header.php"?>
+        <?php require __DIR__ . "/../../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../../templates/header.php"?>
 
 
         <!-- the linktree (using php for eliminating white space bc fuck u html) -->
@@ -46,7 +46,7 @@
         echo $html;
         ?>
 
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php require  __DIR__ . "/../../templates/footer.php"?>
     </body>
 
 </html>

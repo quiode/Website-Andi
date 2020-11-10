@@ -10,8 +10,8 @@
 
     <body id="about_me">
         <!-- wip bar -->
-        <?php require __DIR__ . "/../templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../templates/header.php"?>
+        <?php require __DIR__ . "/../../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../../templates/header.php"?>
         <p id="p_about_me">
             Andreas Heeb
             🐦
@@ -22,7 +22,7 @@
             Sport and Tamron 70-200mm f/2.8 G2
             🐦
         </p>
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php require  __DIR__ . "/../../templates/footer.php"?>
     </body>
 
 </html>

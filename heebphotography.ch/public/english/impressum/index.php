@@ -10,8 +10,8 @@
 
     <body id="impressum">
         <!-- wip bar -->
-        <?php require __DIR__ . "/../templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../templates/header.php"?>
+        <?php require __DIR__ . "/../../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../../templates/header.php"?>
         <section id="german" style="display: none;">
             <p><strong>Kontakt-Adresse</strong></p>
             <p>Dominik Schwaiger<br />Hofackerstrasse 3<br />8722 Kaltbrunn<br />Schweiz</p>
@@ -78,7 +78,7 @@
                 <!--Please note the terms and conditions of SwissAnwalt regarding any costs incurred if the source is omitted!-->
             </article>
         </section>
-        <?php require  __DIR__ . "/../templates/footer.php"?>
+        <?php require  __DIR__ . "/../../templates/footer.php"?>
     </body>
 
 </html>

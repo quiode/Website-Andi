@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <?php include "/../templates/meta-tags.php"?>
+        <?php include __DIR__ . "/../templates/meta-tags.php"?>
         <title>Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="https://heebphotography.ch/public/script/home.js"></script>
@@ -12,8 +12,8 @@
 
     <body id="home" onload="slideshow(5000)">
 
-        <?php require __DIR__ . "/../english/templates/work_in_progress.php"?>
-        <?php require __DIR__ . "/../english/templates/header.php"?>
+        <?php require __DIR__ . "/../templates/work_in_progress.php"?>
+        <?php require __DIR__ . "/../templates/header.php"?>
 
         <section>
             <?php
@@ -75,7 +75,7 @@
             }
             ?>
         </section>
-        <!-- <?php require  __DIR__ . "/../english/templates/footer.php"?> -->
+        <!-- <?php require  __DIR__ . "/../templates/footer.php"?> -->
     </body>
 
 </html>
