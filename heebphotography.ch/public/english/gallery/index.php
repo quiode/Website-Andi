@@ -52,11 +52,11 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         $all_rows = pg_fetch_all($query_result);
                         // button to select everything
                         echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
-                        echo '<label for="all" class="selected" tabindex="0">Everything</label>';
+                        echo '<label for="all" class="selected">Everything</label>';
                         // checkbox for each category
                         foreach ($all_rows as $row) {
                             echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                            echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
+                            echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                             array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                         }
                     } else {
@@ -68,22 +68,22 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                         $all_rows = pg_fetch_all($query_result);
                         // button to select everything (not checked)
                         echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
-                        echo '<label for="all" tabindex="0">Everything</label>';
+                        echo '<label for="all">Everything</label>';
                         // checkbox for each row
                         foreach ($all_rows as $row) {
                             if (in_array($row["category"], $_SESSION["blacklist"])) { // unchecks the checkbox if it is in the blacklist
                                 echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                                echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
+                                echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                                 array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                             } else {
                                 echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '" checked="checked" class="selected">';
-                                echo '<label for="category_' . $row["category"] . '" class="selected" tabindex="0">' . $row["category"] . '</label>';
+                                echo '<label for="category_' . $row["category"] . '" class="selected">' . $row["category"] . '</label>';
                                 array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                             }
                         }
                     }
                     // selects all types and categories and makes a searchbar
-                    echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
+                    echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
                     echo '<datalist id="searchbar_elements">';
                     // gets all distinct types and categories from the database
                     $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
@@ -111,15 +111,15 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                     $all_rows = pg_fetch_all($query_result);
                     // button to select everything
                     echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all">';
-                    echo '<label for="all" tabindex="0">Everything</label>';
+                    echo '<label for="all">Everything</label>';
                     // checkbox for each category
                     foreach ($all_rows as $row) {
                         echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row["category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                        echo '<label for="category_' . $row["category"] . '" tabindex="0">' . $row["category"] . '</label>';
+                        echo '<label for="category_' . $row["category"] . '">' . $row["category"] . '</label>';
                         array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                     }
                     // selects all types and categories and makes a searchbar
-                    echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
+                    echo '<input onchange="searchbar_clicked(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
                     echo '<datalist id="searchbar_elements">';
                     // gets all distinct types and categories from the database
                     $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
@@ -155,15 +155,15 @@ if (!array_key_exists("searchbar_input", $_SESSION)) { // creates the searchbar_
                 $all_rows = pg_fetch_all($query_result);
                 // button to select everything
                 // echo '<input onChange="all_button(this)" type="checkbox" id="all" name="all" value="all" checked="checked" class="selected">';
-                echo '<p id="everything" class="filter_option selected" tabindex="0" onclick="filter(this)">Everything</p>';
+                echo '<p id="everything" class="filter_option selected" onclick="filter(this)">Everything</p>';
                 // checkbox for each category
                 foreach ($all_rows as $row) {
                     // echo '<input onChange="this.form.submit()" type="checkbox" id="category_' . $row[" category"] . '" name="category_' . $row["category"] . '" value="' . $row["category"] . '">';
-                    echo '<p id="' . $row["category"] . '" class="filter_option" tabindex="0" onclick="filter(this)">' . $row["category"] . '</p>';
+                    echo '<p id="' . $row["category"] . '" class="filter_option" onclick="filter(this)">' . $row["category"] . '</p>';
                     array_push($_SESSION["everything"], $row["category"]); //adds the category to the session list of categories and types
                 }
                 // selects all types and categories and makes a searchbar
-                echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar" tabindex="0">';
+                echo '<input onchange="filter(this)" type="search" list="searchbar_elements" name="searchbar" id="searchbar">';
                 echo '<datalist id="searchbar_elements">';
                 // gets all distinct types and categories from the database
                 $categories = pg_fetch_all(pg_query("SELECT DISTINCT category FROM images WHERE category IS NOT NULL GROUP BY category"));
