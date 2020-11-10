@@ -5,6 +5,10 @@
 
 // scss
 #gallery {
+    @media screen and (orientation: portrait){
+        background-color: variables.$header_bg_color;
+    }
+
     #header {
         position: fixed;
         border-bottom-color: white;
