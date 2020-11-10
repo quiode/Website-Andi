@@ -3,7 +3,6 @@ var slideshow_interval = setInterval(slideshow, 5000);
 
 // changes the image
 function slideshow() {
-	alert(navigator.userAgent);
 	var device_slides = picture_orientation();
 	// when the document has fully loaded, begin with slideshow
 	if (document.readyState == "complete") {
@@ -28,18 +27,32 @@ function slideshow() {
 // detects the device orientation and changed the pictures
 function picture_orientation() {
 	var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation; // gets tbe screen orientation
+	// for safari bc apple sucks
 	if (orientation != "portrait-primary" && orientation != "portrait-secondary" && orientation != "landscape-primary" && orientation != "landscape-secondary") {
-		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
-			const element = document.getElementsByClassName("portrait_slides")[index];
-			element.style.display = "block";
+		if (navigator.userAgent.includes("Mobile") || navigator.userAgent.includes("mobile")) {
+			for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
+				const element = document.getElementsByClassName("portrait_slides")[index];
+				element.style.display = "block";
+			}
+			for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
+				const element = document.getElementsByClassName("landscape_slides")[index];
+				element.style.display = "none";
+			}
+			return "portrait_slides";
+		} else {
+			for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
+				const element = document.getElementsByClassName("portrait_slides")[index];
+				element.style.display = "none";
+			}
+			for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
+				const element = document.getElementsByClassName("landscape_slides")[index];
+				element.style.display = "block";
+			}
+			return "landscape_slides";
 		}
-		for (let index = 0; index < document.getElementsByClassName("landscape_slides").length; index++) {
-			const element = document.getElementsByClassName("landscape_slides")[index];
-			element.style.display = "none";
-		}
-		return "portrait_slides";
 	}
 
+	// for all other browsers
 	if (orientation == "portrait-primary" || orientation == "portrait-secondary") {
 		for (let index = 0; index < document.getElementsByClassName("portrait_slides").length; index++) {
 			const element = document.getElementsByClassName("portrait_slides")[index];
