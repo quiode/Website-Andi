@@ -15,7 +15,9 @@
         <div id="navigation-overlay">
             <div id="navigation-content">
                 <?php
-                var_dump(strpos($_SERVER['HTTP_HOST'], "en") != false);
+                var_dump($_SESSION['HTTP_HOST']);
+                var_dump("en");
+                var_dump(strpos($_SERVER['HTTP_HOST'], "en"));
                 if (strpos($_SERVER['HTTP_HOST'], "en") != false) {
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "" . "\">Home</a>";
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "gallery/" . "\">Gallery</a>";
@@ -31,7 +33,6 @@
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "contact/" . "\">Kontakt</a>";
                     echo "<a class=\"links\" href=\"" ."https://" . $_SERVER['HTTP_HOST'] . "/" . "impressum/" . "\">Impressum</a>";
                 }
-                
                 ?>
             </div>
         </div>
