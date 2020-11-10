@@ -7,7 +7,7 @@
         <?php include "/../templates/meta-tags.php"?>
         <title>Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
-        <script src="https://heebphotography.ch/public/script/script/home.js"></script>
+        <script src="https://heebphotography.ch/public/script/home.js"></script>
     </head>
 
     <body id="home" onload="slideshow(5000)">
