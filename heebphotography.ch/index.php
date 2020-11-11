@@ -3,7 +3,7 @@
 
     <head>
         <title>Tierfotografie Andreas Heeb</title>
-        <?php include "./public/templates/meta-tags.php" ?>
+        <?php include "./public/templates/general_metatags.php" ?>
         <meta name="keywords" content="sprache, language, andreas, heeb, andreas heeb, heebphotography, heebphotography.ch">
         <meta name="description" content="The Website from the Photographer Andreas Heeb">
         <!-- font -->
