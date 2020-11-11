@@ -15,8 +15,11 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- metatags -->
+        <?php include __DIR__ . "/../../templates/general_metatags.php"?>
+        <meta name="keywords" content="deutsch, andreas, heeb, andreas heeb, bilder, heebphotography, galerie, bildergalerie, fotos, tiere, beispiele">
+        <meta name="description" content="Vielzählige Bilder von Andreas Heeb">
+        <!-- rest -->
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="https://heebphotography.ch/public/script/gallery.js"></script>
         <title>Bildergalerie | Tierfotografie Andreas Heeb</title>

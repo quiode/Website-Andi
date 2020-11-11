@@ -2,8 +2,11 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- metatags -->
+        <?php include __DIR__ . "/../../templates/general_metatags.php"?>
+        <meta name="keywords" content="deutsch, andreas, heeb, andreas heeb, über mich, heebphotography, informationen">
+        <meta name="description" content="Ein Kurzer Text über den Fotograph Andreas Heeb">
+        <!-- rest -->
         <title>Über Mich | Tierfotografie Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <link rel="shortcut icon" type="image/x-icon" href="https://heebphotography.ch/public/images/favicon/favicon.ico"/>

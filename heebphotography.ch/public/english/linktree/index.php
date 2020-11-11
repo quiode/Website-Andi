@@ -2,8 +2,11 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- metatags -->
+        <?php include __DIR__ . "/../../templates/general_metatags.php"?>
+        <meta name="keywords" content="english, andreas, heeb, andreas heeb, linktree, heebphotography, links, social media, socials">
+        <meta name="description" content="Links to different Social Media Accounts">
+        <!-- rest -->
         <title>Linktree | Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>

@@ -2,8 +2,11 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- metatags -->
+        <?php include __DIR__ . "/../../templates/general_metatags.php"?>
+        <meta name="keywords" content="deutsch, andreas, heeb, andreas heeb, kontakt, heebphotography, kontaktieren, nachricht">
+        <meta name="description" content="Kontaktieren sie Andreas Heeb über ein Kontaktformular.">
+        <!-- rest -->
         <title>Kontakt | Tierfotografie Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
         <script src="https://heebphotography.ch/public/script/contact.js"></script>

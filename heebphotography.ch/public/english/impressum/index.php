@@ -2,6 +2,11 @@
 <html lang="en" style="scrollbar-width: none;">
 
     <head>
+        <!-- metatags -->
+        <?php include __DIR__ . "/../../templates/general_metatags.php"?>
+        <meta name="keywords" content="english, andreas, heeb, andreas heeb, impressum, heebphotography, legal">
+        <meta name="description" content="Impressum for the English part of heebphotography.ch">
+        <!-- rest -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Impressum | Wildlifephotography Andreas Heeb</title>
