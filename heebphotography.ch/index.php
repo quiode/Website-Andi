@@ -3,8 +3,9 @@
 
     <head>
         <title>Tierfotografie Andreas Heeb</title>
-        <link rel="stylesheet" href="./public/styles/main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <?php include "./public/templates/meta-tags.php" ?>
+        <meta name="keywords" content="sprache, language, andreas, heeb, andreas heeb, heebphotography, heebphotography.ch">
+        <meta name="description" content="The Website from the Photographer Andreas Heeb">
         <!-- font -->
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon"
