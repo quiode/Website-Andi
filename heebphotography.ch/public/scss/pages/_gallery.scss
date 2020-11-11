@@ -39,14 +39,12 @@
 
             // text-decoration-thickness: auto;
             &:hover {
-                @media screen (max-width: 600px) {
-                    text-decoration-color: rgba(255, 255, 255, 0);
-                }
+                text-decoration-color: rgba(255, 255, 255, 0);
             }
         }
 
         // #gallery_filter {
-        // position: relative;
+            // position: relative;
         // }
 
         // input {
