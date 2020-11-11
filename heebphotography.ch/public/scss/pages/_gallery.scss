@@ -39,7 +39,7 @@
 
             // text-decoration-thickness: auto;
             &:hover {
-                @media screen and (max-width: 600px) {
+                @media screen (max-width: 600px) {
                     text-decoration-color: rgba(255, 255, 255, 0);
                 }
             }
