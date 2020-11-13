@@ -96,6 +96,8 @@
             z-index: inherit;
 
             .links {
+                font-weight: 100;
+                letter-spacing: normal;
                 display: block;
                 color: variables.$header_text_color;
                 font-size: 10vmin;
