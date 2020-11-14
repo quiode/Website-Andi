@@ -29,12 +29,14 @@ function image_description() {
         }
     }
 
-    let cat_and_type = thumbnail_image.id.split(" ");
-    category = cat_and_type[0];
-    type = cat_and_type[1];
+    let cat_type_latin = thumbnail_image.id.split(" ");
+    category = cat_type_latin[0];
+    type = cat_type_latin[1];
+    latin_name = cat_type_latin[2];
     category = category.replace(/_/g, " ");
     type = type.replace(/_/g, " ");
-    document.getElementById("picture_description").innerHTML = category + ": " + type;
+    latin_name = latin_name.replace(/_/g, " ");
+    document.getElementById("picture_description").innerHTML = category + ": " + type + " (" + latin_name + ")";
     // if (window.innerWidth <= 600) {
     //     document.getElementById("picture_description").style.height = "0px";
     // } else {
@@ -293,7 +295,7 @@ function filter(filter_element) {
         let allowed_images = [];
         let all_images = JSON.parse(sessionStorage.getItem("all_images"));
         all_images.forEach(image => {
-            let image_all = image.category + " " + image.type;
+            let image_all = image.category + " " + image.type + " " + image.latin_name;
             image_all = image_all.toLowerCase();
             image_all = image_all.replace("_", " ");
             if (image_all.includes(filter_value)) {
@@ -344,7 +346,7 @@ function load_images(images) {
             let image = document.createElement("img");
             image.src = "https://heebphotography.ch/public/images/gallery/thumbnail/" + images[counter].name + ".jpg";
             image.classList.add("image");
-            image.id = images[counter].category + " " + images[counter].type;
+            image.id = images[counter].category + " " + images[counter].type + " " + images[counter].latin_name;
             image.addEventListener("click", function () {
                 slideshow_on(this.src);
             });
