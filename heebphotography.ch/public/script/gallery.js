@@ -281,7 +281,7 @@ function filter(filter_element) {
         }
     }
     // filter the images for the filter value
-    filter_value = filter_value.toLowerCase(); // for easier searching
+    filter_value = filter_value.toLowerCase().replace("_", " "); // for easier searching
     let everything = "";
     if (document.location.hostname.includes("en")) {
         everything = "everything";
