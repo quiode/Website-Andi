@@ -281,7 +281,7 @@ function filter(filter_element) {
         }
     }
     // filter the images for the filter value
-    filter_value = filter_value.toLowerCase().replace("_", " "); // for easier searching
+    filter_value = filter_value.toLowerCase().replace(/_/g, " "); // for easier searching
     let everything = "";
     if (document.location.hostname.includes("en")) {
         everything = "everything";
@@ -297,7 +297,7 @@ function filter(filter_element) {
         all_images.forEach(image => {
             let image_all = image.category + " " + image.type + " " + image.latin_name;
             image_all = image_all.toLowerCase();
-            image_all = image_all.replace("_", " ");
+            image_all = image_all.replace(/_/g, " ");
             if (image_all.includes(filter_value)) {
                 allowed_images.push(image);
             }
@@ -311,7 +311,7 @@ function filter(filter_element) {
         //     let image_id = image.id;
         //     // formatting id
         //     image_id = image_id.toLowerCase();
-        //     image_id = image_id.replace("_", " ");
+        //     image_id = image_id.replace(/_/g, " ");
         //     // let regex = RegExp(".*" + filter_value + ".*", 'i');
         //     if (image_id.includes(filter_value)) {
         //         image.style.display = "initial";
