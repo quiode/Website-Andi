@@ -213,7 +213,7 @@
                     // connect to the database
                     $dbconn = pg_connect("host=heebphotography.ch port=5500 dbname=heebphotography user=postgres password=Y1qhk9nzfI2B");
                     // gets the names of the images from the databse
-                    $query = "SELECT name, de_category, de_type FROM images ORDER BY upload_date DESC";
+                    $query = "SELECT name, de_category, de_type, latin_name FROM images ORDER BY upload_date DESC";
                     $query_result = pg_query($query);
                     $all_rows = pg_fetch_all($query_result);
                     pg_close($dbconn); //ends connection to database
