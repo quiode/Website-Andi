@@ -182,6 +182,13 @@
                     array_push($temp, str_replace("_", " ", $type["de_type"]));
                 }
                 $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
+                // gets all distinct latin_names from the database
+                $latin_names = pg_fetch_all(pg_query("SELECT DISTINCT latin_name FROM images WHERE latin_name IS NOT NULL GROUP BY latin_name"));
+                $temp = [];
+                foreach ($latin_names as $latin_name) {
+                    array_push($temp, str_replace("_", " ", $latin_name["latin_name"]));
+                }
+                $all_distinct_rows_and_types = array_merge($all_distinct_rows_and_types, $temp);
                 foreach ($all_distinct_rows_and_types as $item) {
                     echo '<option value="' . $item . '">';
                 }
@@ -232,6 +239,8 @@
                 echo $all_rows[$i]["name"];
                 echo '", "type":"';
                 echo $all_rows[$i]["de_type"];
+                echo '", "latin_name":"';
+                echo $all_rows[$i]["latin_name"];
                 echo '"});';
             }
             echo 'sessionStorage.setItem("all_images", JSON.stringify(images_array));';
