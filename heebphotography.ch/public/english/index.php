@@ -5,7 +5,7 @@
         <!-- metatags -->
         <?php include __DIR__ . "/../templates/general_metatags.php"?>
         <meta name="keywords" content="english, andreas, heeb, andreas heeb, home, heebphotography">
-        <meta name="description" content="Enlgish Homepage of Andreas Heeb">
+        <meta name="description" content="English Homepage of Andreas Heeb">
         <!-- rest -->
         <title>Wildlifephotography Andreas Heeb</title>
         <link rel="stylesheet" href="https://heebphotography.ch/public/styles/main.css">
