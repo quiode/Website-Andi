@@ -20,7 +20,7 @@
             Andreas Heeb
             🐦
             17 Jahre
-            Tierfotografierer
+            Tierfotograph
             Schweiz🇨🇭
             Nikon D500 mit Sigma 150-600mm f/5-6.3
             Sport und Tamron 70-200mm f/2.8 G2
