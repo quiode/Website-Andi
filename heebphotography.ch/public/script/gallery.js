@@ -347,6 +347,7 @@ function load_images(images) {
             image.src = "https://heebphotography.ch/public/images/gallery/thumbnail/" + images[counter].name + ".jpg";
             image.classList.add("image");
             image.id = images[counter].category + " " + images[counter].type + " <i>" + images[counter].latin_name + "</i>";
+            image.loading = "lazy";
             image.addEventListener("click", function () {
                 slideshow_on(this.src);
             });
